@@ -76,6 +76,7 @@
      <Compile Include="Assets\Scripts\Data\Objects\ISettingObject.cs" />
      <Compile Include="Assets\Scripts\Data\Objects\MainSettings.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
+     <Compile Include="Assets\Scripts\InitializerGame.cs" />
      <Compile Include="Assets\Scripts\LoaderController.cs" />
      <Compile Include="Assets\Scripts\Systems\LifeSystems\DamageSystem.cs" />
      <Compile Include="Assets\Scripts\Systems\LifeSystems\HealSystem.cs" />
