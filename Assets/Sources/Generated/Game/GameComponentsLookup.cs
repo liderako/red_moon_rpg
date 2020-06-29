@@ -31,18 +31,19 @@ public static class GameComponentsLookup {
     public const int NavMeshAgent = 20;
     public const int Personality = 21;
     public const int Name = 22;
-    public const int Persona = 23;
-    public const int Speed = 24;
-    public const int Strength = 25;
-    public const int TargetPosition = 26;
-    public const int Transform = 27;
-    public const int UpdateMagicDamage = 28;
-    public const int UpdateMeleeDamage = 29;
-    public const int UpdateRangedDamage = 30;
-    public const int WorldMap = 31;
-    public const int WorldMapMovement = 32;
+    public const int NextLevelName = 23;
+    public const int Persona = 24;
+    public const int Speed = 25;
+    public const int Strength = 26;
+    public const int TargetPosition = 27;
+    public const int Transform = 28;
+    public const int UpdateMagicDamage = 29;
+    public const int UpdateMeleeDamage = 30;
+    public const int UpdateRangedDamage = 31;
+    public const int WorldMap = 32;
+    public const int WorldMapMovement = 33;
 
-    public const int TotalComponents = 33;
+    public const int TotalComponents = 34;
 
     public static readonly string[] componentNames = {
         "Attention",
@@ -68,6 +69,7 @@ public static class GameComponentsLookup {
         "NavMeshAgent",
         "Personality",
         "Name",
+        "NextLevelName",
         "Persona",
         "Speed",
         "Strength",
@@ -104,6 +106,7 @@ public static class GameComponentsLookup {
         typeof(NavMeshAgentComponent),
         typeof(PersonalityComponent),
         typeof(RedMoonRPG.NameComponent),
+        typeof(RedMoonRPG.NextLevelNameComponent),
         typeof(RedMoonRPG.PersonaComponent),
         typeof(SpeedComponent),
         typeof(StrengthComponent),

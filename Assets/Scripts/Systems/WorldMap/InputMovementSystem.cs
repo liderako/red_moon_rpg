@@ -7,6 +7,9 @@ using Entitas.CodeGeneration.Attributes;
 
 namespace WorldMap
 {
+    /*
+    ** Система необходимая для управление передвижением игрока на глобальной карте
+    */
     public class InputMovementSystem : IExecuteSystem
     {
         private Contexts _contexts;

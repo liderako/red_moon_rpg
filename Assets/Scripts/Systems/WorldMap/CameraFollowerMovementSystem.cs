@@ -5,6 +5,9 @@ using Entitas;
 
 namespace WorldMap
 {
+    /*
+    ** Система необходимая для того чтобы камера следовала за фигуркой игрока на глобальной карте
+    */
     public class CameraFollowerMovementSystem : ReactiveSystem<GameEntity>
     {
         private Contexts _contexts;
@@ -30,7 +33,7 @@ namespace WorldMap
             GameEntity entityPlayer = _contexts.game.GetEntityWithName("PlayerModel");
             entityCamera.transform.value.position = Vector3.MoveTowards(
                 entityCamera.transform.value.position,
-                new Vector3(entityPlayer.transform.value.position.x, entityCamera.transform.value.position.y, entityPlayer.transform.value.position.z - 10),
+                new Vector3(entityPlayer.transform.value.position.x, entityCamera.transform.value.position.y, entityPlayer.transform.value.position.z + 10),
                 entityCamera.forceSpeed.value * Time.deltaTime
             );
         }

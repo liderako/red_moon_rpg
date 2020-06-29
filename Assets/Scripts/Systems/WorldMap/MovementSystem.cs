@@ -7,7 +7,7 @@ namespace WorldMap
 {
     /*
     ** Системя для передвижение самой модельки персонажа по глобальной карте
-    ** между локациями. Используется NavMesh Agent;
+    ** Используется NavMesh Agent;
     */
     public class MovementSystem : ReactiveSystem<GameEntity>
     {

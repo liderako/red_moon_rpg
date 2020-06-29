@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using Entitas;
 
+/*
+** Система для модификации основных параметров персонажа
+** Система будет использоваться при создании персонажа либо редактировании основных параметров.
+*/
 public class ModifyStatSystem : ReactiveSystem<GameEntity>
 {
     private Contexts _contexts;

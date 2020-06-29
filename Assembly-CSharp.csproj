@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{efba2d95-d901-80ff-e560-96d37b453aca}</ProjectGuid>
+    <ProjectGuid>{e604cc82-16bc-8488-0389-dfe4c7bc3ae8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -45,6 +45,7 @@
      <Compile Include="Assets\Scripts\Components\Movement\WorldMap\WorldMapComponent.cs" />
      <Compile Include="Assets\Scripts\Components\Movement\WorldMap\WorldMapMovement.cs" />
      <Compile Include="Assets\Scripts\Components\NameComponent.cs" />
+     <Compile Include="Assets\Scripts\Components\NextLevelNameComponent.cs" />
      <Compile Include="Assets\Scripts\Components\PersonaComponent.cs" />
      <Compile Include="Assets\Scripts\Components\Stats\Battle attributes\BooleanComponents\UpdateMagicDamageComponent.cs" />
      <Compile Include="Assets\Scripts\Components\Stats\Battle attributes\BooleanComponents\UpdateMeleeDamageComponent.cs" />
@@ -75,8 +76,10 @@
      <Compile Include="Assets\Scripts\Data\Objects\ISettingObject.cs" />
      <Compile Include="Assets\Scripts\Data\Objects\MainSettings.cs" />
      <Compile Include="Assets\Scripts\GameController.cs" />
+     <Compile Include="Assets\Scripts\LoaderController.cs" />
      <Compile Include="Assets\Scripts\Systems\LifeSystems\DamageSystem.cs" />
      <Compile Include="Assets\Scripts\Systems\LifeSystems\HealSystem.cs" />
+     <Compile Include="Assets\Scripts\Systems\LoadLevelSystem.cs" />
      <Compile Include="Assets\Scripts\Systems\Map\CameraMovementSystem.cs" />
      <Compile Include="Assets\Scripts\Systems\ModifyStatSystem.cs" />
      <Compile Include="Assets\Scripts\Systems\WorldMap\CameraFollowerMovementSystem.cs" />
@@ -87,6 +90,9 @@
      <Compile Include="Assets\Scripts\Systems\СharacterAttributeDataCollection\UpdateManaSystem.cs" />
      <Compile Include="Assets\Scripts\Systems\СharacterAttributeDataCollection\UpdateMeleeDamageSystem.cs" />
      <Compile Include="Assets\Scripts\Systems\СharacterAttributeDataCollection\UpdateRangedDamageSystem.cs" />
+     <Compile Include="Assets\Scripts\Triggers\OnTriggerWorldZonaLevel.cs" />
+     <Compile Include="Assets\Scripts\Triggers\OnTriggerZonaLevel.cs" />
+     <Compile Include="Assets\Scripts\UI\ButtonOnTriggerLevel.cs" />
      <Compile Include="Assets\Scripts\Utils\Singleton.cs" />
      <Compile Include="Assets\Sources\Generated\Components\MapPositionComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Components\TargetPositionComponent.cs" />
@@ -114,6 +120,7 @@
      <Compile Include="Assets\Sources\Generated\Game\Components\GameModifiedStatComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Game\Components\GameNameComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Game\Components\GameNavMeshAgentComponent.cs" />
+     <Compile Include="Assets\Sources\Generated\Game\Components\GameNextLevelNameComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Game\Components\GamePersonaComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Game\Components\GamePersonalityComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Game\Components\GameSpeedComponent.cs" />
@@ -135,13 +142,31 @@
      <Compile Include="Assets\Sources\Generated\Input\InputContext.cs" />
      <Compile Include="Assets\Sources\Generated\Input\InputEntity.cs" />
      <Compile Include="Assets\Sources\Generated\Input\InputMatcher.cs" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
      <None Include="Assets\Graphics\Shaders\SyntyStudios_LOD.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
+     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
      <None Include="Assets\Graphics\Shaders\SyntyStudios_Vines.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
      <None Include="Assets\Graphics\Shaders\SyntyStudios_Water.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <None Include="Assets\Graphics\Shaders\SyntyStudios_Trees.shader" />
      <None Include="Assets\Graphics\Shaders\VS_indirect.cginc" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Assets\Graphics\Shaders\SyntyStudios_Moss.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
+     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
      <None Include="Assets\Graphics\Shaders\SyntyStudios_SkyGradient.shader" />
+     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
     <Reference Include="UnityEngine">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.12f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -326,31 +351,31 @@
         <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.12f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-        <HintPath>C:/Users/Антонио/Documents/Unity/Red Moon RPG/Assets/Plugins/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
+        <HintPath>C:/Users/Антонио/Documents/Unity/red_moon_rpg/Assets/Plugins/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Entitas.Blueprints">
-        <HintPath>C:/Users/Антонио/Documents/Unity/Red Moon RPG/Assets/Plugins/Libs/Entitas/Entitas.Blueprints.dll</HintPath>
+        <HintPath>C:/Users/Антонио/Documents/Unity/red_moon_rpg/Assets/Plugins/Libs/Entitas/Entitas.Blueprints.dll</HintPath>
     </Reference>
     <Reference Include="Entitas.CodeGeneration.Attributes">
-        <HintPath>C:/Users/Антонио/Documents/Unity/Red Moon RPG/Assets/Plugins/Libs/Entitas/Entitas.CodeGeneration.Attributes.dll</HintPath>
+        <HintPath>C:/Users/Антонио/Documents/Unity/red_moon_rpg/Assets/Plugins/Libs/Entitas/Entitas.CodeGeneration.Attributes.dll</HintPath>
     </Reference>
     <Reference Include="Entitas">
-        <HintPath>C:/Users/Антонио/Documents/Unity/Red Moon RPG/Assets/Plugins/Libs/Entitas/Entitas.dll</HintPath>
+        <HintPath>C:/Users/Антонио/Documents/Unity/red_moon_rpg/Assets/Plugins/Libs/Entitas/Entitas.dll</HintPath>
     </Reference>
     <Reference Include="Entitas.Unity">
-        <HintPath>C:/Users/Антонио/Documents/Unity/Red Moon RPG/Assets/Plugins/Libs/Entitas/Entitas.Unity.dll</HintPath>
+        <HintPath>C:/Users/Антонио/Documents/Unity/red_moon_rpg/Assets/Plugins/Libs/Entitas/Entitas.Unity.dll</HintPath>
     </Reference>
     <Reference Include="Entitas.Utils">
-        <HintPath>C:/Users/Антонио/Documents/Unity/Red Moon RPG/Assets/Plugins/Libs/Entitas/Entitas.Utils.dll</HintPath>
+        <HintPath>C:/Users/Антонио/Documents/Unity/red_moon_rpg/Assets/Plugins/Libs/Entitas/Entitas.Utils.dll</HintPath>
     </Reference>
     <Reference Include="Entitas.VisualDebugging.Unity">
-        <HintPath>C:/Users/Антонио/Documents/Unity/Red Moon RPG/Assets/Plugins/Libs/Entitas/Entitas.VisualDebugging.Unity.dll</HintPath>
+        <HintPath>C:/Users/Антонио/Documents/Unity/red_moon_rpg/Assets/Plugins/Libs/Entitas/Entitas.VisualDebugging.Unity.dll</HintPath>
     </Reference>
     <Reference Include="fabl.Appenders">
-        <HintPath>C:/Users/Антонио/Documents/Unity/Red Moon RPG/Assets/Plugins/Libs/Entitas/fabl.Appenders.dll</HintPath>
+        <HintPath>C:/Users/Антонио/Documents/Unity/red_moon_rpg/Assets/Plugins/Libs/Entitas/fabl.Appenders.dll</HintPath>
     </Reference>
     <Reference Include="fabl">
-        <HintPath>C:/Users/Антонио/Documents/Unity/Red Moon RPG/Assets/Plugins/Libs/Entitas/fabl.dll</HintPath>
+        <HintPath>C:/Users/Антонио/Documents/Unity/red_moon_rpg/Assets/Plugins/Libs/Entitas/fabl.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.12f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -707,36 +732,36 @@
         <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.12f1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-        <HintPath>C:/Users/Антонио/Documents/Unity/Red Moon RPG/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+        <HintPath>C:/Users/Антонио/Documents/Unity/red_moon_rpg/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-        <HintPath>C:/Users/Антонио/Documents/Unity/Red Moon RPG/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+        <HintPath>C:/Users/Антонио/Documents/Unity/red_moon_rpg/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-        <HintPath>C:/Users/Антонио/Documents/Unity/Red Moon RPG/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+        <HintPath>C:/Users/Антонио/Documents/Unity/red_moon_rpg/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-        <HintPath>C:/Users/Антонио/Documents/Unity/Red Moon RPG/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+        <HintPath>C:/Users/Антонио/Documents/Unity/red_moon_rpg/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-        <HintPath>C:/Users/Антонио/Documents/Unity/Red Moon RPG/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+        <HintPath>C:/Users/Антонио/Documents/Unity/red_moon_rpg/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-        <HintPath>C:/Users/Антонио/Documents/Unity/Red Moon RPG/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+        <HintPath>C:/Users/Антонио/Documents/Unity/red_moon_rpg/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-        <HintPath>C:/Users/Антонио/Documents/Unity/Red Moon RPG/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+        <HintPath>C:/Users/Антонио/Documents/Unity/red_moon_rpg/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-        <HintPath>C:/Users/Антонио/Documents/Unity/Red Moon RPG/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+        <HintPath>C:/Users/Антонио/Documents/Unity/red_moon_rpg/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-        <HintPath>C:/Users/Антонио/Documents/Unity/Red Moon RPG/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+        <HintPath>C:/Users/Антонио/Documents/Unity/red_moon_rpg/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{81a73cf4-b07c-09fc-4118-fe4dd6e33870}</Project>
+      <Project>{dfb89f6f-b046-68df-df3b-09a7ba3183fa}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>

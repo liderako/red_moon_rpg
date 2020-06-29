@@ -10,6 +10,8 @@ public class GameController : MonoBehaviour
     public GameObject _playerPrefab;
     private Systems _systems;
 
+    [SerializeField] private Camera _mainCamera;
+
     private void Start()
     {
 		Contexts contexts = Contexts.sharedInstance;
@@ -18,35 +20,37 @@ public class GameController : MonoBehaviour
         _systems.Initialize();
 
         initTest();
+        Debug.Log("Start");
+        // DontDestroyOnLoad(gameObject);
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (_systems != null)
         {
-            _systems = CreateWorldMapSystems(Contexts.sharedInstance);
-            return ;
+            _systems.Execute();
         }
-        _systems.Execute();
     }
 
-    private void FixedUpdate()
+    private void OnDestroy()
     {
-        _systems.Execute();
+        Debug.Log("Destroy");
+        GameContext game = Contexts.sharedInstance.game;;
+        // game.DestroyAllEntities();
+        _systems.ClearReactiveSystems();
+        game.GetEntityWithName("Camera").Destroy();
+        game.GetEntityWithName("PlayerModel").Destroy();
     }
+
+    // private void FixedUpdate()
+    // {
+    //     _systems.Execute();
+    // }
 
     private void initTest()
     {
         TestInitPlayer();
         TestInitCamera();
-        TestLevelEntity();
-    }
-
-    private void TestLevelEntity()
-    {
-        GameEntity level = Contexts.sharedInstance.game.CreateEntity();
-        level.AddName("Level");
-        level.AddLimitMap(new Vector2(-30, 30), new Vector2(20, 45), new Vector2(-40, 40));
     }
 
     private void TestInitPlayer()
@@ -63,18 +67,11 @@ public class GameController : MonoBehaviour
     private void TestInitCamera()
     {
         GameEntity cameraEntity = Contexts.sharedInstance.game.CreateEntity();
-        cameraEntity.AddTransform(Camera.main.gameObject.transform);
+        cameraEntity.AddTransform(_mainCamera.gameObject.transform);
         cameraEntity.AddName("Camera");
         cameraEntity.AddSpeed(6);
         cameraEntity.AddForceSpeed(12);
         cameraEntity.AddBorderThickness(10);
-    }
-
-    private Systems CreateWorldMapSystems(Contexts contexts)
-	{
-		return new Feature("Game")
-        .Add(new WorldMap.MovementSystem(contexts))
-        .Add(new WorldMap.InputMovementSystem(contexts));
     }
 
     private Systems CreateSystems(Contexts contexts)

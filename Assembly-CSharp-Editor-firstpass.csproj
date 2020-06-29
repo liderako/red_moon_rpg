@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{72654330-0957-e427-735d-512e9a9279a0}</ProjectGuid>
+    <ProjectGuid>{a64c862d-338e-eea5-28cf-6278b285c622}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor-firstpass</AssemblyName>
@@ -235,61 +235,61 @@
         <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.12f1/Editor/Data/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-        <HintPath>C:/Users/Антонио/Documents/Unity/Red Moon RPG/Assets/Plugins/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
+        <HintPath>C:/Users/Антонио/Documents/Unity/red_moon_rpg/Assets/Plugins/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Entitas.Blueprints">
-        <HintPath>C:/Users/Антонио/Documents/Unity/Red Moon RPG/Assets/Plugins/Libs/Entitas/Entitas.Blueprints.dll</HintPath>
+        <HintPath>C:/Users/Антонио/Documents/Unity/red_moon_rpg/Assets/Plugins/Libs/Entitas/Entitas.Blueprints.dll</HintPath>
     </Reference>
     <Reference Include="Entitas.CodeGeneration.Attributes">
-        <HintPath>C:/Users/Антонио/Documents/Unity/Red Moon RPG/Assets/Plugins/Libs/Entitas/Entitas.CodeGeneration.Attributes.dll</HintPath>
+        <HintPath>C:/Users/Антонио/Documents/Unity/red_moon_rpg/Assets/Plugins/Libs/Entitas/Entitas.CodeGeneration.Attributes.dll</HintPath>
     </Reference>
     <Reference Include="Entitas">
-        <HintPath>C:/Users/Антонио/Documents/Unity/Red Moon RPG/Assets/Plugins/Libs/Entitas/Entitas.dll</HintPath>
+        <HintPath>C:/Users/Антонио/Documents/Unity/red_moon_rpg/Assets/Plugins/Libs/Entitas/Entitas.dll</HintPath>
     </Reference>
     <Reference Include="Entitas.Unity">
-        <HintPath>C:/Users/Антонио/Documents/Unity/Red Moon RPG/Assets/Plugins/Libs/Entitas/Entitas.Unity.dll</HintPath>
+        <HintPath>C:/Users/Антонио/Documents/Unity/red_moon_rpg/Assets/Plugins/Libs/Entitas/Entitas.Unity.dll</HintPath>
     </Reference>
     <Reference Include="Entitas.Utils">
-        <HintPath>C:/Users/Антонио/Documents/Unity/Red Moon RPG/Assets/Plugins/Libs/Entitas/Entitas.Utils.dll</HintPath>
+        <HintPath>C:/Users/Антонио/Documents/Unity/red_moon_rpg/Assets/Plugins/Libs/Entitas/Entitas.Utils.dll</HintPath>
     </Reference>
     <Reference Include="Entitas.VisualDebugging.Unity">
-        <HintPath>C:/Users/Антонио/Documents/Unity/Red Moon RPG/Assets/Plugins/Libs/Entitas/Entitas.VisualDebugging.Unity.dll</HintPath>
+        <HintPath>C:/Users/Антонио/Documents/Unity/red_moon_rpg/Assets/Plugins/Libs/Entitas/Entitas.VisualDebugging.Unity.dll</HintPath>
     </Reference>
     <Reference Include="fabl.Appenders">
-        <HintPath>C:/Users/Антонио/Documents/Unity/Red Moon RPG/Assets/Plugins/Libs/Entitas/fabl.Appenders.dll</HintPath>
+        <HintPath>C:/Users/Антонио/Documents/Unity/red_moon_rpg/Assets/Plugins/Libs/Entitas/fabl.Appenders.dll</HintPath>
     </Reference>
     <Reference Include="fabl">
-        <HintPath>C:/Users/Антонио/Documents/Unity/Red Moon RPG/Assets/Plugins/Libs/Entitas/fabl.dll</HintPath>
+        <HintPath>C:/Users/Антонио/Documents/Unity/red_moon_rpg/Assets/Plugins/Libs/Entitas/fabl.dll</HintPath>
     </Reference>
     <Reference Include="Entitas.CodeGeneration.CodeGenerator">
-        <HintPath>C:/Users/Антонио/Documents/Unity/Red Moon RPG/Assets/Plugins/Libs/Entitas/Editor/Entitas.CodeGeneration.CodeGenerator.dll</HintPath>
+        <HintPath>C:/Users/Антонио/Documents/Unity/red_moon_rpg/Assets/Plugins/Libs/Entitas/Editor/Entitas.CodeGeneration.CodeGenerator.dll</HintPath>
     </Reference>
     <Reference Include="Entitas.CodeGeneration">
-        <HintPath>C:/Users/Антонио/Documents/Unity/Red Moon RPG/Assets/Plugins/Libs/Entitas/Editor/Entitas.CodeGeneration.dll</HintPath>
+        <HintPath>C:/Users/Антонио/Documents/Unity/red_moon_rpg/Assets/Plugins/Libs/Entitas/Editor/Entitas.CodeGeneration.dll</HintPath>
     </Reference>
     <Reference Include="Entitas.CodeGeneration.Plugins">
-        <HintPath>C:/Users/Антонио/Documents/Unity/Red Moon RPG/Assets/Plugins/Libs/Entitas/Editor/Entitas.CodeGeneration.Plugins.dll</HintPath>
+        <HintPath>C:/Users/Антонио/Documents/Unity/red_moon_rpg/Assets/Plugins/Libs/Entitas/Editor/Entitas.CodeGeneration.Plugins.dll</HintPath>
     </Reference>
     <Reference Include="Entitas.CodeGeneration.Unity.Editor">
-        <HintPath>C:/Users/Антонио/Documents/Unity/Red Moon RPG/Assets/Plugins/Libs/Entitas/Editor/Entitas.CodeGeneration.Unity.Editor.dll</HintPath>
+        <HintPath>C:/Users/Антонио/Documents/Unity/red_moon_rpg/Assets/Plugins/Libs/Entitas/Editor/Entitas.CodeGeneration.Unity.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Entitas.Migration">
-        <HintPath>C:/Users/Антонио/Documents/Unity/Red Moon RPG/Assets/Plugins/Libs/Entitas/Editor/Entitas.Migration.dll</HintPath>
+        <HintPath>C:/Users/Антонио/Documents/Unity/red_moon_rpg/Assets/Plugins/Libs/Entitas/Editor/Entitas.Migration.dll</HintPath>
     </Reference>
     <Reference Include="Entitas.Migration.Unity.Editor">
-        <HintPath>C:/Users/Антонио/Documents/Unity/Red Moon RPG/Assets/Plugins/Libs/Entitas/Editor/Entitas.Migration.Unity.Editor.dll</HintPath>
+        <HintPath>C:/Users/Антонио/Documents/Unity/red_moon_rpg/Assets/Plugins/Libs/Entitas/Editor/Entitas.Migration.Unity.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Entitas.Unity.Editor">
-        <HintPath>C:/Users/Антонио/Documents/Unity/Red Moon RPG/Assets/Plugins/Libs/Entitas/Editor/Entitas.Unity.Editor.dll</HintPath>
+        <HintPath>C:/Users/Антонио/Documents/Unity/red_moon_rpg/Assets/Plugins/Libs/Entitas/Editor/Entitas.Unity.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Entitas.VisualDebugging.CodeGeneration.Plugins">
-        <HintPath>C:/Users/Антонио/Documents/Unity/Red Moon RPG/Assets/Plugins/Libs/Entitas/Editor/Entitas.VisualDebugging.CodeGeneration.Plugins.dll</HintPath>
+        <HintPath>C:/Users/Антонио/Documents/Unity/red_moon_rpg/Assets/Plugins/Libs/Entitas/Editor/Entitas.VisualDebugging.CodeGeneration.Plugins.dll</HintPath>
     </Reference>
     <Reference Include="Entitas.VisualDebugging.Unity.Editor">
-        <HintPath>C:/Users/Антонио/Documents/Unity/Red Moon RPG/Assets/Plugins/Libs/Entitas/Editor/Entitas.VisualDebugging.Unity.Editor.dll</HintPath>
+        <HintPath>C:/Users/Антонио/Documents/Unity/red_moon_rpg/Assets/Plugins/Libs/Entitas/Editor/Entitas.VisualDebugging.Unity.Editor.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-        <HintPath>C:/Users/Антонио/Documents/Unity/Red Moon RPG/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
+        <HintPath>C:/Users/Антонио/Documents/Unity/red_moon_rpg/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
         <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.12f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>
@@ -646,42 +646,42 @@
         <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.12f1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.TestRunner">
-        <HintPath>C:/Users/Антонио/Documents/Unity/Red Moon RPG/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
+        <HintPath>C:/Users/Антонио/Documents/Unity/red_moon_rpg/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TestRunner">
-        <HintPath>C:/Users/Антонио/Documents/Unity/Red Moon RPG/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
+        <HintPath>C:/Users/Антонио/Documents/Unity/red_moon_rpg/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-        <HintPath>C:/Users/Антонио/Documents/Unity/Red Moon RPG/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+        <HintPath>C:/Users/Антонио/Documents/Unity/red_moon_rpg/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-        <HintPath>C:/Users/Антонио/Documents/Unity/Red Moon RPG/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+        <HintPath>C:/Users/Антонио/Documents/Unity/red_moon_rpg/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-        <HintPath>C:/Users/Антонио/Documents/Unity/Red Moon RPG/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+        <HintPath>C:/Users/Антонио/Documents/Unity/red_moon_rpg/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-        <HintPath>C:/Users/Антонио/Documents/Unity/Red Moon RPG/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+        <HintPath>C:/Users/Антонио/Documents/Unity/red_moon_rpg/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-        <HintPath>C:/Users/Антонио/Documents/Unity/Red Moon RPG/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+        <HintPath>C:/Users/Антонио/Documents/Unity/red_moon_rpg/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-        <HintPath>C:/Users/Антонио/Documents/Unity/Red Moon RPG/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+        <HintPath>C:/Users/Антонио/Documents/Unity/red_moon_rpg/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-        <HintPath>C:/Users/Антонио/Documents/Unity/Red Moon RPG/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+        <HintPath>C:/Users/Антонио/Documents/Unity/red_moon_rpg/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-        <HintPath>C:/Users/Антонио/Documents/Unity/Red Moon RPG/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+        <HintPath>C:/Users/Антонио/Documents/Unity/red_moon_rpg/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-        <HintPath>C:/Users/Антонио/Documents/Unity/Red Moon RPG/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+        <HintPath>C:/Users/Антонио/Documents/Unity/red_moon_rpg/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{81a73cf4-b07c-09fc-4118-fe4dd6e33870}</Project>
+      <Project>{dfb89f6f-b046-68df-df3b-09a7ba3183fa}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
       <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
     </ProjectReference>
