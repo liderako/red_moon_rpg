@@ -26,7 +26,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
-    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup>
     <NoConfig>true</NoConfig>
@@ -36,6 +36,55 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Runtime\Attributes\GetSetAttribute.cs" />
+     <Compile Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Runtime\Attributes\MinAttribute.cs" />
+     <Compile Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Runtime\Attributes\TrackballAttribute.cs" />
+     <Compile Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Runtime\Attributes\TrackballGroupAttribute.cs" />
+     <Compile Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Runtime\Components\AmbientOcclusionComponent.cs" />
+     <Compile Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Runtime\Components\BloomComponent.cs" />
+     <Compile Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Runtime\Components\BuiltinDebugViewsComponent.cs" />
+     <Compile Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Runtime\Components\ChromaticAberrationComponent.cs" />
+     <Compile Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Runtime\Components\ColorGradingComponent.cs" />
+     <Compile Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Runtime\Components\DepthOfFieldComponent.cs" />
+     <Compile Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Runtime\Components\DitheringComponent.cs" />
+     <Compile Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Runtime\Components\EyeAdaptationComponent.cs" />
+     <Compile Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Runtime\Components\FogComponent.cs" />
+     <Compile Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Runtime\Components\FxaaComponent.cs" />
+     <Compile Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Runtime\Components\GrainComponent.cs" />
+     <Compile Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Runtime\Components\MotionBlurComponent.cs" />
+     <Compile Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Runtime\Components\ScreenSpaceReflectionComponent.cs" />
+     <Compile Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Runtime\Components\TaaComponent.cs" />
+     <Compile Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Runtime\Components\UserLutComponent.cs" />
+     <Compile Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Runtime\Components\VignetteComponent.cs" />
+     <Compile Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Runtime\Models\AmbientOcclusionModel.cs" />
+     <Compile Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Runtime\Models\AntialiasingModel.cs" />
+     <Compile Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Runtime\Models\BloomModel.cs" />
+     <Compile Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Runtime\Models\BuiltinDebugViewsModel.cs" />
+     <Compile Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Runtime\Models\ChromaticAberrationModel.cs" />
+     <Compile Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Runtime\Models\ColorGradingModel.cs" />
+     <Compile Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Runtime\Models\DepthOfFieldModel.cs" />
+     <Compile Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Runtime\Models\DitheringModel.cs" />
+     <Compile Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Runtime\Models\EyeAdaptationModel.cs" />
+     <Compile Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Runtime\Models\FogModel.cs" />
+     <Compile Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Runtime\Models\GrainModel.cs" />
+     <Compile Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Runtime\Models\MotionBlurModel.cs" />
+     <Compile Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Runtime\Models\ScreenSpaceReflectionModel.cs" />
+     <Compile Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Runtime\Models\UserLutModel.cs" />
+     <Compile Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Runtime\Models\VignetteModel.cs" />
+     <Compile Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Runtime\PostProcessingBehaviour.cs" />
+     <Compile Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Runtime\PostProcessingComponent.cs" />
+     <Compile Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Runtime\PostProcessingContext.cs" />
+     <Compile Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Runtime\PostProcessingModel.cs" />
+     <Compile Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Runtime\PostProcessingProfile.cs" />
+     <Compile Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Runtime\Utils\ColorGradingCurve.cs" />
+     <Compile Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Runtime\Utils\GraphicsUtils.cs" />
+     <Compile Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Runtime\Utils\MaterialFactory.cs" />
+     <Compile Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Runtime\Utils\RenderTextureFactory.cs" />
+     <Compile Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Utilities\CustomMotionTexture\ExampleWheelController.cs" />
+     <Compile Include="Assets\NastyWizard_Depth\VertFog\PostProcessVertFog.cs" />
+     <Compile Include="Assets\NastyWizard_Depth\Water\NastyWater.cs" />
+     <Compile Include="Assets\NastyWizard_Depth\Water\PostProcessingWater.cs" />
+     <Compile Include="Assets\NastyWizard_Depth\Water\WaterVolume.cs" />
      <Compile Include="Assets\Scripts\Components\Movement\Map\BorderThicknessComponent.cs" />
      <Compile Include="Assets\Scripts\Components\Movement\Map\ForceSpeedComponent.cs" />
      <Compile Include="Assets\Scripts\Components\Movement\Map\LimitMapComponent.cs" />
@@ -81,11 +130,12 @@
      <Compile Include="Assets\Scripts\Systems\LifeSystems\DamageSystem.cs" />
      <Compile Include="Assets\Scripts\Systems\LifeSystems\HealSystem.cs" />
      <Compile Include="Assets\Scripts\Systems\LoadLevelSystem.cs" />
-     <Compile Include="Assets\Scripts\Systems\Map\CameraMovementSystem.cs" />
      <Compile Include="Assets\Scripts\Systems\ModifyStatSystem.cs" />
-     <Compile Include="Assets\Scripts\Systems\WorldMap\CameraFollowerMovementSystem.cs" />
-     <Compile Include="Assets\Scripts\Systems\WorldMap\InputMovementSystem.cs" />
-     <Compile Include="Assets\Scripts\Systems\WorldMap\MovementSystem.cs" />
+     <Compile Include="Assets\Scripts\Systems\WorldMap\Camera\FollowerMovementSystem.cs" />
+     <Compile Include="Assets\Scripts\Systems\WorldMap\Camera\MovementSystem.cs" />
+     <Compile Include="Assets\Scripts\Systems\WorldMap\Camera\ReturnMovementSystem.cs" />
+     <Compile Include="Assets\Scripts\Systems\WorldMap\Player\InputMovementSystem.cs" />
+     <Compile Include="Assets\Scripts\Systems\WorldMap\Player\MovementSystem.cs" />
      <Compile Include="Assets\Scripts\Systems\СharacterAttributeDataCollection\UpdateHealthSystem.cs" />
      <Compile Include="Assets\Scripts\Systems\СharacterAttributeDataCollection\UpdateMagicDamageSystem.cs" />
      <Compile Include="Assets\Scripts\Systems\СharacterAttributeDataCollection\UpdateManaSystem.cs" />
@@ -144,23 +194,71 @@
      <Compile Include="Assets\Sources\Generated\Input\InputEntity.cs" />
      <Compile Include="Assets\Sources\Generated\Input\InputMatcher.cs" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
+     <None Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Resources\Shaders\ScreenSpaceReflection.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
+     <None Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Resources\Shaders\GrainGen.shader" />
+     <None Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Editor Resources\Monitors\HistogramCompute.compute" />
+     <None Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Resources\Shaders\FXAA3.cginc" />
+     <None Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Resources\Shaders\EyeAdaptation.shader" />
+     <None Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Utilities\CustomMotionTexture\Shaders\CustomMotionVectorTexture.shader" />
+     <None Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Editor Resources\UI\CurveBackground.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
+     <None Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Resources\Shaders\BuiltinDebugViews.shader" />
+     <None Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Resources\Shaders\EyeAdaptation.cginc" />
+     <None Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Resources\Shaders\LutGen.shader" />
+     <None Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Resources\Shaders\EyeHistogram.compute" />
      <None Include="Assets\Graphics\Shaders\SyntyStudios_LOD.shader" />
+     <None Include="Assets\NastyWizard_Depth\VertFog\PostProcessVertFog.shader" />
+     <None Include="Assets\NastyWizard_Depth\Water\WaterShaderAdv.shader" />
+     <None Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Resources\Shaders\TAA.cginc" />
+     <None Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Resources\Shaders\AmbientOcclusion.cginc" />
+     <None Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Editor Resources\Monitors\VectorscopeCompute.compute" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
+     <None Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Resources\Shaders\ColorGrading.cginc" />
+     <None Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Editor Resources\Monitors\HistogramRender.shader" />
+     <None Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Resources\Shaders\UberSecondPass.cginc" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
      <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
+     <None Include="Assets\NastyWizard_Depth\Water\PostFunctions.cginc" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
+     <None Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Resources\Bluenoise64\LICENSE.txt" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
+     <None Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Resources\Shaders\ACES.cginc" />
+     <None Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Resources\Shaders\MotionBlur.cginc" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
+     <None Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Resources\Shaders\AmbientOcclusion.shader" />
+     <None Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Resources\Shaders\FXAA.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
      <None Include="Assets\Graphics\Shaders\SyntyStudios_Vines.shader" />
+     <None Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Resources\Shaders\ScreenSpaceRaytrace.cginc" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
+     <None Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Resources\Shaders\Tonemapping.cginc" />
      <None Include="Assets\Graphics\Shaders\SyntyStudios_Water.shader" />
+     <None Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Resources\Shaders\Fog.shader" />
+     <None Include="Assets\NastyWizard_Depth\README.txt" />
+     <None Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Editor Resources\Monitors\ParadeRender.shader" />
+     <None Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Resources\Shaders\MotionBlur.shader" />
+     <None Include="Assets\NastyWizard_Depth\Water\Distortion.shader" />
+     <None Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Resources\Shaders\DiskKernels.cginc" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
+     <None Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Resources\Bluenoise64\COPYING.txt" />
      <None Include="Assets\Graphics\Shaders\SyntyStudios_Trees.shader" />
+     <None Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Editor Resources\UI\Trackball.shader" />
+     <None Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Editor Resources\Monitors\WaveformRender.shader" />
      <None Include="Assets\Graphics\Shaders\VS_indirect.cginc" />
+     <None Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Resources\Shaders\Common.cginc" />
+     <None Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Editor Resources\Monitors\VectorscopeRender.shader" />
+     <None Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Resources\Shaders\Bloom.shader" />
+     <None Include="Assets\NastyWizard_Depth\Water\WaterShader.shader" />
+     <None Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Resources\Shaders\Uber.shader" />
+     <None Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Resources\Shaders\DepthOfField.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
+     <None Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Resources\Shaders\TAA.shader" />
+     <None Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Resources\Shaders\Blit.shader" />
+     <None Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Resources\Shaders\Bloom.cginc" />
+     <None Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Editor Resources\Monitors\WaveformCompute.compute" />
+     <None Include="Assets\NastyWizard_Depth\Water\GaussianBlur.shader" />
+     <None Include="Assets\NastyWizard_Depth\Demo\PostProcessing\Resources\Shaders\DepthOfField.cginc" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
      <None Include="Assets\Graphics\Shaders\SyntyStudios_Moss.shader" />
      <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
