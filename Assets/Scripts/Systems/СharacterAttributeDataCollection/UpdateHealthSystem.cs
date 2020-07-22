@@ -13,10 +13,10 @@ public class UpdateHealthSystem : ReactiveSystem<GameEntity>
     private Contexts _contexts;
     private int _lvlBonus;
     
-    public UpdateHealthSystem(Contexts contexts) : base(contexts.game)
+    public UpdateHealthSystem(Contexts contexts, GameBalanceSettings gmt) : base(contexts.game)
     {
         _contexts = contexts;
-        _lvlBonus = GameSettings.Instance.Model.MainData.RangedDamageForDexterity;
+        _lvlBonus = gmt.RangedDamageForDexterity;
     }
 
     protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)

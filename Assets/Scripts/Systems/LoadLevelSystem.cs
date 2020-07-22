@@ -35,12 +35,8 @@ public class LoadLevelSystem : ReactiveSystem<GameEntity>
     {
         GameEntity entity = _contexts.game.GetEntityWithName("Level");
         _prevLevelName = SceneManager.GetActiveScene().name;
-        // UnloadLevel(SceneManager.GetActiveScene().name);
-        // LoadLevel(entity.nextLevelName.value);
         name = "Loading";
         LoadLevel(name);
-        // LoadLevel(entity.nextLevelName.value);
-        // entity.RemoveNextLevelName();
     }
 
 

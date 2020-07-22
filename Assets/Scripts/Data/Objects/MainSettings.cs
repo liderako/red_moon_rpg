@@ -20,6 +20,6 @@ namespace RedMoonRPG.Settings.Objects
             data.MainData = JsonConvert.DeserializeObject<MainSettings>(textAsset.text);
         }
 
-        public string NameSettingsFile { get {return "MainSettings";}}
+        public string NameSettingsFile { get { return "MainSettings"; } }
     }
 }

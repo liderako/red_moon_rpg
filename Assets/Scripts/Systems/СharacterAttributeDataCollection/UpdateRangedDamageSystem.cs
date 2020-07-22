@@ -14,11 +14,11 @@ public class UpdateRangedDamageSystem : ReactiveSystem<GameEntity>
     private int _lvlBonus;
     private float _range;
     
-    public UpdateRangedDamageSystem(Contexts contexts) : base(contexts.game)
+    public UpdateRangedDamageSystem(Contexts contexts, GameBalanceSettings gmt) : base(contexts.game)
     {
         _contexts = contexts;
-        _lvlBonus = GameSettings.Instance.Model.MainData.RangedDamageForDexterity;
-        _range = GameSettings.Instance.Model.MainData.RangeRangedDamage;
+        _lvlBonus = gmt.RangedDamageForDexterity;
+        _range = gmt.RangeRangedDamage;
     }
 
     protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)

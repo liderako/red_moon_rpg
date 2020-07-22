@@ -14,11 +14,11 @@ public class UpdateMeleeDamageSystem : ReactiveSystem<GameEntity>
     private int _lvlBonus;
     private float _range;
 
-    public UpdateMeleeDamageSystem(Contexts contexts) : base(contexts.game)
+    public UpdateMeleeDamageSystem(Contexts contexts, GameBalanceSettings gmt) : base(contexts.game)
     {
         _contexts = contexts;
-        _lvlBonus = GameSettings.Instance.Model.MainData.MeleeDamageForStrength;
-        _range = GameSettings.Instance.Model.MainData.RangeMeleeDamage;
+        _lvlBonus = gmt.MeleeDamageForStrength;
+        _range = gmt.RangeMeleeDamage;
     }
 
     protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)

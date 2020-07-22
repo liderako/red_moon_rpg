@@ -13,10 +13,10 @@ public class UpdateManaSystem : ReactiveSystem<GameEntity>
     private Contexts _contexts;
     private int _lvlBonus;
     
-    public UpdateManaSystem(Contexts contexts) : base(contexts.game)
+    public UpdateManaSystem(Contexts contexts, GameBalanceSettings gmt) : base(contexts.game)
     {
         _contexts = contexts;
-        _lvlBonus = GameSettings.Instance.Model.MainData.ManaForLevelIntellect;
+        _lvlBonus = gmt.ManaForLevelIntellect;
     }
 
     protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)

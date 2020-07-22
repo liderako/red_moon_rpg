@@ -14,11 +14,11 @@ public class UpdateMagicDamageSystem : ReactiveSystem<GameEntity>
     private int _lvlBonus;
     private float _range;
     
-    public UpdateMagicDamageSystem(Contexts contexts) : base(contexts.game)
+    public UpdateMagicDamageSystem(Contexts contexts, GameBalanceSettings gmt) : base(contexts.game)
     {
         _contexts = contexts;
-        _lvlBonus = GameSettings.Instance.Model.MainData.MagicDamageForIntellect;
-        _range = GameSettings.Instance.Model.MainData.RangeMagicDamage;
+        _lvlBonus = gmt.MagicDamageForIntellect;
+        _range = gmt.RangeMagicDamage;
     }
 
     protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)

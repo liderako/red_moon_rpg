@@ -8,6 +8,10 @@ using Entitas;
 public class GameController : MonoBehaviour
 {
     public GameObject _playerPrefab;
+
+    public CameraSettings ct;
+    public GameBalanceSettings gbt;
+
     private Systems _systems;
 
     private void Start()
@@ -58,9 +62,9 @@ public class GameController : MonoBehaviour
         GameEntity cameraEntity = Contexts.sharedInstance.game.CreateEntity();
         cameraEntity.AddTransform(Camera.main.gameObject.transform);
         cameraEntity.AddName("Camera");
-        cameraEntity.AddSpeed(6);
-        cameraEntity.AddForceSpeed(12);
-        cameraEntity.AddBorderThickness(10);
+        cameraEntity.AddSpeed(ct.speed);
+        cameraEntity.AddForceSpeed(ct.ForceSpeed);
+        cameraEntity.AddBorderThickness(ct.BorderThickness);
         cameraEntity.AddMapPosition(new Position(Vector3.zero));
     }
 
@@ -75,6 +79,6 @@ public class GameController : MonoBehaviour
         .Add(new WorldMap.Player.InputMovementSystem(contexts))
         .Add(new WorldMap.Camera.CameraMovementSystem(contexts))
         .Add(new WorldMap.Camera.ReturnMovementSystem(contexts))
-        .Add(new UpdateHealthSystem(contexts));
+        .Add(new UpdateHealthSystem(contexts, gbt));
     }
 }

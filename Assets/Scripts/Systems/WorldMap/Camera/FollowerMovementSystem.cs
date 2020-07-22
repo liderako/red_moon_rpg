@@ -30,6 +30,8 @@ namespace WorldMap.Camera
 
         protected override void Execute(List<GameEntity> entities)
         {
+            // TO DO точно ли нужно оставить по таким тегам искать?
+            // может поменять на теги по типу констант в файлике
             GameEntity entityCamera = _contexts.game.GetEntityWithName("Camera");
             GameEntity entityPlayer = _contexts.game.GetEntityWithName("PlayerModel");
             entityCamera.transform.value.position = Vector3.MoveTowards(
