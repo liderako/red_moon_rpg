@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Entitas;
 using Entitas.CodeGeneration.Attributes;
+using RedMoonRPG.Tags;
 
 namespace WorldMap.Camera
 {
@@ -21,8 +22,8 @@ namespace WorldMap.Camera
 
         public void Execute()
         {
-            GameEntity camera = _contexts.game.GetEntityWithName("Camera");
-            GameEntity level = _contexts.game.GetEntityWithName("Level");
+            GameEntity camera = _contexts.game.GetEntityWithName(Tags.camera);
+            GameEntity level = _contexts.game.GetEntityWithName(Tags.level);
             Vector3 pos = camera.transform.value.position;
             float speed = (Input.GetKey("left shift") ? camera.forceSpeed.value : camera.speed.value);
             if (Input.GetKey("w") || Input.mousePosition.y >= Screen.height - camera.borderThickness.value)
@@ -59,8 +60,8 @@ namespace WorldMap.Camera
             }
             if (Input.GetKeyDown(KeyCode.Tab))
             {
-                GameEntity entity = _contexts.game.GetEntityWithName("PlayerModel"); // TO DO поменять потом на какой-то тег на то кем мы управляем
-                GameEntity entityCamera = _contexts.game.GetEntityWithName("Camera");
+                GameEntity entity = _contexts.game.GetEntityWithName(Tags.playerAvatar); // TO DO поменять потом на какой-то тег на то кем мы управляем
+                GameEntity entityCamera = _contexts.game.GetEntityWithName(Tags.camera);
                 entityCamera.isFreeCamera = false;
                 entityCamera.isWorldMapMovement = true;
                 entityCamera.ReplaceMapPosition(new Position(entityCamera.transform.value.position));

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Entitas;
 using Entitas.CodeGeneration.Attributes;
+using RedMoonRPG.Tags;
 
 namespace WorldMap.Player
 {
@@ -27,8 +28,8 @@ namespace WorldMap.Player
                 RaycastHit hit;
                 if (Physics.Raycast(ray, out hit))
                 {
-                    GameEntity entity = _contexts.game.GetEntityWithName("PlayerModel");
-                    GameEntity entityCamera = _contexts.game.GetEntityWithName("Camera");
+                    GameEntity entity = _contexts.game.GetEntityWithName(Tags.playerAvatar);
+                    GameEntity entityCamera = _contexts.game.GetEntityWithName(Tags.camera);
                     entityCamera.isFreeCamera = false;
                     entity.isWorldMapMovement = true;
                     entity.AddTargetPosition(new Position(hit.point));

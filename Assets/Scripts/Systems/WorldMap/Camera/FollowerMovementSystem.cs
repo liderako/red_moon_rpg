@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Entitas;
+using RedMoonRPG.Tags;
 
 namespace WorldMap.Camera
 {
@@ -25,15 +26,15 @@ namespace WorldMap.Camera
         protected override bool Filter(GameEntity entity)
         {
             return entity.isWorldMapMovement &&
-            _contexts.game.GetEntityWithName("Camera").isFreeCamera == false; // и тут проверка если игрок начал двигать мышкой то слежка прекратится за игроком.
+            _contexts.game.GetEntityWithName(Tags.camera).isFreeCamera == false; // и тут проверка если игрок начал двигать мышкой то слежка прекратится за игроком.
         }
 
         protected override void Execute(List<GameEntity> entities)
         {
             // TO DO точно ли нужно оставить по таким тегам искать?
             // может поменять на теги по типу констант в файлике
-            GameEntity entityCamera = _contexts.game.GetEntityWithName("Camera");
-            GameEntity entityPlayer = _contexts.game.GetEntityWithName("PlayerModel");
+            GameEntity entityCamera = _contexts.game.GetEntityWithName(Tags.camera);
+            GameEntity entityPlayer = _contexts.game.GetEntityWithName(Tags.playerAvatar);
             entityCamera.transform.value.position = Vector3.MoveTowards(
                 entityCamera.transform.value.position,
                 new Vector3(entityPlayer.transform.value.position.x, entityCamera.transform.value.position.y, entityPlayer.transform.value.position.z + 10),

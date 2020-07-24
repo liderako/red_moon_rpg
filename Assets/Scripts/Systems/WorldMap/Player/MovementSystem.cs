@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Entitas;
+using RedMoonRPG.Tags;
 
 namespace WorldMap.Player
 {
@@ -31,7 +32,7 @@ namespace WorldMap.Player
         protected override void Execute(List<GameEntity> entities)
         {
 
-            GameEntity player = _contexts.game.GetEntityWithName("PlayerModel");
+            GameEntity player = _contexts.game.GetEntityWithName(Tags.playerAvatar);
             if (player.isWorldMapMovement == true)
             {
                 if (player.hasTargetPosition)

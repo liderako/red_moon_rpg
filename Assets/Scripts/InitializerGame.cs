@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using RedMoonRPG.Tags;
 
 public class InitializerGame : MonoBehaviour
 {
@@ -12,6 +13,6 @@ public class InitializerGame : MonoBehaviour
     private IEnumerator wait()
     {
         yield return new WaitForSeconds(0.01f);
-        Contexts.sharedInstance.game.GetEntityWithName("Level").AddNextLevelName("Map");
+        Contexts.sharedInstance.game.GetEntityWithName(Tags.level).AddNextLevelName("Map");
     }
 }

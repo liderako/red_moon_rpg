@@ -1,10 +1,2 @@
 ﻿{
-    "MagicDamageForIntellect" : 3,
-    "RangeMagicDamage" : 0.20,
-    "MeleeDamageForStrength" : 5,
-    "RangeMeleeDamage" : 0.30,
-    "RangedDamageForDexterity" : 4,
-    "RangeRangedDamage" : 0.40,
-    "ManaForLevelIntellect" : 10,
-    "HpForLevelEndurance" : 5
 }

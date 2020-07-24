@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using Entitas;
+using RedMoonRPG.Tags;
 
 
 public class GameController : MonoBehaviour
@@ -34,10 +35,9 @@ public class GameController : MonoBehaviour
     private void OnDestroy()
     {
         GameContext game = Contexts.sharedInstance.game;;
-        // game.DestroyAllEntities();
         _systems.ClearReactiveSystems();
-        game.GetEntityWithName("Camera").Destroy();
-        game.GetEntityWithName("PlayerModel").Destroy();
+        game.GetEntityWithName(Tags.camera).Destroy();
+        game.GetEntityWithName(Tags.playerAvatar).Destroy();
     }
 
     private void initTest()
@@ -51,7 +51,7 @@ public class GameController : MonoBehaviour
         GameEntity entity = Contexts.sharedInstance.game.CreateEntity();
         GameObject go = Instantiate(_playerPrefab);
         entity.AddNavMeshAgent(go.GetComponent<NavMeshAgent>());
-        entity.AddName("PlayerModel");
+        entity.AddName(Tags.playerAvatar);
         entity.AddMapPosition(new Position(Vector3.zero));
         entity.AddTransform(go.GetComponent<NavMeshAgent>().transform);
         entity.AddPersona("Lola");
@@ -61,7 +61,7 @@ public class GameController : MonoBehaviour
     {
         GameEntity cameraEntity = Contexts.sharedInstance.game.CreateEntity();
         cameraEntity.AddTransform(Camera.main.gameObject.transform);
-        cameraEntity.AddName("Camera");
+        cameraEntity.AddName(Tags.camera);
         cameraEntity.AddSpeed(ct.speed);
         cameraEntity.AddForceSpeed(ct.ForceSpeed);
         cameraEntity.AddBorderThickness(ct.BorderThickness);

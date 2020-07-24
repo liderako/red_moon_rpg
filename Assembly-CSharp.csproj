@@ -170,6 +170,7 @@
     <Compile Include="Assets\Scripts\Systems\СharacterAttributeDataCollection\UpdateManaSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\СharacterAttributeDataCollection\UpdateMeleeDamageSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\СharacterAttributeDataCollection\UpdateRangedDamageSystem.cs" />
+    <Compile Include="Assets\Scripts\Tags.cs" />
     <Compile Include="Assets\Scripts\Triggers\OnTriggerWorldZonaLevel.cs" />
     <Compile Include="Assets\Scripts\Triggers\OnTriggerZonaLevel.cs" />
     <Compile Include="Assets\Scripts\UI\ButtonOnTriggerLevel.cs" />

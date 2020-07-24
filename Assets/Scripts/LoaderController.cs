@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Entitas;
+using RedMoonRPG.Tags;
 
 public class LoaderController : MonoBehaviour
 {
@@ -21,7 +22,7 @@ public class LoaderController : MonoBehaviour
     private void InitTest()
     {
         GameEntity level = Contexts.sharedInstance.game.CreateEntity();
-        level.AddName("Level");
+        level.AddName(Tags.level);
         level.AddLimitMap(new Vector2(-30, 30), new Vector2(20, 45), new Vector2(-40, 40));
     }
 

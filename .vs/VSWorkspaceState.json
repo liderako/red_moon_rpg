@@ -2,8 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\Assets",
+    "\\Assets\\Resources",
+    "\\Assets\\Resources\\GameSettings",
     "\\Assets\\Scripts",
-    "\\Assets\\Scripts\\ScriptableObjects"
+    "\\Assets\\Scripts\\Data",
+    "\\Assets\\Scripts\\Data\\Objects",
+    "\\Assets\\Scripts\\ScriptableObjects",
+    "\\Assets\\Scripts\\Systems",
+    "\\Assets\\Scripts\\Systems\\СharacterAttributeDataCollection"
   ],
+  "SelectedNode": "\\Assets\\Resources\\GameSettings\\MainSettings.json",
   "PreviewInSolutionExplorer": false
 }
