@@ -39,14 +39,15 @@ public static class GameComponentsLookup {
     public const int Speed = 28;
     public const int Strength = 29;
     public const int TargetPosition = 30;
-    public const int Transform = 31;
-    public const int UpdateMagicDamage = 32;
-    public const int UpdateMeleeDamage = 33;
-    public const int UpdateRangedDamage = 34;
-    public const int WorldMap = 35;
-    public const int WorldMapMovement = 36;
+    public const int TeleportCamera = 31;
+    public const int Transform = 32;
+    public const int UpdateMagicDamage = 33;
+    public const int UpdateMeleeDamage = 34;
+    public const int UpdateRangedDamage = 35;
+    public const int WorldMap = 36;
+    public const int WorldMapMovement = 37;
 
-    public const int TotalComponents = 37;
+    public const int TotalComponents = 38;
 
     public static readonly string[] componentNames = {
         "ActiveAnimation",
@@ -80,6 +81,7 @@ public static class GameComponentsLookup {
         "Speed",
         "Strength",
         "TargetPosition",
+        "TeleportCamera",
         "Transform",
         "UpdateMagicDamage",
         "UpdateMeleeDamage",
@@ -120,6 +122,7 @@ public static class GameComponentsLookup {
         typeof(SpeedComponent),
         typeof(StrengthComponent),
         typeof(TargetPositionComponent),
+        typeof(TeleportCameraComponent),
         typeof(TransformComponent),
         typeof(UpdateMagicDamageComponent),
         typeof(UpdateMeleeDamageComponent),

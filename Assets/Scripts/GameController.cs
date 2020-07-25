@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using Entitas;
 using RedMoonRPG.Utils;
+using UnityEngine.SceneManagement;
 
 
 namespace RedMoonRPG
@@ -46,18 +47,27 @@ namespace RedMoonRPG
             TestInitPlayer();
             TestInitCamera();
             TestInitLevel();
+
+            //GameEntity entity = Contexts.sharedInstance.game.GetEntityWithName(Tags.playerAvatar);
+            //GameEntity entityCamera = Contexts.sharedInstance.game.GetEntityWithName(Tags.camera);
+            //entityCamera.transform.value.position = Vector3.MoveTowards(
+            //                    entityCamera.transform.value.position,
+            //                    new Vector3(entity.transform.value.position.x, entityCamera.transform.value.position.y, entity.transform.value.position.z + 10),
+            //                    100
+            //                );
         }
 
         private void TestInitLevel()
         {
             GameEntity level = Contexts.sharedInstance.game.GetEntityWithName(Tags.level);
+            LevelSettings settings = Resources.Load<LevelSettings>(Tags.levelSettings + SceneManager.GetActiveScene().name);
             if (level.hasLimitMap)
             {
-                level.ReplaceLimitMap(new Vector2(-30, 30), new Vector2(20, 45), new Vector2(-40, 40));
+                level.ReplaceLimitMap(settings.axisX, settings.axisY, settings.axisZ);
             }
             else
             {
-                level.AddLimitMap(new Vector2(-30, 30), new Vector2(20, 45), new Vector2(-40, 40));
+                level.AddLimitMap(settings.axisX, settings.axisY, settings.axisZ);
             }
         }
 
@@ -84,6 +94,7 @@ namespace RedMoonRPG
             cameraEntity.AddForceSpeed(cameraSettings.ForceSpeed);
             cameraEntity.AddBorderThickness(cameraSettings.BorderThickness);
             cameraEntity.AddMapPosition(new Position(Vector3.zero));
+            cameraEntity.isTeleportCamera = true;
         }
 
         private Entitas.Systems CreateSystems(Contexts contexts)
@@ -94,6 +105,7 @@ namespace RedMoonRPG
             .Add(new Systems.WorldMap.Camera.CameraFollowerMovementSystem(contexts))
             .Add(new Systems.WorldMap.Camera.MovementSystem(contexts))
             .Add(new Systems.WorldMap.Camera.ReturnMovementSystem(contexts))
+            .Add(new Systems.WorldMap.Camera.TeleportSystem(contexts))
             .Add(new Systems.WorldMap.Player.MovementSystem(contexts))
             .Add(new Systems.WorldMap.Player.InputMovementSystem(contexts))
             .Add(new Systems.Animations.BoolAnimationSystem(contexts))

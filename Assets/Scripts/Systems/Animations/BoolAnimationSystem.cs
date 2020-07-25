@@ -29,10 +29,6 @@ namespace RedMoonRPG.Systems.Animations
             for (int i = 0; i < entities.Count; i++)
             {
                 GameEntity entity = entities[i];
-                //if (entity.nextAnimation.name == entity.activeAnimation.name)
-                //{
-                //    continue;
-                //}
                 entity.animator.value.SetBool(entity.activeAnimation.name, false);
                 entity.animator.value.SetBool(entity.nextAnimation.name, true);
                 entity.ReplaceActiveAnimation(entity.nextAnimation.name);

@@ -147,6 +147,7 @@
     <Compile Include="Assets\Scripts\Components\Stats\Main attributes\StrengthComponent.cs" />
     <Compile Include="Assets\Scripts\Components\Stats\Main attributes\Update main Attributes\ModifiedStatComponent.cs" />
     <Compile Include="Assets\Scripts\Components\Stats\Main attributes\Update main Attributes\Stat.cs" />
+    <Compile Include="Assets\Scripts\Components\TeleportCameraComponent.cs" />
     <Compile Include="Assets\Scripts\Components\Unity\AnimatorComponent.cs" />
     <Compile Include="Assets\Scripts\Components\Unity\NavMeshAgentComponent.cs" />
     <Compile Include="Assets\Scripts\Components\Unity\TransformComponent.cs" />
@@ -161,6 +162,7 @@
     <Compile Include="Assets\Scripts\Scenes.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\CameraSettings.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\GameBalanceSettings.cs" />
+    <Compile Include="Assets\Scripts\ScriptableObjects\LevelSettings.cs" />
     <Compile Include="Assets\Scripts\Systems\Animations\BoolAnimationSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\LifeSystems\DamageSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\LifeSystems\HealSystem.cs" />
@@ -169,6 +171,7 @@
     <Compile Include="Assets\Scripts\Systems\WorldMap\Camera\FollowerMovementSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\WorldMap\Camera\MovementSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\WorldMap\Camera\ReturnMovementSystem.cs" />
+    <Compile Include="Assets\Scripts\Systems\WorldMap\Camera\TeleportSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\WorldMap\Player\InputMovementSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\WorldMap\Player\MovementSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\СharacterAttributeDataCollection\UpdateHealthSystem.cs" />
@@ -216,6 +219,7 @@
     <Compile Include="Assets\Sources\Generated\Game\Components\GameSpeedComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameStrengthComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameTargetPositionComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Game\Components\GameTeleportCameraComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameTransformComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameUpdateMagicDamageComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameUpdateMeleeDamageComponent.cs" />
