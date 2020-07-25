@@ -4,18 +4,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using Entitas;
 using Entitas.CodeGeneration.Attributes;
-using RedMoonRPG.Tags;
 
-namespace WorldMap.Camera
+namespace RedMoonRPG.Systems.WorldMap.Camera
 {
     /*
     ** Система для свободного управление камерой на любой из локаций.
     */
-    public class CameraMovementSystem : IExecuteSystem
+    public class MovementSystem : IExecuteSystem
     {
         private Contexts _contexts;
 
-        public CameraMovementSystem(Contexts contexts)
+        public MovementSystem(Contexts contexts)
         {
             _contexts = contexts;
         }

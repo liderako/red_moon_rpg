@@ -4,86 +4,90 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Entitas;
 
+
 /*
 ** Система необходимая для того чтобы камера следовала за фигуркой игрока на глобальной карте
 */
-public class LoadLevelSystem : ReactiveSystem<GameEntity>
+namespace RedMoonRPG.Systems
 {
-    private Contexts _contexts;
-    private List<AsyncOperation> _loadOperations = new List<AsyncOperation>();
-
-    private string _prevLevelName;
-
-    private string name;
-
-    public LoadLevelSystem(Contexts contexts) : base(contexts.game)
+    public class LoadLevelSystem : ReactiveSystem<GameEntity>
     {
-        _contexts = contexts;
-    }
+        private Contexts _contexts;
+        private List<AsyncOperation> _loadOperations = new List<AsyncOperation>();
 
-    protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
-    {
-        return context.CreateCollector(GameMatcher.NextLevelName);
-    }
+        private string _prevLevelName;
 
-    protected override bool Filter(GameEntity entity)
-    {
-        return entity.hasNextLevelName;
-    }
+        private string _name;
 
-    protected override void Execute(List<GameEntity> entities)
-    {
-        GameEntity entity = _contexts.game.GetEntityWithName("Level");
-        _prevLevelName = SceneManager.GetActiveScene().name;
-        name = "Loading";
-        LoadLevel(name);
-    }
-
-
-    private void OnLoadOperationComplete(AsyncOperation ao)
-    {
-        if (_loadOperations.Contains(ao))
+        public LoadLevelSystem(Contexts contexts) : base(contexts.game)
         {
-            _loadOperations.Remove(ao);
-            if (_loadOperations.Count == 0)
+            _contexts = contexts;
+        }
+
+        protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
+        {
+            return context.CreateCollector(GameMatcher.NextLevelName);
+        }
+
+        protected override bool Filter(GameEntity entity)
+        {
+            return entity.hasNextLevelName;
+        }
+
+        protected override void Execute(List<GameEntity> entities)
+        {
+            GameEntity entity = _contexts.game.GetEntityWithName(Tags.level);
+            _prevLevelName = SceneManager.GetActiveScene().name;
+            _name = Scenes.loading;
+            LoadLevel(_name);
+        }
+
+
+        private void OnLoadOperationComplete(AsyncOperation ao)
+        {
+            if (_loadOperations.Contains(ao))
             {
-                SceneManager.SetActiveScene(SceneManager.GetSceneByName(name));
-                UnloadLevel(_prevLevelName);
+                _loadOperations.Remove(ao);
+                if (_loadOperations.Count == 0)
+                {
+                    SceneManager.SetActiveScene(SceneManager.GetSceneByName(_name));
+                    UnloadLevel(_prevLevelName);
+                }
             }
         }
-    }
 
-    private void OnUnloadOperationComplete(AsyncOperation ao)
-    {
-        if (SceneManager.GetActiveScene().name.Equals("Loading"))
+        private void OnUnloadOperationComplete(AsyncOperation ao)
         {
-            GameEntity entity = _contexts.game.GetEntityWithName("Level");
-            _prevLevelName = "Loading";
-            name = entity.nextLevelName.value;
-            LoadLevel(entity.nextLevelName.value);
-            entity.RemoveNextLevelName();
+            if (SceneManager.GetActiveScene().name.Equals(Scenes.loading))
+            {
+                GameEntity entity = _contexts.game.GetEntityWithName(Tags.level);
+                _prevLevelName = Scenes.loading;
+                _name = entity.nextLevelName.value;
+                LoadLevel(entity.nextLevelName.value);
+                entity.RemoveNextLevelName();
+            }
         }
-    }
 
-    private void LoadLevel(string levelName)
-    {
-        AsyncOperation ao = SceneManager.LoadSceneAsync(levelName, LoadSceneMode.Additive);
-        if (ao == null)
+        private void LoadLevel(string levelName)
         {
-            Debug.LogError("[GameManager] unable load scene " + levelName);
-            return ;
+            AsyncOperation ao = SceneManager.LoadSceneAsync(levelName, LoadSceneMode.Additive);
+            if (ao == null)
+            {
+                Debug.LogError("[GameManager] unable load scene " + levelName);
+                return;
+            }
+            ao.completed += OnLoadOperationComplete;
+            _loadOperations.Add(ao);
         }
-        ao.completed += OnLoadOperationComplete;
-        _loadOperations.Add(ao);
-    }
-    private void UnloadLevel(string levelName) 
-    {
-        AsyncOperation ao = SceneManager.UnloadSceneAsync(levelName);
-        if (ao == null)
+        private void UnloadLevel(string levelName)
         {
-            Debug.LogError("[GameManager] unable unload scene " + levelName);
-            return ;
+            AsyncOperation ao = SceneManager.UnloadSceneAsync(levelName);
+            if (ao == null)
+            {
+                Debug.LogError("[GameManager] unable unload scene " + levelName);
+                return;
+            }
+            ao.completed += OnUnloadOperationComplete;
         }
-        ao.completed += OnUnloadOperationComplete;
     }
 }

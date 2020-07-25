@@ -1,18 +1,35 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using RedMoonRPG.Tags;
+using UnityEngine.SceneManagement;
 
-public class InitializerGame : MonoBehaviour
+namespace RedMoonRPG
 {
-    public void Start()
+    public class InitializerGame : MonoBehaviour
     {
-        StartCoroutine(wait());
-    }
+        [SerializeField] private GameObject _gameController;
 
-    private IEnumerator wait()
-    {
-        yield return new WaitForSeconds(0.01f);
-        Contexts.sharedInstance.game.GetEntityWithName(Tags.level).AddNextLevelName("Map");
+        private void Awake()
+        {
+            if (LoaderController.Instance == null)
+            {
+                gameObject.AddComponent<LoaderController>();
+            }
+            if (SceneManager.GetActiveScene().name == Tags.init)
+            {
+                StartCoroutine(StartGame());
+            }
+            if (_gameController != null)
+            {
+                _gameController.SetActive(true);
+            }
+        }
+
+        private IEnumerator StartGame()
+        {
+            yield return new WaitForSeconds(1f);
+            Contexts.sharedInstance.game.GetEntityWithName(Tags.level).AddNextLevelName(Scenes.baseMap);
+            Destroy(this);
+        }
     }
 }

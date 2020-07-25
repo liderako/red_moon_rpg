@@ -696,6 +696,12 @@
     <Reference Include="UnityEditor.UI">
       <HintPath>D:/asvirido-unity/rpg/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Recorder.Editor">
+      <HintPath>D:/asvirido-unity/rpg/Library/ScriptAssemblies/Unity.Recorder.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Recorder">
+      <HintPath>D:/asvirido-unity/rpg/Library/ScriptAssemblies/Unity.Recorder.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

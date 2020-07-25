@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Entitas;
-using RedMoonRPG.Tags;
 
-namespace WorldMap.Camera
+namespace RedMoonRPG.Systems.WorldMap.Camera
 {
     /*
     ** Система необходимая для того чтобы камера следовала за фигуркой игрока на глобальной карте

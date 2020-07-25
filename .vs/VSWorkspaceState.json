@@ -2,15 +2,14 @@
   "ExpandedNodes": [
     "",
     "\\Assets",
-    "\\Assets\\Resources",
-    "\\Assets\\Resources\\GameSettings",
     "\\Assets\\Scripts",
-    "\\Assets\\Scripts\\Data",
-    "\\Assets\\Scripts\\Data\\Objects",
-    "\\Assets\\Scripts\\ScriptableObjects",
+    "\\Assets\\Scripts\\Components",
     "\\Assets\\Scripts\\Systems",
-    "\\Assets\\Scripts\\Systems\\СharacterAttributeDataCollection"
+    "\\Assets\\Scripts\\Systems\\Animations",
+    "\\Assets\\Scripts\\Systems\\WorldMap",
+    "\\Assets\\Scripts\\Systems\\WorldMap\\Camera",
+    "\\Assets\\Scripts\\Systems\\WorldMap\\Player"
   ],
-  "SelectedNode": "\\Assets\\Resources\\GameSettings\\MainSettings.json",
+  "SelectedNode": "\\Assets\\Scripts\\Components\\NextAnimationComponent.cs",
   "PreviewInSolutionExplorer": false
 }

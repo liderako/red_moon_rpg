@@ -5,18 +5,18 @@ using UnityEngine;
 using Entitas;
 using Entitas.CodeGeneration.Attributes;
 
-namespace WorldMap.Camera
+namespace RedMoonRPG.Systems.WorldMap.Camera
 {
     /*
     ** Система для свободного управление камерой на любой из локаций.
     */
     public class ReturnMovementSystem : ReactiveSystem<GameEntity>
     {
-        private Contexts _contexts;
+       // private Contexts _contexts;
         
         public ReturnMovementSystem(Contexts contexts) : base(contexts.game)
         {
-            _contexts = contexts;
+        //    _contexts = contexts;
         }
 
         protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)

@@ -1,14 +1,15 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using Entitas;
 
-public class OnTriggerZonaLevel : MonoBehaviour
+namespace RedMoonRPG.Triggers
 {
-    [SerializeField] private string nameNextLevel;
-
-    private void OnTriggerEnter(Collider other)
+    public class OnTriggerZonaLevel : MonoBehaviour
     {
-        Contexts.sharedInstance.game.GetEntityWithName("Level").AddNextLevelName(nameNextLevel);
+        [SerializeField] private string nameNextLevel;
+
+        private void OnTriggerEnter(Collider other)
+        {
+            Contexts.sharedInstance.game.GetEntityWithName(Tags.level).AddNextLevelName(nameNextLevel);
+        }
     }
 }

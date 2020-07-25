@@ -8,44 +8,49 @@
 //------------------------------------------------------------------------------
 public static class GameComponentsLookup {
 
-    public const int Attention = 0;
-    public const int BorderThickness = 1;
-    public const int Damaged = 2;
-    public const int Dexterity = 3;
-    public const int Endurance = 4;
-    public const int ForceSpeed = 5;
-    public const int FreeCamera = 6;
-    public const int Healed = 7;
-    public const int Health = 8;
-    public const int HealthUpdate = 9;
-    public const int IndexMagicDamage = 10;
-    public const int IndexMeleeDamage = 11;
-    public const int IndexRangedDamage = 12;
-    public const int Intellect = 13;
-    public const int LimitMap = 14;
-    public const int Luck = 15;
-    public const int Mana = 16;
-    public const int ManaUpdate = 17;
-    public const int MapPosition = 18;
-    public const int ModifiedStat = 19;
-    public const int NavMeshAgent = 20;
-    public const int Personality = 21;
-    public const int Name = 22;
-    public const int NextLevelName = 23;
-    public const int Persona = 24;
-    public const int Speed = 25;
-    public const int Strength = 26;
-    public const int TargetPosition = 27;
-    public const int Transform = 28;
-    public const int UpdateMagicDamage = 29;
-    public const int UpdateMeleeDamage = 30;
-    public const int UpdateRangedDamage = 31;
-    public const int WorldMap = 32;
-    public const int WorldMapMovement = 33;
+    public const int ActiveAnimation = 0;
+    public const int Animator = 1;
+    public const int Attention = 2;
+    public const int BorderThickness = 3;
+    public const int Damaged = 4;
+    public const int Dexterity = 5;
+    public const int Endurance = 6;
+    public const int ForceSpeed = 7;
+    public const int FreeCamera = 8;
+    public const int Healed = 9;
+    public const int Health = 10;
+    public const int HealthUpdate = 11;
+    public const int IndexMagicDamage = 12;
+    public const int IndexMeleeDamage = 13;
+    public const int IndexRangedDamage = 14;
+    public const int Intellect = 15;
+    public const int LimitMap = 16;
+    public const int Luck = 17;
+    public const int Mana = 18;
+    public const int ManaUpdate = 19;
+    public const int MapPosition = 20;
+    public const int ModifiedStat = 21;
+    public const int NavMeshAgent = 22;
+    public const int NextAnimation = 23;
+    public const int Personality = 24;
+    public const int Name = 25;
+    public const int NextLevelName = 26;
+    public const int Persona = 27;
+    public const int Speed = 28;
+    public const int Strength = 29;
+    public const int TargetPosition = 30;
+    public const int Transform = 31;
+    public const int UpdateMagicDamage = 32;
+    public const int UpdateMeleeDamage = 33;
+    public const int UpdateRangedDamage = 34;
+    public const int WorldMap = 35;
+    public const int WorldMapMovement = 36;
 
-    public const int TotalComponents = 34;
+    public const int TotalComponents = 37;
 
     public static readonly string[] componentNames = {
+        "ActiveAnimation",
+        "Animator",
         "Attention",
         "BorderThickness",
         "Damaged",
@@ -67,6 +72,7 @@ public static class GameComponentsLookup {
         "MapPosition",
         "ModifiedStat",
         "NavMeshAgent",
+        "NextAnimation",
         "Personality",
         "Name",
         "NextLevelName",
@@ -83,6 +89,8 @@ public static class GameComponentsLookup {
     };
 
     public static readonly System.Type[] componentTypes = {
+        typeof(ActiveAnimationComponent),
+        typeof(AnimatorComponent),
         typeof(AttentionComponent),
         typeof(BorderThicknessComponent),
         typeof(DamagedComponent),
@@ -104,6 +112,7 @@ public static class GameComponentsLookup {
         typeof(MapPositionComponent),
         typeof(ModifiedStatComponent),
         typeof(NavMeshAgentComponent),
+        typeof(NextAnimationComponent),
         typeof(PersonalityComponent),
         typeof(RedMoonRPG.NameComponent),
         typeof(RedMoonRPG.NextLevelNameComponent),

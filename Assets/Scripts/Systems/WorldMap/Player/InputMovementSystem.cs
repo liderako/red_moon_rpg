@@ -4,9 +4,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using Entitas;
 using Entitas.CodeGeneration.Attributes;
-using RedMoonRPG.Tags;
 
-namespace WorldMap.Player
+namespace RedMoonRPG.Systems.WorldMap.Player
 {
     /*
     ** Система необходимая для управление передвижением игрока на глобальной карте

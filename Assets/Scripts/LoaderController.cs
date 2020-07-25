@@ -2,38 +2,42 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Entitas;
-using RedMoonRPG.Tags;
+using RedMoonRPG.Systems;
+using RedMoonRPG.Utils;
 
-public class LoaderController : MonoBehaviour
+namespace RedMoonRPG
 {
-    private Systems _systems;
-
-    private void Start()
+    public class LoaderController : Singleton<LoaderController>
     {
-		Contexts contexts = Contexts.sharedInstance;
+        private Entitas.Systems _systems;
 
-		_systems = CreateLoadingSystem(contexts);
-        _systems.Initialize();
+        protected override void Awake()
+        {
+            base.Awake();
+            Contexts contexts = Contexts.sharedInstance;
 
-        InitTest();
-        DontDestroyOnLoad(gameObject);
-    }
+            _systems = CreateLoadingSystem(contexts);
+            _systems.Initialize();
+            CreateLevelEntity();
 
-    private void InitTest()
-    {
-        GameEntity level = Contexts.sharedInstance.game.CreateEntity();
-        level.AddName(Tags.level);
-        level.AddLimitMap(new Vector2(-30, 30), new Vector2(20, 45), new Vector2(-40, 40));
-    }
+            DontDestroyOnLoad(gameObject);
+        }
 
-    private void Update()
-    {
-        _systems.Execute();
-    }
+        private void Update()
+        {
+            _systems.Execute();
+        }
 
-    private Systems CreateLoadingSystem(Contexts contexts)
-	{
-		return new Feature("GameLoading")
-        .Add(new LoadLevelSystem(contexts));
+        private void CreateLevelEntity()
+        {
+            GameEntity level = Contexts.sharedInstance.game.CreateEntity();
+            level.AddName(Tags.level);
+        }
+
+        private Entitas.Systems CreateLoadingSystem(Contexts contexts)
+        {
+            return new Feature("GameLoading")
+            .Add(new LoadLevelSystem(contexts));
+        }
     }
 }

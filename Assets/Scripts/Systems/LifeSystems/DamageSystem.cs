@@ -7,7 +7,7 @@ using Entitas;
 ** Системя для получение урона и уменьшение хп
 */
 
-namespace Life
+namespace RedMoonRPG.Systems.Life
 {
     public class DamageSystem : ReactiveSystem<GameEntity>
     {

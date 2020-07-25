@@ -2,62 +2,64 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Entitas;
-using RedMoonRPG.Settings;
 
 /*
 ** Система обновляен данные про магический урон для игрового персонажа
 ** собирая данные со всех бафоф и артефактов
 */
-public class UpdateMagicDamageSystem : ReactiveSystem<GameEntity>
+namespace RedMoonRPG.Systems
 {
-    private Contexts _contexts;
-    private int _lvlBonus;
-    private float _range;
-    
-    public UpdateMagicDamageSystem(Contexts contexts, GameBalanceSettings gmt) : base(contexts.game)
+    public class UpdateMagicDamageSystem : ReactiveSystem<GameEntity>
     {
-        _contexts = contexts;
-        _lvlBonus = gmt.MagicDamageForIntellect;
-        _range = gmt.RangeMagicDamage;
-    }
+        private Contexts _contexts;
+        private int _lvlBonus;
+        private float _range;
 
-    protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
-    {
-        return context.CreateCollector(GameMatcher.UpdateMagicDamage);
-    }
-
-    /*
-    ** Система будет вызиваться только один раз на персонажа благодаря тому
-    ** что Имя может быть только у одного Entity на персонажа
-    */
-    protected override bool Filter(GameEntity entity)
-    {
-        return entity.hasName && entity.isUpdateMagicDamage && entity.hasPersona;
-    }
-
-    protected override void Execute(List<GameEntity> entities)
-    {
-        GameContext g = _contexts.game;
-        int len = entities.Count;
-        for (int i = 0; i < entities.Count; i++)
+        public UpdateMagicDamageSystem(Contexts contexts, GameBalanceSettings gmt) : base(contexts.game)
         {
-            HashSet<GameEntity> array = _contexts.game.GetEntitiesWithPersona(entities[i].persona.value);
-            int amount = 0;
-            int minAmount = 0;
-            foreach (GameEntity gn in array)
+            _contexts = contexts;
+            _lvlBonus = gmt.MagicDamageForIntellect;
+            _range = gmt.RangeMagicDamage;
+        }
+
+        protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
+        {
+            return context.CreateCollector(GameMatcher.UpdateMagicDamage);
+        }
+
+        /*
+        ** Система будет вызиваться только один раз на персонажа благодаря тому
+        ** что Имя может быть только у одного Entity на персонажа
+        */
+        protected override bool Filter(GameEntity entity)
+        {
+            return entity.hasName && entity.isUpdateMagicDamage && entity.hasPersona;
+        }
+
+        protected override void Execute(List<GameEntity> entities)
+        {
+            GameContext g = _contexts.game;
+            int len = entities.Count;
+            for (int i = 0; i < entities.Count; i++)
             {
-                if (gn.hasIntellect) // если это стата персонажа или баф от шмоток или тд зайдет сюда
+                HashSet<GameEntity> array = _contexts.game.GetEntitiesWithPersona(entities[i].persona.value);
+                int amount = 0;
+                int minAmount = 0;
+                foreach (GameEntity gn in array)
                 {
-                    amount += (gn.intellect.value * _lvlBonus); // подсчитываем бонусный урон от всего интелекта персонажа
+                    if (gn.hasIntellect) // если это стата персонажа или баф от шмоток или тд зайдет сюда
+                    {
+                        amount += (gn.intellect.value * _lvlBonus); // подсчитываем бонусный урон от всего интелекта персонажа
+                    }
+                    if (gn.hasIndexMeleeDamage && !gn.hasName) // если это оружие то зайдет сюда
+                    {
+                        amount += (gn.indexMagicDamage.maxValue); // бонус от оружия к максимальному урону
+                        minAmount += (gn.indexMagicDamage.minValue); // бонус от оружия к минимальному урону
+                    }
                 }
-                if (gn.hasIndexMeleeDamage && !gn.hasName) // если это оружие то зайдет сюда
-                {
-                    amount += (gn.indexMagicDamage.maxValue); // бонус от оружия к максимальному урону
-                    minAmount += (gn.indexMagicDamage.minValue); // бонус от оружия к минимальному урону
-                }
+                entities[i].indexMagicDamage.maxValue = amount;
+                entities[i].indexMagicDamage.minValue = amount - (int)(amount * _range) + minAmount;
             }
-            entities[i].indexMagicDamage.maxValue = amount;
-            entities[i].indexMagicDamage.minValue = amount - (int)(amount * _range) + minAmount;
         }
     }
 }

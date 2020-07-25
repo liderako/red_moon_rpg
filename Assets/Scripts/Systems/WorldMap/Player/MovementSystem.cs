@@ -2,9 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Entitas;
-using RedMoonRPG.Tags;
 
-namespace WorldMap.Player
+namespace RedMoonRPG.Systems.WorldMap.Player
 {
     /*
     ** Системя для передвижение самой модельки персонажа по глобальной карте
@@ -26,7 +25,7 @@ namespace WorldMap.Player
 
         protected override bool Filter(GameEntity entity)
         {
-            return entity.isWorldMapMovement == true && entity.hasNavMeshAgent;
+            return entity.isWorldMapMovement == true && entity.hasNavMeshAgent && entity.hasAnimator;
         }
 
         protected override void Execute(List<GameEntity> entities)
@@ -38,12 +37,14 @@ namespace WorldMap.Player
                 if (player.hasTargetPosition)
                 {
                     player.navMeshAgent.agent.SetDestination(player.targetPosition.value.vector);
+                    player.AddNextAnimation(AnimationTags.walk);
                     player.RemoveTargetPosition();
                     player.ReplaceMapPosition(new Position(player.navMeshAgent.agent.transform.position));
                 }
                 if (Vector3.Distance(player.mapPosition.value.vector, player.navMeshAgent.agent.destination) < player.navMeshAgent.agent.stoppingDistance)
                 {
                     player.isWorldMapMovement = false;
+                    player.AddNextAnimation(AnimationTags.idle);
                 }
                 player.ReplaceMapPosition(new Position(player.navMeshAgent.agent.transform.position));
             }

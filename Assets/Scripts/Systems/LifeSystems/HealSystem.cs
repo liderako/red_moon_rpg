@@ -8,7 +8,7 @@ using Entitas;
 ** в теории можно использовать и для прочности предметов.
 */
 
-namespace Life
+namespace RedMoonRPG.Systems.Life
 {
     public class HealSystem : ReactiveSystem<GameEntity>
     {

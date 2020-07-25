@@ -2,21 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Entitas;
+using RedMoonRPG.UI;
 
-public class OnTriggerWorldZonaLevel : MonoBehaviour
+namespace RedMoonRPG.Triggers
 {
-    [SerializeField] private string nameNextLevel;
-    [SerializeField] private GameObject button;
-    [SerializeField] private ButtonOnTriggerLevel script;
+    public class OnTriggerWorldZonaLevel : MonoBehaviour
+    {
+        [SerializeField] private string nameNextLevel;
+        [SerializeField] private GameObject button;
+        [SerializeField] private ButtonOnTriggerLevel script;
 
-    private void OnTriggerEnter(Collider other)
-    {
-        button.SetActive(true);
-        script.nameNextLevel = nameNextLevel;
-    }
-    
-    private void OnTriggerExit(Collider other)
-    {
-        button.SetActive(false);
+        private void OnTriggerEnter(Collider other)
+        {
+            button.SetActive(true);
+            script.nameNextLevel = nameNextLevel;
+        }
+
+        private void OnTriggerExit(Collider other)
+        {
+            button.SetActive(false);
+        }
     }
 }

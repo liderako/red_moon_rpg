@@ -3,14 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using Entitas;
 
-public class ButtonOnTriggerLevel : MonoBehaviour
+namespace RedMoonRPG.UI
 {
-    public string nameNextLevel;
-
-    public void OnClick()
+    public class ButtonOnTriggerLevel : MonoBehaviour
     {
-        // Debug.Log(nameNextLevel);
-        Contexts.sharedInstance.game.GetEntityWithName("Level").AddNextLevelName(nameNextLevel);
-        // entity.AddPersona("allsalaslslasa");
+        public string nameNextLevel;
+
+        public void OnClick()
+        {
+            Contexts.sharedInstance.game.GetEntityWithName(Tags.level).AddNextLevelName(nameNextLevel);
+        }
     }
 }
