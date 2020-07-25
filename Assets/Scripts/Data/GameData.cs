@@ -12,7 +12,7 @@ namespace RedMoonRPG.Settings
         {
             DontDestroyOnLoad(gameObject);
             //LoadingData();
-            //SavedData();
+            SavedData();
         }
 
         public void SavedData()

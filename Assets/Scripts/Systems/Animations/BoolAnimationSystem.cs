@@ -5,13 +5,14 @@ using Entitas;
 
 namespace RedMoonRPG.Systems.Animations
 {
+    /*
+     *  Система для переключение анимаций буловским способом
+     */
     public class BoolAnimationSystem : ReactiveSystem<GameEntity>
     {
-        //private Contexts _contexts;
 
         public BoolAnimationSystem(Contexts contexts) : base(contexts.game)
         {
-            //_contexts = contexts;
         }
 
         protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)

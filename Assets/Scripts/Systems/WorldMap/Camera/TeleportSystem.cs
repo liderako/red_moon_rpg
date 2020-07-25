@@ -8,15 +8,12 @@ using Entitas.CodeGeneration.Attributes;
 namespace RedMoonRPG.Systems.WorldMap.Camera
 {
     /*
-    ** Система для свободного управление камерой на любой из локаций.
+    ** Система для телепортации камеры к фигурке персонажа при загрузке на уровне.
     */
     public class TeleportSystem : ReactiveSystem<GameEntity>
     {
-        // private Contexts _contexts;
-
         public TeleportSystem(Contexts contexts) : base(contexts.game)
         {
-            //    _contexts = contexts;
         }
 
         protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)

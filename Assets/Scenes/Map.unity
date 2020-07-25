@@ -214,7 +214,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Model:
     playerData:
-      position: {x: 0, y: 0, z: 0}
+      position: {fileID: 128199870}
+--- !u!4 &128199870 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7203189450735319081, guid: 273af4d89a21d564e99350c43b3931eb,
+    type: 3}
+  m_PrefabInstance: {fileID: 7203189450193594473}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &185375276
 PrefabInstance:
   m_ObjectHideFlags: 0
