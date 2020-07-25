@@ -1,8 +1,10 @@
-﻿namespace RedMoonRPG.Settings.Objects
+﻿using UnityEngine;
+
+namespace RedMoonRPG.Settings.Objects
 {
     [System.Serializable]
     public class Data
     {
-        public MainSettings MainData;     
+        public PlayerSavedData playerData;
     }
 }

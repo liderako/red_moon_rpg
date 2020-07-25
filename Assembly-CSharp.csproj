@@ -153,9 +153,8 @@
     <Compile Include="Assets\Scripts\Components\Unity\TransformComponent.cs" />
     <Compile Include="Assets\Scripts\Data\Data.cs" />
     <Compile Include="Assets\Scripts\Data\FileReader.cs" />
-    <Compile Include="Assets\Scripts\Data\GameSettings.cs" />
-    <Compile Include="Assets\Scripts\Data\Objects\ISettingObject.cs" />
-    <Compile Include="Assets\Scripts\Data\Objects\MainSettings.cs" />
+    <Compile Include="Assets\Scripts\Data\GameData.cs" />
+    <Compile Include="Assets\Scripts\Data\Objects\PlayerSavedData.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
     <Compile Include="Assets\Scripts\InitializerGame.cs" />
     <Compile Include="Assets\Scripts\LoaderController.cs" />

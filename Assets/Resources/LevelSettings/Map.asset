@@ -15,3 +15,5 @@ MonoBehaviour:
   axisX: {x: -20, y: 20}
   axisY: {x: 20, y: 45}
   axisZ: {x: -20, y: 33}
+  positions:
+  - {x: 0, y: 0, z: 0}

@@ -1,33 +1,29 @@
 ﻿using UnityEngine;
 using RedMoonRPG.Settings.Objects;
+using System.IO;
+using Newtonsoft.Json;
 
 namespace RedMoonRPG.Settings
 {
     public class FileReader
     {
-        private const string _pathGameSettings = "GameSettings/";
-        private ISettingObject[] _settingObjects = new ISettingObject[] {new MainSettings()};
-
-        public Data GetGameSettings()
+        public void SaveData(Data data)
         {
-            Data data = new Data();
-            UpdateData(data);
-            return data;
+#if UNITY_EDITOR
+            Debug.Log(Application.persistentDataPath);
+#endif
+            File.WriteAllText(Application.persistentDataPath + "/" + Tags.mainData + ".json", JsonConvert.SerializeObject(data));
+        }
+        
+        public Data LoadSavedData()
+        {
+            return JsonConvert.DeserializeObject<Data>(ReadSettings(Tags.mainData)); ;
         }
 
-        private void UpdateData(Data data)
+        private string ReadSettings(string nameFile)
         {
-            int len = _settingObjects.Length;
-            for (int i = 0; i < len; i++)
-            {
-                _settingObjects[i].UpdateData(data, ReadSettings(_settingObjects[i].NameSettingsFile));
-            }
-        }
-
-        private TextAsset ReadSettings(string nameSettingsFile)
-        {
-            TextAsset textAsset = (TextAsset)Resources.Load(_pathGameSettings + nameSettingsFile);
-            return textAsset;
+            string s = File.ReadAllText(Application.persistentDataPath + "/" + nameFile + ".json");
+            return s;
         }
     }
 }

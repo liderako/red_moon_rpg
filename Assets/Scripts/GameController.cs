@@ -15,8 +15,14 @@ namespace RedMoonRPG
 
         public CameraSettings cameraSettings;
         public GameBalanceSettings gameBalanceSettings;
+        private LevelSettings _levelSettings;
 
         private Entitas.Systems _systems;
+
+        public void Awake()
+        {
+            _levelSettings = Resources.Load<LevelSettings>(Tags.levelSettings + SceneManager.GetActiveScene().name);
+        }
 
         private void Start()
         {
@@ -47,27 +53,18 @@ namespace RedMoonRPG
             TestInitPlayer();
             TestInitCamera();
             TestInitLevel();
-
-            //GameEntity entity = Contexts.sharedInstance.game.GetEntityWithName(Tags.playerAvatar);
-            //GameEntity entityCamera = Contexts.sharedInstance.game.GetEntityWithName(Tags.camera);
-            //entityCamera.transform.value.position = Vector3.MoveTowards(
-            //                    entityCamera.transform.value.position,
-            //                    new Vector3(entity.transform.value.position.x, entityCamera.transform.value.position.y, entity.transform.value.position.z + 10),
-            //                    100
-            //                );
         }
 
         private void TestInitLevel()
         {
             GameEntity level = Contexts.sharedInstance.game.GetEntityWithName(Tags.level);
-            LevelSettings settings = Resources.Load<LevelSettings>(Tags.levelSettings + SceneManager.GetActiveScene().name);
             if (level.hasLimitMap)
             {
-                level.ReplaceLimitMap(settings.axisX, settings.axisY, settings.axisZ);
+                level.ReplaceLimitMap(_levelSettings.axisX, _levelSettings.axisY, _levelSettings.axisZ);
             }
             else
             {
-                level.AddLimitMap(settings.axisX, settings.axisY, settings.axisZ);
+                level.AddLimitMap(_levelSettings.axisX, _levelSettings.axisY, _levelSettings.axisZ);
             }
         }
 
