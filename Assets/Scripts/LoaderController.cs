@@ -30,6 +30,8 @@ namespace RedMoonRPG
 
         private void CreateLevelEntity()
         {
+            GameEntity game = Contexts.sharedInstance.game.CreateEntity();
+            game.AddName("GameInit");
             GameEntity level = Contexts.sharedInstance.game.CreateEntity();
             level.AddName(Tags.level);
         }
@@ -37,6 +39,8 @@ namespace RedMoonRPG
         private Entitas.Systems CreateLoadingSystem(Contexts contexts)
         {
             return new Feature("GameLoading")
+            .Add(new InitializeSystems.CameraInitEntitySystem(contexts))
+            .Add(new InitializeSystems.LevelInitEntitySystem(contexts))
             .Add(new LoadLevelSystem(contexts));
         }
     }

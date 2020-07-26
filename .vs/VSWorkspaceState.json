@@ -3,13 +3,13 @@
     "",
     "\\Assets",
     "\\Assets\\Scripts",
-    "\\Assets\\Scripts\\Components",
+    "\\Assets\\Scripts\\Data",
+    "\\Assets\\Scripts\\Data\\Objects",
+    "\\Assets\\Scripts\\ScriptableObjects",
     "\\Assets\\Scripts\\Systems",
-    "\\Assets\\Scripts\\Systems\\Animations",
-    "\\Assets\\Scripts\\Systems\\WorldMap",
-    "\\Assets\\Scripts\\Systems\\WorldMap\\Camera",
-    "\\Assets\\Scripts\\Systems\\WorldMap\\Player"
+    "\\Assets\\Scripts\\Systems\\InitializeSystems",
+    "\\Assets\\Sources"
   ],
-  "SelectedNode": "\\Assets\\Scripts\\Components\\NextAnimationComponent.cs",
+  "SelectedNode": "\\Assets\\Scripts\\LoaderController.cs",
   "PreviewInSolutionExplorer": false
 }

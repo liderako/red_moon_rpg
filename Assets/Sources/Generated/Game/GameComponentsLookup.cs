@@ -12,48 +12,51 @@ public static class GameComponentsLookup {
     public const int Animator = 1;
     public const int Attention = 2;
     public const int BorderThickness = 3;
-    public const int Damaged = 4;
-    public const int Dexterity = 5;
-    public const int Endurance = 6;
-    public const int ForceSpeed = 7;
-    public const int FreeCamera = 8;
-    public const int Healed = 9;
-    public const int Health = 10;
-    public const int HealthUpdate = 11;
-    public const int IndexMagicDamage = 12;
-    public const int IndexMeleeDamage = 13;
-    public const int IndexRangedDamage = 14;
-    public const int Intellect = 15;
-    public const int LimitMap = 16;
-    public const int Luck = 17;
-    public const int Mana = 18;
-    public const int ManaUpdate = 19;
-    public const int MapPosition = 20;
-    public const int ModifiedStat = 21;
-    public const int NavMeshAgent = 22;
-    public const int NextAnimation = 23;
-    public const int Personality = 24;
-    public const int Name = 25;
-    public const int NextLevelName = 26;
-    public const int Persona = 27;
-    public const int Speed = 28;
-    public const int Strength = 29;
-    public const int TargetPosition = 30;
-    public const int TeleportCamera = 31;
-    public const int Transform = 32;
-    public const int UpdateMagicDamage = 33;
-    public const int UpdateMeleeDamage = 34;
-    public const int UpdateRangedDamage = 35;
-    public const int WorldMap = 36;
-    public const int WorldMapMovement = 37;
+    public const int CameraCreate = 4;
+    public const int Damaged = 5;
+    public const int Dexterity = 6;
+    public const int Endurance = 7;
+    public const int ForceSpeed = 8;
+    public const int FreeCamera = 9;
+    public const int Healed = 10;
+    public const int Health = 11;
+    public const int HealthUpdate = 12;
+    public const int IndexMagicDamage = 13;
+    public const int IndexMeleeDamage = 14;
+    public const int IndexRangedDamage = 15;
+    public const int Intellect = 16;
+    public const int LevelCreate = 17;
+    public const int LimitMap = 18;
+    public const int Luck = 19;
+    public const int Mana = 20;
+    public const int ManaUpdate = 21;
+    public const int MapPosition = 22;
+    public const int ModifiedStat = 23;
+    public const int NavMeshAgent = 24;
+    public const int NextAnimation = 25;
+    public const int Personality = 26;
+    public const int Name = 27;
+    public const int NextLevelName = 28;
+    public const int Persona = 29;
+    public const int Speed = 30;
+    public const int Strength = 31;
+    public const int TargetPosition = 32;
+    public const int TeleportCamera = 33;
+    public const int Transform = 34;
+    public const int UpdateMagicDamage = 35;
+    public const int UpdateMeleeDamage = 36;
+    public const int UpdateRangedDamage = 37;
+    public const int WorldMap = 38;
+    public const int WorldMapMovement = 39;
 
-    public const int TotalComponents = 38;
+    public const int TotalComponents = 40;
 
     public static readonly string[] componentNames = {
         "ActiveAnimation",
         "Animator",
         "Attention",
         "BorderThickness",
+        "CameraCreate",
         "Damaged",
         "Dexterity",
         "Endurance",
@@ -66,6 +69,7 @@ public static class GameComponentsLookup {
         "IndexMeleeDamage",
         "IndexRangedDamage",
         "Intellect",
+        "LevelCreate",
         "LimitMap",
         "Luck",
         "Mana",
@@ -95,6 +99,7 @@ public static class GameComponentsLookup {
         typeof(AnimatorComponent),
         typeof(AttentionComponent),
         typeof(BorderThicknessComponent),
+        typeof(CameraCreateComponent),
         typeof(DamagedComponent),
         typeof(DexterityComponent),
         typeof(EnduranceComponent),
@@ -107,6 +112,7 @@ public static class GameComponentsLookup {
         typeof(IndexMeleeDamageComponent),
         typeof(IndexRangedDamageComponent),
         typeof(IntellectComponent),
+        typeof(LevelCreateComponent),
         typeof(LimitMapComponent),
         typeof(LuckComponent),
         typeof(ManaComponent),

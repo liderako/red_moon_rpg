@@ -11,5 +11,6 @@
         public const string levelSettings = "LevelSettings/";
         public const string pathGameSettings = "Progress/";
         public const string mainData = "dataRPG";
+        public const string cameraSettings = "CameraData";
     }
 }

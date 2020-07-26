@@ -675,8 +675,14 @@
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>D:/asvirido-unity/rpg/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Recorder.Editor">
+      <HintPath>D:/asvirido-unity/rpg/Library/ScriptAssemblies/Unity.Recorder.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>D:/asvirido-unity/rpg/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Recorder">
+      <HintPath>D:/asvirido-unity/rpg/Library/ScriptAssemblies/Unity.Recorder.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>D:/asvirido-unity/rpg/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
@@ -695,12 +701,6 @@
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>D:/asvirido-unity/rpg/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Recorder.Editor">
-      <HintPath>D:/asvirido-unity/rpg/Library/ScriptAssemblies/Unity.Recorder.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Recorder">
-      <HintPath>D:/asvirido-unity/rpg/Library/ScriptAssemblies/Unity.Recorder.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup></ItemGroup>

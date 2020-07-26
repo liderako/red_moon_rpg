@@ -1,9 +1,10 @@
-﻿using System.Collections;
+﻿using RedMoonRPG.Settings;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace RedMoonRPG
+namespace RedMoonRPG.InitializeSystems
 {
     public class InitializerGame : MonoBehaviour
     {
@@ -13,7 +14,17 @@ namespace RedMoonRPG
         {
             if (LoaderController.Instance == null)
             {
-                gameObject.AddComponent<LoaderController>();
+                Debug.Log("init loader controller");
+                GameObject go = new GameObject();
+                go.AddComponent<LoaderController>();
+                go.name = "LoaderController";
+            }
+            if (GameData.Instance == null)
+            {
+                Debug.Log("init game data");
+                GameObject go = new GameObject();
+                go.AddComponent<GameData>();
+                go.name = "GameData";
             }
             if (SceneManager.GetActiveScene().name == Tags.init)
             {

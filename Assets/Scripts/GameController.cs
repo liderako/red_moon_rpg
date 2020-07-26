@@ -13,15 +13,16 @@ namespace RedMoonRPG
     {
         public GameObject _playerPrefab;
 
-        public CameraSettings cameraSettings;
+        //public CameraSettings cameraSettings;
         public GameBalanceSettings gameBalanceSettings;
-        private LevelSettings _levelSettings;
+        //public LevelSettings _levelSettings;
 
         private Entitas.Systems _systems;
 
         public void Awake()
         {
-            _levelSettings = Resources.Load<LevelSettings>(Tags.levelSettings + SceneManager.GetActiveScene().name);
+            //_levelSettings = Resources.Load<LevelSettings>(Tags.levelSettings + gameObject.scene.name);
+            Debug.Log(SceneManager.GetActiveScene().name);
         }
 
         private void Start()
@@ -50,23 +51,25 @@ namespace RedMoonRPG
 
         private void initTest()
         {
+            //GameEntity gameInitializer;
+            //if (Contexts.sharedInstance.game.GetEntityWithName("GameInit") == null)
+            //{
+            //    gameInitializer = Contexts.sharedInstance.game.CreateEntity();
+            //    gameInitializer.AddName("GameInit");
+            //}
+            //else
+            //{
+            GameEntity gameInitializer = Contexts.sharedInstance.game.GetEntityWithName("GameInit");
+            //}
             TestInitPlayer();
-            TestInitCamera();
-            TestInitLevel();
+            //TestInitLevel();
+            gameInitializer.isCameraCreate = true;
+            gameInitializer.isLevelCreate = true;
         }
 
-        private void TestInitLevel()
-        {
-            GameEntity level = Contexts.sharedInstance.game.GetEntityWithName(Tags.level);
-            if (level.hasLimitMap)
-            {
-                level.ReplaceLimitMap(_levelSettings.axisX, _levelSettings.axisY, _levelSettings.axisZ);
-            }
-            else
-            {
-                level.AddLimitMap(_levelSettings.axisX, _levelSettings.axisY, _levelSettings.axisZ);
-            }
-        }
+        //private void TestInitLevel()
+        //{
+        //}
 
         private void TestInitPlayer()
         {
@@ -80,18 +83,6 @@ namespace RedMoonRPG
             entity.AddActiveAnimation(AnimationTags.idle);
             entity.AddNextAnimation(AnimationTags.idle);
             entity.AddPersona("Lola");
-        }
-
-        private void TestInitCamera()
-        {
-            GameEntity cameraEntity = Contexts.sharedInstance.game.CreateEntity();
-            cameraEntity.AddTransform(Camera.main.gameObject.transform);
-            cameraEntity.AddName(Tags.camera);
-            cameraEntity.AddSpeed(cameraSettings.speed);
-            cameraEntity.AddForceSpeed(cameraSettings.ForceSpeed);
-            cameraEntity.AddBorderThickness(cameraSettings.BorderThickness);
-            cameraEntity.AddMapPosition(new Position(Vector3.zero));
-            cameraEntity.isTeleportCamera = true;
         }
 
         private Entitas.Systems CreateSystems(Contexts contexts)

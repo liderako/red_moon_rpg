@@ -114,6 +114,8 @@
     <Compile Include="Assets\Graphics\NastyWizard_Depth\Water\WaterVolume.cs" />
     <Compile Include="Assets\Scripts\Animations.cs" />
     <Compile Include="Assets\Scripts\Components\ActiveAnimationComponent.cs" />
+    <Compile Include="Assets\Scripts\Components\CameraCreate.cs" />
+    <Compile Include="Assets\Scripts\Components\LevelCreate.cs" />
     <Compile Include="Assets\Scripts\Components\Movement\Map\BorderThicknessComponent.cs" />
     <Compile Include="Assets\Scripts\Components\Movement\Map\ForceSpeedComponent.cs" />
     <Compile Include="Assets\Scripts\Components\Movement\Map\LimitMapComponent.cs" />
@@ -163,6 +165,8 @@
     <Compile Include="Assets\Scripts\ScriptableObjects\GameBalanceSettings.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\LevelSettings.cs" />
     <Compile Include="Assets\Scripts\Systems\Animations\BoolAnimationSystem.cs" />
+    <Compile Include="Assets\Scripts\Systems\InitializeSystems\CameraInitEntitySystem.cs" />
+    <Compile Include="Assets\Scripts\Systems\InitializeSystems\LevelInitEntitySystem.cs" />
     <Compile Include="Assets\Scripts\Systems\LifeSystems\DamageSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\LifeSystems\HealSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\LoadLevelSystem.cs" />
@@ -172,7 +176,7 @@
     <Compile Include="Assets\Scripts\Systems\WorldMap\Camera\ReturnMovementSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\WorldMap\Camera\TeleportSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\WorldMap\Player\InputMovementSystem.cs" />
-    <Compile Include="Assets\Scripts\Systems\WorldMap\Player\MovementSystem.cs" />
+    <Compile Include="Assets\Scripts\Systems\СharacterAttributeDataCollection\MovementSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\СharacterAttributeDataCollection\UpdateHealthSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\СharacterAttributeDataCollection\UpdateMagicDamageSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\СharacterAttributeDataCollection\UpdateManaSystem.cs" />
@@ -191,6 +195,7 @@
     <Compile Include="Assets\Sources\Generated\Game\Components\GameAnimatorComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameAttentionComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameBorderThicknessComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Game\Components\GameCameraCreateComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameDamagedComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameDexterityComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameEnduranceComponent.cs" />
@@ -203,6 +208,7 @@
     <Compile Include="Assets\Sources\Generated\Game\Components\GameIndexMeleeDamageComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameIndexRangedDamageComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameIntellectComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Game\Components\GameLevelCreateComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameLimitMapComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameLuckComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameManaComponent.cs" />
@@ -884,8 +890,14 @@
     <Reference Include="Unity.VSCode.Editor">
       <HintPath>D:/asvirido-unity/rpg/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
+    <Reference Include="Unity.Recorder.Editor">
+      <HintPath>D:/asvirido-unity/rpg/Library/ScriptAssemblies/Unity.Recorder.Editor.dll</HintPath>
+    </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
       <HintPath>D:/asvirido-unity/rpg/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Recorder">
+      <HintPath>D:/asvirido-unity/rpg/Library/ScriptAssemblies/Unity.Recorder.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
       <HintPath>D:/asvirido-unity/rpg/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
@@ -904,12 +916,6 @@
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>D:/asvirido-unity/rpg/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Recorder.Editor">
-      <HintPath>D:/asvirido-unity/rpg/Library/ScriptAssemblies/Unity.Recorder.Editor.dll</HintPath>
-    </Reference>
-    <Reference Include="Unity.Recorder">
-      <HintPath>D:/asvirido-unity/rpg/Library/ScriptAssemblies/Unity.Recorder.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
