@@ -35,7 +35,7 @@ namespace RedMoonRPG
 
         private void OnDestroy()
         {
-            GameContext game = Contexts.sharedInstance.game; ;
+            GameContext game = Contexts.sharedInstance.game;
             _systems.ClearReactiveSystems();
             game.GetEntityWithName(Tags.camera).Destroy();
             game.GetEntityWithName(Tags.playerAvatar).Destroy();
@@ -43,25 +43,11 @@ namespace RedMoonRPG
 
         private void initTest()
         {
-            //GameEntity gameInitializer;
-            //if (Contexts.sharedInstance.game.GetEntityWithName("GameInit") == null)
-            //{
-            //    gameInitializer = Contexts.sharedInstance.game.CreateEntity();
-            //    gameInitializer.AddName("GameInit");
-            //}
-            //else
-            //{
             GameEntity gameInitializer = Contexts.sharedInstance.game.GetEntityWithName("GameInit");
-            //}
             TestInitPlayer();
-            //TestInitLevel();
             gameInitializer.isCameraCreate = true;
             gameInitializer.isLevelCreate = true;
         }
-
-        //private void TestInitLevel()
-        //{
-        //}
 
         private void TestInitPlayer()
         {

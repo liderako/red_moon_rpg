@@ -3,13 +3,12 @@
     "",
     "\\Assets",
     "\\Assets\\Scripts",
-    "\\Assets\\Scripts\\Data",
-    "\\Assets\\Scripts\\Data\\Objects",
-    "\\Assets\\Scripts\\ScriptableObjects",
+    "\\Assets\\Scripts\\Components",
     "\\Assets\\Scripts\\Systems",
-    "\\Assets\\Scripts\\Systems\\InitializeSystems",
+    "\\Assets\\Scripts\\Systems\\LifeSystems",
+    "\\Assets\\Scripts\\Systems\\СharacterAttributeDataCollection",
     "\\Assets\\Sources"
   ],
-  "SelectedNode": "\\Assets\\Scripts\\LoaderController.cs",
+  "SelectedNode": "\\Assets\\TestsEditMode",
   "PreviewInSolutionExplorer": false
 }

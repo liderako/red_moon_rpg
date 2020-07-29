@@ -12,50 +12,55 @@ public static class GameComponentsLookup {
     public const int Animator = 1;
     public const int Attention = 2;
     public const int BorderThickness = 3;
-    public const int CameraCreate = 4;
-    public const int Damaged = 5;
-    public const int Dexterity = 6;
-    public const int Endurance = 7;
-    public const int ForceSpeed = 8;
-    public const int FreeCamera = 9;
-    public const int Healed = 10;
-    public const int Health = 11;
-    public const int HealthUpdate = 12;
-    public const int IndexMagicDamage = 13;
-    public const int IndexMeleeDamage = 14;
-    public const int IndexRangedDamage = 15;
-    public const int Intellect = 16;
-    public const int LevelCreate = 17;
-    public const int LimitMap = 18;
-    public const int Luck = 19;
-    public const int Mana = 20;
-    public const int ManaUpdate = 21;
-    public const int MapPosition = 22;
-    public const int ModifiedStat = 23;
-    public const int NavMeshAgent = 24;
-    public const int NextAnimation = 25;
-    public const int Personality = 26;
-    public const int Name = 27;
-    public const int NextLevelName = 28;
-    public const int Persona = 29;
-    public const int Speed = 30;
-    public const int Strength = 31;
-    public const int TargetPosition = 32;
-    public const int TeleportCamera = 33;
-    public const int Transform = 34;
-    public const int UpdateMagicDamage = 35;
-    public const int UpdateMeleeDamage = 36;
-    public const int UpdateRangedDamage = 37;
-    public const int WorldMap = 38;
-    public const int WorldMapMovement = 39;
+    public const int Calory = 4;
+    public const int CameraCreate = 5;
+    public const int Damaged = 6;
+    public const int Dexterity = 7;
+    public const int Endurance = 8;
+    public const int ForceSpeed = 9;
+    public const int FreeCamera = 10;
+    public const int Healed = 11;
+    public const int Health = 12;
+    public const int HealthUpdate = 13;
+    public const int Hunger = 14;
+    public const int IndexMagicDamage = 15;
+    public const int IndexMeleeDamage = 16;
+    public const int IndexRangedDamage = 17;
+    public const int Intellect = 18;
+    public const int LevelCreate = 19;
+    public const int LimitMap = 20;
+    public const int Luck = 21;
+    public const int Mana = 22;
+    public const int ManaUpdate = 23;
+    public const int MapPosition = 24;
+    public const int ModifiedStat = 25;
+    public const int NavMeshAgent = 26;
+    public const int NextAnimation = 27;
+    public const int Personality = 28;
+    public const int Name = 29;
+    public const int NextLevelName = 30;
+    public const int Persona = 31;
+    public const int Speed = 32;
+    public const int Strength = 33;
+    public const int TargetPosition = 34;
+    public const int TeleportCamera = 35;
+    public const int Thirst = 36;
+    public const int Transform = 37;
+    public const int UpdateMagicDamage = 38;
+    public const int UpdateMeleeDamage = 39;
+    public const int UpdateRangedDamage = 40;
+    public const int Water = 41;
+    public const int WorldMap = 42;
+    public const int WorldMapMovement = 43;
 
-    public const int TotalComponents = 40;
+    public const int TotalComponents = 44;
 
     public static readonly string[] componentNames = {
         "ActiveAnimation",
         "Animator",
         "Attention",
         "BorderThickness",
+        "Calory",
         "CameraCreate",
         "Damaged",
         "Dexterity",
@@ -65,6 +70,7 @@ public static class GameComponentsLookup {
         "Healed",
         "Health",
         "HealthUpdate",
+        "Hunger",
         "IndexMagicDamage",
         "IndexMeleeDamage",
         "IndexRangedDamage",
@@ -86,10 +92,12 @@ public static class GameComponentsLookup {
         "Strength",
         "TargetPosition",
         "TeleportCamera",
+        "Thirst",
         "Transform",
         "UpdateMagicDamage",
         "UpdateMeleeDamage",
         "UpdateRangedDamage",
+        "Water",
         "WorldMap",
         "WorldMapMovement"
     };
@@ -99,6 +107,7 @@ public static class GameComponentsLookup {
         typeof(AnimatorComponent),
         typeof(AttentionComponent),
         typeof(BorderThicknessComponent),
+        typeof(CaloryComponent),
         typeof(CameraCreateComponent),
         typeof(DamagedComponent),
         typeof(DexterityComponent),
@@ -108,6 +117,7 @@ public static class GameComponentsLookup {
         typeof(HealedComponent),
         typeof(HealthComponent),
         typeof(HealthUpdateComponent),
+        typeof(HungerComponent),
         typeof(IndexMagicDamageComponent),
         typeof(IndexMeleeDamageComponent),
         typeof(IndexRangedDamageComponent),
@@ -129,10 +139,12 @@ public static class GameComponentsLookup {
         typeof(StrengthComponent),
         typeof(TargetPositionComponent),
         typeof(TeleportCameraComponent),
+        typeof(ThirstComponent),
         typeof(TransformComponent),
         typeof(UpdateMagicDamageComponent),
         typeof(UpdateMeleeDamageComponent),
         typeof(UpdateRangedDamageComponent),
+        typeof(WaterComponent),
         typeof(WorldMapComponent),
         typeof(WorldMapMovement)
     };

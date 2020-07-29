@@ -12,11 +12,9 @@ namespace RedMoonRPG.Systems.WorldMap.Camera
     */
     public class ReturnMovementSystem : ReactiveSystem<GameEntity>
     {
-       // private Contexts _contexts;
         
         public ReturnMovementSystem(Contexts contexts) : base(contexts.game)
         {
-        //    _contexts = contexts;
         }
 
         protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)

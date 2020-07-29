@@ -32,6 +32,7 @@ namespace RedMoonRPG.Systems.Life
             int len = entities.Count;
             for (int i = 0; i < entities.Count; i++)
             {
+                // to do кажется тут хп превысит максимальное
                 entities[i].health.value = entities[i].health.value + entities[i].healed.value;
                 entities[i].RemoveHealed();
             }
