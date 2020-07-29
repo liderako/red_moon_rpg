@@ -13,17 +13,9 @@ namespace RedMoonRPG
     {
         public GameObject _playerPrefab;
 
-        //public CameraSettings cameraSettings;
         public GameBalanceSettings gameBalanceSettings;
-        //public LevelSettings _levelSettings;
 
         private Entitas.Systems _systems;
-
-        public void Awake()
-        {
-            //_levelSettings = Resources.Load<LevelSettings>(Tags.levelSettings + gameObject.scene.name);
-            Debug.Log(SceneManager.GetActiveScene().name);
-        }
 
         private void Start()
         {

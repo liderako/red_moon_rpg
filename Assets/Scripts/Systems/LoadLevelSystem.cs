@@ -4,12 +4,11 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Entitas;
 
-
-/*
-** Система необходимая для того чтобы камера следовала за фигуркой игрока на глобальной карте
-*/
 namespace RedMoonRPG.Systems
 {
+    /*
+    ** Система необходимая для того чтобы камера следовала за фигуркой игрока на глобальной карте
+    */
     public class LoadLevelSystem : ReactiveSystem<GameEntity>
     {
         private Contexts _contexts;

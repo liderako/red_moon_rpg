@@ -10,7 +10,6 @@ namespace RedMoonRPG.Systems.Animations
      */
     public class BoolAnimationSystem : ReactiveSystem<GameEntity>
     {
-
         public BoolAnimationSystem(Contexts contexts) : base(contexts.game)
         {
         }

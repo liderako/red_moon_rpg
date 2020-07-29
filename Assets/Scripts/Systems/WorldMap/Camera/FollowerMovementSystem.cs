@@ -30,10 +30,8 @@ namespace RedMoonRPG.Systems.WorldMap.Camera
 
         protected override void Execute(List<GameEntity> entities)
         {
-            // TO DO точно ли нужно оставить по таким тегам искать?
-            // может поменять на теги по типу констант в файлике
             GameEntity entityCamera = _contexts.game.GetEntityWithName(Tags.camera);
-            GameEntity entityPlayer = _contexts.game.GetEntityWithName(Tags.playerAvatar);
+            GameEntity entityPlayer = _contexts.game.GetEntityWithName(Tags.playerAvatar); // TO DO
             entityCamera.transform.value.position = Vector3.MoveTowards(
                 entityCamera.transform.value.position,
                 new Vector3(entityPlayer.transform.value.position.x, entityCamera.transform.value.position.y, entityPlayer.transform.value.position.z + 10),

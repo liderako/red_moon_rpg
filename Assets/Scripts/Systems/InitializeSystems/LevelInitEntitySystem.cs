@@ -6,13 +6,14 @@ using RedMoonRPG.Settings;
 
 namespace RedMoonRPG.InitializeSystems
 {
+    /*
+     * Система для инициализации сущности уровня и подгрузки параметров уровня
+     */
     public class LevelInitEntitySystem : ReactiveSystem<GameEntity>
     {
-        private Contexts _contexts;
 
         public LevelInitEntitySystem(Contexts contexts) : base(contexts.game)
         {
-            _contexts = contexts;
         }
 
         protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)

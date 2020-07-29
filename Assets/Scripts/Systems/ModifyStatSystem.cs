@@ -3,19 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using Entitas;
 
-/*
-** Система для модификации основных параметров персонажа
-** Система будет использоваться при создании персонажа либо редактировании основных параметров.
-*/
 namespace RedMoonRPG.Systems
 {
+    /*
+    ** Система для модификации основных параметров персонажа
+    ** Система будет использоваться при создании персонажа либо редактировании основных параметров.
+    */
     public class ModifyStatSystem : ReactiveSystem<GameEntity>
     {
-        private Contexts _contexts;
-
         public ModifyStatSystem(Contexts contexts) : base(contexts.game)
         {
-            _contexts = contexts;
         }
 
         protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
@@ -31,7 +28,7 @@ namespace RedMoonRPG.Systems
         protected override void Execute(List<GameEntity> entities)
         {
             int len = entities.Count;
-            for (int i = 0; i < entities.Count; i++)
+            for (int i = 0; i < len; i++)
             {
                 ChangeStat(entities[i]);
                 entities[i].RemoveModifiedStat();

@@ -12,11 +12,9 @@ namespace RedMoonRPG.Systems.Life
 {
     public class HealSystem : ReactiveSystem<GameEntity>
     {
-        private Contexts _contexts;
         
         public HealSystem(Contexts contexts) : base(contexts.game)
         {
-            _contexts = contexts;
         }
 
         protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)

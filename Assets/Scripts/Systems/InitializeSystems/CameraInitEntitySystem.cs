@@ -5,6 +5,9 @@ using Entitas;
 
 namespace RedMoonRPG.InitializeSystems
 {
+    /*
+     * Система для инициализации камеры на уровне
+     */
     public class CameraInitEntitySystem : ReactiveSystem<GameEntity>
     {
         private Contexts _contexts;

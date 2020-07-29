@@ -11,11 +11,9 @@ namespace RedMoonRPG.Systems.Life
 {
     public class DamageSystem : ReactiveSystem<GameEntity>
     {
-        private Contexts _contexts;
         
         public DamageSystem(Contexts contexts) : base(contexts.game)
         {
-            _contexts = contexts;
         }
 
         protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
