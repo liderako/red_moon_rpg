@@ -37,6 +37,10 @@ namespace RedMoonRPG.Systems.Life
                 {
                     entities[i].hunger.value = 0;
                 }
+                else if (entities[i].hunger.value > entities[i].hunger.maxValue)
+                {
+                    entities[i].hunger.value = entities[i].hunger.maxValue;
+                }
                 entities[i].RemoveCalory();
             }
         }

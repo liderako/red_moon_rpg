@@ -12,7 +12,6 @@ namespace RedMoonRPG.Systems.Life
 {
     public class HealSystem : ReactiveSystem<GameEntity>
     {
-        
         public HealSystem(Contexts contexts) : base(contexts.game)
         {
         }
@@ -30,10 +29,13 @@ namespace RedMoonRPG.Systems.Life
         protected override void Execute(List<GameEntity> entities)
         {
             int len = entities.Count;
-            for (int i = 0; i < entities.Count; i++)
+            for (int i = 0; i < len; i++)
             {
-                // to do кажется тут хп превысит максимальное
                 entities[i].health.value = entities[i].health.value + entities[i].healed.value;
+                if (entities[i].health.value > entities[i].health.maxValue)
+                {
+                    entities[i].health.value = entities[i].health.maxValue;
+                }
                 entities[i].RemoveHealed();
             }
         }

@@ -32,6 +32,10 @@ namespace RedMoonRPG.Systems.Life
             for (int i = 0; i < entities.Count; i++)
             {
                 entities[i].health.value = entities[i].health.value - entities[i].damaged.value;
+                if (entities[i].health.value < 0)
+                {
+                    entities[i].health.value = 0;
+                }
                 entities[i].RemoveDamaged();
             }
         }

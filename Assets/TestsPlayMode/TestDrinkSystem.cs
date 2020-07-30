@@ -60,5 +60,39 @@ namespace Tests
             systems.DeactivateReactiveSystems();
             contexts.Reset();
         }
+        [UnityTest]
+        public IEnumerator TestEatSystemThirstCase()
+        {
+            Contexts contexts = Contexts.sharedInstance;
+            Entitas.Systems systems = new Feature("Game")
+                .Add(new RedMoonRPG.Systems.Life.DrinkSystem(contexts));
+            GameEntity entity = contexts.game.CreateEntity();
+            entity.AddThirst(50, 100);
+            systems.Initialize();
+            entity.AddWater(-50);
+            yield return new WaitForSeconds(0.1f);
+            systems.Execute();
+            Assert.AreEqual(entity.thirst.value, 100);
+            Assert.IsTrue(!entity.hasWater);
+            systems.DeactivateReactiveSystems();
+            contexts.Reset();
+        }
+        [UnityTest]
+        public IEnumerator TestEatSystemMaxThirstCase()
+        {
+            Contexts contexts = Contexts.sharedInstance;
+            Entitas.Systems systems = new Feature("Game")
+                .Add(new RedMoonRPG.Systems.Life.DrinkSystem(contexts));
+            GameEntity entity = contexts.game.CreateEntity();
+            entity.AddThirst(50, 100);
+            systems.Initialize();
+            entity.AddWater(-100);
+            yield return new WaitForSeconds(0.1f);
+            systems.Execute();
+            Assert.AreEqual(entity.thirst.value, 100);
+            Assert.IsTrue(!entity.hasWater);
+            systems.DeactivateReactiveSystems();
+            contexts.Reset();
+        }
     }
 }

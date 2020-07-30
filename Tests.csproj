@@ -63,8 +63,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\TestsPlayMode\TestDamageSystem.cs" />
     <Compile Include="Assets\TestsPlayMode\TestDrinkSystem.cs" />
     <Compile Include="Assets\TestsPlayMode\TestEatSystem.cs" />
+    <Compile Include="Assets\TestsPlayMode\TestHealSystem.cs" />
     <None Include="Assets\TestsPlayMode\Tests.asmdef" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.4f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
