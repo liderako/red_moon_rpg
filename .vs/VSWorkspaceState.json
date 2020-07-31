@@ -3,12 +3,14 @@
     "",
     "\\Assets",
     "\\Assets\\Scripts",
-    "\\Assets\\Scripts\\Components",
+    "\\Assets\\Scripts\\Data",
+    "\\Assets\\Scripts\\ScriptableObjects",
     "\\Assets\\Scripts\\Systems",
-    "\\Assets\\Scripts\\Systems\\LifeSystems",
     "\\Assets\\Scripts\\Systems\\СharacterAttributeDataCollection",
-    "\\Assets\\Sources"
+    "\\Assets\\Sources",
+    "\\Assets\\TestsPlayMode",
+    "\\Assets\\TestsPlayMode\\CharacterAttributeDataCollection"
   ],
-  "SelectedNode": "\\Assets\\TestsEditMode",
+  "SelectedNode": "\\Assets\\Scripts\\Systems\\СharacterAttributeDataCollection\\UpdateHealthSystem.cs",
   "PreviewInSolutionExplorer": false
 }

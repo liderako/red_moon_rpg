@@ -12,5 +12,6 @@
         public const string pathGameSettings = "Progress/";
         public const string mainData = "dataRPG";
         public const string cameraSettings = "CameraData";
+        public const string gameBalance = "gameBalance";
     }
 }

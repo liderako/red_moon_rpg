@@ -13,12 +13,15 @@ namespace RedMoonRPG.Settings
 
         public LevelSettings LevelSettings;
 
+        public GameBalanceSettings GameBalanceSettings;
+
         public void Start()
         {
             SceneManager.sceneLoaded += OnSceneLoaded;
             //LoadingData();
             //SavedData();
             OnSceneLoaded(SceneManager.GetActiveScene(), LoadSceneMode.Single);
+            GameBalanceSettings = Resources.Load<GameBalanceSettings>(Tags.gameBalance);
             DontDestroyOnLoad(gameObject);
         }
 

@@ -16,7 +16,7 @@ namespace RedMoonRPG.Systems
         public UpdateHealthSystem(Contexts contexts, GameBalanceSettings gmt) : base(contexts.game)
         {
             _contexts = contexts;
-            _lvlBonus = gmt.RangedDamageForDexterity;
+            _lvlBonus = gmt.HpForLevelEndurance;
         }
 
         protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
@@ -31,9 +31,8 @@ namespace RedMoonRPG.Systems
 
         protected override void Execute(List<GameEntity> entities)
         {
-            GameContext g = _contexts.game;
             int len = entities.Count;
-            for (int i = 0; i < entities.Count; i++)
+            for (int i = 0; i < len; i++)
             {
                 HashSet<GameEntity> array = _contexts.game.GetEntitiesWithPersona(entities[i].persona.value);
                 int hp = 0;

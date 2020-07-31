@@ -63,6 +63,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\TestsPlayMode\CharacterAttributeDataCollection\TestUpdateHealthSystem.cs" />
     <Compile Include="Assets\TestsPlayMode\TestDamageSystem.cs" />
     <Compile Include="Assets\TestsPlayMode\TestDrinkSystem.cs" />
     <Compile Include="Assets\TestsPlayMode\TestEatSystem.cs" />
@@ -643,10 +644,6 @@
     <ProjectReference Include="GameAssembly.csproj">
       <Project>{4FBF37FA-FB50-4E71-36F2-0707524A3CDC}</Project>
       <Name>GameAssembly</Name>
-    </ProjectReference>
-    <ProjectReference Include="TestsEditMode.csproj">
-      <Project>{02243AFD-81F5-9BC2-E5B5-1AB2B90AB18D}</Project>
-      <Name>TestsEditMode</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
