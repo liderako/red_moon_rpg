@@ -50,7 +50,7 @@ namespace RedMoonRPG.Systems
                     {
                         amount += (gn.intellect.value * _lvlBonus); // подсчитываем бонусный урон от всего интелекта персонажа
                     }
-                    if (gn.hasIndexMeleeDamage && !gn.hasName) // если это оружие то зайдет сюда
+                    if (gn.hasIndexMagicDamage && !gn.hasName) // если это оружие то зайдет сюда
                     {
                         amount += (gn.indexMagicDamage.maxValue); // бонус от оружия к максимальному урону
                         minAmount += (gn.indexMagicDamage.minValue); // бонус от оружия к минимальному урону
@@ -58,6 +58,7 @@ namespace RedMoonRPG.Systems
                 }
                 entities[i].indexMagicDamage.maxValue = amount;
                 entities[i].indexMagicDamage.minValue = amount - (int)(amount * _range) + minAmount;
+                entities[i].isUpdateMagicDamage = false;
             }
         }
     }

@@ -1,16 +1,13 @@
 {
   "ExpandedNodes": [
     "",
-    "\\Assets",
-    "\\Assets\\Scripts",
-    "\\Assets\\Scripts\\Data",
-    "\\Assets\\Scripts\\ScriptableObjects",
-    "\\Assets\\Scripts\\Systems",
-    "\\Assets\\Scripts\\Systems\\СharacterAttributeDataCollection",
-    "\\Assets\\Sources",
+    "\\Assets\\Scripts\\Components",
+    "\\Assets\\Scripts\\Components\\Stats",
+    "\\Assets\\Scripts\\Components\\Time",
     "\\Assets\\TestsPlayMode",
-    "\\Assets\\TestsPlayMode\\CharacterAttributeDataCollection"
+    "\\Assets\\TestsPlayMode\\CharacterAttributeDataCollection",
+    "\\Assets\\TestsPlayMode\\LifeSystemsTest"
   ],
-  "SelectedNode": "\\Assets\\Scripts\\Systems\\СharacterAttributeDataCollection\\UpdateHealthSystem.cs",
+  "SelectedNode": "\\Entitas.properties",
   "PreviewInSolutionExplorer": false
 }

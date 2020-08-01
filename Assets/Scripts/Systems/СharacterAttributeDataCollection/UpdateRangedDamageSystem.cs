@@ -58,6 +58,7 @@ namespace RedMoonRPG.Systems
                 }
                 entities[i].indexRangedDamage.maxValue = amount;
                 entities[i].indexRangedDamage.minValue = amount - (int)(amount * _range) + minAmount;
+                entities[i].isUpdateRangedDamage = false;
             }
         }
     }
