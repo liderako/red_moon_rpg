@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{75A0258C-D034-D648-BEF7-F9AECD42FCE0}</ProjectGuid>
+    <ProjectGuid>{C0AA8BBD-2556-CBC1-680A-39BD4D41CD77}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
@@ -300,61 +300,61 @@
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/16.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>D:/asvirido-unity/rpg/Assets/Plugins/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Assets/Plugins/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Entitas.Blueprints">
-      <HintPath>D:/asvirido-unity/rpg/Assets/Plugins/Libs/Entitas/Entitas.Blueprints.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Assets/Plugins/Libs/Entitas/Entitas.Blueprints.dll</HintPath>
     </Reference>
     <Reference Include="Entitas.CodeGeneration.Attributes">
-      <HintPath>D:/asvirido-unity/rpg/Assets/Plugins/Libs/Entitas/Entitas.CodeGeneration.Attributes.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Assets/Plugins/Libs/Entitas/Entitas.CodeGeneration.Attributes.dll</HintPath>
     </Reference>
     <Reference Include="Entitas">
-      <HintPath>D:/asvirido-unity/rpg/Assets/Plugins/Libs/Entitas/Entitas.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Assets/Plugins/Libs/Entitas/Entitas.dll</HintPath>
     </Reference>
     <Reference Include="Entitas.Unity">
-      <HintPath>D:/asvirido-unity/rpg/Assets/Plugins/Libs/Entitas/Entitas.Unity.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Assets/Plugins/Libs/Entitas/Entitas.Unity.dll</HintPath>
     </Reference>
     <Reference Include="Entitas.Utils">
-      <HintPath>D:/asvirido-unity/rpg/Assets/Plugins/Libs/Entitas/Entitas.Utils.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Assets/Plugins/Libs/Entitas/Entitas.Utils.dll</HintPath>
     </Reference>
     <Reference Include="Entitas.VisualDebugging.Unity">
-      <HintPath>D:/asvirido-unity/rpg/Assets/Plugins/Libs/Entitas/Entitas.VisualDebugging.Unity.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Assets/Plugins/Libs/Entitas/Entitas.VisualDebugging.Unity.dll</HintPath>
     </Reference>
     <Reference Include="fabl.Appenders">
-      <HintPath>D:/asvirido-unity/rpg/Assets/Plugins/Libs/Entitas/fabl.Appenders.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Assets/Plugins/Libs/Entitas/fabl.Appenders.dll</HintPath>
     </Reference>
     <Reference Include="fabl">
-      <HintPath>D:/asvirido-unity/rpg/Assets/Plugins/Libs/Entitas/fabl.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Assets/Plugins/Libs/Entitas/fabl.dll</HintPath>
     </Reference>
     <Reference Include="Entitas.CodeGeneration.CodeGenerator">
-      <HintPath>D:/asvirido-unity/rpg/Assets/Plugins/Libs/Entitas/Editor/Entitas.CodeGeneration.CodeGenerator.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Assets/Plugins/Libs/Entitas/Editor/Entitas.CodeGeneration.CodeGenerator.dll</HintPath>
     </Reference>
     <Reference Include="Entitas.CodeGeneration">
-      <HintPath>D:/asvirido-unity/rpg/Assets/Plugins/Libs/Entitas/Editor/Entitas.CodeGeneration.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Assets/Plugins/Libs/Entitas/Editor/Entitas.CodeGeneration.dll</HintPath>
     </Reference>
     <Reference Include="Entitas.CodeGeneration.Plugins">
-      <HintPath>D:/asvirido-unity/rpg/Assets/Plugins/Libs/Entitas/Editor/Entitas.CodeGeneration.Plugins.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Assets/Plugins/Libs/Entitas/Editor/Entitas.CodeGeneration.Plugins.dll</HintPath>
     </Reference>
     <Reference Include="Entitas.CodeGeneration.Unity.Editor">
-      <HintPath>D:/asvirido-unity/rpg/Assets/Plugins/Libs/Entitas/Editor/Entitas.CodeGeneration.Unity.Editor.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Assets/Plugins/Libs/Entitas/Editor/Entitas.CodeGeneration.Unity.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Entitas.Migration">
-      <HintPath>D:/asvirido-unity/rpg/Assets/Plugins/Libs/Entitas/Editor/Entitas.Migration.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Assets/Plugins/Libs/Entitas/Editor/Entitas.Migration.dll</HintPath>
     </Reference>
     <Reference Include="Entitas.Migration.Unity.Editor">
-      <HintPath>D:/asvirido-unity/rpg/Assets/Plugins/Libs/Entitas/Editor/Entitas.Migration.Unity.Editor.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Assets/Plugins/Libs/Entitas/Editor/Entitas.Migration.Unity.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Entitas.Unity.Editor">
-      <HintPath>D:/asvirido-unity/rpg/Assets/Plugins/Libs/Entitas/Editor/Entitas.Unity.Editor.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Assets/Plugins/Libs/Entitas/Editor/Entitas.Unity.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Entitas.VisualDebugging.CodeGeneration.Plugins">
-      <HintPath>D:/asvirido-unity/rpg/Assets/Plugins/Libs/Entitas/Editor/Entitas.VisualDebugging.CodeGeneration.Plugins.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Assets/Plugins/Libs/Entitas/Editor/Entitas.VisualDebugging.CodeGeneration.Plugins.dll</HintPath>
     </Reference>
     <Reference Include="Entitas.VisualDebugging.Unity.Editor">
-      <HintPath>D:/asvirido-unity/rpg/Assets/Plugins/Libs/Entitas/Editor/Entitas.VisualDebugging.Unity.Editor.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Assets/Plugins/Libs/Entitas/Editor/Entitas.VisualDebugging.Unity.Editor.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-      <HintPath>D:/asvirido-unity/rpg/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.4f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -717,56 +717,56 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.TestRunner">
-      <HintPath>D:/asvirido-unity/rpg/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TestRunner">
-      <HintPath>D:/asvirido-unity/rpg/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>D:/asvirido-unity/rpg/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>D:/asvirido-unity/rpg/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Recorder.Editor">
-      <HintPath>D:/asvirido-unity/rpg/Library/ScriptAssemblies/Unity.Recorder.Editor.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Library/ScriptAssemblies/Unity.Recorder.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/asvirido-unity/rpg/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Recorder">
-      <HintPath>D:/asvirido-unity/rpg/Library/ScriptAssemblies/Unity.Recorder.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Library/ScriptAssemblies/Unity.Recorder.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>D:/asvirido-unity/rpg/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>D:/asvirido-unity/rpg/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>D:/asvirido-unity/rpg/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>D:/asvirido-unity/rpg/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/asvirido-unity/rpg/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>D:/asvirido-unity/rpg/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{08E50540-F89D-425A-6C55-E35D09651BC5}</Project>
+      <Project>{4512E32E-5AE7-C6F6-9650-D7BF267CA174}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
     <ProjectReference Include="Assembly-CSharp.csproj">
-      <Project>{94C708C1-5F9E-2648-E605-8D49286552FD}</Project>
+      <Project>{CCAB905E-2FC3-E8B9-DA0C-5D53DE862451}</Project>
       <Name>Assembly-CSharp</Name>
     </ProjectReference>
     <ProjectReference Include="Assembly-CSharp-Editor-firstpass.csproj">
-      <Project>{783ADFF2-22E4-5E26-5822-211159C5643F}</Project>
+      <Project>{389FF63D-8643-D7CC-B3E7-CEF7441E676E}</Project>
       <Name>Assembly-CSharp-Editor-firstpass</Name>
     </ProjectReference>
   </ItemGroup>

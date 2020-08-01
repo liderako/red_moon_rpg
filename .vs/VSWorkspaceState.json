@@ -1,13 +1,14 @@
 {
   "ExpandedNodes": [
     "",
+    "\\Assets",
     "\\Assets\\Scripts\\Components",
-    "\\Assets\\Scripts\\Components\\Stats",
     "\\Assets\\Scripts\\Components\\Time",
-    "\\Assets\\TestsPlayMode",
-    "\\Assets\\TestsPlayMode\\CharacterAttributeDataCollection",
-    "\\Assets\\TestsPlayMode\\LifeSystemsTest"
+    "\\Assets\\Sources\\Generated",
+    "\\Assets\\Sources\\Generated\\Game",
+    "\\Assets\\Tests\\CharacterAttributeDataCollection",
+    "\\Assets\\Tests\\LifeSystemsTest"
   ],
-  "SelectedNode": "\\Entitas.properties",
+  "SelectedNode": "\\Assets\\Game.asmdef",
   "PreviewInSolutionExplorer": false
 }

@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{3095BED6-7984-8565-FC6D-5DD977CC46CF}</ProjectGuid>
+    <ProjectGuid>{9FAF4DB4-29AD-0C95-EE37-072CDCF74753}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Tests</AssemblyName>
@@ -63,17 +63,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\TestsPlayMode\CharacterAttributeDataCollection\TestUpdateHealthSystem.cs" />
-    <Compile Include="Assets\TestsPlayMode\CharacterAttributeDataCollection\TestUpdateMagicDamageSystem.cs" />
-    <Compile Include="Assets\TestsPlayMode\CharacterAttributeDataCollection\TestUpdateManaSystem.cs" />
-    <Compile Include="Assets\TestsPlayMode\CharacterAttributeDataCollection\TestUpdateMeeleDamageSystem.cs" />
-    <Compile Include="Assets\TestsPlayMode\CharacterAttributeDataCollection\TestUpdateRangedDamageSystem.cs" />
-    <Compile Include="Assets\TestsPlayMode\LifeSystemsTest\TestDamageSystem.cs" />
-    <Compile Include="Assets\TestsPlayMode\LifeSystemsTest\TestDrinkSystem.cs" />
-    <Compile Include="Assets\TestsPlayMode\LifeSystemsTest\TestEatSystem.cs" />
-    <Compile Include="Assets\TestsPlayMode\LifeSystemsTest\TestHealSystem.cs" />
-    <Compile Include="Assets\TestsPlayMode\LifeSystemsTest\TestModifyStatSystem.cs" />
-    <None Include="Assets\TestsPlayMode\Tests.asmdef" />
+    <Compile Include="Assets\Tests\CharacterAttributeDataCollection\TestUpdateHealthSystem.cs" />
+    <Compile Include="Assets\Tests\CharacterAttributeDataCollection\TestUpdateMagicDamageSystem.cs" />
+    <Compile Include="Assets\Tests\CharacterAttributeDataCollection\TestUpdateManaSystem.cs" />
+    <Compile Include="Assets\Tests\CharacterAttributeDataCollection\TestUpdateMeeleDamageSystem.cs" />
+    <Compile Include="Assets\Tests\CharacterAttributeDataCollection\TestUpdateRangedDamageSystem.cs" />
+    <Compile Include="Assets\Tests\LifeSystemsTest\TestDamageSystem.cs" />
+    <Compile Include="Assets\Tests\LifeSystemsTest\TestDrinkSystem.cs" />
+    <Compile Include="Assets\Tests\LifeSystemsTest\TestEatSystem.cs" />
+    <Compile Include="Assets\Tests\LifeSystemsTest\TestHealSystem.cs" />
+    <Compile Include="Assets\Tests\LifeSystemsTest\TestModifyStatSystem.cs" />
+    <None Include="Assets\Tests\Tests.asmdef" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.4f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -257,29 +257,32 @@
     <Reference Include="UnityEditor">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.4f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
-    <Reference Include="nunit.framework">
-      <HintPath>D:/asvirido-unity/rpg/Library/PackageCache/com.unity.ext.nunit@1.0.0/net35/unity-custom/nunit.framework.dll</HintPath>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>D:/asvirido-unity/rpg_n/Assets/Plugins/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Entitas.Blueprints">
-      <HintPath>D:/asvirido-unity/rpg/Assets/Plugins/Libs/Entitas/Entitas.Blueprints.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Assets/Plugins/Libs/Entitas/Entitas.Blueprints.dll</HintPath>
     </Reference>
     <Reference Include="Entitas.CodeGeneration.Attributes">
-      <HintPath>D:/asvirido-unity/rpg/Assets/Plugins/Libs/Entitas/Entitas.CodeGeneration.Attributes.dll</HintPath>
-    </Reference>
-    <Reference Include="Entitas.Unity">
-      <HintPath>D:/asvirido-unity/rpg/Assets/Plugins/Libs/Entitas/Entitas.Unity.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>D:/asvirido-unity/rpg/Assets/Plugins/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Assets/Plugins/Libs/Entitas/Entitas.CodeGeneration.Attributes.dll</HintPath>
     </Reference>
     <Reference Include="Entitas">
-      <HintPath>D:/asvirido-unity/rpg/Assets/Plugins/Libs/Entitas/Entitas.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Assets/Plugins/Libs/Entitas/Entitas.dll</HintPath>
+    </Reference>
+    <Reference Include="Entitas.Unity">
+      <HintPath>D:/asvirido-unity/rpg_n/Assets/Plugins/Libs/Entitas/Entitas.Unity.dll</HintPath>
     </Reference>
     <Reference Include="Entitas.Utils">
-      <HintPath>D:/asvirido-unity/rpg/Assets/Plugins/Libs/Entitas/Entitas.Utils.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Assets/Plugins/Libs/Entitas/Entitas.Utils.dll</HintPath>
     </Reference>
     <Reference Include="Entitas.VisualDebugging.Unity">
-      <HintPath>D:/asvirido-unity/rpg/Assets/Plugins/Libs/Entitas/Entitas.VisualDebugging.Unity.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Assets/Plugins/Libs/Entitas/Entitas.VisualDebugging.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="fabl.Appenders">
+      <HintPath>D:/asvirido-unity/rpg_n/Assets/Plugins/Libs/Entitas/fabl.Appenders.dll</HintPath>
+    </Reference>
+    <Reference Include="fabl">
+      <HintPath>D:/asvirido-unity/rpg_n/Assets/Plugins/Libs/Entitas/fabl.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.4f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -633,22 +636,22 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.4f1/Editor/Data/NetStandard/compat/2.0.0/shims/netfx/System.Xml.Serialization.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.TestRunner">
-      <HintPath>D:/asvirido-unity/rpg/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Library/ScriptAssemblies/UnityEngine.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.TestRunner">
-      <HintPath>D:/asvirido-unity/rpg/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Library/ScriptAssemblies/UnityEditor.TestRunner.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>D:/asvirido-unity/rpg/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>D:/asvirido-unity/rpg/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="GameAssembly.csproj">
-      <Project>{4FBF37FA-FB50-4E71-36F2-0707524A3CDC}</Project>
-      <Name>GameAssembly</Name>
+    <ProjectReference Include="Game.csproj">
+      <Project>{2B20A7E0-4722-9CCB-B61D-250E7989AD68}</Project>
+      <Name>Game</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
