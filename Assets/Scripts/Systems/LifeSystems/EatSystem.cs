@@ -10,24 +10,24 @@ namespace RedMoonRPG.Systems.Life
      * Вызываться будет после тогоо как персонаж что-то сьест.
      * Для вызова нужно накинуть компонент калорий на персонажа.
     */
-    public class EatSystem : ReactiveSystem<GameEntity>
+    public class EatSystem : ReactiveSystem<LifeEntity>
     {
 
-        public EatSystem(Contexts contexts) : base(contexts.game)
+        public EatSystem(Contexts contexts) : base(contexts.life)
         {
         }
 
-        protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
+        protected override ICollector<LifeEntity> GetTrigger(IContext<LifeEntity> context)
         {
-            return context.CreateCollector(GameMatcher.Calory);
+            return context.CreateCollector(LifeMatcher.Calory);
         }
 
-        protected override bool Filter(GameEntity entity)
+        protected override bool Filter(LifeEntity entity)
         {
             return entity.hasCalory && entity.hasHunger;
         }
 
-        protected override void Execute(List<GameEntity> entities)
+        protected override void Execute(List<LifeEntity> entities)
         {
             int len = entities.Count;
             for (int i = 0; i < len; i++)

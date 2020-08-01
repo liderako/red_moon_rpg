@@ -2,13 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\Assets",
+    "\\Assets\\Scripts",
     "\\Assets\\Scripts\\Components",
     "\\Assets\\Scripts\\Components\\Time",
-    "\\Assets\\Sources\\Generated",
-    "\\Assets\\Sources\\Generated\\Game",
-    "\\Assets\\Tests\\CharacterAttributeDataCollection",
+    "\\Assets\\Scripts\\Systems",
+    "\\Assets\\Scripts\\Systems\\LifeSystems",
+    "\\Assets\\Scripts\\Systems\\WorldMap",
+    "\\Assets\\Tests",
     "\\Assets\\Tests\\LifeSystemsTest"
   ],
-  "SelectedNode": "\\Assets\\Game.asmdef",
+  "SelectedNode": "\\Assets\\Scripts\\Systems\\LifeSystems\\EatSystem.cs",
   "PreviewInSolutionExplorer": false
 }

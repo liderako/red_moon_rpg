@@ -1,7 +1,7 @@
 using Entitas.CodeGeneration;
 using Entitas;
 
-[Game]
+[Life]
 public class HungerComponent : IComponent
 {
     public int value;

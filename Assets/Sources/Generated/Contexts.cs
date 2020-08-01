@@ -23,12 +23,16 @@ public partial class Contexts : Entitas.IContexts {
 
     public GameContext game { get; set; }
     public InputContext input { get; set; }
+    public LifeContext life { get; set; }
+    public TimeContext time { get; set; }
 
-    public Entitas.IContext[] allContexts { get { return new Entitas.IContext [] { game, input }; } }
+    public Entitas.IContext[] allContexts { get { return new Entitas.IContext [] { game, input, life, time }; } }
 
     public Contexts() {
         game = new GameContext();
         input = new InputContext();
+        life = new LifeContext();
+        time = new TimeContext();
 
         var postConstructors = System.Linq.Enumerable.Where(
             GetType().GetMethods(),
@@ -67,6 +71,10 @@ public partial class Contexts {
             Name,
             game.GetGroup(GameMatcher.Name),
             (e, c) => ((RedMoonRPG.NameComponent)c).name));
+        time.AddEntityIndex(new Entitas.PrimaryEntityIndex<TimeEntity, string>(
+            Name,
+            time.GetGroup(TimeMatcher.Name),
+            (e, c) => ((RedMoonRPG.NameComponent)c).name));
 
         game.AddEntityIndex(new Entitas.EntityIndex<GameEntity, string>(
             Persona,
@@ -79,6 +87,10 @@ public static class ContextsExtensions {
 
     public static GameEntity GetEntityWithName(this GameContext context, string name) {
         return ((Entitas.PrimaryEntityIndex<GameEntity, string>)context.GetEntityIndex(Contexts.Name)).GetEntity(name);
+    }
+
+    public static TimeEntity GetEntityWithName(this TimeContext context, string name) {
+        return ((Entitas.PrimaryEntityIndex<TimeEntity, string>)context.GetEntityIndex(Contexts.Name)).GetEntity(name);
     }
 
     public static System.Collections.Generic.HashSet<GameEntity> GetEntitiesWithPersona(this GameContext context, string value) {
@@ -102,6 +114,8 @@ public partial class Contexts {
         try {
             CreateContextObserver(game);
             CreateContextObserver(input);
+            CreateContextObserver(life);
+            CreateContextObserver(time);
         } catch(System.Exception) {
         }
     }
