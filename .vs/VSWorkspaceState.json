@@ -2,15 +2,13 @@
   "ExpandedNodes": [
     "",
     "\\Assets",
-    "\\Assets\\Scripts",
-    "\\Assets\\Scripts\\Data",
-    "\\Assets\\Scripts\\ScriptableObjects",
-    "\\Assets\\Scripts\\Systems",
-    "\\Assets\\Scripts\\Systems\\СharacterAttributeDataCollection",
-    "\\Assets\\Sources",
-    "\\Assets\\TestsPlayMode",
-    "\\Assets\\TestsPlayMode\\CharacterAttributeDataCollection"
+    "\\Assets\\Scripts\\Components",
+    "\\Assets\\Scripts\\Components\\Time",
+    "\\Assets\\Sources\\Generated",
+    "\\Assets\\Sources\\Generated\\Game",
+    "\\Assets\\Tests\\CharacterAttributeDataCollection",
+    "\\Assets\\Tests\\LifeSystemsTest"
   ],
-  "SelectedNode": "\\Assets\\Scripts\\Systems\\СharacterAttributeDataCollection\\UpdateHealthSystem.cs",
+  "SelectedNode": "\\Assets\\Game.asmdef",
   "PreviewInSolutionExplorer": false
 }

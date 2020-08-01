@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿#if UNITY_TEST
+using System.Collections;
 using System.Collections.Generic;
 using NUnit.Framework;
 using UnityEngine;
@@ -96,3 +97,4 @@ namespace Tests
         }
     }
 }
+#endif

@@ -33,27 +33,30 @@ public static class GameComponentsLookup {
     public const int Mana = 22;
     public const int ManaUpdate = 23;
     public const int MapPosition = 24;
-    public const int ModifiedStat = 25;
-    public const int NavMeshAgent = 26;
-    public const int NextAnimation = 27;
-    public const int Personality = 28;
-    public const int Name = 29;
-    public const int NextLevelName = 30;
-    public const int Persona = 31;
-    public const int Speed = 32;
-    public const int Strength = 33;
-    public const int TargetPosition = 34;
-    public const int TeleportCamera = 35;
-    public const int Thirst = 36;
-    public const int Transform = 37;
-    public const int UpdateMagicDamage = 38;
-    public const int UpdateMeleeDamage = 39;
-    public const int UpdateRangedDamage = 40;
-    public const int Water = 41;
-    public const int WorldMap = 42;
-    public const int WorldMapMovement = 43;
+    public const int Minute = 25;
+    public const int ModifiedStat = 26;
+    public const int NavMeshAgent = 27;
+    public const int NextAnimation = 28;
+    public const int Personality = 29;
+    public const int Name = 30;
+    public const int NextLevelName = 31;
+    public const int Persona = 32;
+    public const int Second = 33;
+    public const int Speed = 34;
+    public const int SpeedTime = 35;
+    public const int Strength = 36;
+    public const int TargetPosition = 37;
+    public const int TeleportCamera = 38;
+    public const int Thirst = 39;
+    public const int Transform = 40;
+    public const int UpdateMagicDamage = 41;
+    public const int UpdateMeleeDamage = 42;
+    public const int UpdateRangedDamage = 43;
+    public const int Water = 44;
+    public const int WorldMap = 45;
+    public const int WorldMapMovement = 46;
 
-    public const int TotalComponents = 44;
+    public const int TotalComponents = 47;
 
     public static readonly string[] componentNames = {
         "ActiveAnimation",
@@ -81,6 +84,7 @@ public static class GameComponentsLookup {
         "Mana",
         "ManaUpdate",
         "MapPosition",
+        "Minute",
         "ModifiedStat",
         "NavMeshAgent",
         "NextAnimation",
@@ -88,7 +92,9 @@ public static class GameComponentsLookup {
         "Name",
         "NextLevelName",
         "Persona",
+        "Second",
         "Speed",
+        "SpeedTime",
         "Strength",
         "TargetPosition",
         "TeleportCamera",
@@ -128,6 +134,7 @@ public static class GameComponentsLookup {
         typeof(ManaComponent),
         typeof(ManaUpdateComponent),
         typeof(MapPositionComponent),
+        typeof(MinuteComponent),
         typeof(ModifiedStatComponent),
         typeof(NavMeshAgentComponent),
         typeof(NextAnimationComponent),
@@ -135,7 +142,9 @@ public static class GameComponentsLookup {
         typeof(RedMoonRPG.NameComponent),
         typeof(RedMoonRPG.NextLevelNameComponent),
         typeof(RedMoonRPG.PersonaComponent),
+        typeof(SecondComponent),
         typeof(SpeedComponent),
+        typeof(SpeedTimeComponent),
         typeof(StrengthComponent),
         typeof(TargetPositionComponent),
         typeof(TeleportCameraComponent),

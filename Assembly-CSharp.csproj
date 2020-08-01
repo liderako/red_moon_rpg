@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{94C708C1-5F9E-2648-E605-8D49286552FD}</ProjectGuid>
+    <ProjectGuid>{CCAB905E-2FC3-E8B9-DA0C-5D53DE862451}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -112,6 +112,7 @@
     <Compile Include="Assets\Graphics\NastyWizard_Depth\Water\NastyWater.cs" />
     <Compile Include="Assets\Graphics\NastyWizard_Depth\Water\PostProcessingWater.cs" />
     <Compile Include="Assets\Graphics\NastyWizard_Depth\Water\WaterVolume.cs" />
+    <Compile Include="Assets\NewBehaviourScript.cs" />
     <Compile Include="Assets\Scripts\Animations.cs" />
     <Compile Include="Assets\Scripts\Components\ActiveAnimationComponent.cs" />
     <Compile Include="Assets\Scripts\Components\CameraCreate.cs" />
@@ -154,6 +155,11 @@
     <Compile Include="Assets\Scripts\Components\Stats\Main attributes\Update main Attributes\ModifiedStatComponent.cs" />
     <Compile Include="Assets\Scripts\Components\Stats\Main attributes\Update main Attributes\Stat.cs" />
     <Compile Include="Assets\Scripts\Components\TeleportCameraComponent.cs" />
+    <Compile Include="Assets\Scripts\Components\Time\DayComponent.cs" />
+    <Compile Include="Assets\Scripts\Components\Time\HourComponent.cs" />
+    <Compile Include="Assets\Scripts\Components\Time\MinuteComponent.cs" />
+    <Compile Include="Assets\Scripts\Components\Time\SecondComponent.cs" />
+    <Compile Include="Assets\Scripts\Components\Time\SpeedTime.cs" />
     <Compile Include="Assets\Scripts\Components\Unity\AnimatorComponent.cs" />
     <Compile Include="Assets\Scripts\Components\Unity\NavMeshAgentComponent.cs" />
     <Compile Include="Assets\Scripts\Components\Unity\TransformComponent.cs" />
@@ -182,7 +188,7 @@
     <Compile Include="Assets\Scripts\Systems\WorldMap\Camera\ReturnMovementSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\WorldMap\Camera\TeleportSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\WorldMap\Player\InputMovementSystem.cs" />
-    <Compile Include="Assets\Scripts\Systems\СharacterAttributeDataCollection\MovementSystem.cs" />
+    <Compile Include="Assets\Scripts\Systems\WorldMap\Player\MovementSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\СharacterAttributeDataCollection\UpdateHealthSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\СharacterAttributeDataCollection\UpdateMagicDamageSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\СharacterAttributeDataCollection\UpdateManaSystem.cs" />
@@ -222,6 +228,7 @@
     <Compile Include="Assets\Sources\Generated\Game\Components\GameManaComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameManaUpdateComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameMapPositionComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Game\Components\GameMinuteComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameModifiedStatComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameNameComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameNavMeshAgentComponent.cs" />
@@ -229,7 +236,9 @@
     <Compile Include="Assets\Sources\Generated\Game\Components\GameNextLevelNameComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GamePersonaComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GamePersonalityComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Game\Components\GameSecondComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameSpeedComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Game\Components\GameSpeedTimeComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameStrengthComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameTargetPositionComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameTeleportCameraComponent.cs" />
@@ -251,6 +260,16 @@
     <Compile Include="Assets\Sources\Generated\Input\InputContext.cs" />
     <Compile Include="Assets\Sources\Generated\Input\InputEntity.cs" />
     <Compile Include="Assets\Sources\Generated\Input\InputMatcher.cs" />
+    <Compile Include="Assets\Tests\CharacterAttributeDataCollection\TestUpdateHealthSystem.cs" />
+    <Compile Include="Assets\Tests\CharacterAttributeDataCollection\TestUpdateMagicDamageSystem.cs" />
+    <Compile Include="Assets\Tests\CharacterAttributeDataCollection\TestUpdateManaSystem.cs" />
+    <Compile Include="Assets\Tests\CharacterAttributeDataCollection\TestUpdateMeeleDamageSystem.cs" />
+    <Compile Include="Assets\Tests\CharacterAttributeDataCollection\TestUpdateRangedDamageSystem.cs" />
+    <Compile Include="Assets\Tests\LifeSystemsTest\TestDamageSystem.cs" />
+    <Compile Include="Assets\Tests\LifeSystemsTest\TestDrinkSystem.cs" />
+    <Compile Include="Assets\Tests\LifeSystemsTest\TestEatSystem.cs" />
+    <Compile Include="Assets\Tests\LifeSystemsTest\TestHealSystem.cs" />
+    <Compile Include="Assets\Tests\LifeSystemsTest\TestModifyStatSystem.cs" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
     <None Include="Assets\Graphics\NastyWizard_Depth\Demo\PostProcessing\Resources\Shaders\ScreenSpaceReflection.shader" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
@@ -508,31 +527,31 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.4f1/Editor/Data/Managed/UnityEditor.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>D:/asvirido-unity/rpg/Assets/Plugins/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Assets/Plugins/JsonDotNet/Assemblies/Standalone/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="Entitas.Blueprints">
-      <HintPath>D:/asvirido-unity/rpg/Assets/Plugins/Libs/Entitas/Entitas.Blueprints.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Assets/Plugins/Libs/Entitas/Entitas.Blueprints.dll</HintPath>
     </Reference>
     <Reference Include="Entitas.CodeGeneration.Attributes">
-      <HintPath>D:/asvirido-unity/rpg/Assets/Plugins/Libs/Entitas/Entitas.CodeGeneration.Attributes.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Assets/Plugins/Libs/Entitas/Entitas.CodeGeneration.Attributes.dll</HintPath>
     </Reference>
     <Reference Include="Entitas">
-      <HintPath>D:/asvirido-unity/rpg/Assets/Plugins/Libs/Entitas/Entitas.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Assets/Plugins/Libs/Entitas/Entitas.dll</HintPath>
     </Reference>
     <Reference Include="Entitas.Unity">
-      <HintPath>D:/asvirido-unity/rpg/Assets/Plugins/Libs/Entitas/Entitas.Unity.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Assets/Plugins/Libs/Entitas/Entitas.Unity.dll</HintPath>
     </Reference>
     <Reference Include="Entitas.Utils">
-      <HintPath>D:/asvirido-unity/rpg/Assets/Plugins/Libs/Entitas/Entitas.Utils.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Assets/Plugins/Libs/Entitas/Entitas.Utils.dll</HintPath>
     </Reference>
     <Reference Include="Entitas.VisualDebugging.Unity">
-      <HintPath>D:/asvirido-unity/rpg/Assets/Plugins/Libs/Entitas/Entitas.VisualDebugging.Unity.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Assets/Plugins/Libs/Entitas/Entitas.VisualDebugging.Unity.dll</HintPath>
     </Reference>
     <Reference Include="fabl.Appenders">
-      <HintPath>D:/asvirido-unity/rpg/Assets/Plugins/Libs/Entitas/fabl.Appenders.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Assets/Plugins/Libs/Entitas/fabl.Appenders.dll</HintPath>
     </Reference>
     <Reference Include="fabl">
-      <HintPath>D:/asvirido-unity/rpg/Assets/Plugins/Libs/Entitas/fabl.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Assets/Plugins/Libs/Entitas/fabl.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.iOS.Extensions.Xcode">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.4f1/Editor/Data/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.Xcode.dll</HintPath>
@@ -895,42 +914,42 @@
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.4f1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>D:/asvirido-unity/rpg/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>D:/asvirido-unity/rpg/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Recorder.Editor">
-      <HintPath>D:/asvirido-unity/rpg/Library/ScriptAssemblies/Unity.Recorder.Editor.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Library/ScriptAssemblies/Unity.Recorder.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>D:/asvirido-unity/rpg/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Recorder">
-      <HintPath>D:/asvirido-unity/rpg/Library/ScriptAssemblies/Unity.Recorder.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Library/ScriptAssemblies/Unity.Recorder.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>D:/asvirido-unity/rpg/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>D:/asvirido-unity/rpg/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>D:/asvirido-unity/rpg/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>D:/asvirido-unity/rpg/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>D:/asvirido-unity/rpg/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>D:/asvirido-unity/rpg/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>D:/asvirido-unity/rpg_n/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
-      <Project>{08E50540-F89D-425A-6C55-E35D09651BC5}</Project>
+      <Project>{4512E32E-5AE7-C6F6-9650-D7BF267CA174}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
     </ProjectReference>
   </ItemGroup>

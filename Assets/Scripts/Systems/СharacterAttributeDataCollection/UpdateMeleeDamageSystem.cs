@@ -58,6 +58,7 @@ namespace RedMoonRPG.Systems
                 }
                 entities[i].indexMeleeDamage.maxValue = amount;
                 entities[i].indexMeleeDamage.minValue = amount - (int)(amount * _range) + minAmount;
+                entities[i].isUpdateMeleeDamage = false;
             }
         }
     }

@@ -41,22 +41,22 @@ namespace RedMoonRPG.Systems
             for (int i = 0; i < len; i++)
             {
                 HashSet<GameEntity> array = _contexts.game.GetEntitiesWithPersona(entities[i].persona.value);
-                int amount = 0;
+                int mana = 0;
                 foreach (GameEntity gn in array)
                 {
                     if (gn.hasIntellect)
                     {
-                        amount += (gn.intellect.value * _lvlBonus);
+                        mana += (gn.intellect.value * _lvlBonus);
                     }
                 }
-                entities[i].mana.maxValue = amount;
+                entities[i].mana.maxValue = mana;
                 if (entities[i].mana.value > entities[i].mana.maxValue)
                 {
                     entities[i].mana.value -= (entities[i].mana.value - entities[i].mana.maxValue);
                 }
                 else if (entities[i].mana.value == 0)
                 {
-                    entities[i].mana.value = amount;
+                    entities[i].mana.value = mana;
                 }
                 entities[i].isManaUpdate = false;
             }
