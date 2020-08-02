@@ -27,6 +27,9 @@ namespace RedMoonRPG.Systems.Life
             return entity.hasCalory && entity.hasHunger;
         }
 
+
+        // негативное число калорий это снижение голода
+        // позитивное число калорий это увеличение голода
         protected override void Execute(List<LifeEntity> entities)
         {
             int len = entities.Count;

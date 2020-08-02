@@ -4,13 +4,13 @@
     "\\Assets",
     "\\Assets\\Scripts",
     "\\Assets\\Scripts\\Components",
-    "\\Assets\\Scripts\\Components\\Time",
+    "\\Assets\\Scripts\\Components\\Stats",
+    "\\Assets\\Scripts\\Components\\Stats\\Life Attributes",
     "\\Assets\\Scripts\\Systems",
-    "\\Assets\\Scripts\\Systems\\LifeSystems",
-    "\\Assets\\Scripts\\Systems\\WorldMap",
+    "\\Assets\\Scripts\\Systems\\СharacterAttributeDataCollection",
     "\\Assets\\Tests",
     "\\Assets\\Tests\\LifeSystemsTest"
   ],
-  "SelectedNode": "\\Assets\\Scripts\\Systems\\LifeSystems\\EatSystem.cs",
+  "SelectedNode": "\\Assets\\Tests\\TestTimeThirstSystem.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -9,24 +9,24 @@ namespace RedMoonRPG.Systems.Life
      * Вызивается когда персонаж выпьет воду.
      * Когда персонаж выпьет воду будет вешаться компонент воды на персонажа.
      */
-    public class DrinkSystem : ReactiveSystem<GameEntity>
+    public class DrinkSystem : ReactiveSystem<LifeEntity>
     {
 
-        public DrinkSystem(Contexts contexts) : base(contexts.game)
+        public DrinkSystem(Contexts contexts) : base(contexts.life)
         {
         }
 
-        protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
+        protected override ICollector<LifeEntity> GetTrigger(IContext<LifeEntity> context)
         {
-            return context.CreateCollector(GameMatcher.Water);
+            return context.CreateCollector(LifeMatcher.Water);
         }
 
-        protected override bool Filter(GameEntity entity)
+        protected override bool Filter(LifeEntity entity)
         {
             return entity.hasWater && entity.hasThirst;
         }
 
-        protected override void Execute(List<GameEntity> entities)
+        protected override void Execute(List<LifeEntity> entities)
         {
             int len = entities.Count;
             for (int i = 0; i < entities.Count; i++)

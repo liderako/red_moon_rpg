@@ -10,16 +10,22 @@ public static class LifeComponentsLookup {
 
     public const int Calory = 0;
     public const int Hunger = 1;
+    public const int Thirst = 2;
+    public const int Water = 3;
 
-    public const int TotalComponents = 2;
+    public const int TotalComponents = 4;
 
     public static readonly string[] componentNames = {
         "Calory",
-        "Hunger"
+        "Hunger",
+        "Thirst",
+        "Water"
     };
 
     public static readonly System.Type[] componentTypes = {
         typeof(CaloryComponent),
-        typeof(HungerComponent)
+        typeof(HungerComponent),
+        typeof(ThirstComponent),
+        typeof(WaterComponent)
     };
 }

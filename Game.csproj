@@ -253,8 +253,9 @@
     <Compile Include="Assets\Scripts\Systems\LifeSystems\HealSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\LoadLevelSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\ModifyStatSystem.cs" />
-    <Compile Include="Assets\Scripts\Systems\Time.cs" />
+    <Compile Include="Assets\Scripts\Systems\TimeHungredSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\TimeSystem.cs" />
+    <Compile Include="Assets\Scripts\Systems\TimeThirstSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\WorldMap\Camera\FollowerMovementSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\WorldMap\Camera\MovementSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\WorldMap\Camera\ReturnMovementSystem.cs" />
@@ -310,12 +311,10 @@
     <Compile Include="Assets\Sources\Generated\Game\Components\GameStrengthComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameTargetPositionComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameTeleportCameraComponent.cs" />
-    <Compile Include="Assets\Sources\Generated\Game\Components\GameThirstComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameTransformComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameUpdateMagicDamageComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameUpdateMeleeDamageComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameUpdateRangedDamageComponent.cs" />
-    <Compile Include="Assets\Sources\Generated\Game\Components\GameWaterComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameWorldMapComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameWorldMapMovementComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\GameAttribute.cs" />
@@ -330,6 +329,8 @@
     <Compile Include="Assets\Sources\Generated\Input\InputMatcher.cs" />
     <Compile Include="Assets\Sources\Generated\Life\Components\LifeCaloryComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Life\Components\LifeHungerComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Life\Components\LifeThirstComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Life\Components\LifeWaterComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Life\LifeAttribute.cs" />
     <Compile Include="Assets\Sources\Generated\Life\LifeComponentsLookup.cs" />
     <Compile Include="Assets\Sources\Generated\Life\LifeContext.cs" />

@@ -80,8 +80,8 @@
     <Compile Include="Assets\Sources\Generated\Game\Components\GameHealthComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Life\Components\LifeHungerComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameManaComponent.cs" />
-    <Compile Include="Assets\Sources\Generated\Game\Components\GameThirstComponent.cs" />
-    <Compile Include="Assets\Sources\Generated\Game\Components\GameWaterComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Life\Components\LifeThirstComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Life\Components\LifeWaterComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameAttentionComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameDexterityComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameEnduranceComponent.cs" />

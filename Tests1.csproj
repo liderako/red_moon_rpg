@@ -73,7 +73,9 @@
     <Compile Include="Assets\Tests\LifeSystemsTest\TestEatSystem.cs" />
     <Compile Include="Assets\Tests\LifeSystemsTest\TestHealSystem.cs" />
     <Compile Include="Assets\Tests\LifeSystemsTest\TestModifyStatSystem.cs" />
+    <Compile Include="Assets\Tests\TestTimeHungerSystem.cs" />
     <Compile Include="Assets\Tests\TestTimeSystem.cs" />
+    <Compile Include="Assets\Tests\TestTimeThirstSystem.cs" />
     <None Include="Assets\Tests\Tests 1.asmdef" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.4f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

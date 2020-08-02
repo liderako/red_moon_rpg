@@ -42,16 +42,14 @@ public static class GameComponentsLookup {
     public const int Strength = 31;
     public const int TargetPosition = 32;
     public const int TeleportCamera = 33;
-    public const int Thirst = 34;
-    public const int Transform = 35;
-    public const int UpdateMagicDamage = 36;
-    public const int UpdateMeleeDamage = 37;
-    public const int UpdateRangedDamage = 38;
-    public const int Water = 39;
-    public const int WorldMap = 40;
-    public const int WorldMapMovement = 41;
+    public const int Transform = 34;
+    public const int UpdateMagicDamage = 35;
+    public const int UpdateMeleeDamage = 36;
+    public const int UpdateRangedDamage = 37;
+    public const int WorldMap = 38;
+    public const int WorldMapMovement = 39;
 
-    public const int TotalComponents = 42;
+    public const int TotalComponents = 40;
 
     public static readonly string[] componentNames = {
         "ActiveAnimation",
@@ -88,12 +86,10 @@ public static class GameComponentsLookup {
         "Strength",
         "TargetPosition",
         "TeleportCamera",
-        "Thirst",
         "Transform",
         "UpdateMagicDamage",
         "UpdateMeleeDamage",
         "UpdateRangedDamage",
-        "Water",
         "WorldMap",
         "WorldMapMovement"
     };
@@ -133,12 +129,10 @@ public static class GameComponentsLookup {
         typeof(StrengthComponent),
         typeof(TargetPositionComponent),
         typeof(TeleportCameraComponent),
-        typeof(ThirstComponent),
         typeof(TransformComponent),
         typeof(UpdateMagicDamageComponent),
         typeof(UpdateMeleeDamageComponent),
         typeof(UpdateRangedDamageComponent),
-        typeof(WaterComponent),
         typeof(WorldMapComponent),
         typeof(WorldMapMovement)
     };

@@ -1,6 +1,6 @@
 using Entitas;
 
-[Game]
+[Life]
 public class WaterComponent : IComponent
 {
     public int value;
