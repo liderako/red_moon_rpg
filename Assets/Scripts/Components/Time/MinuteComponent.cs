@@ -1,6 +1,6 @@
 ﻿using Entitas;
 
-[Game]
+[Time]
 public class MinuteComponent : IComponent
 {
     public float value;

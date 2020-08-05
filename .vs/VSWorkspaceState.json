@@ -2,13 +2,15 @@
   "ExpandedNodes": [
     "",
     "\\Assets",
+    "\\Assets\\Scripts",
     "\\Assets\\Scripts\\Components",
-    "\\Assets\\Scripts\\Components\\Time",
-    "\\Assets\\Sources\\Generated",
-    "\\Assets\\Sources\\Generated\\Game",
-    "\\Assets\\Tests\\CharacterAttributeDataCollection",
+    "\\Assets\\Scripts\\Components\\Stats",
+    "\\Assets\\Scripts\\Components\\Stats\\Life Attributes",
+    "\\Assets\\Scripts\\Systems",
+    "\\Assets\\Scripts\\Systems\\СharacterAttributeDataCollection",
+    "\\Assets\\Tests",
     "\\Assets\\Tests\\LifeSystemsTest"
   ],
-  "SelectedNode": "\\Assets\\Game.asmdef",
+  "SelectedNode": "\\Assets\\Tests\\TestTimeThirstSystem.cs",
   "PreviewInSolutionExplorer": false
 }

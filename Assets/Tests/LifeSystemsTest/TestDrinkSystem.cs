@@ -15,7 +15,7 @@ namespace Tests
             Contexts contexts = Contexts.sharedInstance;
             Entitas.Systems systems = new Feature("Game")
                 .Add(new RedMoonRPG.Systems.Life.DrinkSystem(contexts));
-            GameEntity entity = contexts.game.CreateEntity();
+            LifeEntity entity = contexts.life.CreateEntity();
             entity.AddThirst(0, 100);
             systems.Initialize();
             entity.AddWater(10);
@@ -32,7 +32,7 @@ namespace Tests
             Contexts contexts = Contexts.sharedInstance;
             Entitas.Systems systems = new Feature("Game")
                 .Add(new RedMoonRPG.Systems.Life.DrinkSystem(contexts));
-            GameEntity entity = contexts.game.CreateEntity();
+            LifeEntity entity = contexts.life.CreateEntity();
             entity.AddThirst(50, 100);
             systems.Initialize();
             entity.AddWater(20);
@@ -50,7 +50,7 @@ namespace Tests
             Contexts contexts = Contexts.sharedInstance;
             Entitas.Systems systems = new Feature("Game")
                 .Add(new RedMoonRPG.Systems.Life.DrinkSystem(contexts));
-            GameEntity entity = contexts.game.CreateEntity();
+            LifeEntity entity = contexts.life.CreateEntity();
             entity.AddThirst(50, 100);
             systems.Initialize();
             entity.AddWater(90);
@@ -67,7 +67,7 @@ namespace Tests
             Contexts contexts = Contexts.sharedInstance;
             Entitas.Systems systems = new Feature("Game")
                 .Add(new RedMoonRPG.Systems.Life.DrinkSystem(contexts));
-            GameEntity entity = contexts.game.CreateEntity();
+            LifeEntity entity = contexts.life.CreateEntity();
             entity.AddThirst(50, 100);
             systems.Initialize();
             entity.AddWater(-50);
@@ -84,7 +84,7 @@ namespace Tests
             Contexts contexts = Contexts.sharedInstance;
             Entitas.Systems systems = new Feature("Game")
                 .Add(new RedMoonRPG.Systems.Life.DrinkSystem(contexts));
-            GameEntity entity = contexts.game.CreateEntity();
+            LifeEntity entity = contexts.life.CreateEntity();
             entity.AddThirst(50, 100);
             systems.Initialize();
             entity.AddWater(-100);

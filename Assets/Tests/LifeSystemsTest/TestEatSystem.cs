@@ -13,9 +13,9 @@ namespace Tests
         public IEnumerator TestEatSystemBaseInit()
         {
             Contexts contexts = Contexts.sharedInstance;
-            Entitas.Systems systems = new Feature("Game")
+            Entitas.Systems systems = new Feature("Life")
                 .Add(new RedMoonRPG.Systems.Life.EatSystem(contexts));
-            GameEntity entity = contexts.game.CreateEntity();
+            LifeEntity entity = contexts.life.CreateEntity();
             entity.AddHunger(0, 100);
             systems.Initialize();
             entity.AddCalory(10);
@@ -33,7 +33,7 @@ namespace Tests
             Contexts contexts = Contexts.sharedInstance;
             Entitas.Systems systems = new Feature("Game")
                 .Add(new RedMoonRPG.Systems.Life.EatSystem(contexts));
-            GameEntity entity = contexts.game.CreateEntity();
+            LifeEntity entity = contexts.life.CreateEntity();
             entity.AddHunger(50, 100);
             entity.AddCalory(25);
             systems.Initialize();
@@ -50,7 +50,7 @@ namespace Tests
             Contexts contexts = Contexts.sharedInstance;
             Entitas.Systems systems = new Feature("Game")
                 .Add(new RedMoonRPG.Systems.Life.EatSystem(contexts));
-            GameEntity entity = contexts.game.CreateEntity();
+            LifeEntity entity = contexts.life.CreateEntity();
             entity.AddHunger(50, 100);
             entity.AddCalory(75);
             systems.Initialize();
@@ -67,7 +67,7 @@ namespace Tests
             Contexts contexts = Contexts.sharedInstance;
             Entitas.Systems systems = new Feature("Game")
                 .Add(new RedMoonRPG.Systems.Life.EatSystem(contexts));
-            GameEntity entity = contexts.game.CreateEntity();
+            LifeEntity entity = contexts.life.CreateEntity();
             entity.AddHunger(50, 100);
             entity.AddCalory(-25);
             systems.Initialize();
@@ -84,7 +84,7 @@ namespace Tests
             Contexts contexts = Contexts.sharedInstance;
             Entitas.Systems systems = new Feature("Game")
                 .Add(new RedMoonRPG.Systems.Life.EatSystem(contexts));
-            GameEntity entity = contexts.game.CreateEntity();
+            LifeEntity entity = contexts.life.CreateEntity();
             entity.AddHunger(50, 100);
             entity.AddCalory(-125);
             systems.Initialize();
