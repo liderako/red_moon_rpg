@@ -35,12 +35,10 @@ namespace RedMoonRPG.Systems
 
         protected override void Execute(List<GameEntity> entities)
         {
-            GameEntity entity = _contexts.game.GetEntityWithName(Tags.level);
             _prevLevelName = SceneManager.GetActiveScene().name;
             _name = Scenes.loading;
             LoadLevel(_name);
         }
-
 
         private void OnLoadOperationComplete(AsyncOperation ao)
         {
