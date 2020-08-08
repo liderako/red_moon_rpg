@@ -17,7 +17,7 @@ namespace RedMoonRPG.Settings
         
         public Data LoadSavedData()
         {
-            return JsonConvert.DeserializeObject<Data>(ReadSettings(Tags.mainData)); ;
+            return JsonConvert.DeserializeObject<Data>(ReadSettings(Tags.mainData));
         }
 
         private string ReadSettings(string nameFile)

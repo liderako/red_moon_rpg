@@ -3,14 +3,14 @@
     "",
     "\\Assets",
     "\\Assets\\Scripts",
-    "\\Assets\\Scripts\\Components",
-    "\\Assets\\Scripts\\Components\\Stats",
-    "\\Assets\\Scripts\\Components\\Stats\\Life Attributes",
-    "\\Assets\\Scripts\\Systems",
-    "\\Assets\\Scripts\\Systems\\СharacterAttributeDataCollection",
-    "\\Assets\\Tests",
-    "\\Assets\\Tests\\LifeSystemsTest"
+    "\\Assets\\Scripts\\Data",
+    "\\Assets\\Scripts\\Data\\Objects",
+    "\\Assets\\Scripts\\ScriptableObjects",
+    "\\Assets\\TerrainGridSystem",
+    "\\Assets\\TerrainGridSystem\\Demos",
+    "\\Assets\\TerrainGridSystem\\Demos\\Demo14_TerrainPathFinding",
+    "\\Assets\\TerrainGridSystem\\Scripts"
   ],
-  "SelectedNode": "\\Assets\\Tests\\TestTimeThirstSystem.cs",
+  "SelectedNode": "\\Assets\\Scripts\\Data\\FileReader.cs",
   "PreviewInSolutionExplorer": false
 }
