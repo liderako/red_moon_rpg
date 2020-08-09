@@ -20,6 +20,10 @@ namespace TGS
 		// Use this for initialization
 		private void Start ()
 		{
+            #if !LEVEL_EDITOR
+                Destroy(gameObject);
+                return;
+            #endif
             path = Application.dataPath + "/Resources/LevelSettings/GridMap/";
             tgs = TerrainGridSystem.instance;
             DefaultDrawColor();
