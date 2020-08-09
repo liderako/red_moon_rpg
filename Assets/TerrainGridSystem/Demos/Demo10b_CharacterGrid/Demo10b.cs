@@ -1,10 +1,13 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Net;
+using System;
 
-
-namespace TGS {
-	public class Demo10b : MonoBehaviour {
+namespace TGS
+{
+	public class Demo10b : MonoBehaviour
+	{
 
 		TerrainGridSystem tgs;
 		GUIStyle labelStyle;
@@ -34,7 +37,7 @@ namespace TGS {
 			GUI.Label (new Rect (10, 65, 160, 30), "Open the Demo10b.cs script to learn how to assign gridCenter property using code.", labelStyle);
 		}
 
-		void FixedUpdate() {
+		void Update() {
 
 			// Move ball
 			const float strength = 10f;
@@ -83,16 +86,48 @@ namespace TGS {
 
 
 		// Highlight neighbour cells around character posiiton
-		void ShowNeighbours(Vector3 position) {
-			Cell characterCell = tgs.CellGetAtPosition(position, true);
-			List<Cell> neighbours = tgs.CellGetNeighbours(characterCell);
-			if (neighbours!=null) {
-				foreach(Cell cell in neighbours) {
-					tgs.CellFadeOut(cell, Color.red, 2.0f);
-				}
-			}
+		void ShowNeighbours(Vector3 position)
+		{
+			BzeroColor();
+			Cell charactercell = tgs.CellGetAtPosition(position, true);
+			_array = new List<int>();
+			Show(0, charactercell);
+			tgs.CellSetColor(tgs.CellGetIndex(charactercell), Color.green);
+			_array.Clear();
 		}
 
-	}
+		private const int maxPrice = 4;
+		private const int priceXstep = 1;
+		private const int priceYstep = 1;
+		private List<int> _array;
 
+		private void Show(int price, Cell currentCell)
+        {
+			if (price > maxPrice)
+            {
+				return;
+            }
+			if (!_array.Contains(tgs.CellGetIndex(currentCell)))
+            {
+				_array.Add(tgs.CellGetIndex(currentCell));
+				tgs.CellSetColor(tgs.CellGetIndex(currentCell), Color.red);
+				Show(price + priceXstep, tgs.cells[tgs.CellGetIndex(tgs.CellGetRow(tgs.CellGetIndex(currentCell)) + 1, tgs.CellGetColumn(tgs.CellGetIndex(currentCell)), true)]);
+				Show(price + priceXstep, tgs.cells[tgs.CellGetIndex(tgs.CellGetRow(tgs.CellGetIndex(currentCell)) - 1, tgs.CellGetColumn(tgs.CellGetIndex(currentCell)), true)]);
+				Show(price + priceYstep, tgs.cells[tgs.CellGetIndex(tgs.CellGetRow(tgs.CellGetIndex(currentCell)), tgs.CellGetColumn(tgs.CellGetIndex(currentCell)) + 1, true)]);
+				Show(price + priceYstep, tgs.cells[tgs.CellGetIndex(tgs.CellGetRow(tgs.CellGetIndex(currentCell)), tgs.CellGetColumn(tgs.CellGetIndex(currentCell)) - 1, true)]);
+				//Show(price + priceYstep + priceXstep, tgs.cells[tgs.CellGetIndex(tgs.CellGetRow(tgs.CellGetIndex(currentCell)) - 1, tgs.CellGetColumn(tgs.CellGetIndex(currentCell)) - 1, true)]);
+				//Show(price + priceYstep + priceXstep, tgs.cells[tgs.CellGetIndex(tgs.CellGetRow(tgs.CellGetIndex(currentCell)) + 1, tgs.CellGetColumn(tgs.CellGetIndex(currentCell)) - 1, true)]);
+				//Show(price + priceYstep + priceXstep, tgs.cells[tgs.CellGetIndex(tgs.CellGetRow(tgs.CellGetIndex(currentCell)) - 1, tgs.CellGetColumn(tgs.CellGetIndex(currentCell)) + 1, true)]);
+				//Show(price + priceYstep + priceXstep, tgs.cells[tgs.CellGetIndex(tgs.CellGetRow(tgs.CellGetIndex(currentCell)) + 1, tgs.CellGetColumn(tgs.CellGetIndex(currentCell)) + 1, true)]);
+			}
+        }
+
+		private void BzeroColor()
+        {
+			for (int i = 0; i < tgs.cells.Count; i++)
+            {
+				tgs.CellSetColor(tgs.CellGetIndex(tgs.cells[i]), Color.black);
+            }
+        }
+    }
 }

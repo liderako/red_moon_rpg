@@ -21,7 +21,7 @@ RenderSettings:
   m_LinearFogStart: 0
   m_LinearFogEnd: 300
   m_AmbientSkyColor: {r: 1, g: 1, b: 1, a: 1}
-  m_AmbientEquatorColor: {r: 0.5283019, g: 0.5283019, b: 0.5283019, a: 1}
+  m_AmbientEquatorColor: {r: 1, g: 1, b: 1, a: 1}
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 1
@@ -218,7 +218,7 @@ Light:
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
-  m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
+  m_Color: {r: 0.6415094, g: 0.6415094, b: 0.6415094, a: 1}
   m_Intensity: 1
   m_Range: 10
   m_SpotAngle: 30
@@ -282,36 +282,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1031254780
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1031254781}
-  m_Layer: 5
-  m_Name: Surfaces
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1031254781
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1031254780}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1152865959}
-  m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1067430636 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 942954186513845296, guid: 5b242dde64a969442ae6f9baa2cee49f,
@@ -369,12 +339,12 @@ MonoBehaviour:
   _pathFindingHeavyDiagonals: 0
   territoriesTexture: {fileID: 0}
   territoriesTextureNeutralColor: {r: 0, g: 0, b: 0, a: 0}
-  _numTerritories: 1
+  _numTerritories: 2
   _showTerritories: 0
   _colorizeTerritories: 1
   _colorizedTerritoriesAlpha: 0
   _territoryHighlightColor: {r: 1, g: 0, b: 0, a: 0.7}
-  _territoryFrontierColor: {r: 1, g: 1, b: 1, a: 1}
+  _territoryFrontierColor: {r: 0, g: 0, b: 0, a: 1}
   _territoryDisputedFrontierColor: {r: 0, g: 0, b: 0, a: 1}
   _showTerritoriesOuterBorder: 1
   _allowTerritoriesInsideTerritories: 1
@@ -389,24 +359,24 @@ MonoBehaviour:
   _hexSize: 0.01
   _gridRelaxation: 1
   _gridCurvature: 0
-  _highlightMode: 2
-  _highlightFadeMin: 0.011061947
-  _highlightFadeAmount: 0.011061947
+  _highlightMode: 0
+  _highlightFadeMin: 0.045643155
+  _highlightFadeAmount: 0.118257344
   _highlightScaleMin: 0.75
   _highlightScaleMax: 1.1
-  _highlightFadeSpeed: 1
+  _highlightFadeSpeed: 0.88
   _highlightMinimumTerrainDistance: 1
   _highlightEffect: 0
-  _overlayMode: 1
+  _overlayMode: 0
   _gridCenter: {x: 0, y: 0}
   _gridCenterWorldPosition: {x: 0, y: 0, z: 0}
   _gridScale: {x: 1, y: 1}
-  _gridElevation: 0.25
+  _gridElevation: 0
   _gridElevationBase: 0
-  _gridCameraOffset: 0
+  _gridCameraOffset: 0.0166
   _gridNormalOffset: 0
-  _gridMeshDepthOffset: -55
-  _gridSurfaceDepthOffset: -3
+  _gridMeshDepthOffset: -9
+  _gridSurfaceDepthOffset: -100
   _gridRoughness: 0.001
   _cellRowCount: 32
   _cellColumnCount: 32
@@ -445,8 +415,8 @@ MonoBehaviour:
   - {fileID: 0}
   _respectOtherUI: 1
   _nearClipFadeEnabled: 1
-  _nearClipFade: 5
-  _nearClipFadeFallOff: 13.5
+  _nearClipFade: 7
+  _nearClipFadeFallOff: 28.9
   _enableGridEditor: 1
 --- !u!23 &1152865957
 MeshRenderer:
@@ -506,10 +476,10 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1152865954}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 16, y: 0.26, z: 16}
+  m_LocalPosition: {x: 16.000483, y: 0.013750458, z: 15.997712}
   m_LocalScale: {x: 32, y: 32, z: 1}
   m_Children:
-  - {fileID: 1031254781}
+  - {fileID: 1431939169}
   m_Father: {fileID: 1413549751}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -565,7 +535,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 95.6
   orthographic: 0
   orthographic size: 5
   m_Depth: 0
@@ -591,7 +561,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1184213515}
   m_LocalRotation: {x: 0.5488838, y: -0, z: -0, w: 0.83589864}
-  m_LocalPosition: {x: 17.78, y: 19.2, z: 7.81}
+  m_LocalPosition: {x: 17.78, y: 13.86, z: 7.55}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -656,11 +626,11 @@ Terrain:
   m_Enabled: 1
   serializedVersion: 6
   m_TerrainData: {fileID: 15600000, guid: fa858418d5614fb499a94b5ecb44bc22, type: 2}
-  m_TreeDistance: 5000
-  m_TreeBillboardDistance: 50
-  m_TreeCrossFadeLength: 5
+  m_TreeDistance: 500
+  m_TreeBillboardDistance: 150
+  m_TreeCrossFadeLength: 150
   m_TreeMaximumFullLODCount: 50
-  m_DetailObjectDistance: 80
+  m_DetailObjectDistance: 250
   m_DetailObjectDensity: 1
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
@@ -671,7 +641,7 @@ Terrain:
   m_DrawTreesAndFoliage: 1
   m_ReflectionProbeUsage: 1
   m_MaterialTemplate: {fileID: 10652, guid: 0000000000000000f000000000000000, type: 0}
-  m_BakeLightProbesForTrees: 1
+  m_BakeLightProbesForTrees: 0
   m_PreserveTreePrototypeLayers: 0
   m_DeringLightProbesForTrees: 1
   m_ScaleInLightmap: 0.0256
@@ -707,6 +677,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 981f45b7cb8d94208afa75a29e96f5c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1431939168
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1431939169}
+  m_Layer: 5
+  m_Name: Surfaces
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1431939169
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1431939168}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1152865959}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1934829157
 GameObject:
   m_ObjectHideFlags: 0
@@ -739,6 +739,7 @@ MonoBehaviour:
   _levelName: test
   _cells: 
   colorClose: {r: 0.5566038, g: 0.2756764, b: 0.2756764, a: 0.36078432}
+  colorOpen: {r: 0.745283, g: 0.745283, b: 0.745283, a: 0.20784314}
 --- !u!4 &1934829159
 Transform:
   m_ObjectHideFlags: 0

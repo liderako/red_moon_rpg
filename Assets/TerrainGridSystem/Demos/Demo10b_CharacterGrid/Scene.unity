@@ -425,7 +425,7 @@ MonoBehaviour:
   canvasTexture: {fileID: 0}
   _transparentBackground: 0
   _gridMask: {fileID: 0}
-  _gridTopology: 3
+  _gridTopology: 1
   _seed: 1
   _evenLayout: 0
   _regularHexagons: 0
@@ -523,7 +523,7 @@ MeshRenderer:
   m_IgnoreNormalsForChartDetection: 0
   m_ImportantGI: 0
   m_StitchLightmapSeams: 1
-  m_SelectedEditorRenderState: 3
+  m_SelectedEditorRenderState: 0
   m_MinimumChartSize: 4
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
@@ -702,7 +702,7 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.5
-  m_Height: 2
+  m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!33 &1941001559

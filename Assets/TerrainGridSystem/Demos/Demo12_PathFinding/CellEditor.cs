@@ -15,12 +15,14 @@ namespace TGS
         [SerializeField] private string _levelName;
 		[SerializeField] private List<int> _cells = new List<int>();
         public Color colorClose;
+        public Color colorOpen;
 
 		// Use this for initialization
 		private void Start ()
 		{
             path = Application.dataPath + "/Resources/LevelSettings/GridMap/";
             tgs = TerrainGridSystem.instance;
+            DefaultDrawColor();
             Load();
 			tgs.OnCellClick += (cellIndex, buttonIndex) => changeCellOwner(cellIndex);
         }
@@ -47,6 +49,16 @@ namespace TGS
             {
                 Debug.Log("Save");
                 Save();
+            }
+        }
+
+        private void DefaultDrawColor()
+        {
+            List<Cell> cells = tgs.cells;
+            for (int i = 0; i < cells.Count; i++)
+            {
+                tgs.CellSetColor(tgs.CellGetIndex(cells[i]), colorOpen);
+                tgs.CellSetCanCross(tgs.CellGetIndex(cells[i]), false);
             }
         }
 
