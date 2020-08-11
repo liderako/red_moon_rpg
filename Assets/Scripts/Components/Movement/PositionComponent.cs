@@ -1,7 +1,7 @@
 ﻿using Entitas.CodeGeneration.Attributes;
 using UnityEngine;
 
-[Game, CustomComponentName("TargetPosition", "MapPosition")]
+[Game,Grid, CustomComponentName("TargetPosition", "MapPosition")]
 public class Position
 {
     public Position(Vector3 p)

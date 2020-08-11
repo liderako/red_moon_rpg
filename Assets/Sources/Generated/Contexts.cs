@@ -22,14 +22,16 @@ public partial class Contexts : Entitas.IContexts {
     static Contexts _sharedInstance;
 
     public GameContext game { get; set; }
+    public GridContext grid { get; set; }
     public InputContext input { get; set; }
     public LifeContext life { get; set; }
     public TimeContext time { get; set; }
 
-    public Entitas.IContext[] allContexts { get { return new Entitas.IContext [] { game, input, life, time }; } }
+    public Entitas.IContext[] allContexts { get { return new Entitas.IContext [] { game, grid, input, life, time }; } }
 
     public Contexts() {
         game = new GameContext();
+        grid = new GridContext();
         input = new InputContext();
         life = new LifeContext();
         time = new TimeContext();
@@ -75,6 +77,10 @@ public partial class Contexts {
             Name,
             time.GetGroup(TimeMatcher.Name),
             (e, c) => ((RedMoonRPG.NameComponent)c).name));
+        grid.AddEntityIndex(new Entitas.PrimaryEntityIndex<GridEntity, string>(
+            Name,
+            grid.GetGroup(GridMatcher.Name),
+            (e, c) => ((RedMoonRPG.NameComponent)c).name));
 
         game.AddEntityIndex(new Entitas.EntityIndex<GameEntity, string>(
             Persona,
@@ -91,6 +97,10 @@ public static class ContextsExtensions {
 
     public static TimeEntity GetEntityWithName(this TimeContext context, string name) {
         return ((Entitas.PrimaryEntityIndex<TimeEntity, string>)context.GetEntityIndex(Contexts.Name)).GetEntity(name);
+    }
+
+    public static GridEntity GetEntityWithName(this GridContext context, string name) {
+        return ((Entitas.PrimaryEntityIndex<GridEntity, string>)context.GetEntityIndex(Contexts.Name)).GetEntity(name);
     }
 
     public static System.Collections.Generic.HashSet<GameEntity> GetEntitiesWithPersona(this GameContext context, string value) {
@@ -113,6 +123,7 @@ public partial class Contexts {
     public void InitializeContexObservers() {
         try {
             CreateContextObserver(game);
+            CreateContextObserver(grid);
             CreateContextObserver(input);
             CreateContextObserver(life);
             CreateContextObserver(time);

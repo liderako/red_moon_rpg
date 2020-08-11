@@ -86,9 +86,9 @@ namespace TGS
 
 
 		// Highlight neighbour cells around character posiiton
-		void ShowNeighbours(Vector3 position)
+		public void ShowNeighbours(Vector3 position)
 		{
-			BzeroColor();
+			//BzeroColor();
 			Cell charactercell = tgs.CellGetAtPosition(position, true);
 			_array = new List<int>();
 			Show(0, charactercell);
@@ -120,14 +120,6 @@ namespace TGS
 				//Show(price + priceYstep + priceXstep, tgs.cells[tgs.CellGetIndex(tgs.CellGetRow(tgs.CellGetIndex(currentCell)) - 1, tgs.CellGetColumn(tgs.CellGetIndex(currentCell)) + 1, true)]);
 				//Show(price + priceYstep + priceXstep, tgs.cells[tgs.CellGetIndex(tgs.CellGetRow(tgs.CellGetIndex(currentCell)) + 1, tgs.CellGetColumn(tgs.CellGetIndex(currentCell)) + 1, true)]);
 			}
-        }
-
-		private void BzeroColor()
-        {
-			for (int i = 0; i < tgs.cells.Count; i++)
-            {
-				tgs.CellSetColor(tgs.CellGetIndex(tgs.cells[i]), Color.black);
-            }
         }
     }
 }

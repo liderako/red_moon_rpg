@@ -17,7 +17,20 @@ namespace RedMoonRPG.Settings
         {
             _cells = new FileReader().LoadGridJson(_levelName);
             _tgs = TerrainGridSystem.instance;
-            //DefaultDrawColor();
+            DefaultGridSettings();
+        }
+
+        private void DefaultGridSettings()
+        {
+            List<Cell> cells = _tgs.cells;
+            for (int i = 0; i < cells.Count; i++)
+            {
+                _tgs.CellSetCanCross(_tgs.CellGetIndex(cells[i]), true);
+            }
+            for (int i = 0; i < _cells.Count; i++)
+            {
+                _tgs.CellSetCanCross(_cells[i], false);
+            }
         }
 
         private void DefaultDrawColor()
@@ -26,9 +39,7 @@ namespace RedMoonRPG.Settings
             for (int i = 0; i < cells.Count; i++)
             {
                 _tgs.CellSetColor(_tgs.CellGetIndex(cells[i]), colorOpen);
-                _tgs.CellSetCanCross(_tgs.CellGetIndex(cells[i]), true);
             }
-            //DrawCloseGrids();
         }
 
         private void DrawCloseGrids()
@@ -36,7 +47,6 @@ namespace RedMoonRPG.Settings
             for (int i = 0; i < _cells.Count; i++)
             {
                 _tgs.CellSetColor(_cells[i], colorClose);
-                _tgs.CellSetCanCross(_cells[i], false);
             }
         }
     }
