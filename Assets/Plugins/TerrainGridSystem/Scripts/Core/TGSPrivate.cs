@@ -1418,11 +1418,11 @@ namespace TGS {
 		/// </summary>
 		/// <returns><c>true</c>, if terrain roughness has changed, <c>false</c> otherwise.</returns>
 		bool CalculateTerrainRoughness (bool reuseTerrainData) {
-			if (reuseTerrainData && _terrain.terrainData.heightmapWidth == heightMapWidth && _terrain.terrainData.heightmapHeight == heightMapHeight && terrainHeights != null && terrainRoughnessMap != null) {
+			if (reuseTerrainData && _terrain.terrainData.heightmapResolution == heightMapWidth && _terrain.terrainData.heightmapResolution == heightMapHeight && terrainHeights != null && terrainRoughnessMap != null) {
 				return false;
 			}
-			heightMapWidth = _terrain.terrainData.heightmapWidth;
-			heightMapHeight = _terrain.terrainData.heightmapHeight;
+			heightMapWidth = _terrain.terrainData.heightmapResolution;
+			heightMapHeight = _terrain.terrainData.heightmapResolution;
 			terrainHeights = _terrain.terrainData.GetHeights (0, 0, heightMapWidth, heightMapHeight);
 			terrainRoughnessMapWidth = heightMapWidth / TERRAIN_CHUNK_SIZE;
 			terrainRoughnessMapHeight = heightMapHeight / TERRAIN_CHUNK_SIZE;

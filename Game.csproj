@@ -334,6 +334,7 @@
     <Compile Include="Assets\Scripts\Data\Objects\PlayerSavedData.cs" />
     <Compile Include="Assets\Scripts\Demo10b.cs" />
     <Compile Include="Assets\Scripts\GameController.cs" />
+    <Compile Include="Assets\Scripts\GridData.cs" />
     <Compile Include="Assets\Scripts\InitializerGame.cs" />
     <Compile Include="Assets\Scripts\LoaderController.cs" />
     <Compile Include="Assets\Scripts\Scenes.cs" />

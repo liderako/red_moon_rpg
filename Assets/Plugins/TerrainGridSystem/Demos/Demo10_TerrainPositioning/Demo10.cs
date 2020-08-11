@@ -62,8 +62,8 @@ namespace TGS {
 		void RandomizeTerrain(float strength) {
 			tgs.terrain.heightmapMaximumLOD = 0;	// always show maximum detail
 
-			int w = tgs.terrain.terrainData.heightmapWidth;
-			int h = tgs.terrain.terrainData.heightmapHeight;
+			int w = tgs.terrain.terrainData.heightmapResolution;
+			int h = tgs.terrain.terrainData.heightmapResolution;
 			float[,] heights = tgs.terrain.terrainData.GetHeights(0,0,w,h);
 
 			float z = Time.time;

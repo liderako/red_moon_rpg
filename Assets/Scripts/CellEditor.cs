@@ -4,31 +4,27 @@ using System.Collections.Generic;
 using System;
 using System.IO;
 using Newtonsoft.Json;
+using RedMoonRPG.Settings;
+using TGS;
 
-namespace TGS
+namespace RedMoonRPG.Settings
 {
 	public class CellEditor : MonoBehaviour
 	{
         private TerrainGridSystem tgs;
-        string path; 
-
         [SerializeField] private string _levelName;
-		[SerializeField] private List<int> _cells = new List<int>();
+        [SerializeField] private List<int> _cells = new List<int>();
         public Color colorClose;
         public Color colorOpen;
 
-		// Use this for initialization
+        private FileReader _fileReader;
 		private void Start ()
 		{
-            #if !LEVEL_EDITOR
-                Destroy(gameObject);
-                return;
-            #endif
-            path = Application.dataPath + "/Resources/LevelSettings/GridMap/";
             tgs = TerrainGridSystem.instance;
+            _fileReader = new FileReader();
+            _cells = _fileReader.LoadGridJson(_levelName);
             DefaultDrawColor();
-            Load();
-			tgs.OnCellClick += (cellIndex, buttonIndex) => changeCellOwner(cellIndex);
+            tgs.OnCellClick += (cellIndex, buttonIndex) => changeCellOwner(cellIndex);
         }
 
 		private void changeCellOwner(int cellIndex)
@@ -52,7 +48,7 @@ namespace TGS
             if (Input.GetKeyDown(KeyCode.P))
             {
                 Debug.Log("Save");
-                Save();
+                _fileReader.SaveGridSystem(_levelName, _cells);
             }
         }
 
@@ -62,55 +58,18 @@ namespace TGS
             for (int i = 0; i < cells.Count; i++)
             {
                 tgs.CellSetColor(tgs.CellGetIndex(cells[i]), colorOpen);
-                tgs.CellSetCanCross(tgs.CellGetIndex(cells[i]), false);
+                tgs.CellSetCanCross(tgs.CellGetIndex(cells[i]), true);
             }
+            DrawCloseGrids();
         }
 
-        private void ChangeColor()
+        private void DrawCloseGrids()
         {
             for (int i = 0; i < _cells.Count; i++)
             {
                 tgs.CellSetColor(_cells[i], colorClose);
                 tgs.CellSetCanCross(_cells[i], false);
             }
-        }
-
-        private void Load()
-        {
-            if (!ExistsLevelMap(_levelName + ".json"))
-            {
-                return;
-            }
-            string fileName = _levelName;
-            string s = LoadDataFromFile(fileName);
-            _cells = JsonConvert.DeserializeObject<List<int>>(s);
-            ChangeColor();
-        }
-
-        private void Save()
-        {
-            string fileName = _levelName + ".json";
-            WriteDataToFile(JsonConvert.SerializeObject(_cells), fileName);
-        }
-
-        private string LoadDataFromFile(string fileName)
-        {
-            TextAsset asset = Resources.Load("LevelSettings/GridMap/" + fileName) as TextAsset;
-            return asset.text;
-        }
-
-        private void WriteDataToFile(string jsonString, string filename)
-        {
-            File.WriteAllText(path + filename, jsonString);
-        }
-
-        public bool ExistsLevelMap(string fileName)
-        {
-            if ((File.Exists(path + fileName)) == false)
-            {
-                return false;
-            }
-            return true;
         }
     }
 }

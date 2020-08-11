@@ -13,5 +13,7 @@
         public const string mainData = "dataRPG";
         public const string cameraSettings = "CameraData";
         public const string gameBalance = "gameBalance";
+        public const string ResourcesPathGridSettings = "/Resources/LevelSettings/GridMap/";
+        public const string PathGridSettings = "LevelSettings/GridMap/";
     }
 }

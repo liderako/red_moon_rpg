@@ -5,12 +5,8 @@
     "\\Assets\\Scripts",
     "\\Assets\\Scripts\\Data",
     "\\Assets\\Scripts\\Data\\Objects",
-    "\\Assets\\Scripts\\ScriptableObjects",
-    "\\Assets\\TerrainGridSystem",
-    "\\Assets\\TerrainGridSystem\\Demos",
-    "\\Assets\\TerrainGridSystem\\Demos\\Demo14_TerrainPathFinding",
-    "\\Assets\\TerrainGridSystem\\Scripts"
+    "\\Assets\\Scripts\\ScriptableObjects"
   ],
-  "SelectedNode": "\\Assets\\Scripts\\Data\\FileReader.cs",
+  "SelectedNode": "\\Assets\\Scripts\\Demo10b.cs",
   "PreviewInSolutionExplorer": false
 }
