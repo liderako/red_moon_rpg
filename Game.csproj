@@ -338,6 +338,7 @@
     <Compile Include="Assets\Scripts\GridData.cs" />
     <Compile Include="Assets\Scripts\InitializerGame.cs" />
     <Compile Include="Assets\Scripts\LoaderController.cs" />
+    <Compile Include="Assets\Scripts\LocalGameController.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\CameraSettings.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\GameBalanceSettings.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\LevelSettings.cs" />

@@ -27,25 +27,26 @@ namespace RedMoonRPG.Systems.WorldMap.Camera
             float speed = (Input.GetKey("left shift") ? camera.forceSpeed.value : camera.speed.value);
             if (Input.GetKey("w") || Input.mousePosition.y >= Screen.height - camera.borderThickness.value)
             {
-                pos.z -= speed * Time.deltaTime;
+                //pos.z -= speed * Time.deltaTime;
+                pos += Vector3.forward * speed * Time.deltaTime;
                 camera.isFreeCamera = true;
             }
             if (Input.GetKey("s") || Input.mousePosition.y <= camera.borderThickness.value)
             {
-                pos.z += speed * Time.deltaTime;
+                pos += Vector3.back * speed * Time.deltaTime;
                 camera.isFreeCamera = true;
             }
             if (Input.GetKey("d") || Input.mousePosition.x >= Screen.width - camera.borderThickness.value)
             {
-                pos.x -= speed * Time.deltaTime;
+                pos += Vector3.right * speed * Time.deltaTime;
                 camera.isFreeCamera = true;
             }
             if (Input.GetKey("a") || Input.mousePosition.x <= camera.borderThickness.value)
             {
-                pos.x += speed * Time.deltaTime;
+                pos += Vector3.left * speed * Time.deltaTime;
                 camera.isFreeCamera = true;
             }
-            if (Input.GetAxis("Mouse ScrollWheel") !=0 )
+            if (Input.GetAxis("Mouse ScrollWheel") != 0)
             {
                 float t = (Input.GetAxis("Mouse ScrollWheel") > 0 ? -1 : 1);
                 pos.y += (camera.forceSpeed.value * t) * Time.deltaTime;

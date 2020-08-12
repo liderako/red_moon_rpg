@@ -8,7 +8,9 @@ namespace RedMoonRPG.InitializeSystems
 {
     public class InitializerGame : MonoBehaviour
     {
-        [SerializeField] private GameObject _gameController;
+        [SerializeField] private GameObject _gameControllerWorldMap;
+        [SerializeField] private GameObject _gameControllerLocalMap;
+        [SerializeField] private bool WorldMap;
 
         private void Awake()
         {
@@ -30,9 +32,13 @@ namespace RedMoonRPG.InitializeSystems
             {
                 StartCoroutine(StartGame());
             }
-            if (_gameController != null)
+            if (WorldMap)
             {
-                _gameController.SetActive(true);
+                _gameControllerWorldMap.SetActive(true);
+            }
+            else
+            {
+                _gameControllerLocalMap.SetActive(true);
             }
         }
 

@@ -63,20 +63,31 @@ namespace RedMoonRPG
             entity.AddPersona("Lola");
         }
 
+        //private Entitas.Systems CreateSystems(Contexts contexts)
+        //{
+        //    return new Feature("Game")
+        //    .Add(new Systems.Life.DamageSystem(contexts))
+        //    .Add(new Systems.Life.HealSystem(contexts))
+        //    .Add(new Systems.WorldMap.Camera.CameraFollowerMovementSystem(contexts))
+        //    .Add(new Systems.WorldMap.Camera.MovementSystem(contexts))
+        //    .Add(new Systems.WorldMap.Camera.ReturnMovementSystem(contexts))
+        //    .Add(new Systems.WorldMap.Camera.TeleportSystem(contexts))
+        //    .Add(new Systems.WorldMap.Player.MovementSystem(contexts))
+        //    .Add(new Systems.WorldMap.Player.InputMovementSystem(contexts))
+        //    .Add(new Systems.Animations.BoolAnimationSystem(contexts))
+        //    .Add(new Systems.ModifyStatSystem(contexts))
+        //    .Add(new Systems.UpdateHealthSystem(contexts, gameBalanceSettings));
+        //}
         private Entitas.Systems CreateSystems(Contexts contexts)
         {
             return new Feature("Game")
-            .Add(new Systems.Life.DamageSystem(contexts))
-            .Add(new Systems.Life.HealSystem(contexts))
             .Add(new Systems.WorldMap.Camera.CameraFollowerMovementSystem(contexts))
             .Add(new Systems.WorldMap.Camera.MovementSystem(contexts))
             .Add(new Systems.WorldMap.Camera.ReturnMovementSystem(contexts))
             .Add(new Systems.WorldMap.Camera.TeleportSystem(contexts))
             .Add(new Systems.WorldMap.Player.MovementSystem(contexts))
             .Add(new Systems.WorldMap.Player.InputMovementSystem(contexts))
-            .Add(new Systems.Animations.BoolAnimationSystem(contexts))
-            .Add(new Systems.ModifyStatSystem(contexts))
-            .Add(new Systems.UpdateHealthSystem(contexts, gameBalanceSettings));
+            .Add(new Systems.Animations.BoolAnimationSystem(contexts));
         }
     }
 }
