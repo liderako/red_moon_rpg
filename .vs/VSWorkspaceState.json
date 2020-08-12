@@ -3,14 +3,13 @@
     "",
     "\\Assets",
     "\\Assets\\Scripts",
-    "\\Assets\\Scripts\\Components",
     "\\Assets\\Scripts\\Components\\Movement",
-    "\\Assets\\Scripts\\Data\\Objects",
     "\\Assets\\Scripts\\Systems",
-    "\\Assets\\Scripts\\Systems\\Battle\\Grid",
-    "\\Assets\\Scripts\\Systems\\TimeG",
-    "\\Assets\\Scripts\\Tags"
+    "\\Assets\\Scripts\\Systems\\InitializeSystems",
+    "\\Assets\\Scripts\\Systems\\WorldMap",
+    "\\Assets\\Scripts\\Systems\\WorldMap\\Camera",
+    "\\Logs"
   ],
-  "SelectedNode": "\\Assets\\Scripts\\GameController.cs",
+  "SelectedNode": "\\Assets\\Scripts\\Systems\\WorldMap\\Camera\\ReturnMovementSystem.cs",
   "PreviewInSolutionExplorer": false
 }

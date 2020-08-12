@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce1cb135a7da81749a20558ed35d4e20, type: 3}
   m_Name: Arena1
   m_EditorClassIdentifier: 
-  axisX: {x: 5, y: 25}
+  axisX: {x: 0, y: 32}
   axisY: {x: 5, y: 20}
-  axisZ: {x: 0, y: 25}
+  axisZ: {x: 0, y: 32}
