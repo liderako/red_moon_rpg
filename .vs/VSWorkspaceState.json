@@ -3,13 +3,14 @@
     "",
     "\\Assets",
     "\\Assets\\Scripts",
-    "\\Assets\\Scripts\\Components\\Movement",
+    "\\Assets\\Scripts\\Components",
+    "\\Assets\\Scripts\\Components\\Grid",
     "\\Assets\\Scripts\\Systems",
-    "\\Assets\\Scripts\\Systems\\InitializeSystems",
-    "\\Assets\\Scripts\\Systems\\WorldMap",
-    "\\Assets\\Scripts\\Systems\\WorldMap\\Camera",
+    "\\Assets\\Scripts\\Systems\\Battle",
+    "\\Assets\\Scripts\\Systems\\Battle\\Grid",
+    "\\Assets\\Scripts\\Utils",
     "\\Logs"
   ],
-  "SelectedNode": "\\Assets\\Scripts\\Systems\\WorldMap\\Camera\\ReturnMovementSystem.cs",
+  "SelectedNode": "\\Assets\\Scripts\\Components\\Battle",
   "PreviewInSolutionExplorer": false
 }

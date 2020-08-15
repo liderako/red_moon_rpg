@@ -38,7 +38,7 @@ namespace RedMoonRPG.InitializeSystems
                 cameraEntity.AddForceSpeed(cameraSettings.ForceSpeed);
                 cameraEntity.AddBorderThickness(cameraSettings.BorderThickness);
                 cameraEntity.AddMapPosition(new Position(Vector3.zero));
-                cameraEntity.isTeleportCamera = true;
+                //cameraEntity.isTeleportCamera = true;
                 entities[0].isCameraCreate = false;
             }
         }

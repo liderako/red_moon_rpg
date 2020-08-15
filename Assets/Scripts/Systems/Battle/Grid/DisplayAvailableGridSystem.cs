@@ -19,7 +19,7 @@ namespace RedMoonRPG.Battle.Grid
 
         protected override bool Filter(GridEntity entity)
         {
-            return entity.isActiveAvatar && entity.hasActionPoint;
+            return entity.activeAvatar.value == true && entity.hasActionPoint;
         }
 
         protected override void Execute(List<GridEntity> entities)

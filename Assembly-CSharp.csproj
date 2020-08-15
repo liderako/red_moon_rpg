@@ -56,7 +56,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Sources\Generated\Game\Components\GameActiveAnimationComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Grid\Components\GridActionPointComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Grid\Components\GridActiveAvatarComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Game\Components\GameActiveAvatarComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Grid\Components\GridBattleComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameCameraCreateComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Grid\Components\GridPathComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Grid\Components\GridTerrainGridComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameLevelCreateComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameBorderThicknessComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameForceSpeedComponent.cs" />
@@ -66,7 +72,6 @@
     <Compile Include="Assets\Sources\Generated\Game\Components\GameWorldMapComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameWorldMapMovementComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameNextAnimationComponent.cs" />
-    <Compile Include="Assets\Sources\Generated\Grid\Components\GridTerrainGridComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameUpdateMagicDamageComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameUpdateMeleeDamageComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameUpdateRangedDamageComponent.cs" />
@@ -100,8 +105,6 @@
     <Compile Include="Assets\Sources\Generated\Game\Components\GameAnimatorComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameNavMeshAgentComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameTransformComponent.cs" />
-    <Compile Include="Assets\Sources\Generated\Grid\Components\GridActionPointComponent.cs" />
-    <Compile Include="Assets\Sources\Generated\Grid\Components\GridActiveAvatarComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameNameComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Time\Components\TimeNameComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Grid\Components\GridNameComponent.cs" />
@@ -111,6 +114,7 @@
     <Compile Include="Assets\Sources\Generated\Grid\Components\GridTargetPositionComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameMapPositionComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Grid\Components\GridMapPositionComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Components\Interfaces\IActiveAvatar.cs" />
     <Compile Include="Assets\Sources\Generated\Components\Interfaces\IName.cs" />
     <Compile Include="Assets\Sources\Generated\Components\Interfaces\ITargetPosition.cs" />
     <Compile Include="Assets\Sources\Generated\Components\Interfaces\IMapPosition.cs" />

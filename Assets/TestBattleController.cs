@@ -28,7 +28,7 @@ public class TestBattleController : MonoBehaviour
     private void InitTest()
     {
         GridEntity avatar = Contexts.sharedInstance.grid.CreateEntity();
-        avatar.isActiveAvatar = true;
+        avatar.AddActiveAvatar(true);
         avatar.AddActionPoint(5);
         avatar.AddMapPosition(new Position(Player.transform.position));
         avatar.AddTerrainGrid(TerrainGridSystem.instance);

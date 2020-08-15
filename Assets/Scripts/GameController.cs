@@ -52,6 +52,11 @@ namespace RedMoonRPG
         private void TestInitPlayer()
         {
             GameEntity entity = Contexts.sharedInstance.game.CreateEntity();
+
+            GameEntity entity1 = Contexts.sharedInstance.game.CreateEntity();
+            entity1.AddActiveAvatar(false);
+            GameEntity entity2 = Contexts.sharedInstance.game.CreateEntity();
+            entity2.AddActiveAvatar(false);
             GameObject go = Instantiate(_playerPrefab);
             entity.AddNavMeshAgent(go.GetComponent<NavMeshAgent>());
             entity.AddName(Tags.playerAvatar);
@@ -60,6 +65,7 @@ namespace RedMoonRPG
             entity.AddAnimator(go.GetComponent<Animator>());
             entity.AddActiveAnimation(AnimationTags.idle);
             entity.AddNextAnimation(AnimationTags.idle);
+            entity.AddActiveAvatar(true);
             entity.AddPersona("Lola");
         }
 

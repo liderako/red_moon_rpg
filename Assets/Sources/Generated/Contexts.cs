@@ -64,11 +64,21 @@ public partial class Contexts : Entitas.IContexts {
 //------------------------------------------------------------------------------
 public partial class Contexts {
 
+    public const string ActiveAvatar = "ActiveAvatar";
     public const string Name = "Name";
     public const string Persona = "Persona";
 
     [Entitas.CodeGeneration.Attributes.PostConstructor]
     public void InitializeEntityIndices() {
+        grid.AddEntityIndex(new Entitas.EntityIndex<GridEntity, bool>(
+            ActiveAvatar,
+            grid.GetGroup(GridMatcher.ActiveAvatar),
+            (e, c) => ((ActiveAvatarComponent)c).value));
+        game.AddEntityIndex(new Entitas.EntityIndex<GameEntity, bool>(
+            ActiveAvatar,
+            game.GetGroup(GameMatcher.ActiveAvatar),
+            (e, c) => ((ActiveAvatarComponent)c).value));
+
         game.AddEntityIndex(new Entitas.PrimaryEntityIndex<GameEntity, string>(
             Name,
             game.GetGroup(GameMatcher.Name),
@@ -90,6 +100,14 @@ public partial class Contexts {
 }
 
 public static class ContextsExtensions {
+
+    public static System.Collections.Generic.HashSet<GridEntity> GetEntitiesWithActiveAvatar(this GridContext context, bool value) {
+        return ((Entitas.EntityIndex<GridEntity, bool>)context.GetEntityIndex(Contexts.ActiveAvatar)).GetEntities(value);
+    }
+
+    public static System.Collections.Generic.HashSet<GameEntity> GetEntitiesWithActiveAvatar(this GameContext context, bool value) {
+        return ((Entitas.EntityIndex<GameEntity, bool>)context.GetEntityIndex(Contexts.ActiveAvatar)).GetEntities(value);
+    }
 
     public static GameEntity GetEntityWithName(this GameContext context, string name) {
         return ((Entitas.PrimaryEntityIndex<GameEntity, string>)context.GetEntityIndex(Contexts.Name)).GetEntity(name);
