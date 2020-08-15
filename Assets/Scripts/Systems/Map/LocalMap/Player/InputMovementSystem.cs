@@ -27,6 +27,14 @@ namespace RedMoonRPG.Systems.LocalMap.Player
                     {
                         return;
                     }
+					if (!player.hasNextAnimation)
+					{
+						player.AddNextAnimation(AnimationTags.walk);
+					}
+					else
+                    {
+						player.ReplaceNextAnimation(AnimationTags.walk);
+					}
 					gridEntity.ReplacePath(moveList, 0);
 					gridEntity.ReplaceMapPosition(gridEntity.mapPosition.value);
 					return;

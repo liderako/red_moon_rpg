@@ -6,11 +6,11 @@
     "\\Assets\\Scripts\\Components",
     "\\Assets\\Scripts\\Components\\Grid",
     "\\Assets\\Scripts\\Systems",
-    "\\Assets\\Scripts\\Systems\\Battle",
-    "\\Assets\\Scripts\\Systems\\Battle\\Grid",
-    "\\Assets\\Scripts\\Utils",
-    "\\Logs"
+    "\\Assets\\Scripts\\Systems\\InitializeSystems",
+    "\\Assets\\Scripts\\Systems\\Map",
+    "\\Assets\\Scripts\\Systems\\Map\\WorldMap",
+    "\\Assets\\Scripts\\Systems\\Map\\WorldMap\\Camera"
   ],
-  "SelectedNode": "\\Assets\\Scripts\\Components\\Battle",
+  "SelectedNode": "\\Assets\\Scripts\\Systems\\Map\\WorldMap\\Camera\\FollowerMovementSystem.cs",
   "PreviewInSolutionExplorer": false
 }
