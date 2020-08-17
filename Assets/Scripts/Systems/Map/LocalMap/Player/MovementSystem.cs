@@ -36,6 +36,9 @@ namespace RedMoonRPG.Systems.LocalMap.Player
                     entityGrid.path.gridPath.Clear();
                     entityGrid.path.iterator = 0;
                     entityPlayer.AddNextAnimation(AnimationTags.idle);
+                    GridEntity e = Contexts.sharedInstance.grid.GetEntityWithCellPointer(true);
+                    Object.Destroy(e.transform.value.gameObject);
+                    e.Destroy();
                 }
             }
         }

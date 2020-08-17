@@ -65,6 +65,7 @@ public partial class Contexts : Entitas.IContexts {
 public partial class Contexts {
 
     public const string ActiveAvatar = "ActiveAvatar";
+    public const string CellPointer = "CellPointer";
     public const string Name = "Name";
     public const string Persona = "Persona";
 
@@ -78,6 +79,11 @@ public partial class Contexts {
             ActiveAvatar,
             game.GetGroup(GameMatcher.ActiveAvatar),
             (e, c) => ((ActiveAvatarComponent)c).value));
+
+        grid.AddEntityIndex(new Entitas.PrimaryEntityIndex<GridEntity, bool>(
+            CellPointer,
+            grid.GetGroup(GridMatcher.CellPointer),
+            (e, c) => ((CellPointerComponent)c).value));
 
         game.AddEntityIndex(new Entitas.PrimaryEntityIndex<GameEntity, string>(
             Name,
@@ -107,6 +113,10 @@ public static class ContextsExtensions {
 
     public static System.Collections.Generic.HashSet<GameEntity> GetEntitiesWithActiveAvatar(this GameContext context, bool value) {
         return ((Entitas.EntityIndex<GameEntity, bool>)context.GetEntityIndex(Contexts.ActiveAvatar)).GetEntities(value);
+    }
+
+    public static GridEntity GetEntityWithCellPointer(this GridContext context, bool value) {
+        return ((Entitas.PrimaryEntityIndex<GridEntity, bool>)context.GetEntityIndex(Contexts.CellPointer)).GetEntity(value);
     }
 
     public static GameEntity GetEntityWithName(this GameContext context, string name) {

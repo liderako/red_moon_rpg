@@ -283,6 +283,7 @@
     <Compile Include="Assets\Scripts\Components\Battle\ActiveAvatarComponent.cs" />
     <Compile Include="Assets\Scripts\Components\Battle\BattleComponent.cs" />
     <Compile Include="Assets\Scripts\Components\CameraCreate.cs" />
+    <Compile Include="Assets\Scripts\Components\Grid\CellPointer.cs" />
     <Compile Include="Assets\Scripts\Components\Grid\PathComponent.cs" />
     <Compile Include="Assets\Scripts\Components\Grid\TerrainGridComponent.cs" />
     <Compile Include="Assets\Scripts\Components\LevelCreate.cs" />
@@ -383,6 +384,7 @@
     <Compile Include="Assets\Sources\Generated\Components\Interfaces\IMapPosition.cs" />
     <Compile Include="Assets\Sources\Generated\Components\Interfaces\IName.cs" />
     <Compile Include="Assets\Sources\Generated\Components\Interfaces\ITargetPosition.cs" />
+    <Compile Include="Assets\Sources\Generated\Components\Interfaces\ITransform.cs" />
     <Compile Include="Assets\Sources\Generated\Components\MapPositionComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Components\TargetPositionComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Contexts.cs" />
@@ -436,11 +438,13 @@
     <Compile Include="Assets\Sources\Generated\Grid\Components\GridActionPointComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Grid\Components\GridActiveAvatarComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Grid\Components\GridBattleComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Grid\Components\GridCellPointerComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Grid\Components\GridMapPositionComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Grid\Components\GridNameComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Grid\Components\GridPathComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Grid\Components\GridTargetPositionComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Grid\Components\GridTerrainGridComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Grid\Components\GridTransformComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Grid\GridAttribute.cs" />
     <Compile Include="Assets\Sources\Generated\Grid\GridComponentsLookup.cs" />
     <Compile Include="Assets\Sources\Generated\Grid\GridContext.cs" />

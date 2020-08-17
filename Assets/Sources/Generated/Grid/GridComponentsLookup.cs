@@ -11,33 +11,39 @@ public static class GridComponentsLookup {
     public const int ActionPoint = 0;
     public const int ActiveAvatar = 1;
     public const int Battle = 2;
-    public const int MapPosition = 3;
-    public const int Path = 4;
-    public const int Name = 5;
-    public const int TargetPosition = 6;
-    public const int TerrainGrid = 7;
+    public const int CellPointer = 3;
+    public const int MapPosition = 4;
+    public const int Path = 5;
+    public const int Name = 6;
+    public const int TargetPosition = 7;
+    public const int TerrainGrid = 8;
+    public const int Transform = 9;
 
-    public const int TotalComponents = 8;
+    public const int TotalComponents = 10;
 
     public static readonly string[] componentNames = {
         "ActionPoint",
         "ActiveAvatar",
         "Battle",
+        "CellPointer",
         "MapPosition",
         "Path",
         "Name",
         "TargetPosition",
-        "TerrainGrid"
+        "TerrainGrid",
+        "Transform"
     };
 
     public static readonly System.Type[] componentTypes = {
         typeof(ActionPointComponent),
         typeof(ActiveAvatarComponent),
         typeof(BattleComponent),
+        typeof(CellPointerComponent),
         typeof(MapPositionComponent),
         typeof(PathComponent),
         typeof(RedMoonRPG.NameComponent),
         typeof(TargetPositionComponent),
-        typeof(TerrainGridComponent)
+        typeof(TerrainGridComponent),
+        typeof(TransformComponent)
     };
 }

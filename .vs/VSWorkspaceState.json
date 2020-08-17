@@ -5,12 +5,13 @@
     "\\Assets\\Scripts",
     "\\Assets\\Scripts\\Components",
     "\\Assets\\Scripts\\Components\\Grid",
+    "\\Assets\\Scripts\\Components\\Unity",
     "\\Assets\\Scripts\\Systems",
-    "\\Assets\\Scripts\\Systems\\InitializeSystems",
     "\\Assets\\Scripts\\Systems\\Map",
     "\\Assets\\Scripts\\Systems\\Map\\WorldMap",
-    "\\Assets\\Scripts\\Systems\\Map\\WorldMap\\Camera"
+    "\\Assets\\Scripts\\Systems\\Map\\WorldMap\\Player",
+    "\\Assets\\Scripts\\Systems\\СharacterAttributeDataCollection"
   ],
-  "SelectedNode": "\\Assets\\Scripts\\Systems\\Map\\WorldMap\\Camera\\FollowerMovementSystem.cs",
+  "SelectedNode": "\\Assets\\Scripts\\Systems\\Map\\LocalMap\\Player\\MovementSystem.cs",
   "PreviewInSolutionExplorer": false
 }
