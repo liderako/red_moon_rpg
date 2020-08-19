@@ -18,7 +18,16 @@ namespace RedMoonRPG.Systems.LocalMap.Player
                 if (Physics.Raycast(ray, out hit))
                 {
 					GridEntity gridEntity = Contexts.sharedInstance.grid.GetEntityWithName(player.name.name);
+					TerrainGridSystem tgs = gridEntity.terrainGrid.value;
+					/* Если клетка закрыта то выходим*/
+					if (tgs.CellGetAtPosition(hit.point, true).canCross == false)
+                    {
+						return;
+                    }
 					GridEntity cellPointer = Contexts.sharedInstance.grid.GetEntityWithCellPointer(true);
+					/*
+					 * инициализируем клетку
+					 */
 					if (cellPointer == null)
                     {
 						cellPointer = Contexts.sharedInstance.grid.CreateEntity();
@@ -27,11 +36,10 @@ namespace RedMoonRPG.Systems.LocalMap.Player
 						cellPointer.AddTransform(go.transform);
                     }
 					gridEntity.ReplaceActiveAvatar(true);
-					TerrainGridSystem tgs = gridEntity.terrainGrid.value;
-					int t_cell = tgs.CellGetIndex(tgs.CellGetAtPosition(hit.point, true));
-                    int startCell = tgs.CellGetIndex(tgs.CellGetAtPosition(player.transform.value.position, true));
-                    cellPointer.transform.value.position = new Vector3(tgs.CellGetPosition(t_cell, true).x, tgs.CellGetPosition(t_cell, true).y + 0.25f, tgs.CellGetPosition(t_cell, true).z);
-                    List<int> moveList = tgs.FindPath(startCell, t_cell, 0, 0, -1); /* третий параметр ограничит может дальность поиска клеток для пошагового боя*/
+					int endCell = tgs.CellGetIndex(tgs.CellGetAtPosition(hit.point, true));
+					int startCell = tgs.CellGetIndex(tgs.CellGetAtPosition(player.transform.value.position, true));
+                    cellPointer.transform.value.position = new Vector3(tgs.CellGetPosition(endCell, true).x, tgs.CellGetPosition(endCell, true).y + 0.25f, tgs.CellGetPosition(endCell, true).z);
+                    List<int> moveList = tgs.FindPath(startCell, endCell, 0, 0, -1); /* третий параметр ограничит может дальность поиска клеток для пошагового боя*/
                     if (moveList == null)
                     {
                         return;

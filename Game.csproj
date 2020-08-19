@@ -290,6 +290,7 @@
     <Compile Include="Assets\Scripts\Components\Movement\Map\BorderThicknessComponent.cs" />
     <Compile Include="Assets\Scripts\Components\Movement\Map\ForceSpeedComponent.cs" />
     <Compile Include="Assets\Scripts\Components\Movement\Map\LimitMapComponent.cs" />
+    <Compile Include="Assets\Scripts\Components\Movement\Map\RotateSpeedComponent.cs" />
     <Compile Include="Assets\Scripts\Components\Movement\Map\SpeedComponent.cs" />
     <Compile Include="Assets\Scripts\Components\Movement\PositionComponent.cs" />
     <Compile Include="Assets\Scripts\Components\Movement\WorldMap\FreeCameraComponent.cs" />
@@ -383,6 +384,8 @@
     <Compile Include="Assets\Sources\Generated\Components\Interfaces\IActiveAvatar.cs" />
     <Compile Include="Assets\Sources\Generated\Components\Interfaces\IMapPosition.cs" />
     <Compile Include="Assets\Sources\Generated\Components\Interfaces\IName.cs" />
+    <Compile Include="Assets\Sources\Generated\Components\Interfaces\IRotateSpeed.cs" />
+    <Compile Include="Assets\Sources\Generated\Components\Interfaces\ISpeed.cs" />
     <Compile Include="Assets\Sources\Generated\Components\Interfaces\ITargetPosition.cs" />
     <Compile Include="Assets\Sources\Generated\Components\Interfaces\ITransform.cs" />
     <Compile Include="Assets\Sources\Generated\Components\MapPositionComponent.cs" />
@@ -420,6 +423,7 @@
     <Compile Include="Assets\Sources\Generated\Game\Components\GameNextLevelNameComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GamePersonaComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GamePersonalityComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Game\Components\GameRotateSpeedComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameSpeedComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameStrengthComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameTargetPositionComponent.cs" />
@@ -442,6 +446,8 @@
     <Compile Include="Assets\Sources\Generated\Grid\Components\GridMapPositionComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Grid\Components\GridNameComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Grid\Components\GridPathComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Grid\Components\GridRotateSpeedComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Grid\Components\GridSpeedComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Grid\Components\GridTargetPositionComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Grid\Components\GridTerrainGridComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Grid\Components\GridTransformComponent.cs" />

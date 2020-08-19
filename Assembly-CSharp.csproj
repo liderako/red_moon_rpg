@@ -68,7 +68,10 @@
     <Compile Include="Assets\Sources\Generated\Game\Components\GameBorderThicknessComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameForceSpeedComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameLimitMapComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Game\Components\GameRotateSpeedComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Grid\Components\GridRotateSpeedComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameSpeedComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Grid\Components\GridSpeedComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameFreeCameraComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameWorldMapComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameWorldMapMovementComponent.cs" />
@@ -117,6 +120,8 @@
     <Compile Include="Assets\Sources\Generated\Game\Components\GameMapPositionComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Grid\Components\GridMapPositionComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Components\Interfaces\IActiveAvatar.cs" />
+    <Compile Include="Assets\Sources\Generated\Components\Interfaces\IRotateSpeed.cs" />
+    <Compile Include="Assets\Sources\Generated\Components\Interfaces\ISpeed.cs" />
     <Compile Include="Assets\Sources\Generated\Components\Interfaces\ITransform.cs" />
     <Compile Include="Assets\Sources\Generated\Components\Interfaces\IName.cs" />
     <Compile Include="Assets\Sources\Generated\Components\Interfaces\ITargetPosition.cs" />

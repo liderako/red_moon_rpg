@@ -83,6 +83,8 @@ namespace RedMoonRPG
             avatar.AddTerrainGrid(TerrainGridSystem.instance);
             avatar.AddName(entity.name.name);
             avatar.AddPath(new List<int>(), 0);
+            avatar.AddSpeed(2);
+            avatar.AddRotateSpeed(5);
 
 
             //GameEntity camera = Contexts.sharedInstance.game.GetEntityWithName(Tags.camera);

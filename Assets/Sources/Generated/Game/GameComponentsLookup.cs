@@ -39,18 +39,19 @@ public static class GameComponentsLookup {
     public const int Name = 28;
     public const int NextLevelName = 29;
     public const int Persona = 30;
-    public const int Speed = 31;
-    public const int Strength = 32;
-    public const int TargetPosition = 33;
-    public const int TeleportCamera = 34;
-    public const int Transform = 35;
-    public const int UpdateMagicDamage = 36;
-    public const int UpdateMeleeDamage = 37;
-    public const int UpdateRangedDamage = 38;
-    public const int WorldMap = 39;
-    public const int WorldMapMovement = 40;
+    public const int RotateSpeed = 31;
+    public const int Speed = 32;
+    public const int Strength = 33;
+    public const int TargetPosition = 34;
+    public const int TeleportCamera = 35;
+    public const int Transform = 36;
+    public const int UpdateMagicDamage = 37;
+    public const int UpdateMeleeDamage = 38;
+    public const int UpdateRangedDamage = 39;
+    public const int WorldMap = 40;
+    public const int WorldMapMovement = 41;
 
-    public const int TotalComponents = 41;
+    public const int TotalComponents = 42;
 
     public static readonly string[] componentNames = {
         "ActiveAnimation",
@@ -84,6 +85,7 @@ public static class GameComponentsLookup {
         "Name",
         "NextLevelName",
         "Persona",
+        "RotateSpeed",
         "Speed",
         "Strength",
         "TargetPosition",
@@ -128,6 +130,7 @@ public static class GameComponentsLookup {
         typeof(RedMoonRPG.NameComponent),
         typeof(RedMoonRPG.NextLevelNameComponent),
         typeof(RedMoonRPG.PersonaComponent),
+        typeof(RotateSpeedComponent),
         typeof(SpeedComponent),
         typeof(StrengthComponent),
         typeof(TargetPositionComponent),
