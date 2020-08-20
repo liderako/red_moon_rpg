@@ -4,7 +4,7 @@ using UnityEngine;
 using Entitas;
 using RedMoonRPG.Settings;
 
-namespace RedMoonRPG.InitializeSystems
+namespace RedMoonRPG.Systems.InitializeSystems
 {
     /*
      * Система для инициализации сущности уровня и подгрузки параметров уровня

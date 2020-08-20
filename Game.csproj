@@ -348,6 +348,7 @@
     <Compile Include="Assets\Scripts\ScriptableObjects\GameBalanceSettings.cs" />
     <Compile Include="Assets\Scripts\ScriptableObjects\LevelSettings.cs" />
     <Compile Include="Assets\Scripts\Systems\Animations\BoolAnimationSystem.cs" />
+    <Compile Include="Assets\Scripts\Systems\Battle\Grid\AwakeDisplayGridSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\Battle\Grid\DisplayAvailableGridSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\InitializeSystems\CameraInitEntitySystem.cs" />
     <Compile Include="Assets\Scripts\Systems\InitializeSystems\LevelInitEntitySystem.cs" />

@@ -1857,49 +1857,53 @@ namespace TGS {
 
 		void DrawCellBorders () {
 
-			if (cellLayer != null) {
-				DestroyImmediate (cellLayer);
-			} else {
-				Transform t = transform.Find (CELLS_LAYER_NAME);
-				if (t != null)
-					DestroyImmediate (t.gameObject);
-			}
-			if (cells.Count == 0)
-				return;
+            if (cellLayer != null)
+            {
+                DestroyImmediate(cellLayer);
+            }
+            else
+            {
+                Transform t = transform.Find(CELLS_LAYER_NAME);
+                if (t != null)
+                    DestroyImmediate(t.gameObject);
+            }
+            if (cells.Count == 0)
+                return;
 
-			cellLayer = new GameObject (CELLS_LAYER_NAME);
-			disposalManager.MarkForDisposal (cellLayer);
-			cellLayer.transform.SetParent (transform, false);
-			cellLayer.transform.localPosition = Vector3.back * 0.001f;
-		
-			for (int k = 0; k < cellMeshBorders.Length; k++) {
-				GameObject flayer = new GameObject ("flayer");
-				disposalManager.MarkForDisposal (flayer);
-				flayer.hideFlags |= HideFlags.HideInHierarchy;
-				flayer.transform.SetParent (cellLayer.transform, false);
-				flayer.transform.localPosition = Misc.Vector3zero;
-				flayer.transform.localRotation = Quaternion.Euler (Misc.Vector3zero);
-			
-				Mesh mesh = new Mesh ();
-				mesh.vertices = cellMeshBorders [k];
-				mesh.SetIndices (cellMeshIndices [k], MeshTopology.Lines, 0);
+            cellLayer = new GameObject(CELLS_LAYER_NAME);
+            disposalManager.MarkForDisposal(cellLayer);
+            cellLayer.transform.SetParent(transform, false);
+            cellLayer.transform.localPosition = Vector3.back * 0.001f;
 
-				mesh.RecalculateBounds ();
-				disposalManager.MarkForDisposal (mesh);
-			
-				MeshFilter mf = flayer.AddComponent<MeshFilter> ();
-				mf.sharedMesh = mesh;
-				_lastVertexCount += mesh.vertexCount;
-			
-				MeshRenderer mr = flayer.AddComponent<MeshRenderer> ();
-				mr.receiveShadows = false;
-				mr.reflectionProbeUsage = UnityEngine.Rendering.ReflectionProbeUsage.Off;
-				mr.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
-				mr.sharedMaterial = cellsMat;
-			}
-			cellLayer.SetActive (_showCells);
-			cellsGeoMat.SetFloat ("_Thickness", _cellBorderThickness - 0.8f);
-		}
+            for (int k = 0; k < cellMeshBorders.Length; k++)
+            {
+                GameObject flayer = new GameObject("flayer");
+                disposalManager.MarkForDisposal(flayer);
+                flayer.hideFlags |= HideFlags.HideInHierarchy;
+                flayer.transform.SetParent(cellLayer.transform, false);
+                flayer.transform.localPosition = Misc.Vector3zero;
+                flayer.transform.localRotation = Quaternion.Euler(Misc.Vector3zero);
+
+                Mesh mesh = new Mesh();
+                mesh.vertices = cellMeshBorders[k];
+                mesh.SetIndices(cellMeshIndices[k], MeshTopology.Lines, 0);
+
+                mesh.RecalculateBounds();
+                disposalManager.MarkForDisposal(mesh);
+
+                MeshFilter mf = flayer.AddComponent<MeshFilter>();
+                mf.sharedMesh = mesh;
+                _lastVertexCount += mesh.vertexCount;
+
+                MeshRenderer mr = flayer.AddComponent<MeshRenderer>();
+                mr.receiveShadows = false;
+                mr.reflectionProbeUsage = UnityEngine.Rendering.ReflectionProbeUsage.Off;
+                mr.shadowCastingMode = UnityEngine.Rendering.ShadowCastingMode.Off;
+                mr.sharedMaterial = cellsMat;
+            }
+            cellLayer.SetActive(_showCells);
+            cellsGeoMat.SetFloat("_Thickness", _cellBorderThickness - 0.8f);
+        }
 
 		void DrawColorizedCells () {
 			int cellsCount = cells.Count;

@@ -4,14 +4,15 @@
     "\\Assets",
     "\\Assets\\Scripts",
     "\\Assets\\Scripts\\Components",
-    "\\Assets\\Scripts\\Components\\Grid",
-    "\\Assets\\Scripts\\Components\\Unity",
+    "\\Assets\\Scripts\\Components\\Movement",
+    "\\Assets\\Scripts\\Components\\Movement\\Map",
     "\\Assets\\Scripts\\Systems",
+    "\\Assets\\Scripts\\Systems\\Battle",
+    "\\Assets\\Scripts\\Systems\\Battle\\Grid",
     "\\Assets\\Scripts\\Systems\\Map",
-    "\\Assets\\Scripts\\Systems\\Map\\WorldMap",
-    "\\Assets\\Scripts\\Systems\\Map\\WorldMap\\Player",
-    "\\Assets\\Scripts\\Systems\\СharacterAttributeDataCollection"
+    "\\Assets\\Scripts\\Systems\\Map\\LocalMap",
+    "\\Assets\\Scripts\\Systems\\Map\\LocalMap\\Player"
   ],
-  "SelectedNode": "\\Assets\\Scripts\\Systems\\Map\\LocalMap\\Player\\MovementSystem.cs",
+  "SelectedNode": "\\Assets\\Scripts\\Systems\\Battle\\Grid\\DisplayAvailableGridSystem.cs",
   "PreviewInSolutionExplorer": false
 }

@@ -73,11 +73,10 @@ namespace RedMoonRPG
             entity.AddAnimator(go.GetComponent<Animator>());
             entity.AddActiveAnimation(AnimationTags.idle);
             entity.AddNextAnimation(AnimationTags.idle);
-            entity.AddActiveAvatar(true);
             entity.AddPersona("Lola");
+            entity.AddActiveAvatar(true);
 
             GridEntity avatar = Contexts.sharedInstance.grid.CreateEntity();
-            avatar.AddActiveAvatar(true);
             avatar.AddActionPoint(5);
             avatar.AddMapPosition(new Position(entity.transform.value.position));
             avatar.AddTerrainGrid(TerrainGridSystem.instance);
@@ -85,11 +84,25 @@ namespace RedMoonRPG
             avatar.AddPath(new List<int>(), 0);
             avatar.AddSpeed(2);
             avatar.AddRotateSpeed(5);
-
+            avatar.AddActiveAvatar(true);
+            StartCoroutine(wait(avatar, entity, avatar));
 
             //GameEntity camera = Contexts.sharedInstance.game.GetEntityWithName(Tags.camera);
             //camera.isWorldMap = false;
             // to do нужно чтобы не было никаких конфликтов между управлением камер в локал и глоб картах
+        }
+
+        public IEnumerator wait(GridEntity e, GameEntity player, GridEntity avatar)
+        {
+            yield return new WaitForSeconds(2);
+            e.isBattle = true;
+            player.ReplaceActiveAvatar(true);
+            avatar.ReplaceActiveAvatar(true);
+        }
+
+        public void Wait(GridEntity e)
+        {
+            e.isBattle = true;
         }
 
         private Entitas.Systems CreateSystems(Contexts contexts)
@@ -101,7 +114,9 @@ namespace RedMoonRPG
             .Add(new Systems.WorldMap.Camera.TeleportSystem(contexts))
             .Add(new Systems.Animations.BoolAnimationSystem(contexts))
             .Add(new Systems.LocalMap.Player.InputMovementSystem())
-            .Add(new Systems.LocalMap.Player.MovementSystem(contexts));
+            .Add(new Systems.LocalMap.Player.MovementSystem(contexts))
+            .Add(new Systems.Battle.Grid.AwakeDisplayGridSystem(contexts))
+            .Add(new Systems.Battle.Grid.DisplayAvailableGridSystem(contexts));
         }
     }
 }

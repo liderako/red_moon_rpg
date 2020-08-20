@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Entitas;
 
-namespace RedMoonRPG.InitializeSystems
+namespace RedMoonRPG.Systems.InitializeSystems
 {
     /*
      * Система для инициализации камеры на уровне

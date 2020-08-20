@@ -4,7 +4,7 @@ using UnityEngine;
 using Entitas;
 using TGS;
 
-namespace RedMoonRPG.Battle.Grid
+namespace RedMoonRPG.Systems.Battle.Grid
 {
     public class DisplayAvailableGridSystem : ReactiveSystem<GridEntity>
     {
@@ -19,7 +19,7 @@ namespace RedMoonRPG.Battle.Grid
 
         protected override bool Filter(GridEntity entity)
         {
-            return entity.activeAvatar.value == true && entity.hasActionPoint;
+            return entity.isBattle && entity.activeAvatar.value == true && entity.hasActionPoint;
         }
 
         protected override void Execute(List<GridEntity> entities)
@@ -55,7 +55,7 @@ namespace RedMoonRPG.Battle.Grid
             {
                 return;
             }
-            if (!array.Contains(tgs.CellGetIndex(currentCell)) && currentCell.canCross)
+            if (currentCell.canCross)
             {
                 array.Add(tgs.CellGetIndex(currentCell));
                 tgs.CellSetColor(tgs.CellGetIndex(currentCell), new Color(194, 194, 194, 0.1f));

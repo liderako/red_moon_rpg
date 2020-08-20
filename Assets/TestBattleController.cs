@@ -37,6 +37,6 @@ public class TestBattleController : MonoBehaviour
     private Entitas.Systems CreateSystems(Contexts contexts)
     {
         return new Feature("Grid")
-        .Add(new RedMoonRPG.Battle.Grid.DisplayAvailableGridSystem(contexts));
+        .Add(new RedMoonRPG.Systems.Battle.Grid.DisplayAvailableGridSystem(contexts));
     }
 }

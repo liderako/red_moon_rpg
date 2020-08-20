@@ -39,8 +39,8 @@ namespace RedMoonRPG
         private Entitas.Systems CreateLoadingSystem(Contexts contexts)
         {
             return new Feature("GameLoading")
-            .Add(new InitializeSystems.CameraInitEntitySystem(contexts))
-            .Add(new InitializeSystems.LevelInitEntitySystem(contexts))
+            .Add(new Systems.InitializeSystems.CameraInitEntitySystem(contexts))
+            .Add(new Systems.InitializeSystems.LevelInitEntitySystem(contexts))
             .Add(new LoadLevelSystem(contexts));
         }
     }
