@@ -2,13 +2,11 @@
   "ExpandedNodes": [
     "",
     "\\Assets",
+    "\\Assets\\Plugins",
+    "\\Assets\\Plugins\\TerrainGridSystem\\Demos",
+    "\\Assets\\Plugins\\TerrainGridSystem\\Demos\\Demo10b_CharacterGrid",
     "\\Assets\\Scripts",
-    "\\Assets\\Scripts\\Components",
-    "\\Assets\\Scripts\\Components\\Movement",
-    "\\Assets\\Scripts\\Components\\Movement\\Map",
     "\\Assets\\Scripts\\Systems",
-    "\\Assets\\Scripts\\Systems\\Battle",
-    "\\Assets\\Scripts\\Systems\\Battle\\Grid",
     "\\Assets\\Scripts\\Systems\\Map",
     "\\Assets\\Scripts\\Systems\\Map\\LocalMap",
     "\\Assets\\Scripts\\Systems\\Map\\LocalMap\\Player"

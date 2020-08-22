@@ -21,5 +21,9 @@
         // const 
         public const int priceXstep = 1;
         public const int priceYstep = 1;
+
+
+        // layers
+        public const int PlayerLayer = 8;
     }
 }

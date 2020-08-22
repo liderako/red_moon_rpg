@@ -15,6 +15,11 @@ namespace RedMoonRPG
         public GameObject _playerPrefab;
 
         public GameBalanceSettings gameBalanceSettings;
+        public List<GameObject> _testEnemy;
+
+
+        [SerializeField] private Transform _spawnPoint;
+
 
         private Entitas.Systems _systems;
 
@@ -49,27 +54,19 @@ namespace RedMoonRPG
             gameInitializer.isLevelCreate = true;
 
             TestInitPlayer();
+            TestInitEnemy();
         }
-
-        //private void initTest()
-        //{
-        //    GameEntity gameInitializer = Contexts.sharedInstance.game.GetEntityWithName("GameInit");
-        //    TestInitPlayer();
-        //    gameInitializer.isCameraCreate = true;
-        //    gameInitializer.isLevelCreate = true;
-        //}
-
-        [SerializeField] private Transform _spawnPoint;
 
         private void TestInitPlayer()
         {
+            TerrainGridSystem tgs = TerrainGridSystem.instance;
             GameEntity entity = Contexts.sharedInstance.game.CreateEntity();
             GameObject go = Instantiate(_playerPrefab);
-            go.transform.position = _spawnPoint.position;
-            entity.AddNavMeshAgent(go.GetComponent<NavMeshAgent>());
+            go.transform.position = tgs.CellGetPosition(tgs.CellGetAtPosition(_spawnPoint.position, true), true);
+            //entity.AddNavMeshAgent(go.GetComponent<NavMeshAgent>());
             entity.AddName(Tags.playerAvatar);
             entity.AddMapPosition(new Position(go.transform.position));
-            entity.AddTransform(go.GetComponent<NavMeshAgent>().transform);
+            entity.AddTransform(go.transform);
             entity.AddAnimator(go.GetComponent<Animator>());
             entity.AddActiveAnimation(AnimationTags.idle);
             entity.AddNextAnimation(AnimationTags.idle);
@@ -85,24 +82,39 @@ namespace RedMoonRPG
             avatar.AddSpeed(2);
             avatar.AddRotateSpeed(5);
             avatar.AddActiveAvatar(true);
-            StartCoroutine(wait(avatar, entity, avatar));
 
             //GameEntity camera = Contexts.sharedInstance.game.GetEntityWithName(Tags.camera);
             //camera.isWorldMap = false;
             // to do нужно чтобы не было никаких конфликтов между управлением камер в локал и глоб картах
         }
 
-        public IEnumerator wait(GridEntity e, GameEntity player, GridEntity avatar)
+        public void FixedUpdate()
         {
-            yield return new WaitForSeconds(2);
-            e.isBattle = true;
-            player.ReplaceActiveAvatar(true);
-            avatar.ReplaceActiveAvatar(true);
+            for (int i = 0; i < _testEnemy.Count; i++)
+            {
+                //Debug.Log(TerrainGridSystem.instance.CellGetAtPosition(Vector3.zero));
+            }
         }
 
-        public void Wait(GridEntity e)
+        //void SnapToCellCenter()
+        //{
+        //    Vector3 pos = tgs.SnapToCell(character.transform.position);
+        //    character.transform.position = pos + Vector3.up;
+        //}
+
+        private void TestInitEnemy()
         {
-            e.isBattle = true;
+            TerrainGridSystem tgs = TerrainGridSystem.instance;
+            for (int i = 0; i < _testEnemy.Count; i++)
+            {
+                GameEntity entity = Contexts.sharedInstance.game.CreateEntity();
+                _testEnemy[i].transform.position = tgs.CellGetPosition(tgs.CellGetAtPosition(_testEnemy[i].transform.position, true), true);
+                entity.AddAnimator(_testEnemy[i].GetComponent<Animator>());
+                entity.AddActiveAnimation(AnimationTags.idle);
+                entity.AddNextAnimation(AnimationTags.idle);
+                entity.AddPersona(_testEnemy[i].name);
+                entity.AddActiveAvatar(false);
+            }
         }
 
         private Entitas.Systems CreateSystems(Contexts contexts)

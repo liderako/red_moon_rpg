@@ -377,6 +377,7 @@
     <Compile Include="Assets\Scripts\Tags\Animations.cs" />
     <Compile Include="Assets\Scripts\Tags\Scenes.cs" />
     <Compile Include="Assets\Scripts\Tags\Tags.cs" />
+    <Compile Include="Assets\Scripts\Triggers\OnTriggerBattle.cs" />
     <Compile Include="Assets\Scripts\Triggers\OnTriggerWorldZonaLevel.cs" />
     <Compile Include="Assets\Scripts\Triggers\OnTriggerZonaLevel.cs" />
     <Compile Include="Assets\Scripts\UI\ButtonOnTriggerLevel.cs" />

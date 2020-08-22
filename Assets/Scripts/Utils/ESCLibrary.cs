@@ -17,7 +17,7 @@ namespace RedMoonRPG
                     return e;
                 }
             }
-            Debug.LogError("Active avatar doesn't found");
+            //Debug.LogError("Active avatar doesn't found");
             return null;
         }
     }

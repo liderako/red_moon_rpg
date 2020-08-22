@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using RedMoonRPG.Battle.Grid;
 using TGS;
 
 public class TestBattleController : MonoBehaviour

@@ -44,23 +44,30 @@ namespace RedMoonRPG.Systems.LocalMap.Player
             }
         }
 
-        private void Move(GameEntity player, GridEntity avatar, Vector3 targetPosition)
+        private void Move(GameEntity unit, GridEntity avatar, Vector3 targetPosition)
         {
             // Двигаем персонажа и его аватара
-            player.transform.value.position = Vector3.MoveTowards(player.transform.value.position, targetPosition, avatar.speed.value * Time.deltaTime);
-            player.ReplaceMapPosition(new Position(player.transform.value.position));
-            avatar.ReplaceMapPosition(new Position(player.mapPosition.value.vector));
+            unit.transform.value.position = Vector3.MoveTowards(unit.transform.value.position, targetPosition, avatar.speed.value * Time.deltaTime);
+            unit.ReplaceMapPosition(new Position(unit.transform.value.position));
+            avatar.ReplaceMapPosition(new Position(unit.mapPosition.value.vector));
 
             // Поварачиваем персонажа
-            Quaternion OriginalRot = player.transform.value.rotation;
-            player.transform.value.LookAt(targetPosition);
-            Quaternion NewRot = player.transform.value.rotation;
-            player.transform.value.rotation = OriginalRot;
-            player.transform.value.rotation = Quaternion.Lerp(player.transform.value.rotation, NewRot, avatar.rotateSpeed.value * Time.deltaTime);
+            Quaternion OriginalRot = unit.transform.value.rotation;
+            unit.transform.value.LookAt(targetPosition);
+            Quaternion NewRot = unit.transform.value.rotation;
+            unit.transform.value.rotation = OriginalRot;
+            unit.transform.value.rotation = Quaternion.Lerp(unit.transform.value.rotation, NewRot, avatar.rotateSpeed.value * Time.deltaTime);
 
             // проверка дошел ли персонаж до след клетки, если да то увел итератор
-            if (Vector3.Distance(player.transform.value.position, targetPosition) <= 0.001f)
+            if (Vector3.Distance(unit.transform.value.position, targetPosition) <= 0.001f)
             {
+                if (unit.activeAvatar.value == false && avatar.activeAvatar.value == false)
+                {
+                    avatar.path.gridPath.Clear();
+                    avatar.path.iterator = 0;
+                    return;
+
+                }
                 avatar.path.iterator += 1;
             }
         }

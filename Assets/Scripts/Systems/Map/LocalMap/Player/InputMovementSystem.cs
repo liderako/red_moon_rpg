@@ -13,9 +13,11 @@ namespace RedMoonRPG.Systems.LocalMap.Player
 			if (Input.GetMouseButtonDown(0))
 			{
 				GameEntity player = ESCLibrary.GetActivePlayer();
+				if (player == null) return;
 				RaycastHit hit;
                 Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-                if (Physics.Raycast(ray, out hit))
+				LayerMask mask = LayerMask.GetMask("Default");
+				if (Physics.Raycast(ray, out hit, 1000, mask))
                 {
 					GridEntity gridEntity = Contexts.sharedInstance.grid.GetEntityWithName(player.name.name);
 					TerrainGridSystem tgs = gridEntity.terrainGrid.value;
