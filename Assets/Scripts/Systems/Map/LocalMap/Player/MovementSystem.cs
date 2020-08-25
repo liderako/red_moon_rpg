@@ -34,6 +34,7 @@ namespace RedMoonRPG.Systems.LocalMap.Player
                 Move(entityPlayer, entityGrid, entityGrid.terrainGrid.value.CellGetPosition(entityGrid.path.gridPath[entityGrid.path.iterator]));
                 if (entityGrid.path.iterator >= entityGrid.path.gridPath.Count)
                 {
+                    entityGrid.terrainGrid.value.CellGetAtPosition(entityPlayer.transform.value.position, true).canCross = false;
                     entityGrid.path.gridPath.Clear();
                     entityGrid.path.iterator = 0;
                     entityPlayer.AddNextAnimation(AnimationTags.idle);
@@ -66,7 +67,6 @@ namespace RedMoonRPG.Systems.LocalMap.Player
                     avatar.path.gridPath.Clear();
                     avatar.path.iterator = 0;
                     return;
-
                 }
                 avatar.path.iterator += 1;
             }

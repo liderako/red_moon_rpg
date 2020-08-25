@@ -33,6 +33,27 @@ namespace RedMoonRPG.Settings
             }
         }
 
+        public void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.Escape))
+            {
+                TerrainGridSystem tgs = TerrainGridSystem.instance;
+
+                for (int i = 0; i < tgs.cells.Count; i++)
+                {
+
+                    if (tgs.cells[i].canCross == false)
+                    {
+                        _tgs.CellSetColor(i, colorClose);
+                    }
+                    else
+                    {
+                        _tgs.CellSetColor(i, colorOpen);
+                    }
+                }
+            }
+        }
+
         private void DefaultDrawColor()
         {
             List<Cell> cells = _tgs.cells;

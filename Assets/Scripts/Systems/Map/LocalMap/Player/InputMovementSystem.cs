@@ -27,9 +27,7 @@ namespace RedMoonRPG.Systems.LocalMap.Player
 						return;
                     }
 					GridEntity cellPointer = Contexts.sharedInstance.grid.GetEntityWithCellPointer(true);
-					/*
-					 * инициализируем клетку
-					 */
+					/*инициализируем клетку */
 					if (cellPointer == null)
                     {
 						cellPointer = Contexts.sharedInstance.grid.CreateEntity();
@@ -37,15 +35,18 @@ namespace RedMoonRPG.Systems.LocalMap.Player
 						GameObject go = GameObject.Instantiate<GameObject>(Resources.Load<GameObject>("Circle"));
 						cellPointer.AddTransform(go.transform);
                     }
-					gridEntity.ReplaceActiveAvatar(true);
+					/* Задаем параметры для алгоритма поиска пути*/
+					gridEntity.terrainGrid.value.CellGetAtPosition(gridEntity.mapPosition.value.vector, true).canCross = true;
 					int endCell = tgs.CellGetIndex(tgs.CellGetAtPosition(hit.point, true));
 					int startCell = tgs.CellGetIndex(tgs.CellGetAtPosition(player.transform.value.position, true));
-                    cellPointer.transform.value.position = new Vector3(tgs.CellGetPosition(endCell, true).x, tgs.CellGetPosition(endCell, true).y + 0.25f, tgs.CellGetPosition(endCell, true).z);
                     List<int> moveList = tgs.FindPath(startCell, endCell, 0, 0, -1); /* третий параметр ограничит может дальность поиска клеток для пошагового боя*/
-                    if (moveList == null)
+					//gridEntity.terrainGrid.value.CellGetAtPosition(gridEntity.mapPosition.value.vector, true).canCross = false;
+					/* защита от пустых путей */
+					if (moveList == null)
                     {
                         return;
                     }
+					/* настраиваем анимацию */
 					if (!player.hasNextAnimation)
 					{
 						player.AddNextAnimation(AnimationTags.walk);
@@ -54,6 +55,9 @@ namespace RedMoonRPG.Systems.LocalMap.Player
                     {
 						player.ReplaceNextAnimation(AnimationTags.walk);
 					}
+					/* запускаем тригеры для старта систем*/
+					cellPointer.transform.value.position = new Vector3(tgs.CellGetPosition(endCell, true).x, tgs.CellGetPosition(endCell, true).y + 0.25f, tgs.CellGetPosition(endCell, true).z);
+					gridEntity.ReplaceActiveAvatar(true);
 					gridEntity.ReplacePath(moveList, 0);
 					gridEntity.ReplaceMapPosition(gridEntity.mapPosition.value);
 					return;

@@ -70,12 +70,13 @@ namespace RedMoonRPG
             entity.AddAnimator(go.GetComponent<Animator>());
             entity.AddActiveAnimation(AnimationTags.idle);
             entity.AddNextAnimation(AnimationTags.idle);
-            entity.AddPersona("Lola");
+            entity.AddPersona("Antonio");
             entity.AddActiveAvatar(true);
 
             GridEntity avatar = Contexts.sharedInstance.grid.CreateEntity();
             avatar.AddActionPoint(5);
             avatar.AddMapPosition(new Position(entity.transform.value.position));
+            tgs.CellGetAtPosition(_spawnPoint.position, true).canCross = false; // делаем текущию клетку героя непроходимой для других
             avatar.AddTerrainGrid(TerrainGridSystem.instance);
             avatar.AddName(entity.name.name);
             avatar.AddPath(new List<int>(), 0);
@@ -87,20 +88,6 @@ namespace RedMoonRPG
             //camera.isWorldMap = false;
             // to do нужно чтобы не было никаких конфликтов между управлением камер в локал и глоб картах
         }
-
-        public void FixedUpdate()
-        {
-            for (int i = 0; i < _testEnemy.Count; i++)
-            {
-                //Debug.Log(TerrainGridSystem.instance.CellGetAtPosition(Vector3.zero));
-            }
-        }
-
-        //void SnapToCellCenter()
-        //{
-        //    Vector3 pos = tgs.SnapToCell(character.transform.position);
-        //    character.transform.position = pos + Vector3.up;
-        //}
 
         private void TestInitEnemy()
         {
@@ -114,6 +101,8 @@ namespace RedMoonRPG
                 entity.AddNextAnimation(AnimationTags.idle);
                 entity.AddPersona(_testEnemy[i].name);
                 entity.AddActiveAvatar(false);
+                // делаем текущию клетку врага непроходимой для других
+                tgs.CellGetAtPosition(_testEnemy[i].transform.position, true).canCross = false;
             }
         }
 

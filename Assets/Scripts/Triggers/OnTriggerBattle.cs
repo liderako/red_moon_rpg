@@ -14,15 +14,16 @@ namespace RedMoonRPG.Triggers
             {
                 GameEntity[] gameGroup = Contexts.sharedInstance.game.GetGroup(GameMatcher.ActiveAvatar).GetEntities();
                 GridEntity[] gridGroup = Contexts.sharedInstance.grid.GetGroup(GridMatcher.ActiveAvatar).GetEntities();
+                for (int i = 0; i < gridGroup.Length; i++)
+                {
+                    if (gridGroup[i].isBattle == true) return; // защита от постоянного вхождение в битву в случаях когда анимация юнита крутит тригерр
+                    gridGroup[i].ReplaceActiveAvatar(false);
+                    gridGroup[i].isBattle = true;
+                }
                 for (int i = 0; i < gameGroup.Length; i++)
                 {
                     gameGroup[i].ReplaceActiveAvatar(false);
                     Debug.Log(gameGroup[i].persona.value + " now in battle");
-                }
-                for (int i = 0; i < gridGroup.Length; i++)
-                {
-                    gridGroup[i].ReplaceActiveAvatar(false);
-                    gridGroup[i].isBattle = true;
                 }
             }
         }
