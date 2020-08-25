@@ -4,14 +4,13 @@
     "\\Assets",
     "\\Assets\\Scripts",
     "\\Assets\\Scripts\\Systems",
-    "\\Assets\\Scripts\\Systems\\Battle",
-    "\\Assets\\Scripts\\Systems\\Battle\\Grid",
     "\\Assets\\Scripts\\Systems\\Map",
     "\\Assets\\Scripts\\Systems\\Map\\LocalMap",
     "\\Assets\\Scripts\\Systems\\Map\\LocalMap\\Player",
     "\\Assets\\Scripts\\Systems\\Map\\WorldMap",
-    "\\Assets\\Scripts\\Systems\\Map\\WorldMap\\Player"
+    "\\Assets\\Scripts\\Systems\\Map\\WorldMap\\Player",
+    "\\Assets\\Scripts\\Triggers"
   ],
-  "SelectedNode": "\\Assets\\Scripts\\Systems\\Map\\LocalMap\\Player\\InputMovementSystem.cs",
+  "SelectedNode": "\\Assets\\Scripts\\LocalGameController.cs",
   "PreviewInSolutionExplorer": false
 }
