@@ -12,7 +12,7 @@ namespace RedMoonRPG
             HashSet<GameEntity> sets = Contexts.sharedInstance.game.GetEntitiesWithActiveAvatar(true);
             foreach (var e in sets)
             {
-                if (e.hasName)
+                if (e.hasName && e.isPlayer)
                 {
                     return e;
                 }

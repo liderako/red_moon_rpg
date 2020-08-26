@@ -279,10 +279,12 @@
     <Compile Include="Assets\Plugins\TerrainGridSystem\Scripts\TerrainGridSystem.cs" />
     <Compile Include="Assets\Scripts\CellEditor.cs" />
     <Compile Include="Assets\Scripts\Components\ActiveAnimationComponent.cs" />
-    <Compile Include="Assets\Scripts\Components\Battle\ActionPointComponent.cs" />
-    <Compile Include="Assets\Scripts\Components\Battle\ActiveAvatarComponent.cs" />
-    <Compile Include="Assets\Scripts\Components\Battle\BattleComponent.cs" />
+    <Compile Include="Assets\Scripts\Components\Battle\BattleListComponent.cs" />
+    <Compile Include="Assets\Scripts\Components\Battle\UpdateActiveAvatarComponent.cs" />
     <Compile Include="Assets\Scripts\Components\CameraCreate.cs" />
+    <Compile Include="Assets\Scripts\Components\Grid\ActionPointComponent.cs" />
+    <Compile Include="Assets\Scripts\Components\Grid\ActiveAvatarComponent.cs" />
+    <Compile Include="Assets\Scripts\Components\Grid\BattleComponent.cs" />
     <Compile Include="Assets\Scripts\Components\Grid\CellPointer.cs" />
     <Compile Include="Assets\Scripts\Components\Grid\PathComponent.cs" />
     <Compile Include="Assets\Scripts\Components\Grid\TerrainGridComponent.cs" />
@@ -300,6 +302,7 @@
     <Compile Include="Assets\Scripts\Components\NextAnimationComponent.cs" />
     <Compile Include="Assets\Scripts\Components\NextLevelNameComponent.cs" />
     <Compile Include="Assets\Scripts\Components\PersonaComponent.cs" />
+    <Compile Include="Assets\Scripts\Components\Player\PlayerComponent.cs" />
     <Compile Include="Assets\Scripts\Components\Stats\Battle attributes\BooleanComponents\UpdateMagicDamageComponent.cs" />
     <Compile Include="Assets\Scripts\Components\Stats\Battle attributes\BooleanComponents\UpdateMeleeDamageComponent.cs" />
     <Compile Include="Assets\Scripts\Components\Stats\Battle attributes\BooleanComponents\UpdateRangedDamageComponent.cs" />
@@ -350,6 +353,7 @@
     <Compile Include="Assets\Scripts\Systems\Animations\BoolAnimationSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\Battle\Grid\AwakeDisplayGridSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\Battle\Grid\DisplayAvailableGridSystem.cs" />
+    <Compile Include="Assets\Scripts\Systems\Battle\QueueBattleSystems.cs" />
     <Compile Include="Assets\Scripts\Systems\InitializeSystems\CameraInitEntitySystem.cs" />
     <Compile Include="Assets\Scripts\Systems\InitializeSystems\LevelInitEntitySystem.cs" />
     <Compile Include="Assets\Scripts\Systems\LifeSystems\DamageSystem.cs" />
@@ -383,6 +387,13 @@
     <Compile Include="Assets\Scripts\UI\ButtonOnTriggerLevel.cs" />
     <Compile Include="Assets\Scripts\Utils\ESCLibrary.cs" />
     <Compile Include="Assets\Scripts\Utils\Singleton.cs" />
+    <Compile Include="Assets\Sources\Generated\Battle\BattleAttribute.cs" />
+    <Compile Include="Assets\Sources\Generated\Battle\BattleComponentsLookup.cs" />
+    <Compile Include="Assets\Sources\Generated\Battle\BattleContext.cs" />
+    <Compile Include="Assets\Sources\Generated\Battle\BattleEntity.cs" />
+    <Compile Include="Assets\Sources\Generated\Battle\BattleMatcher.cs" />
+    <Compile Include="Assets\Sources\Generated\Battle\Components\BattleBattleListComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Battle\Components\BattleUpdateActiveAvatarComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Components\Interfaces\IActiveAvatar.cs" />
     <Compile Include="Assets\Sources\Generated\Components\Interfaces\IMapPosition.cs" />
     <Compile Include="Assets\Sources\Generated\Components\Interfaces\IName.cs" />
@@ -425,6 +436,7 @@
     <Compile Include="Assets\Sources\Generated\Game\Components\GameNextLevelNameComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GamePersonaComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GamePersonalityComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Game\Components\GamePlayerComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameRotateSpeedComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameSpeedComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameStrengthComponent.cs" />

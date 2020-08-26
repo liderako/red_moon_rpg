@@ -36,22 +36,23 @@ public static class GameComponentsLookup {
     public const int NavMeshAgent = 25;
     public const int NextAnimation = 26;
     public const int Personality = 27;
-    public const int Name = 28;
-    public const int NextLevelName = 29;
-    public const int Persona = 30;
-    public const int RotateSpeed = 31;
-    public const int Speed = 32;
-    public const int Strength = 33;
-    public const int TargetPosition = 34;
-    public const int TeleportCamera = 35;
-    public const int Transform = 36;
-    public const int UpdateMagicDamage = 37;
-    public const int UpdateMeleeDamage = 38;
-    public const int UpdateRangedDamage = 39;
-    public const int WorldMap = 40;
-    public const int WorldMapMovement = 41;
+    public const int Player = 28;
+    public const int Name = 29;
+    public const int NextLevelName = 30;
+    public const int Persona = 31;
+    public const int RotateSpeed = 32;
+    public const int Speed = 33;
+    public const int Strength = 34;
+    public const int TargetPosition = 35;
+    public const int TeleportCamera = 36;
+    public const int Transform = 37;
+    public const int UpdateMagicDamage = 38;
+    public const int UpdateMeleeDamage = 39;
+    public const int UpdateRangedDamage = 40;
+    public const int WorldMap = 41;
+    public const int WorldMapMovement = 42;
 
-    public const int TotalComponents = 42;
+    public const int TotalComponents = 43;
 
     public static readonly string[] componentNames = {
         "ActiveAnimation",
@@ -82,6 +83,7 @@ public static class GameComponentsLookup {
         "NavMeshAgent",
         "NextAnimation",
         "Personality",
+        "Player",
         "Name",
         "NextLevelName",
         "Persona",
@@ -127,6 +129,7 @@ public static class GameComponentsLookup {
         typeof(NavMeshAgentComponent),
         typeof(NextAnimationComponent),
         typeof(PersonalityComponent),
+        typeof(PlayerComponent),
         typeof(RedMoonRPG.NameComponent),
         typeof(RedMoonRPG.NextLevelNameComponent),
         typeof(RedMoonRPG.PersonaComponent),

@@ -3,13 +3,13 @@
     "",
     "\\Assets",
     "\\Assets\\Scripts",
-    "\\Assets\\Scripts\\Systems",
-    "\\Assets\\Scripts\\Systems\\Map",
-    "\\Assets\\Scripts\\Systems\\Map\\LocalMap",
-    "\\Assets\\Scripts\\Systems\\Map\\LocalMap\\Player",
-    "\\Assets\\Scripts\\Systems\\Map\\WorldMap",
-    "\\Assets\\Scripts\\Systems\\Map\\WorldMap\\Player",
-    "\\Assets\\Scripts\\Triggers"
+    "\\Assets\\Scripts\\Components",
+    "\\Assets\\Scripts\\Components\\Player",
+    "\\Assets\\Scripts\\Components\\Stats\\Battle attributes",
+    "\\Assets\\Scripts\\Components\\Stats\\Life Attributes",
+    "\\Assets\\Scripts\\Components\\Stats\\Life Attributes\\BooleanComponent",
+    "\\Assets\\Scripts\\Components\\Stats\\Main attributes",
+    "\\Assets\\Scripts\\Utils"
   ],
   "SelectedNode": "\\Assets\\Scripts\\LocalGameController.cs",
   "PreviewInSolutionExplorer": false

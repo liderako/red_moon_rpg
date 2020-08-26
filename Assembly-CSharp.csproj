@@ -56,11 +56,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Sources\Generated\Game\Components\GameActiveAnimationComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Battle\Components\BattleBattleListComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Battle\Components\BattleUpdateActiveAvatarComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Game\Components\GameCameraCreateComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Grid\Components\GridActionPointComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Grid\Components\GridActiveAvatarComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameActiveAvatarComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Grid\Components\GridBattleComponent.cs" />
-    <Compile Include="Assets\Sources\Generated\Game\Components\GameCameraCreateComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Grid\Components\GridCellPointerComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Grid\Components\GridPathComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Grid\Components\GridTerrainGridComponent.cs" />
@@ -76,6 +78,7 @@
     <Compile Include="Assets\Sources\Generated\Game\Components\GameWorldMapComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameWorldMapMovementComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameNextAnimationComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Game\Components\GamePlayerComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameUpdateMagicDamageComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameUpdateMeleeDamageComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameUpdateRangedDamageComponent.cs" />
@@ -130,6 +133,7 @@
     <Compile Include="Assets\Sources\Generated\Components\MapPositionComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Input\InputComponentsLookup.cs" />
     <Compile Include="Assets\Sources\Generated\Game\GameComponentsLookup.cs" />
+    <Compile Include="Assets\Sources\Generated\Battle\BattleComponentsLookup.cs" />
     <Compile Include="Assets\Sources\Generated\Grid\GridComponentsLookup.cs" />
     <Compile Include="Assets\Sources\Generated\Life\LifeComponentsLookup.cs" />
     <Compile Include="Assets\Sources\Generated\Time\TimeComponentsLookup.cs" />
@@ -138,22 +142,26 @@
     <Compile Include="Assets\Sources\Generated\Life\LifeAttribute.cs" />
     <Compile Include="Assets\Sources\Generated\Time\TimeAttribute.cs" />
     <Compile Include="Assets\Sources\Generated\Grid\GridAttribute.cs" />
+    <Compile Include="Assets\Sources\Generated\Battle\BattleAttribute.cs" />
     <Compile Include="Assets\Sources\Generated\Game\GameContext.cs" />
     <Compile Include="Assets\Sources\Generated\Input\InputContext.cs" />
     <Compile Include="Assets\Sources\Generated\Life\LifeContext.cs" />
     <Compile Include="Assets\Sources\Generated\Time\TimeContext.cs" />
     <Compile Include="Assets\Sources\Generated\Grid\GridContext.cs" />
+    <Compile Include="Assets\Sources\Generated\Battle\BattleContext.cs" />
     <Compile Include="Assets\Sources\Generated\Game\GameMatcher.cs" />
     <Compile Include="Assets\Sources\Generated\Input\InputMatcher.cs" />
     <Compile Include="Assets\Sources\Generated\Life\LifeMatcher.cs" />
     <Compile Include="Assets\Sources\Generated\Time\TimeMatcher.cs" />
     <Compile Include="Assets\Sources\Generated\Grid\GridMatcher.cs" />
+    <Compile Include="Assets\Sources\Generated\Battle\BattleMatcher.cs" />
     <Compile Include="Assets\Sources\Generated\Contexts.cs" />
     <Compile Include="Assets\Sources\Generated\Game\GameEntity.cs" />
     <Compile Include="Assets\Sources\Generated\Input\InputEntity.cs" />
     <Compile Include="Assets\Sources\Generated\Life\LifeEntity.cs" />
     <Compile Include="Assets\Sources\Generated\Time\TimeEntity.cs" />
     <Compile Include="Assets\Sources\Generated\Grid\GridEntity.cs" />
+    <Compile Include="Assets\Sources\Generated\Battle\BattleEntity.cs" />
     <Compile Include="Assets\Sources\Generated\Feature.cs" />
   </ItemGroup>
   <ItemGroup>

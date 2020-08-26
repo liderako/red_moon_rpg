@@ -71,8 +71,11 @@ namespace RedMoonRPG
             entity.AddActiveAnimation(AnimationTags.idle);
             entity.AddNextAnimation(AnimationTags.idle);
             entity.AddPersona("Antonio");
+            entity.AddDexterity(5);
             entity.AddActiveAvatar(true);
+            entity.isPlayer = true;
 
+            // создаем клетку для игрока
             GridEntity avatar = Contexts.sharedInstance.grid.CreateEntity();
             avatar.AddActionPoint(5);
             avatar.AddMapPosition(new Position(entity.transform.value.position));
@@ -92,17 +95,31 @@ namespace RedMoonRPG
         private void TestInitEnemy()
         {
             TerrainGridSystem tgs = TerrainGridSystem.instance;
+            // создаем гейм сущности для врагов
             for (int i = 0; i < _testEnemy.Count; i++)
             {
                 GameEntity entity = Contexts.sharedInstance.game.CreateEntity();
                 _testEnemy[i].transform.position = tgs.CellGetPosition(tgs.CellGetAtPosition(_testEnemy[i].transform.position, true), true);
                 entity.AddAnimator(_testEnemy[i].GetComponent<Animator>());
+                entity.AddTransform(_testEnemy[i].transform);
                 entity.AddActiveAnimation(AnimationTags.idle);
                 entity.AddNextAnimation(AnimationTags.idle);
                 entity.AddPersona(_testEnemy[i].name);
-                entity.AddActiveAvatar(false);
-                // делаем текущию клетку врага непроходимой для других
-                tgs.CellGetAtPosition(_testEnemy[i].transform.position, true).canCross = false;
+                entity.AddName(_testEnemy[i].name + i.ToString());
+                entity.AddActiveAvatar(true);
+                entity.AddDexterity(6);
+
+                // создаем клетки для врагов
+                GridEntity avatar = Contexts.sharedInstance.grid.CreateEntity();
+                avatar.AddActionPoint(5);
+                avatar.AddMapPosition(new Position(entity.transform.value.position));
+                tgs.CellGetAtPosition(entity.transform.value.position, true).canCross = false; // делаем текущию клетку врага непроходимой для других
+                avatar.AddTerrainGrid(TerrainGridSystem.instance);
+                avatar.AddName(entity.name.name);
+                avatar.AddPath(new List<int>(), 0);
+                avatar.AddSpeed(2);
+                avatar.AddRotateSpeed(5);
+                avatar.AddActiveAvatar(true);
             }
         }
 
@@ -117,7 +134,8 @@ namespace RedMoonRPG
             .Add(new Systems.LocalMap.Player.InputMovementSystem())
             .Add(new Systems.LocalMap.Player.MovementSystem(contexts))
             .Add(new Systems.Battle.Grid.AwakeDisplayGridSystem(contexts))
-            .Add(new Systems.Battle.Grid.DisplayAvailableGridSystem(contexts));
+            .Add(new Systems.Battle.Grid.DisplayAvailableGridSystem(contexts))
+            .Add(new Systems.Battle.QueueBattleSystems(contexts));
         }
     }
 }
