@@ -107,7 +107,7 @@ namespace RedMoonRPG
                 entity.AddPersona(_testEnemy[i].name);
                 entity.AddName(_testEnemy[i].name + i.ToString());
                 entity.AddActiveAvatar(true);
-                entity.AddDexterity(6);
+                entity.AddDexterity(4);
 
                 // создаем клетки для врагов
                 GridEntity avatar = Contexts.sharedInstance.grid.CreateEntity();
@@ -133,6 +133,7 @@ namespace RedMoonRPG
             .Add(new Systems.Animations.BoolAnimationSystem(contexts))
             .Add(new Systems.LocalMap.Player.InputMovementSystem())
             .Add(new Systems.LocalMap.Player.MovementSystem(contexts))
+            .Add(new Systems.LocalMap.Player.BattleMovementSystem(contexts))
             .Add(new Systems.Battle.Grid.AwakeDisplayGridSystem(contexts))
             .Add(new Systems.Battle.Grid.DisplayAvailableGridSystem(contexts))
             .Add(new Systems.Battle.QueueBattleSystems(contexts));

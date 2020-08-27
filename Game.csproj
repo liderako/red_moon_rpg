@@ -361,6 +361,7 @@
     <Compile Include="Assets\Scripts\Systems\LifeSystems\EatSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\LifeSystems\HealSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\LoadLevelSystem.cs" />
+    <Compile Include="Assets\Scripts\Systems\Map\LocalMap\Player\BattleMovementSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\Map\LocalMap\Player\InputMovementSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\Map\LocalMap\Player\MovementSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\Map\WorldMap\Camera\FollowerMovementSystem.cs" />

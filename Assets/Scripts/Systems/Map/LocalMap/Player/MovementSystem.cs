@@ -22,7 +22,7 @@ namespace RedMoonRPG.Systems.LocalMap.Player
         protected override bool Filter(GridEntity entity)
         {
             //return entity.activeAvatar.value == true && entity.hasPath && entity.path.iterator < entity.path.gridPath.Count;
-            return entity.hasPath && entity.path.iterator < entity.path.gridPath.Count;
+            return entity.hasPath && entity.path.iterator < entity.path.gridPath.Count && entity.isBattle == false;
         }
 
         protected override void Execute(List<GridEntity> entities)

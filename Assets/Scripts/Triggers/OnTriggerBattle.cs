@@ -12,8 +12,13 @@ namespace RedMoonRPG.Triggers
         {
             if (other.gameObject.layer == Tags.PlayerLayer)
             {
-                GameEntity[] gameGroup = Contexts.sharedInstance.game.GetGroup(GameMatcher.ActiveAvatar).GetEntities();
                 GridEntity[] gridGroup = Contexts.sharedInstance.grid.GetGroup(GridMatcher.ActiveAvatar).GetEntities();
+                for (int i = 0; i < gridGroup.Length; i++)
+                {
+                    if (gridGroup[i].isBattle) // защита от постоянного вхождение в битву в случаях когда анимация юнита крутит тригерр
+                        return;
+                }
+                GameEntity[] gameGroup = Contexts.sharedInstance.game.GetGroup(GameMatcher.ActiveAvatar).GetEntities();
                 List<GameEntity> gameEntities = new List<GameEntity>();
                 List<GridEntity> gridsEntities = new List<GridEntity>();
                 if (gameGroup.Length != gridGroup.Length)
@@ -22,21 +27,20 @@ namespace RedMoonRPG.Triggers
                     return;
                 }
                 gameGroup = SortForDExterity(gameGroup);
+                Debug.Log("Порядок ходов:");
                 foreach (var e in gameGroup)
                 {
                     Debug.Log(e.name.name);
                 }
                 for (int i = 0; i < gameGroup.Length; i++)
                 {
-                    //if (gridGroup[i].isBattle == true) return; // защита от постоянного вхождение в битву в случаях когда анимация юнита крутит тригерр
                     GridEntity g = Contexts.sharedInstance.grid.GetEntityWithName(gameGroup[i].name.name);
-                    if (g.isBattle == true) return; // защита от постоянного вхождение в битву в случаях когда анимация юнита крутит тригерр
                     g.isBattle = true;
                     g.ReplaceActiveAvatar(false);
                     gameGroup[i].ReplaceActiveAvatar(false);
                     gameEntities.Add(gameGroup[i]);
+                    gameGroup[i].AddNextAnimation(AnimationTags.idle);
                     gridsEntities.Add(g);
-                    Debug.Log(gameGroup[i].persona.value + " now in battle");
                 }
                 BattleEntity battleManager = Contexts.sharedInstance.battle.CreateEntity();
                 battleManager.isUpdateActiveAvatar = true;

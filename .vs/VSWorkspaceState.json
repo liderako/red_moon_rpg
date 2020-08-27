@@ -4,13 +4,14 @@
     "\\Assets",
     "\\Assets\\Scripts",
     "\\Assets\\Scripts\\Components",
-    "\\Assets\\Scripts\\Components\\Player",
-    "\\Assets\\Scripts\\Components\\Stats\\Battle attributes",
-    "\\Assets\\Scripts\\Components\\Stats\\Life Attributes",
-    "\\Assets\\Scripts\\Components\\Stats\\Life Attributes\\BooleanComponent",
-    "\\Assets\\Scripts\\Components\\Stats\\Main attributes",
-    "\\Assets\\Scripts\\Utils"
+    "\\Assets\\Scripts\\Components\\Grid",
+    "\\Assets\\Scripts\\Systems",
+    "\\Assets\\Scripts\\Systems\\Map",
+    "\\Assets\\Scripts\\Systems\\Map\\LocalMap",
+    "\\Assets\\Scripts\\Systems\\Map\\LocalMap\\Player",
+    "\\Assets\\Scripts\\Tags",
+    "\\Assets\\Scripts\\Triggers"
   ],
-  "SelectedNode": "\\Assets\\Scripts\\LocalGameController.cs",
+  "SelectedNode": "\\Assets\\Scripts\\Systems\\Map\\LocalMap\\Player\\InputMovementSystem.cs",
   "PreviewInSolutionExplorer": false
 }
