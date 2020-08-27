@@ -8,17 +8,20 @@
 //------------------------------------------------------------------------------
 public static class BattleComponentsLookup {
 
-    public const int BattleList = 0;
-    public const int UpdateActiveAvatar = 1;
+    public const int AwakeBattle = 0;
+    public const int BattleList = 1;
+    public const int UpdateActiveAvatar = 2;
 
-    public const int TotalComponents = 2;
+    public const int TotalComponents = 3;
 
     public static readonly string[] componentNames = {
+        "AwakeBattle",
         "BattleList",
         "UpdateActiveAvatar"
     };
 
     public static readonly System.Type[] componentTypes = {
+        typeof(AwakeBattleComponent),
         typeof(BattleListComponent),
         typeof(UpdateActiveAvatarComponent)
     };

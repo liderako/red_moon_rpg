@@ -24,53 +24,77 @@ namespace RedMoonRPG.Systems.Battle.Grid
 
         protected override void Execute(List<GridEntity> entities)
         {
-            for (int i = 0; i < entities.Count; i++)
+            if (entities.Count != 1)
             {
-                BzeroColor(entities[i].terrainGrid.value);
-                ShowNeighbours(entities[i].mapPosition.value.vector, entities[i].actionPoint.value, entities[i].terrainGrid.value);
+                Debug.LogError("Сущность для этой системы может быть только одна.");
+                return;
+            }
+            if (entities[0].hasPathDisplay)
+            {
+                BzeroCell(entities[0].terrainGrid.value, entities[0].pathDisplay.value);
+                List<int> array = ShowNeighbours(entities[0].mapPosition.value.vector, entities[0].actionPoint.value, entities[0].terrainGrid.value);
+                entities[0].ReplacePathDisplay(array);
+            }
+            else
+            {
+                List<int> array = ShowNeighbours(entities[0].mapPosition.value.vector, entities[0].actionPoint.value, entities[0].terrainGrid.value);
+                entities[0].AddPathDisplay(array);
+            }
+        }
+        
+        private void BzeroCell(TerrainGridSystem tgs, List<int> array)
+        {
+            int len = array.Count;
+            for (int i = 0; i < len; i++)
+            {
+                tgs.CellSetColor(array[i], new Color(0, 0, 0, 0));
             }
         }
 
-        private void BzeroColor(TerrainGridSystem tgs)
+        private List<int> ShowNeighbours(Vector3 positionActiveAvatar, int maxPrice, TerrainGridSystem tgs)
         {
-            for (int i = 0; i < tgs.cells.Count; i++)
-            {
-                tgs.CellSetColor(tgs.CellGetIndex(tgs.cells[i]), new Color(0, 0, 0, 0));
-            }
-        }
-
-        private void ShowNeighbours(Vector3 positionActiveAvatar, int maxPrice, TerrainGridSystem tgs)
-        {
-            BzeroColor(tgs);
             Cell charactercell = tgs.CellGetAtPosition(positionActiveAvatar, true);
             List<int> array = new List<int>();
             SearchAvailabeCell(tgs, maxPrice, array, 0, charactercell);
             tgs.CellSetColor(tgs.CellGetIndex(charactercell), new Color(0,0,0,0));
-            array.Clear();
+            return array;
         }
 
         private void SearchAvailabeCell(TerrainGridSystem tgs, int maxPrice, List<int> array, int price, Cell currentCell)
         {
-            if (price > maxPrice)
+            if (price > maxPrice - 1)
             {
                 return;
             }
-            if (currentCell.canCross)
+            int row = currentCell.row;
+            int column = currentCell.column;
+            int right = tgs.CellGetIndex(row + 1, column, true);
+            int left = tgs.CellGetIndex(row - 1, column, true);
+            int top = tgs.CellGetIndex(row, column + 1, true);
+            int down = tgs.CellGetIndex(row, column - 1, true);
+            if (tgs.cells[right].canCross)
             {
-                array.Add(tgs.CellGetIndex(currentCell));
-                tgs.CellSetColor(tgs.CellGetIndex(currentCell), new Color(194, 194, 194, 0.1f));
-                // right
-                SearchAvailabeCell(tgs, maxPrice, array, price + Tags.priceXstep,
-                    tgs.cells[tgs.CellGetIndex(tgs.CellGetRow(tgs.CellGetIndex(currentCell)) + 1, tgs.CellGetColumn(tgs.CellGetIndex(currentCell)), true)]);
-                // left
-                SearchAvailabeCell(tgs, maxPrice, array, price + Tags.priceXstep,
-                    tgs.cells[tgs.CellGetIndex(tgs.CellGetRow(tgs.CellGetIndex(currentCell)) - 1, tgs.CellGetColumn(tgs.CellGetIndex(currentCell)), true)]);
-                // top
-                SearchAvailabeCell(tgs, maxPrice, array, price + Tags.priceYstep,
-                    tgs.cells[tgs.CellGetIndex(tgs.CellGetRow(tgs.CellGetIndex(currentCell)), tgs.CellGetColumn(tgs.CellGetIndex(currentCell)) + 1, true)]);
-                // down
-                SearchAvailabeCell(tgs, maxPrice, array, price + Tags.priceYstep,
-                    tgs.cells[tgs.CellGetIndex(tgs.CellGetRow(tgs.CellGetIndex(currentCell)), tgs.CellGetColumn(tgs.CellGetIndex(currentCell)) - 1, true)]);
+                array.Add(right);
+                tgs.CellSetColor(right, new Color(194, 194, 194, 0.1f));
+                SearchAvailabeCell(tgs, maxPrice, array, price + Tags.priceXstep, tgs.cells[right]);
+            }
+            if (tgs.cells[left].canCross)
+            {
+                array.Add(left);
+                tgs.CellSetColor(left, new Color(194, 194, 194, 0.1f));
+                SearchAvailabeCell(tgs, maxPrice, array, price + Tags.priceXstep, tgs.cells[left]);
+            }
+            if (tgs.cells[top].canCross)
+            {
+                array.Add(top);
+                tgs.CellSetColor(top, new Color(194, 194, 194, 0.1f));
+                SearchAvailabeCell(tgs, maxPrice, array, price + Tags.priceXstep, tgs.cells[top]);
+            }
+            if (tgs.cells[down].canCross)
+            {
+                array.Add(down);
+                tgs.CellSetColor(down, new Color(194, 194, 194, 0.1f));
+                SearchAvailabeCell(tgs, maxPrice, array, price + Tags.priceXstep, tgs.cells[down]);
             }
         }
     }
