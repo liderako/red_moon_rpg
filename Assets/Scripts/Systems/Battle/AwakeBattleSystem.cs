@@ -48,8 +48,7 @@ namespace RedMoonRPG.Systems.Battle
                 Debug.LogError("Длинна массива доступных юнитов и аватаров не равная.");
                 return;
             }
-            //gameGroup = SortForDExterity(gameGroup);
-            
+            gameGroup = SortForDExterity(gameGroup);
             Debug.Log("Порядок ходов:");
             foreach (var e in gameGroup)
             {
@@ -62,7 +61,14 @@ namespace RedMoonRPG.Systems.Battle
                 g.ReplaceActiveAvatar(false);
                 gameGroup[i].ReplaceActiveAvatar(false);
                 gameEntities.Add(gameGroup[i]);
-                gameGroup[i].AddNextAnimation(AnimationTags.idle);
+                if (gameGroup[i].hasNextAnimation)
+                {
+                    gameGroup[i].ReplaceNextAnimation(AnimationTags.idle);
+                }
+                else
+                {
+                    gameGroup[i].AddNextAnimation(AnimationTags.idle);
+                }
                 gridsEntities.Add(g);
             }
         }
@@ -76,9 +82,10 @@ namespace RedMoonRPG.Systems.Battle
 
         private GameEntity[] SortForDExterity(GameEntity[] group)
         {
-            for (int i = 0; i < group.Length - 1; i++)
+            int len = group.Length;
+            for (int i = 0; i < len - 1; i++)
             {
-                for (int j = i + 1; j < group.Length; j++)
+                for (int j = i + 1; j < len; j++)
                 {
                     // compare array element with  
                     // all next element 
