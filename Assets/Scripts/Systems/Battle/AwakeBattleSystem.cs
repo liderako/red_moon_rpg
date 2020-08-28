@@ -77,7 +77,7 @@ namespace RedMoonRPG.Systems.Battle
         {
             manager.isUpdateActiveAvatar = true;
             manager.isAwakeBattle = false;
-            manager.AddBattleList(gameEntities, gridsEntities, 0);
+            manager.AddBattleList(gameEntities, gridsEntities, -1);
         }
 
         private GameEntity[] SortForDExterity(GameEntity[] group)

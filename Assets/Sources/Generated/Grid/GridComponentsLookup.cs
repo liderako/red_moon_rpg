@@ -15,14 +15,15 @@ public static class GridComponentsLookup {
     public const int MapPosition = 4;
     public const int Path = 5;
     public const int PathDisplay = 6;
-    public const int Name = 7;
-    public const int RotateSpeed = 8;
-    public const int Speed = 9;
-    public const int TargetPosition = 10;
-    public const int TerrainGrid = 11;
-    public const int Transform = 12;
+    public const int Player = 7;
+    public const int Name = 8;
+    public const int RotateSpeed = 9;
+    public const int Speed = 10;
+    public const int TargetPosition = 11;
+    public const int TerrainGrid = 12;
+    public const int Transform = 13;
 
-    public const int TotalComponents = 13;
+    public const int TotalComponents = 14;
 
     public static readonly string[] componentNames = {
         "ActionPoint",
@@ -32,6 +33,7 @@ public static class GridComponentsLookup {
         "MapPosition",
         "Path",
         "PathDisplay",
+        "Player",
         "Name",
         "RotateSpeed",
         "Speed",
@@ -48,6 +50,7 @@ public static class GridComponentsLookup {
         typeof(MapPositionComponent),
         typeof(PathComponent),
         typeof(PathDisplayComponent),
+        typeof(PlayerComponent),
         typeof(RedMoonRPG.NameComponent),
         typeof(RotateSpeedComponent),
         typeof(SpeedComponent),

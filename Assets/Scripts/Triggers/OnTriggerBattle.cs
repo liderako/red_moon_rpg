@@ -19,6 +19,7 @@ namespace RedMoonRPG.Triggers
                         return;
                 }
                 BattleEntity battleManager = Contexts.sharedInstance.battle.CreateEntity();
+                battleManager.AddName(Tags.battleManagerEntity);
                 battleManager.isAwakeBattle = true;
             }   
         }

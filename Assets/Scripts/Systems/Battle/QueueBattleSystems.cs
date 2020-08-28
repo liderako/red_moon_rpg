@@ -29,15 +29,17 @@ namespace RedMoonRPG.Systems.Battle
                 return;
             }
             BattleEntity battleManager = entities[0];
+            battleManager.battleList.iterator += 1;
+            battleManager.isUpdateActiveAvatar = false;
             int i = battleManager.battleList.iterator;
             if (battleManager.battleList.iterator > battleManager.battleList.gridAvatars.Count)
             {
                 battleManager.battleList.iterator = 0;
             }
             battleManager.battleList.gridAvatars[i].ReplaceActiveAvatar(true);
+            battleManager.battleList.gridAvatars[i].ReplaceActionPoint(battleManager.battleList.units[i].dexterity.value);
             battleManager.battleList.units[i].ReplaceActiveAvatar(true);
             Debug.Log("Now Active Avatar is " + battleManager.battleList.units[i].name.name);
-            battleManager.battleList.iterator += 1;
         }
     }
 }

@@ -19,7 +19,7 @@ namespace RedMoonRPG.Systems.Battle.Grid
 
         protected override bool Filter(GridEntity entity)
         {
-            return entity.isBattle && entity.activeAvatar.value == true && entity.hasActionPoint;
+            return entity.isBattle && entity.activeAvatar.value == true && entity.hasActionPoint && entity.isPlayer;
         }
 
         protected override void Execute(List<GridEntity> entities)
@@ -42,7 +42,7 @@ namespace RedMoonRPG.Systems.Battle.Grid
             }
         }
         
-        private void BzeroCell(TerrainGridSystem tgs, List<int> array)
+        public static void BzeroCell(TerrainGridSystem tgs, List<int> array)
         {
             int len = array.Count;
             for (int i = 0; i < len; i++)

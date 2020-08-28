@@ -3,14 +3,13 @@
     "",
     "\\Assets",
     "\\Assets\\Scripts",
-    "\\Assets\\Scripts\\Components",
-    "\\Assets\\Scripts\\Components\\Grid",
+    "\\Assets\\Scripts\\Controllers",
     "\\Assets\\Scripts\\Systems",
-    "\\Assets\\Scripts\\Systems\\Map",
-    "\\Assets\\Scripts\\Systems\\Map\\LocalMap",
-    "\\Assets\\Scripts\\Systems\\Map\\LocalMap\\Player",
+    "\\Assets\\Scripts\\Systems\\Battle",
+    "\\Assets\\Scripts\\Systems\\Battle\\Grid",
     "\\Assets\\Scripts\\Tags",
-    "\\Assets\\Scripts\\Triggers"
+    "\\Assets\\Scripts\\Triggers",
+    "\\Assets\\Scripts\\UI"
   ],
   "SelectedNode": "\\Assets\\Scripts\\Systems\\Map\\LocalMap\\Player\\InputMovementSystem.cs",
   "PreviewInSolutionExplorer": false

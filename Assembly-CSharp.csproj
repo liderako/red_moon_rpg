@@ -58,6 +58,7 @@
     <Compile Include="Assets\Sources\Generated\Game\Components\GameActiveAnimationComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattleAwakeBattleComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattleBattleListComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Battle\Components\BattleSkipTurnComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattleUpdateActiveAvatarComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameCameraCreateComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Grid\Components\GridActionPointComponent.cs" />
@@ -81,6 +82,7 @@
     <Compile Include="Assets\Sources\Generated\Game\Components\GameWorldMapMovementComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameNextAnimationComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GamePlayerComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Grid\Components\GridPlayerComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameUpdateMagicDamageComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameUpdateMeleeDamageComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameUpdateRangedDamageComponent.cs" />
@@ -118,6 +120,7 @@
     <Compile Include="Assets\Sources\Generated\Game\Components\GameNameComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Time\Components\TimeNameComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Grid\Components\GridNameComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Battle\Components\BattleNameComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameNextLevelNameComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GamePersonaComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameTargetPositionComponent.cs" />
@@ -127,6 +130,7 @@
     <Compile Include="Assets\Sources\Generated\Components\Interfaces\IActiveAvatar.cs" />
     <Compile Include="Assets\Sources\Generated\Components\Interfaces\IRotateSpeed.cs" />
     <Compile Include="Assets\Sources\Generated\Components\Interfaces\ISpeed.cs" />
+    <Compile Include="Assets\Sources\Generated\Components\Interfaces\IPlayer.cs" />
     <Compile Include="Assets\Sources\Generated\Components\Interfaces\ITransform.cs" />
     <Compile Include="Assets\Sources\Generated\Components\Interfaces\IName.cs" />
     <Compile Include="Assets\Sources\Generated\Components\Interfaces\ITargetPosition.cs" />

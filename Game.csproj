@@ -280,6 +280,7 @@
     <Compile Include="Assets\Scripts\Components\ActiveAnimationComponent.cs" />
     <Compile Include="Assets\Scripts\Components\Battle\AwakeBattleComponent.cs" />
     <Compile Include="Assets\Scripts\Components\Battle\BattleListComponent.cs" />
+    <Compile Include="Assets\Scripts\Components\Battle\SkipTurnComponent.cs" />
     <Compile Include="Assets\Scripts\Components\Battle\UpdateActiveAvatarComponent.cs" />
     <Compile Include="Assets\Scripts\Components\CameraCreate.cs" />
     <Compile Include="Assets\Scripts\Components\Grid\ActionPointComponent.cs" />
@@ -359,6 +360,7 @@
     <Compile Include="Assets\Scripts\Systems\Battle\Grid\AwakeDisplayGridSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\Battle\Grid\DisplayAvailableGridSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\Battle\QueueBattleSystems.cs" />
+    <Compile Include="Assets\Scripts\Systems\Battle\SkipTurnSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\InitializeSystems\CameraInitEntitySystem.cs" />
     <Compile Include="Assets\Scripts\Systems\InitializeSystems\LevelInitEntitySystem.cs" />
     <Compile Include="Assets\Scripts\Systems\LifeSystems\DamageSystem.cs" />
@@ -384,6 +386,7 @@
     <Compile Include="Assets\Scripts\Systems\СharacterAttributeDataCollection\UpdateManaSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\СharacterAttributeDataCollection\UpdateMeleeDamageSystem.cs" />
     <Compile Include="Assets\Scripts\Systems\СharacterAttributeDataCollection\UpdateRangedDamageSystem.cs" />
+    <Compile Include="Assets\Scripts\TMP\TMP_GUI_WITHOUT_BUTTONS.cs" />
     <Compile Include="Assets\Scripts\Tags\Animations.cs" />
     <Compile Include="Assets\Scripts\Tags\Scenes.cs" />
     <Compile Include="Assets\Scripts\Tags\Tags.cs" />
@@ -400,10 +403,13 @@
     <Compile Include="Assets\Sources\Generated\Battle\BattleMatcher.cs" />
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattleAwakeBattleComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattleBattleListComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Battle\Components\BattleNameComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Battle\Components\BattleSkipTurnComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattleUpdateActiveAvatarComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Components\Interfaces\IActiveAvatar.cs" />
     <Compile Include="Assets\Sources\Generated\Components\Interfaces\IMapPosition.cs" />
     <Compile Include="Assets\Sources\Generated\Components\Interfaces\IName.cs" />
+    <Compile Include="Assets\Sources\Generated\Components\Interfaces\IPlayer.cs" />
     <Compile Include="Assets\Sources\Generated\Components\Interfaces\IRotateSpeed.cs" />
     <Compile Include="Assets\Sources\Generated\Components\Interfaces\ISpeed.cs" />
     <Compile Include="Assets\Sources\Generated\Components\Interfaces\ITargetPosition.cs" />
@@ -468,6 +474,7 @@
     <Compile Include="Assets\Sources\Generated\Grid\Components\GridNameComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Grid\Components\GridPathComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Grid\Components\GridPathDisplayComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Grid\Components\GridPlayerComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Grid\Components\GridRotateSpeedComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Grid\Components\GridSpeedComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Grid\Components\GridTargetPositionComponent.cs" />

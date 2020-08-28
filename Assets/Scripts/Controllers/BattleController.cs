@@ -28,6 +28,7 @@ namespace RedMoonRPG
         {
             return new Feature("Battle")
             .Add(new Systems.Battle.QueueBattleSystems(contexts))
+            .Add(new Systems.Battle.SkipTurnSystem(contexts))
             .Add(new Systems.Battle.AwakeBattleSystem(contexts));
         }
     }

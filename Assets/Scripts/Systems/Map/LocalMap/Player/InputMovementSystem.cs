@@ -10,7 +10,7 @@ namespace RedMoonRPG.Systems.LocalMap.Player
 	{
         public void Execute()
 		{
-			if (Input.GetMouseButtonDown(0))
+			if (Input.GetMouseButtonDown(0)) // TO DO
 			{
 				GameEntity player = ESCLibrary.GetActivePlayer();
 				if (player == null) return;

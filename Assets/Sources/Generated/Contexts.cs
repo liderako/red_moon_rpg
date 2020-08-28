@@ -99,6 +99,10 @@ public partial class Contexts {
             Name,
             grid.GetGroup(GridMatcher.Name),
             (e, c) => ((RedMoonRPG.NameComponent)c).name));
+        battle.AddEntityIndex(new Entitas.PrimaryEntityIndex<BattleEntity, string>(
+            Name,
+            battle.GetGroup(BattleMatcher.Name),
+            (e, c) => ((RedMoonRPG.NameComponent)c).name));
 
         game.AddEntityIndex(new Entitas.EntityIndex<GameEntity, string>(
             Persona,
@@ -131,6 +135,10 @@ public static class ContextsExtensions {
 
     public static GridEntity GetEntityWithName(this GridContext context, string name) {
         return ((Entitas.PrimaryEntityIndex<GridEntity, string>)context.GetEntityIndex(Contexts.Name)).GetEntity(name);
+    }
+
+    public static BattleEntity GetEntityWithName(this BattleContext context, string name) {
+        return ((Entitas.PrimaryEntityIndex<BattleEntity, string>)context.GetEntityIndex(Contexts.Name)).GetEntity(name);
     }
 
     public static System.Collections.Generic.HashSet<GameEntity> GetEntitiesWithPersona(this GameContext context, string value) {

@@ -77,7 +77,7 @@ namespace RedMoonRPG
 
             // создаем клетку для игрока
             GridEntity avatar = Contexts.sharedInstance.grid.CreateEntity();
-            avatar.AddActionPoint(5);
+            avatar.AddActionPoint(0);
             avatar.AddMapPosition(new Position(entity.transform.value.position));
             tgs.CellGetAtPosition(_spawnPoint.position, true).canCross = false; // делаем текущию клетку героя непроходимой для других
             avatar.AddTerrainGrid(TerrainGridSystem.instance);
@@ -86,6 +86,7 @@ namespace RedMoonRPG
             avatar.AddSpeed(2);
             avatar.AddRotateSpeed(5);
             avatar.AddActiveAvatar(true);
+            avatar.isPlayer = true;
 
             //GameEntity camera = Contexts.sharedInstance.game.GetEntityWithName(Tags.camera);
             //camera.isWorldMap = false;
@@ -111,7 +112,7 @@ namespace RedMoonRPG
 
                 // создаем клетки для врагов
                 GridEntity avatar = Contexts.sharedInstance.grid.CreateEntity();
-                avatar.AddActionPoint(5);
+                avatar.AddActionPoint(0);
                 avatar.AddMapPosition(new Position(entity.transform.value.position));
                 tgs.CellGetAtPosition(entity.transform.value.position, true).canCross = false; // делаем текущию клетку врага непроходимой для других
                 avatar.AddTerrainGrid(TerrainGridSystem.instance);

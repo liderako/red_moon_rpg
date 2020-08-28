@@ -1,6 +1,6 @@
 ﻿using Entitas;
 
-[Game]
+[Game][Grid]
 public class PlayerComponent : IComponent
 {
 }

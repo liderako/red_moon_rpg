@@ -10,19 +10,25 @@ public static class BattleComponentsLookup {
 
     public const int AwakeBattle = 0;
     public const int BattleList = 1;
-    public const int UpdateActiveAvatar = 2;
+    public const int Name = 2;
+    public const int SkipTurn = 3;
+    public const int UpdateActiveAvatar = 4;
 
-    public const int TotalComponents = 3;
+    public const int TotalComponents = 5;
 
     public static readonly string[] componentNames = {
         "AwakeBattle",
         "BattleList",
+        "Name",
+        "SkipTurn",
         "UpdateActiveAvatar"
     };
 
     public static readonly System.Type[] componentTypes = {
         typeof(AwakeBattleComponent),
         typeof(BattleListComponent),
+        typeof(RedMoonRPG.NameComponent),
+        typeof(SkipTurnComponent),
         typeof(UpdateActiveAvatarComponent)
     };
 }

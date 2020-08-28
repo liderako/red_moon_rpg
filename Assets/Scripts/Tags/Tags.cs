@@ -8,6 +8,7 @@
         public const string level = "Level";
         public const string init = "Init";
         public const string grid = "Grid";
+        public const string battleManagerEntity = "BattleManager";
 
         // path
         public const string levelSettings = "LevelSettings/";
