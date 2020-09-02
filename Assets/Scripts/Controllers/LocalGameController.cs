@@ -132,9 +132,10 @@ namespace RedMoonRPG
             .Add(new Systems.WorldMap.Camera.ReturnMovementSystem(contexts))
             .Add(new Systems.WorldMap.Camera.TeleportSystem(contexts))
             .Add(new Systems.Animations.BoolAnimationSystem(contexts))
-            .Add(new Systems.LocalMap.Player.InputMovementSystem())
+            .Add(new Systems.LocalMap.Player.Battle.InputMovementSystem(contexts))
+            .Add(new Systems.LocalMap.Player.InputMovementSystem(contexts))
             .Add(new Systems.LocalMap.Player.MovementSystem(contexts))
-            .Add(new Systems.LocalMap.Player.BattleMovementSystem(contexts));
+            .Add(new Systems.LocalMap.Player.Battle.BattleMovementSystem(contexts));
         }
     }
 }

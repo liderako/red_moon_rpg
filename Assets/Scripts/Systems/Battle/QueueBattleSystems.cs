@@ -34,7 +34,7 @@ namespace RedMoonRPG.Systems.Battle
             int i = battleManager.battleList.iterator;
             if (battleManager.battleList.iterator > battleManager.battleList.gridAvatars.Count)
             {
-                battleManager.battleList.iterator = 0;
+                return;
             }
             battleManager.battleList.gridAvatars[i].ReplaceActiveAvatar(true);
             battleManager.battleList.gridAvatars[i].ReplaceActionPoint(battleManager.battleList.units[i].dexterity.value);

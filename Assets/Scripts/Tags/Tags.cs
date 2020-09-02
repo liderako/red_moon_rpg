@@ -9,6 +9,7 @@
         public const string init = "Init";
         public const string grid = "Grid";
         public const string battleManagerEntity = "BattleManager";
+        public const string inputEntity = "InputManager";
 
         // path
         public const string levelSettings = "LevelSettings/";
@@ -26,5 +27,10 @@
 
         // layers
         public const int PlayerLayer = 8;
+    }
+
+    public struct ButtonTags
+    {
+        public const int mouseButton0 = 0;
     }
 }

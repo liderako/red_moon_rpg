@@ -5,12 +5,12 @@
     "\\Assets\\Scripts",
     "\\Assets\\Scripts\\Controllers",
     "\\Assets\\Scripts\\Systems",
-    "\\Assets\\Scripts\\Systems\\Battle",
-    "\\Assets\\Scripts\\Systems\\Battle\\Grid",
-    "\\Assets\\Scripts\\Tags",
-    "\\Assets\\Scripts\\Triggers",
-    "\\Assets\\Scripts\\UI"
+    "\\Assets\\Scripts\\Systems\\Map",
+    "\\Assets\\Scripts\\Systems\\Map\\LocalMap",
+    "\\Assets\\Scripts\\Systems\\Map\\LocalMap\\Player",
+    "\\Assets\\Scripts\\Systems\\Map\\WorldMap",
+    "\\Assets\\Scripts\\Tags"
   ],
-  "SelectedNode": "\\Assets\\Scripts\\Systems\\Map\\LocalMap\\Player\\InputMovementSystem.cs",
+  "SelectedNode": "\\Assets\\Scripts\\Tags\\Tags.cs",
   "PreviewInSolutionExplorer": false
 }

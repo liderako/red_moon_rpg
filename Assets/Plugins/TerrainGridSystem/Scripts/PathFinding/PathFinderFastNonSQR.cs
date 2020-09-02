@@ -287,7 +287,7 @@ namespace TGS.PathFinding
 																				}
 
 																				if (!mHexagonalGrid && mHeavyDiagonals && i > 3)
-																								mNewG = mCalcGrid [mLocation].G + (int)(gridValue * 2.41f);
+																								mNewG = mCalcGrid [mLocation].G + (int)(gridValue * 2f);
 																				else
 																								mNewG = mCalcGrid [mLocation].G + gridValue;
 

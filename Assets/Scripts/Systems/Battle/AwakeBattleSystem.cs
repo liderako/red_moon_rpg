@@ -59,6 +59,7 @@ namespace RedMoonRPG.Systems.Battle
                 GridEntity g = Contexts.sharedInstance.grid.GetEntityWithName(gameGroup[i].name.name);
                 g.isBattle = true;
                 g.ReplaceActiveAvatar(false);
+                g.RemovePath();
                 gameGroup[i].ReplaceActiveAvatar(false);
                 gameEntities.Add(gameGroup[i]);
                 if (gameGroup[i].hasNextAnimation)
@@ -76,8 +77,11 @@ namespace RedMoonRPG.Systems.Battle
         private void StartBattle(BattleEntity manager, List<GameEntity> gameEntities, List<GridEntity> gridsEntities)
         {
             manager.isUpdateActiveAvatar = true;
+            manager.AddName(Tags.battleManagerEntity);
             manager.isAwakeBattle = false;
             manager.AddBattleList(gameEntities, gridsEntities, -1);
+            manager.AddRound(0);
+            Contexts.sharedInstance.input.GetEntityWithName(Tags.inputEntity).isBattle = true;
         }
 
         private GameEntity[] SortForDExterity(GameEntity[] group)
