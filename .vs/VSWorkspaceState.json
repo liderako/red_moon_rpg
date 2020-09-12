@@ -3,14 +3,16 @@
     "",
     "\\Assets",
     "\\Assets\\Scripts",
-    "\\Assets\\Scripts\\Controllers",
     "\\Assets\\Scripts\\Systems",
+    "\\Assets\\Scripts\\Systems\\Battle",
+    "\\Assets\\Scripts\\Systems\\Battle\\Grid",
     "\\Assets\\Scripts\\Systems\\Map",
     "\\Assets\\Scripts\\Systems\\Map\\LocalMap",
     "\\Assets\\Scripts\\Systems\\Map\\LocalMap\\Player",
-    "\\Assets\\Scripts\\Systems\\Map\\WorldMap",
-    "\\Assets\\Scripts\\Tags"
+    "\\Assets\\Scripts\\Systems\\Map\\LocalMap\\Player\\BattleMovement",
+    "\\Assets\\Scripts\\TMP",
+    "\\Assets\\Scripts\\Utils"
   ],
-  "SelectedNode": "\\Assets\\Scripts\\Tags\\Tags.cs",
+  "SelectedNode": "\\Assets\\Scripts\\Systems\\Battle\\NewBattleRoundSystem.cs",
   "PreviewInSolutionExplorer": false
 }

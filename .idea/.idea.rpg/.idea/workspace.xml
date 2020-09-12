@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="21a65572-38e6-4830-81aa-81ac3db23c56" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Scripts/Components/NameComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Movement/Map/RotateSpeedComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Movement/Map/SpeedComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Movement/PositionComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Triggers/OnTriggerBattle.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Generated/Battle/Components/BattleBattleListComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Generated/Components/MapPositionComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Generated/Components/TargetPositionComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/BattleController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Battle/SkipTurnSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Battle/Grid/DisplayAvailableGridSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Battle/Grid/AwakeDisplayGridSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Battle/AwakeBattleSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Battle/EndTurnSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Battle/QueueBattleSystems.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/GameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/GridController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/TestBattleController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Map/LocalMap/Player/InputMovementSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Map/LocalMap/Player/MovementSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Map/LocalMap/Player/BattleMovement/BattleMovementSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Map/LocalMap/Player/BattleMovement/InputMovementSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/LocalGameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Battle/DecisionMakingSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Battle/AI/FilterTargetComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Battle/AI/PriorityStateComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Battle/AI/PriorityFilterTargetComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Generated/Battle/Components/BattlePriorityStatesComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Generated/Battle/Components/BattlePriorityFilterTargetComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enums/FilterTarget.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enums/BattleState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Battle/AI/DecisionMakingSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Enums/Factions.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Factions/TypeFactionComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Factions/EnemyComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Generated/Battle/BattleComponentsLookup.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Generated/Game/Components/GameEnemyComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Generated/Game/GameComponentsLookup.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Generated/Components/Interfaces/IEnemy.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Generated/Components/Interfaces/IAI.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Generated/Battle/Components/BattleEnemyComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/AI/DecisionMakingSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Factions/FactionRelationsComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Factions/TypeFactionComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Factions/AIComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/NameComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Controllers/LoaderController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Tags/Tags.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/InitializeSystems/CreateFactionSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Tags/Enums/Factions.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Factions/FactionsComponent.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1hDVtqAdCgPxJDe7HnJOm3AUjkC" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="21a65572-38e6-4830-81aa-81ac3db23c56" name="Default Changelist" comment="" />
+      <created>1599545870577</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1599545870577</updated>
+      <workItem from="1599545895637" duration="2691000" />
+      <workItem from="1599673033643" duration="500000" />
+      <workItem from="1599714711187" duration="2386000" />
+      <workItem from="1599718407503" duration="550000" />
+      <workItem from="1599719031490" duration="6850000" />
+      <workItem from="1599831552466" duration="389000" />
+      <workItem from="1599915712401" duration="8515000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="498" height="446" key="SwitcherDM" timestamp="1599919028099">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599919028099" />
+    <state x="0" y="0" width="1369" height="1028" maximized="true" key="dock-window-1" timestamp="1599831930642">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="0" y="0" width="1369" height="1028" maximized="true" key="dock-window-1/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1599831930642" />
+    <state x="616" y="173" width="672" height="678" key="search.everywhere.popup" timestamp="1599922546652">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="173" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599922546652" />
+  </component>
+</project>

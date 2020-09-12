@@ -11,20 +11,20 @@ public partial class BattleEntity {
     public BattleListComponent battleList { get { return (BattleListComponent)GetComponent(BattleComponentsLookup.BattleList); } }
     public bool hasBattleList { get { return HasComponent(BattleComponentsLookup.BattleList); } }
 
-    public void AddBattleList(System.Collections.Generic.List<GameEntity> newUnits, System.Collections.Generic.List<GridEntity> newGridAvatars, int newIterator) {
+    public void AddBattleList(System.Collections.Generic.List<GameEntity> newUnits, System.Collections.Generic.List<BattleEntity> newBattleAvatars, int newIterator) {
         var index = BattleComponentsLookup.BattleList;
         var component = CreateComponent<BattleListComponent>(index);
         component.units = newUnits;
-        component.gridAvatars = newGridAvatars;
+        component.battleAvatars = newBattleAvatars;
         component.iterator = newIterator;
         AddComponent(index, component);
     }
 
-    public void ReplaceBattleList(System.Collections.Generic.List<GameEntity> newUnits, System.Collections.Generic.List<GridEntity> newGridAvatars, int newIterator) {
+    public void ReplaceBattleList(System.Collections.Generic.List<GameEntity> newUnits, System.Collections.Generic.List<BattleEntity> newBattleAvatars, int newIterator) {
         var index = BattleComponentsLookup.BattleList;
         var component = CreateComponent<BattleListComponent>(index);
         component.units = newUnits;
-        component.gridAvatars = newGridAvatars;
+        component.battleAvatars = newBattleAvatars;
         component.iterator = newIterator;
         ReplaceComponent(index, component);
     }

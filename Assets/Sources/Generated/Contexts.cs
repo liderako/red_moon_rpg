@@ -22,18 +22,18 @@ public partial class Contexts : Entitas.IContexts {
     static Contexts _sharedInstance;
 
     public BattleContext battle { get; set; }
+    public FactionContext faction { get; set; }
     public GameContext game { get; set; }
-    public GridContext grid { get; set; }
     public InputContext input { get; set; }
     public LifeContext life { get; set; }
     public TimeContext time { get; set; }
 
-    public Entitas.IContext[] allContexts { get { return new Entitas.IContext [] { battle, game, grid, input, life, time }; } }
+    public Entitas.IContext[] allContexts { get { return new Entitas.IContext [] { battle, faction, game, input, life, time }; } }
 
     public Contexts() {
         battle = new BattleContext();
+        faction = new FactionContext();
         game = new GameContext();
-        grid = new GridContext();
         input = new InputContext();
         life = new LifeContext();
         time = new TimeContext();
@@ -73,18 +73,18 @@ public partial class Contexts {
 
     [Entitas.CodeGeneration.Attributes.PostConstructor]
     public void InitializeEntityIndices() {
-        grid.AddEntityIndex(new Entitas.EntityIndex<GridEntity, bool>(
+        battle.AddEntityIndex(new Entitas.EntityIndex<BattleEntity, bool>(
             ActiveAvatar,
-            grid.GetGroup(GridMatcher.ActiveAvatar),
+            battle.GetGroup(BattleMatcher.ActiveAvatar),
             (e, c) => ((ActiveAvatarComponent)c).value));
         game.AddEntityIndex(new Entitas.EntityIndex<GameEntity, bool>(
             ActiveAvatar,
             game.GetGroup(GameMatcher.ActiveAvatar),
             (e, c) => ((ActiveAvatarComponent)c).value));
 
-        grid.AddEntityIndex(new Entitas.PrimaryEntityIndex<GridEntity, bool>(
+        battle.AddEntityIndex(new Entitas.PrimaryEntityIndex<BattleEntity, bool>(
             CellPointer,
-            grid.GetGroup(GridMatcher.CellPointer),
+            battle.GetGroup(BattleMatcher.CellPointer),
             (e, c) => ((CellPointerComponent)c).value));
 
         game.AddEntityIndex(new Entitas.PrimaryEntityIndex<GameEntity, string>(
@@ -95,10 +95,6 @@ public partial class Contexts {
             Name,
             time.GetGroup(TimeMatcher.Name),
             (e, c) => ((RedMoonRPG.NameComponent)c).name));
-        grid.AddEntityIndex(new Entitas.PrimaryEntityIndex<GridEntity, string>(
-            Name,
-            grid.GetGroup(GridMatcher.Name),
-            (e, c) => ((RedMoonRPG.NameComponent)c).name));
         battle.AddEntityIndex(new Entitas.PrimaryEntityIndex<BattleEntity, string>(
             Name,
             battle.GetGroup(BattleMatcher.Name),
@@ -106,6 +102,10 @@ public partial class Contexts {
         input.AddEntityIndex(new Entitas.PrimaryEntityIndex<InputEntity, string>(
             Name,
             input.GetGroup(InputMatcher.Name),
+            (e, c) => ((RedMoonRPG.NameComponent)c).name));
+        faction.AddEntityIndex(new Entitas.PrimaryEntityIndex<FactionEntity, string>(
+            Name,
+            faction.GetGroup(FactionMatcher.Name),
             (e, c) => ((RedMoonRPG.NameComponent)c).name));
 
         game.AddEntityIndex(new Entitas.EntityIndex<GameEntity, string>(
@@ -117,16 +117,16 @@ public partial class Contexts {
 
 public static class ContextsExtensions {
 
-    public static System.Collections.Generic.HashSet<GridEntity> GetEntitiesWithActiveAvatar(this GridContext context, bool value) {
-        return ((Entitas.EntityIndex<GridEntity, bool>)context.GetEntityIndex(Contexts.ActiveAvatar)).GetEntities(value);
+    public static System.Collections.Generic.HashSet<BattleEntity> GetEntitiesWithActiveAvatar(this BattleContext context, bool value) {
+        return ((Entitas.EntityIndex<BattleEntity, bool>)context.GetEntityIndex(Contexts.ActiveAvatar)).GetEntities(value);
     }
 
     public static System.Collections.Generic.HashSet<GameEntity> GetEntitiesWithActiveAvatar(this GameContext context, bool value) {
         return ((Entitas.EntityIndex<GameEntity, bool>)context.GetEntityIndex(Contexts.ActiveAvatar)).GetEntities(value);
     }
 
-    public static GridEntity GetEntityWithCellPointer(this GridContext context, bool value) {
-        return ((Entitas.PrimaryEntityIndex<GridEntity, bool>)context.GetEntityIndex(Contexts.CellPointer)).GetEntity(value);
+    public static BattleEntity GetEntityWithCellPointer(this BattleContext context, bool value) {
+        return ((Entitas.PrimaryEntityIndex<BattleEntity, bool>)context.GetEntityIndex(Contexts.CellPointer)).GetEntity(value);
     }
 
     public static GameEntity GetEntityWithName(this GameContext context, string name) {
@@ -137,16 +137,16 @@ public static class ContextsExtensions {
         return ((Entitas.PrimaryEntityIndex<TimeEntity, string>)context.GetEntityIndex(Contexts.Name)).GetEntity(name);
     }
 
-    public static GridEntity GetEntityWithName(this GridContext context, string name) {
-        return ((Entitas.PrimaryEntityIndex<GridEntity, string>)context.GetEntityIndex(Contexts.Name)).GetEntity(name);
-    }
-
     public static BattleEntity GetEntityWithName(this BattleContext context, string name) {
         return ((Entitas.PrimaryEntityIndex<BattleEntity, string>)context.GetEntityIndex(Contexts.Name)).GetEntity(name);
     }
 
     public static InputEntity GetEntityWithName(this InputContext context, string name) {
         return ((Entitas.PrimaryEntityIndex<InputEntity, string>)context.GetEntityIndex(Contexts.Name)).GetEntity(name);
+    }
+
+    public static FactionEntity GetEntityWithName(this FactionContext context, string name) {
+        return ((Entitas.PrimaryEntityIndex<FactionEntity, string>)context.GetEntityIndex(Contexts.Name)).GetEntity(name);
     }
 
     public static System.Collections.Generic.HashSet<GameEntity> GetEntitiesWithPersona(this GameContext context, string value) {
@@ -169,8 +169,8 @@ public partial class Contexts {
     public void InitializeContexObservers() {
         try {
             CreateContextObserver(battle);
+            CreateContextObserver(faction);
             CreateContextObserver(game);
-            CreateContextObserver(grid);
             CreateContextObserver(input);
             CreateContextObserver(life);
             CreateContextObserver(time);
