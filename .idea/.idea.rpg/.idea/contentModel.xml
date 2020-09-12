@@ -539,10 +539,8 @@
                   <e p="UpdateActiveAvatarComponent.cs" t="Include" />
                   <e p="UpdateBattleRound.cs" t="Include" />
                 </e>
-                <e p="CameraCreate.cs" t="Include" />
                 <e p="Factions" t="Include">
                   <e p="AIComponent.cs" t="Include" />
-                  <e p="FactionRelationsComponent.cs" t="Include" />
                   <e p="FactionsComponent.cs" t="Include" />
                   <e p="PlayerComponent.cs" t="Include" />
                   <e p="TypeFactionComponent.cs" t="Include" />
@@ -550,7 +548,6 @@
                 <e p="Input" t="Include">
                   <e p="InputMouseComponent.cs" t="Include" />
                 </e>
-                <e p="LevelCreate.cs" t="Include" />
                 <e p="Movement" t="Include">
                   <e p="Map" t="Include">
                     <e p="BorderThicknessComponent.cs" t="Include" />
@@ -701,6 +698,7 @@
                 <e p="FilterTarget.cs" t="Include" />
                 <e p="Stat.cs" t="Include" />
               </e>
+              <e p="FractionStruct.cs" t="Include" />
               <e p="Scenes.cs" t="Include" />
               <e p="Tags.cs" t="Include" />
             </e>
@@ -777,7 +775,6 @@
             <e p="Contexts.cs" t="Include" />
             <e p="Faction" t="Include">
               <e p="Components" t="Include">
-                <e p="FactionFactionRelationsComponent.cs" t="Include" />
                 <e p="FactionFactionsComponent.cs" t="Include" />
                 <e p="FactionNameComponent.cs" t="Include" />
               </e>
@@ -796,7 +793,6 @@
                 <e p="GameAnimatorComponent.cs" t="Include" />
                 <e p="GameAttentionComponent.cs" t="Include" />
                 <e p="GameBorderThicknessComponent.cs" t="Include" />
-                <e p="GameCameraCreateComponent.cs" t="Include" />
                 <e p="GameDamagedComponent.cs" t="Include" />
                 <e p="GameDexterityComponent.cs" t="Include" />
                 <e p="GameEnduranceComponent.cs" t="Include" />
@@ -809,7 +805,6 @@
                 <e p="GameIndexMeleeDamageComponent.cs" t="Include" />
                 <e p="GameIndexRangedDamageComponent.cs" t="Include" />
                 <e p="GameIntellectComponent.cs" t="Include" />
-                <e p="GameLevelCreateComponent.cs" t="Include" />
                 <e p="GameLimitMapComponent.cs" t="Include" />
                 <e p="GameLuckComponent.cs" t="Include" />
                 <e p="GameManaComponent.cs" t="Include" />

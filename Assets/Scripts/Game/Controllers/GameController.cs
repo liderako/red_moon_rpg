@@ -45,8 +45,6 @@ namespace RedMoonRPG
         {
             GameEntity gameInitializer = Contexts.sharedInstance.game.GetEntityWithName("GameInit");
             TestInitPlayer();
-            gameInitializer.isCameraCreate = true;
-            gameInitializer.isLevelCreate = true;
         }
 
         private void TestInitPlayer()
@@ -87,13 +85,15 @@ namespace RedMoonRPG
         private Entitas.Systems CreateSystems(Contexts contexts)
         {
             return new Feature("Game")
-            .Add(new Systems.WorldMap.Camera.CameraFollowerMovementSystem(contexts))
-            .Add(new Systems.WorldMap.Camera.MovementSystem(contexts))
-            .Add(new Systems.WorldMap.Camera.ReturnMovementSystem(contexts))
-            .Add(new Systems.WorldMap.Camera.TeleportSystem(contexts))
-            .Add(new Systems.WorldMap.Player.MovementSystem(contexts))
-            .Add(new Systems.WorldMap.Player.InputMovementSystem(contexts))
-            .Add(new Systems.Animations.BoolAnimationSystem(contexts));
+                .Add(new Systems.InitializeSystems.CameraInitEntitySystem())
+                .Add(new Systems.InitializeSystems.LevelInitEntitySystem())
+                .Add(new Systems.WorldMap.Camera.CameraFollowerMovementSystem(contexts))
+                .Add(new Systems.WorldMap.Camera.MovementSystem(contexts))
+                .Add(new Systems.WorldMap.Camera.ReturnMovementSystem(contexts))
+                .Add(new Systems.WorldMap.Camera.TeleportSystem(contexts))
+                .Add(new Systems.WorldMap.Player.MovementSystem(contexts))
+                .Add(new Systems.WorldMap.Player.InputMovementSystem(contexts))
+                .Add(new Systems.Animations.BoolAnimationSystem(contexts));
         }
     }
 }

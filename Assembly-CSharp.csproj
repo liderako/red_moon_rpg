@@ -75,16 +75,13 @@
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattleSkipTurnComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattleUpdateActiveAvatarComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattleUpdateBattleRoundComponent.cs" />
-    <Compile Include="Assets\Sources\Generated\Game\Components\GameCameraCreateComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameAIComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattleAIComponent.cs" />
-    <Compile Include="Assets\Sources\Generated\Faction\Components\FactionFactionRelationsComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Faction\Components\FactionFactionsComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GamePlayerComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattlePlayerComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattleTypeFactionComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Input\Components\InputInputMouseComponent.cs" />
-    <Compile Include="Assets\Sources\Generated\Game\Components\GameLevelCreateComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameBorderThicknessComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameForceSpeedComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameLimitMapComponent.cs" />

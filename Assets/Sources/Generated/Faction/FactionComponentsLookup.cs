@@ -8,20 +8,17 @@
 //------------------------------------------------------------------------------
 public static class FactionComponentsLookup {
 
-    public const int FactionRelations = 0;
-    public const int Factions = 1;
-    public const int Name = 2;
+    public const int Factions = 0;
+    public const int Name = 1;
 
-    public const int TotalComponents = 3;
+    public const int TotalComponents = 2;
 
     public static readonly string[] componentNames = {
-        "FactionRelations",
         "Factions",
         "Name"
     };
 
     public static readonly System.Type[] componentTypes = {
-        typeof(FactionRelationsComponent),
         typeof(FactionsComponent),
         typeof(RedMoonRPG.NameComponent)
     };

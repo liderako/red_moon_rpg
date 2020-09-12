@@ -9,9 +9,3 @@ public class FactionsComponent : IComponent
 {
     public List<FactionStruct> value;
 }
-
-public struct FactionStruct
-{
-    public Factions name;
-    public Dictionary<Factions, bool> relations;
-}

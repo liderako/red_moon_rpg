@@ -27,11 +27,11 @@ namespace RedMoonRPG
         private Entitas.Systems CreateSystems(Contexts contexts)
         {
             return new Feature("Battle")
-            .Add(new Systems.Battle.QueueBattleSystems(contexts))
-            .Add(new Systems.Battle.SkipTurnSystem(contexts))
-            .Add(new Systems.Battle.EndTurnSystem(contexts))
-            .Add(new Systems.Battle.NewBattleRound(contexts))
-            .Add(new Systems.Battle.AwakeBattleSystem(contexts));
+                .Add(new Systems.Battle.QueueBattleSystems(contexts))
+                .Add(new Systems.Battle.SkipTurnSystem(contexts))
+                .Add(new Systems.Battle.EndTurnSystem(contexts))
+                .Add(new Systems.Battle.NewBattleRound(contexts))
+                .Add(new Systems.Battle.AwakeBattleSystem(contexts));
         }
     }
 

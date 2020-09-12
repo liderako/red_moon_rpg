@@ -13,15 +13,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Components/NameComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Movement/Map/RotateSpeedComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Movement/Map/SpeedComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Movement/PositionComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Triggers/OnTriggerBattle.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sources/Generated/Battle/Components/BattleBattleListComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sources/Generated/Components/MapPositionComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sources/Generated/Components/TargetPositionComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/BattleController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Battle/SkipTurnSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Battle/Grid/DisplayAvailableGridSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Battle/Grid/AwakeDisplayGridSystem.cs" />
@@ -50,20 +41,29 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Factions/EnemyComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Sources/Generated/Battle/BattleComponentsLookup.cs" />
         <option value="$PROJECT_DIR$/Assets/Sources/Generated/Game/Components/GameEnemyComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sources/Generated/Game/GameComponentsLookup.cs" />
         <option value="$PROJECT_DIR$/Assets/Sources/Generated/Components/Interfaces/IEnemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Sources/Generated/Components/Interfaces/IAI.cs" />
         <option value="$PROJECT_DIR$/Assets/Sources/Generated/Battle/Components/BattleEnemyComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/AI/DecisionMakingSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Factions/FactionRelationsComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Factions/TypeFactionComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Factions/AIComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/NameComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Controllers/LoaderController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Tags/Tags.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/InitializeSystems/CreateFactionSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Tags/Enums/Factions.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Factions/FactionRelationsComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Generated/Faction/FactionComponentsLookup.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Generated/Game/GameComponentsLookup.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/InitializeSystems/CameraInitEntitySystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/InitializeSystems/LevelInitEntitySystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Controllers/LoaderController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Controllers/BattleController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Controllers/GridController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Controllers/LocalGameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Controllers/GameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/InitializeSystems/CreateFactionSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Triggers/OnTriggerBattle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Factions/FactionsComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Tags/FractionStruct.cs" />
       </list>
     </option>
   </component>
@@ -112,6 +112,7 @@
       <workItem from="1599719031490" duration="6850000" />
       <workItem from="1599831552466" duration="389000" />
       <workItem from="1599915712401" duration="8515000" />
+      <workItem from="1599928677323" duration="1865000" />
     </task>
     <servers />
   </component>

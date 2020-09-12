@@ -14,46 +14,44 @@ public static class GameComponentsLookup {
     public const int Animator = 3;
     public const int Attention = 4;
     public const int BorderThickness = 5;
-    public const int CameraCreate = 6;
-    public const int Damaged = 7;
-    public const int Dexterity = 8;
-    public const int Endurance = 9;
-    public const int ForceSpeed = 10;
-    public const int FreeCamera = 11;
-    public const int Healed = 12;
-    public const int Health = 13;
-    public const int HealthUpdate = 14;
-    public const int IndexMagicDamage = 15;
-    public const int IndexMeleeDamage = 16;
-    public const int IndexRangedDamage = 17;
-    public const int Intellect = 18;
-    public const int LevelCreate = 19;
-    public const int LimitMap = 20;
-    public const int Luck = 21;
-    public const int Mana = 22;
-    public const int ManaUpdate = 23;
-    public const int MapPosition = 24;
-    public const int ModifiedStat = 25;
-    public const int NavMeshAgent = 26;
-    public const int NextAnimation = 27;
-    public const int Personality = 28;
-    public const int Player = 29;
-    public const int Name = 30;
-    public const int NextLevelName = 31;
-    public const int Persona = 32;
-    public const int RotateSpeed = 33;
-    public const int Speed = 34;
-    public const int Strength = 35;
-    public const int TargetPosition = 36;
-    public const int TeleportCamera = 37;
-    public const int Transform = 38;
-    public const int UpdateMagicDamage = 39;
-    public const int UpdateMeleeDamage = 40;
-    public const int UpdateRangedDamage = 41;
-    public const int WorldMap = 42;
-    public const int WorldMapMovement = 43;
+    public const int Damaged = 6;
+    public const int Dexterity = 7;
+    public const int Endurance = 8;
+    public const int ForceSpeed = 9;
+    public const int FreeCamera = 10;
+    public const int Healed = 11;
+    public const int Health = 12;
+    public const int HealthUpdate = 13;
+    public const int IndexMagicDamage = 14;
+    public const int IndexMeleeDamage = 15;
+    public const int IndexRangedDamage = 16;
+    public const int Intellect = 17;
+    public const int LimitMap = 18;
+    public const int Luck = 19;
+    public const int Mana = 20;
+    public const int ManaUpdate = 21;
+    public const int MapPosition = 22;
+    public const int ModifiedStat = 23;
+    public const int NavMeshAgent = 24;
+    public const int NextAnimation = 25;
+    public const int Personality = 26;
+    public const int Player = 27;
+    public const int Name = 28;
+    public const int NextLevelName = 29;
+    public const int Persona = 30;
+    public const int RotateSpeed = 31;
+    public const int Speed = 32;
+    public const int Strength = 33;
+    public const int TargetPosition = 34;
+    public const int TeleportCamera = 35;
+    public const int Transform = 36;
+    public const int UpdateMagicDamage = 37;
+    public const int UpdateMeleeDamage = 38;
+    public const int UpdateRangedDamage = 39;
+    public const int WorldMap = 40;
+    public const int WorldMapMovement = 41;
 
-    public const int TotalComponents = 44;
+    public const int TotalComponents = 42;
 
     public static readonly string[] componentNames = {
         "ActiveAnimation",
@@ -62,7 +60,6 @@ public static class GameComponentsLookup {
         "Animator",
         "Attention",
         "BorderThickness",
-        "CameraCreate",
         "Damaged",
         "Dexterity",
         "Endurance",
@@ -75,7 +72,6 @@ public static class GameComponentsLookup {
         "IndexMeleeDamage",
         "IndexRangedDamage",
         "Intellect",
-        "LevelCreate",
         "LimitMap",
         "Luck",
         "Mana",
@@ -109,7 +105,6 @@ public static class GameComponentsLookup {
         typeof(AnimatorComponent),
         typeof(AttentionComponent),
         typeof(BorderThicknessComponent),
-        typeof(CameraCreateComponent),
         typeof(DamagedComponent),
         typeof(DexterityComponent),
         typeof(EnduranceComponent),
@@ -122,7 +117,6 @@ public static class GameComponentsLookup {
         typeof(IndexMeleeDamageComponent),
         typeof(IndexRangedDamageComponent),
         typeof(IntellectComponent),
-        typeof(LevelCreateComponent),
         typeof(LimitMapComponent),
         typeof(LuckComponent),
         typeof(ManaComponent),

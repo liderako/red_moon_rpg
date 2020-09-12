@@ -13,17 +13,17 @@ namespace RedMoonRPG.Systems.InitializeSystems
             FactionEntity factionEntity = Contexts.sharedInstance.faction.CreateEntity();
             factionEntity.AddName(Tags.factionData);
             
-            List<Factions> factions = new List<Factions>();
+            List<FactionStruct> factions = new List<FactionStruct>();
             // создаем лист возможных фракций
-            factions.Add(Factions.Player);
-            factions.Add(Factions.TribesOfHorde);
-            factions.Add(Factions.KingdomOfMetozan);
+            factions.Add(new FactionStruct(Factions.Player, InitPlayerFaction()));
+            factions.Add(new FactionStruct(Factions.TribesOfHorde, InitHordeFaction()));
+            factions.Add(new FactionStruct(Factions.KingdomOfMetozan, InitKingdomMetozan()));
             // добавляем для хранение активных фракций массив в сущность
             factionEntity.AddFactions(factions);
             
-            factionEntity.AddFactionRelations(Factions.Player, InitPlayerFaction());
-            factionEntity.AddFactionRelations(Factions.TribesOfHorde, InitHordeFaction());
-            factionEntity.AddFactionRelations(Factions.KingdomOfMetozan, InitKingdomMetozan());
+            // factionEntity.AddFactionRelations(Factions.Player, InitPlayerFaction());
+            // factionEntity.AddFactionRelations(Factions.TribesOfHorde, InitHordeFaction());
+            // factionEntity.AddFactionRelations(Factions.KingdomOfMetozan, InitKingdomMetozan());
         }
 
         public Dictionary<Factions, bool> InitPlayerFaction()

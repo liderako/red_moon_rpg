@@ -11,19 +11,17 @@ public partial class FactionEntity {
     public FactionsComponent factions { get { return (FactionsComponent)GetComponent(FactionComponentsLookup.Factions); } }
     public bool hasFactions { get { return HasComponent(FactionComponentsLookup.Factions); } }
 
-    public void AddFactions(System.Collections.Generic.List<Factions> newValue, System.Collections.Generic.List<System.Collections.Generic.Dictionary<Factions, bool>> newRelations) {
+    public void AddFactions(System.Collections.Generic.List<FactionStruct> newValue) {
         var index = FactionComponentsLookup.Factions;
         var component = CreateComponent<FactionsComponent>(index);
         component.value = newValue;
-        component.Relations = newRelations;
         AddComponent(index, component);
     }
 
-    public void ReplaceFactions(System.Collections.Generic.List<Factions> newValue, System.Collections.Generic.List<System.Collections.Generic.Dictionary<Factions, bool>> newRelations) {
+    public void ReplaceFactions(System.Collections.Generic.List<FactionStruct> newValue) {
         var index = FactionComponentsLookup.Factions;
         var component = CreateComponent<FactionsComponent>(index);
         component.value = newValue;
-        component.Relations = newRelations;
         ReplaceComponent(index, component);
     }
 

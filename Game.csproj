@@ -304,14 +304,11 @@
      <Compile Include="Assets\Scripts\Game\ECS\Components\Battle\SkipTurnComponent.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\Battle\UpdateActiveAvatarComponent.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\Battle\UpdateBattleRound.cs" />
-     <Compile Include="Assets\Scripts\Game\ECS\Components\CameraCreate.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\Factions\AIComponent.cs" />
-     <Compile Include="Assets\Scripts\Game\ECS\Components\Factions\FactionRelationsComponent.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\Factions\FactionsComponent.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\Factions\PlayerComponent.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\Factions\TypeFactionComponent.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\Input\InputMouseComponent.cs" />
-     <Compile Include="Assets\Scripts\Game\ECS\Components\LevelCreate.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\Movement\Map\BorderThicknessComponent.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\Movement\Map\ForceSpeedComponent.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\Movement\Map\LimitMapComponent.cs" />
@@ -401,6 +398,7 @@
      <Compile Include="Assets\Scripts\Game\Tags\Enums\Factions.cs" />
      <Compile Include="Assets\Scripts\Game\Tags\Enums\FilterTarget.cs" />
      <Compile Include="Assets\Scripts\Game\Tags\Enums\Stat.cs" />
+     <Compile Include="Assets\Scripts\Game\Tags\FractionStruct.cs" />
      <Compile Include="Assets\Scripts\Game\Tags\Scenes.cs" />
      <Compile Include="Assets\Scripts\Game\Tags\Tags.cs" />
      <Compile Include="Assets\Scripts\Game\Triggers\OnTriggerBattle.cs" />
@@ -454,7 +452,6 @@
      <Compile Include="Assets\Sources\Generated\Components\MapPositionComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Components\TargetPositionComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Contexts.cs" />
-     <Compile Include="Assets\Sources\Generated\Faction\Components\FactionFactionRelationsComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Faction\Components\FactionFactionsComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Faction\Components\FactionNameComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Faction\FactionAttribute.cs" />
@@ -469,7 +466,6 @@
      <Compile Include="Assets\Sources\Generated\Game\Components\GameAnimatorComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Game\Components\GameAttentionComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Game\Components\GameBorderThicknessComponent.cs" />
-     <Compile Include="Assets\Sources\Generated\Game\Components\GameCameraCreateComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Game\Components\GameDamagedComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Game\Components\GameDexterityComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Game\Components\GameEnduranceComponent.cs" />
@@ -482,7 +478,6 @@
      <Compile Include="Assets\Sources\Generated\Game\Components\GameIndexMeleeDamageComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Game\Components\GameIndexRangedDamageComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Game\Components\GameIntellectComponent.cs" />
-     <Compile Include="Assets\Sources\Generated\Game\Components\GameLevelCreateComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Game\Components\GameLimitMapComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Game\Components\GameLuckComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Game\Components\GameManaComponent.cs" />

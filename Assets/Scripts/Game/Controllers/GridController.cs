@@ -27,8 +27,8 @@ namespace RedMoonRPG
         private Entitas.Systems CreateSystems(Contexts contexts)
         {
             return new Feature("Grid")
-            .Add(new Systems.Battle.Grid.AwakeDisplayGridSystem(contexts))
-            .Add(new Systems.Battle.Grid.DisplayAvailableGridSystem(contexts));
+                .Add(new Systems.Battle.Grid.AwakeDisplayGridSystem(contexts))
+                .Add(new Systems.Battle.Grid.DisplayAvailableGridSystem(contexts));
         }
     }
 
