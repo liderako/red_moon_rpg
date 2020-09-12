@@ -56,10 +56,10 @@ namespace RedMoonRPG.Systems.Battle
             }
             for (int i = 0; i < gameGroup.Length; i++)
             {
-                BattleEntity g = Contexts.sharedInstance.battle.GetEntityWithName(gameGroup[i].name.name);
-                g.isBattle = true;
-                g.ReplaceActiveAvatar(false);
-                g.RemovePath();
+                BattleEntity avatar = Contexts.sharedInstance.battle.GetEntityWithName(gameGroup[i].name.name);
+                avatar.isBattle = true;
+                avatar.ReplaceActiveAvatar(false);
+                MoveUnitToCenterCell(gameGroup[i], avatar);
                 gameGroup[i].ReplaceActiveAvatar(false);
                 gameEntities.Add(gameGroup[i]);
                 if (gameGroup[i].hasNextAnimation)
@@ -70,10 +70,20 @@ namespace RedMoonRPG.Systems.Battle
                 {
                     gameGroup[i].AddNextAnimation(AnimationTags.idle);
                 }
-                gridsEntities.Add(g);
+                gridsEntities.Add(avatar);
             }
         }
-    
+
+
+        private void MoveUnitToCenterCell(GameEntity unit, BattleEntity avatar)
+        {
+            Vector3 targetPosition = avatar.terrainGrid.value.CellGetPosition(avatar.terrainGrid.value.CellGetAtPosition(unit.transform.value.position, true), true);
+            unit.transform.value.position = targetPosition;
+            unit.ReplaceMapPosition(new Position(targetPosition));
+            avatar.ReplaceMapPosition(new Position(targetPosition));
+            avatar.RemovePath();
+        }
+
         private void StartBattle(BattleEntity manager, List<GameEntity> gameEntities, List<BattleEntity> battleEntities)
         {
             manager.isUpdateActiveAvatar = true;

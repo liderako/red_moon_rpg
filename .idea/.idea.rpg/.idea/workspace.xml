@@ -13,8 +13,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Battle/SkipTurnSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Battle/Grid/DisplayAvailableGridSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Battle/Grid/AwakeDisplayGridSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Battle/AwakeBattleSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Battle/EndTurnSystem.cs" />
@@ -58,12 +56,14 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Controllers/LoaderController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Controllers/BattleController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Controllers/GridController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Controllers/LocalGameController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Controllers/GameController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/InitializeSystems/CreateFactionSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Triggers/OnTriggerBattle.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Factions/FactionsComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Tags/FractionStruct.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Map/LocalMap/Player/MovementSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Controllers/LocalGameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/AwakeBattleSystem.cs" />
       </list>
     </option>
   </component>
@@ -112,7 +112,7 @@
       <workItem from="1599719031490" duration="6850000" />
       <workItem from="1599831552466" duration="389000" />
       <workItem from="1599915712401" duration="8515000" />
-      <workItem from="1599928677323" duration="1865000" />
+      <workItem from="1599928677323" duration="4605000" />
     </task>
     <servers />
   </component>
