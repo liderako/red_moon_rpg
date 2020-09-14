@@ -443,11 +443,11 @@ namespace TGS {
 			}
 			// If it was highlighted, highlight it again
 			if (region.customMaterial != null && isHighlighted) {
-				if (region.customMaterial != null) {
-					hudMatCell.mainTexture = region.customMaterial.mainTexture;
-				} else {
-					hudMatCell.mainTexture = null;
-				}
+				// if (region.customMaterial != null) {
+				// 	hudMatCell.mainTexture = region.customMaterial.mainTexture;
+				// } else {
+				// 	hudMatCell.mainTexture = null;
+				// }
 				surf.GetComponent<Renderer> ().sharedMaterial = hudMatCell;
 				_highlightedObj = surf;
 			}

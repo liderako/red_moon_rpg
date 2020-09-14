@@ -1729,7 +1729,7 @@ namespace TGS {
 				Territory territory = territories [k];
 				Region region = territory.region;
 				if (region.customMaterial != null) {
-					TerritoryToggleRegionSurface (k, true, region.customMaterial.color, (Texture2D)region.customMaterial.mainTexture, region.customTextureScale, region.customTextureOffset, region.customTextureRotation, region.customRotateInLocalSpace);
+					//TerritoryToggleRegionSurface (k, true, region.customMaterial.color, (Texture2D)region.customMaterial.mainTexture, region.customTextureScale, region.customTextureOffset, region.customTextureRotation, region.customRotateInLocalSpace);
 				} else {
 					Color fillColor = territories [k].fillColor;
 					fillColor.a *= colorizedTerritoriesAlpha;
@@ -1910,9 +1910,9 @@ namespace TGS {
 			for (int k = 0; k < cellsCount; k++) {
 				Cell cell = cells [k];
 				Region region = cell.region;
-				if (region.customMaterial != null && cell.visible) {
-					CellToggleRegionSurface (k, true, region.customMaterial.color, false, (Texture2D)region.customMaterial.mainTexture, region.customTextureScale, region.customTextureOffset, region.customTextureRotation, region.customRotateInLocalSpace);
-				}
+				// if (region.customMaterial != null && cell.visible) {
+				// 	CellToggleRegionSurface (k, true, region.customMaterial.color, false, (Texture2D)region.customMaterial.mainTexture, region.customTextureScale, region.customTextureOffset, region.customTextureRotation, region.customRotateInLocalSpace);
+				// }
 			}
 		}
 
@@ -2800,12 +2800,12 @@ namespace TGS {
 					_highlightedObj = GenerateCellRegionSurface (cellIndex, hudMatCell, Misc.Vector2one, Misc.Vector2zero, 0, false);
 				}
 				// Reuse cell texture
-				Cell cell = cells [cellIndex];
-				if (cell.region.customMaterial != null) {
-					hudMatCell.mainTexture = cell.region.customMaterial.mainTexture;
-				} else {
-					hudMatCell.mainTexture = null;
-				}
+				// Cell cell = cells [cellIndex];
+				// if (cell.region.customMaterial != null) {
+				// 	hudMatCell.mainTexture = cell.region.customMaterial.mainTexture;
+				// } else {
+				// 	hudMatCell.mainTexture = null;
+				// }
 				highlightFadeStart = Time.time;
 			}
 

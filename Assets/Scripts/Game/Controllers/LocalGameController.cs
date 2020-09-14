@@ -72,7 +72,7 @@ namespace RedMoonRPG
             entity.AddDexterity(6);
             entity.AddActiveAvatar(true);
             entity.isPlayer = true;
-    
+
             // создаем клетку для игрока
             BattleEntity avatar = Contexts.sharedInstance.battle.CreateEntity();
             avatar.AddActionPoint(0);

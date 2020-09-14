@@ -65,6 +65,10 @@ namespace RedMoonRPG
             entity.AddNextAnimation(AnimationTags.idle);
             entity.AddActiveAvatar(true);
             entity.AddPersona("Lola");
+            if (entity.hasNavMeshAgent)
+            {
+                entity.navMeshAgent.agent.enabled = true;
+            }
         }
 
         //private Entitas.Systems CreateSystems(Contexts contexts)

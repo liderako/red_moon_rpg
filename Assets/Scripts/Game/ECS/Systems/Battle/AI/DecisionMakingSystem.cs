@@ -18,7 +18,7 @@ namespace RedMoonRPG.Systems.Battle.AI
 
         protected override bool Filter(BattleEntity entity)
         {
-            return entity.isAI && entity.activeAvatar.value;
+            return entity.isBattle && entity.isAI && entity.activeAvatar.value;
         }
 
         protected override void Execute(List<BattleEntity> entities)

@@ -25,16 +25,23 @@ namespace RedMoonRPG.Settings
         private string ReadSettings(string nameFile)
         {
             string s = File.ReadAllText(Application.persistentDataPath + "/" + nameFile + ".json");
+            if (s == null)
+            {
+                Debug.LogError("Read Settings error.");
+            }
             return s;
         }
 
         // метод для загрузки с json файла грид системы
         public List<int> LoadGridJson(string levelName)
         {
+            #if UNITY_EDITOR
             if (!ExistsLevelGridSystem(levelName + ".json"))
             {
+                Debug.LogError("LoadGridJson error\n" + Application.dataPath + Tags.ResourcesPathGridSettings + levelName + ".json doesn't found." );
                 return null;
             }
+            #endif
             string fileName = levelName;
             TextAsset asset = Resources.Load(Tags.PathGridSettings + fileName) as TextAsset;
             string s = asset.text;

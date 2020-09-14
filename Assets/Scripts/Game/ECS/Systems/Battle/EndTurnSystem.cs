@@ -18,7 +18,7 @@ namespace RedMoonRPG.Systems.Battle
     
         protected override bool Filter(BattleEntity entity)
         {
-            return entity.activeAvatar.value == true && entity.actionPoint.value == 0 && entity.path.gridPath.Count == 0;
+            return entity.isBattle && entity.activeAvatar.value == true && entity.actionPoint.value == 0 && entity.path.gridPath.Count == 0;
         }
     
         protected override void Execute(List<BattleEntity> entities)

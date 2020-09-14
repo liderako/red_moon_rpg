@@ -121,6 +121,36 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &1877268
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1877269}
+  m_Layer: 5
+  m_Name: Surfaces
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1877269
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1877268}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1152865959}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &20496468
 GameObject:
   m_ObjectHideFlags: 0
@@ -545,6 +575,36 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 316838154}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &318839450
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 318839451}
+  m_Layer: 5
+  m_Name: Surfaces
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &318839451
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318839450}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 857988680}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &329201091
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1911,36 +1971,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 524f7b3acd924d54dad88d623055df53, type: 3}
---- !u!1 &671146909
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 671146910}
-  m_Layer: 5
-  m_Name: Surfaces
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &671146910
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 671146909}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1152865959}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &682797241
 GameObject:
   m_ObjectHideFlags: 0
@@ -2504,6 +2534,196 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1485284017}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &857988679
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 857988680}
+  - component: {fileID: 857988683}
+  - component: {fileID: 857988682}
+  - component: {fileID: 857988681}
+  m_Layer: 5
+  m_Name: TerrainGridSystem (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &857988680
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 857988679}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 15.999016, y: 0.1416187, z: 15.970486}
+  m_LocalScale: {x: 32, y: 32, z: 1}
+  m_Children:
+  - {fileID: 318839451}
+  m_Father: {fileID: 1413549751}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &857988681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 857988679}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81a01c2198d58422e8c1c252ad33df90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxCellsSqrt: 100
+  isDirty: 0
+  mouseIsOver: 0
+  _numCells: 1024
+  _showCells: 0
+  _cellBorderColor: {r: 0, g: 0, b: 0, a: 1}
+  _cellBorderThickness: 1
+  _cellHighlightColor: {r: 0.31629825, g: 0.7830189, b: 0.13665895, a: 0}
+  _cellHighlightNonVisible: 1
+  _cellsMaxSlope: 1
+  _cellsMinimumAltitude: 0
+  _pathFindingHeuristicFormula: 4
+  _pathFindingMaxCost: 2000
+  _pathFindingMaxSteps: 2000
+  _pathFindingUseDiagonals: 1
+  _pathFindingHeavyDiagonals: 1
+  territoriesTexture: {fileID: 0}
+  territoriesTextureNeutralColor: {r: 0, g: 0, b: 0, a: 0}
+  _numTerritories: 1
+  _showTerritories: 0
+  _colorizeTerritories: 1
+  _colorizedTerritoriesAlpha: 0
+  _territoryHighlightColor: {r: 1, g: 0, b: 0, a: 0.7}
+  _territoryFrontierColor: {r: 0, g: 0, b: 0, a: 1}
+  _territoryDisputedFrontierColor: {r: 0, g: 0, b: 0, a: 1}
+  _showTerritoriesOuterBorder: 1
+  _allowTerritoriesInsideTerritories: 1
+  _terrain: {fileID: 1413549750}
+  canvasTexture: {fileID: 0}
+  _transparentBackground: 0
+  _gridMask: {fileID: 0}
+  _gridTopology: 1
+  _seed: 1
+  _evenLayout: 0
+  _regularHexagons: 0
+  _hexSize: 0.01
+  _gridRelaxation: 1
+  _gridCurvature: 0
+  _highlightMode: 2
+  _highlightFadeMin: 0
+  _highlightFadeAmount: 0
+  _highlightScaleMin: 0.8812138
+  _highlightScaleMax: 1.0115607
+  _highlightFadeSpeed: 0.1
+  _highlightMinimumTerrainDistance: 0
+  _highlightEffect: 0
+  _overlayMode: 0
+  _gridCenter: {x: 0, y: 0}
+  _gridCenterWorldPosition: {x: 0, y: 0, z: 0}
+  _gridScale: {x: 1, y: 1}
+  _gridElevation: 0.099
+  _gridElevationBase: 0
+  _gridCameraOffset: 0.1
+  _gridNormalOffset: 0
+  _gridMeshDepthOffset: 0
+  _gridSurfaceDepthOffset: 0
+  _gridRoughness: 0.001
+  _cellRowCount: 32
+  _cellColumnCount: 32
+  textures:
+  - {fileID: 0}
+  - {fileID: 2800000, guid: 25dd648a086b2d749a847ca24d23f80e, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  _respectOtherUI: 1
+  _nearClipFadeEnabled: 1
+  _nearClipFade: 15
+  _nearClipFadeFallOff: 100
+  _enableGridEditor: 0
+--- !u!23 &857988682
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 857988679}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 384cd0540ba4f480ba0d48aaf58c2eff, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 1
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &857988683
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 857988679}
+  m_Mesh: {fileID: 10210, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &890677309
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3288,7 +3508,7 @@ MonoBehaviour:
   territoriesTexture: {fileID: 0}
   territoriesTextureNeutralColor: {r: 0, g: 0, b: 0, a: 0}
   _numTerritories: 1
-  _showTerritories: 0
+  _showTerritories: 1
   _colorizeTerritories: 1
   _colorizedTerritoriesAlpha: 0
   _territoryHighlightColor: {r: 1, g: 0, b: 0, a: 0.7}
@@ -3363,7 +3583,7 @@ MonoBehaviour:
   - {fileID: 0}
   _respectOtherUI: 1
   _nearClipFadeEnabled: 1
-  _nearClipFade: 10
+  _nearClipFade: 15
   _nearClipFadeFallOff: 100
   _enableGridEditor: 0
 --- !u!23 &1152865957
@@ -3427,7 +3647,7 @@ Transform:
   m_LocalPosition: {x: 15.999016, y: 0.1416187, z: 15.970486}
   m_LocalScale: {x: 32, y: 32, z: 1}
   m_Children:
-  - {fileID: 671146910}
+  - {fileID: 1877269}
   m_Father: {fileID: 1413549751}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3899,6 +4119,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1152865959}
+  - {fileID: 857988680}
   m_Father: {fileID: 1553461904}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6066,11 +6287,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2360509346180246753, guid: 6390ac1d1af6b784c8a514114a623141,
-        type: 3}
-      propertyPath: _levelName
-      value: Arena1
       objectReference: {fileID: 0}
     - target: {fileID: 2360509346180246753, guid: 6390ac1d1af6b784c8a514114a623141,
         type: 3}
