@@ -41,9 +41,9 @@ namespace RedMoonRPG.Systems.Battle
     
         private void InitEntities(List<GameEntity> gameEntities, List<BattleEntity> gridsEntities)
         {
-            BattleEntity[] gridGroup = Contexts.sharedInstance.battle.GetGroup(BattleMatcher.ActiveAvatar).GetEntities();
+            BattleEntity[] battleGroup = Contexts.sharedInstance.battle.GetGroup(BattleMatcher.ActiveAvatar).GetEntities();
             GameEntity[] gameGroup = Contexts.sharedInstance.game.GetGroup(GameMatcher.ActiveAvatar).GetEntities();
-            if (gameGroup.Length != gridGroup.Length)
+            if (gameGroup.Length != battleGroup.Length)
             {
                 Debug.LogError("Длинна массива доступных юнитов и аватаров не равная.");
                 return;
@@ -73,7 +73,6 @@ namespace RedMoonRPG.Systems.Battle
                 gridsEntities.Add(avatar);
             }
         }
-
 
         private void MoveUnitToCenterCell(GameEntity unit, BattleEntity avatar)
         {

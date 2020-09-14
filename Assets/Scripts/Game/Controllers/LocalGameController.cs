@@ -49,7 +49,7 @@ namespace RedMoonRPG
     
         private void InitTest()
         {
-            GameEntity gameInitializer = Contexts.sharedInstance.game.GetEntityWithName("GameInit");
+            GameEntity gameInitializer = Contexts.sharedInstance.game.GetEntityWithName("GameInit"); // TO Do зачем нужен GameInit
 
             TestInitPlayer();
             TestInitEnemy();
@@ -61,7 +61,7 @@ namespace RedMoonRPG
             GameEntity entity = Contexts.sharedInstance.game.CreateEntity();
             GameObject go = Instantiate(_playerPrefab);
             go.transform.position = tgs.CellGetPosition(tgs.CellGetAtPosition(_spawnPoint.position, true), true);
-            //entity.AddNavMeshAgent(go.GetComponent<NavMeshAgent>());
+            //entity.AddNavMeshAgent(go.GetComponent<NavMeshAgent>()); // удаляем nav mesh потому чтоо не используем его на локальной карте
             entity.AddName(Tags.playerAvatar);
             entity.AddMapPosition(new Position(go.transform.position));
             entity.AddTransform(go.transform);
@@ -69,7 +69,7 @@ namespace RedMoonRPG
             entity.AddActiveAnimation(AnimationTags.idle);
             entity.AddNextAnimation(AnimationTags.idle);
             entity.AddPersona("Antonio");
-            entity.AddDexterity(3);
+            entity.AddDexterity(6);
             entity.AddActiveAvatar(true);
             entity.isPlayer = true;
     
@@ -85,6 +85,7 @@ namespace RedMoonRPG
             avatar.AddRotateSpeed(5);
             avatar.AddActiveAvatar(true);
             avatar.isPlayer = true;
+            avatar.AddTypeFaction(Factions.Player);
     
             //GameEntity camera = Contexts.sharedInstance.game.GetEntityWithName(Tags.camera);
             //camera.isWorldMap = false;
@@ -119,6 +120,8 @@ namespace RedMoonRPG
                 avatar.AddSpeed(2);
                 avatar.AddRotateSpeed(5);
                 avatar.AddActiveAvatar(true);
+                avatar.AddTypeFaction(Factions.TribesOfHorde);
+                avatar.isAI = true;
             }
         }
     

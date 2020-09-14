@@ -70,6 +70,7 @@ public partial class Contexts {
     public const string CellPointer = "CellPointer";
     public const string Name = "Name";
     public const string Persona = "Persona";
+    public const string TypeFaction = "TypeFaction";
 
     [Entitas.CodeGeneration.Attributes.PostConstructor]
     public void InitializeEntityIndices() {
@@ -112,6 +113,11 @@ public partial class Contexts {
             Persona,
             game.GetGroup(GameMatcher.Persona),
             (e, c) => ((RedMoonRPG.PersonaComponent)c).value));
+
+        battle.AddEntityIndex(new Entitas.EntityIndex<BattleEntity, Factions>(
+            TypeFaction,
+            battle.GetGroup(BattleMatcher.TypeFaction),
+            (e, c) => ((TypeFactionComponent)c).value));
     }
 }
 
@@ -151,6 +157,10 @@ public static class ContextsExtensions {
 
     public static System.Collections.Generic.HashSet<GameEntity> GetEntitiesWithPersona(this GameContext context, string value) {
         return ((Entitas.EntityIndex<GameEntity, string>)context.GetEntityIndex(Contexts.Persona)).GetEntities(value);
+    }
+
+    public static System.Collections.Generic.HashSet<BattleEntity> GetEntitiesWithTypeFaction(this BattleContext context, Factions value) {
+        return ((Entitas.EntityIndex<BattleEntity, Factions>)context.GetEntityIndex(Contexts.TypeFaction)).GetEntities(value);
     }
 }
 //------------------------------------------------------------------------------

@@ -10,13 +10,12 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Editor/TGSInspector.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Battle/Grid/AwakeDisplayGridSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Battle/AwakeBattleSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Battle/EndTurnSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Battle/QueueBattleSystems.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/GameController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/GridController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/TestBattleController.cs" />
@@ -42,19 +41,16 @@
         <option value="$PROJECT_DIR$/Assets/Sources/Generated/Components/Interfaces/IEnemy.cs" />
         <option value="$PROJECT_DIR$/Assets/Sources/Generated/Components/Interfaces/IAI.cs" />
         <option value="$PROJECT_DIR$/Assets/Sources/Generated/Battle/Components/BattleEnemyComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/AI/DecisionMakingSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Factions/TypeFactionComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Factions/AIComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/NameComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Tags/Tags.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Tags/Enums/Factions.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Factions/FactionRelationsComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Sources/Generated/Faction/FactionComponentsLookup.cs" />
         <option value="$PROJECT_DIR$/Assets/Sources/Generated/Game/GameComponentsLookup.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/InitializeSystems/CameraInitEntitySystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/InitializeSystems/LevelInitEntitySystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Controllers/LoaderController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Controllers/BattleController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Controllers/GridController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Controllers/GameController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/InitializeSystems/CreateFactionSystem.cs" />
@@ -62,8 +58,15 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Factions/FactionsComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Tags/FractionStruct.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Map/LocalMap/Player/MovementSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Controllers/LocalGameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Tags/Enums/Fractions.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Tags/Enums/Factions.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/AwakeBattleSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Fractions/TypeFactionComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/AI/DecisionMakingSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Controllers/BattleController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Editor/TGSInspector.cs" />
+        <option value="$PROJECT_DIR$/Assets/Editor/WaterEditor.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Controllers/LocalGameController.cs" />
       </list>
     </option>
   </component>
@@ -78,6 +81,14 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
   </component>
   <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$USER_HOME$/Desktop/testBuild\Red Moon RPG.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\Cell_02\Desktop\testBuild" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
     <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
@@ -112,7 +123,8 @@
       <workItem from="1599719031490" duration="6850000" />
       <workItem from="1599831552466" duration="389000" />
       <workItem from="1599915712401" duration="8515000" />
-      <workItem from="1599928677323" duration="4605000" />
+      <workItem from="1599928677323" duration="5227000" />
+      <workItem from="1600064300247" duration="4592000" />
     </task>
     <servers />
   </component>

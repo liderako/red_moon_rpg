@@ -31,7 +31,8 @@ namespace RedMoonRPG
                 .Add(new Systems.Battle.SkipTurnSystem(contexts))
                 .Add(new Systems.Battle.EndTurnSystem(contexts))
                 .Add(new Systems.Battle.NewBattleRound(contexts))
-                .Add(new Systems.Battle.AwakeBattleSystem(contexts));
+                .Add(new Systems.Battle.AwakeBattleSystem(contexts))
+                .Add(new Systems.Battle.AI.DecisionMakingSystem(contexts));
         }
     }
 
