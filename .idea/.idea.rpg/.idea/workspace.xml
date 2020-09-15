@@ -16,7 +16,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Map/LocalMap/Player/MovementSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Map/LocalMap/Player/BattleMovement/BattleMovementSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Map/LocalMap/Player/BattleMovement/InputMovementSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/LocalGameController.cs" />
@@ -61,12 +60,13 @@
         <option value="$PROJECT_DIR$/Assets/Editor/TGSInspector.cs" />
         <option value="$PROJECT_DIR$/Assets/Editor/WaterEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/EndTurnSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/AI/DecisionMakingSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/TerrainGridSystem/Scripts/TGSCells.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Controllers/LocalGameController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Controllers/GameController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Data/FileReader.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/TerrainGridSystem/Scripts/Core/TGSPrivate.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Tags/Enums/BattleState.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Controllers/LocalGameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/AI/DecisionMakingSystem.cs" />
       </list>
     </option>
   </component>
@@ -125,7 +125,8 @@
       <workItem from="1599915712401" duration="8515000" />
       <workItem from="1599928677323" duration="5227000" />
       <workItem from="1600064300247" duration="4592000" />
-      <workItem from="1600101404677" duration="3698000" />
+      <workItem from="1600101404677" duration="4249000" />
+      <workItem from="1600150039921" duration="4488000" />
     </task>
     <servers />
   </component>
@@ -146,9 +147,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="0" y="0" width="1369" height="1028" maximized="true" key="dock-window-1/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1599831930642" />
-    <state x="616" y="173" width="672" height="678" key="search.everywhere.popup" timestamp="1599922546652">
+    <state x="1070" y="537" width="672" height="678" key="search.everywhere.popup" timestamp="1600152394264">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="616" y="173" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599922546652" />
+    <state x="1070" y="537" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1600152394264" />
   </component>
 </project>

@@ -49,7 +49,7 @@ namespace RedMoonRPG
     
         private void InitTest()
         {
-            GameEntity gameInitializer = Contexts.sharedInstance.game.GetEntityWithName("GameInit"); // TO Do зачем нужен GameInit
+//            GameEntity gameInitializer = Contexts.sharedInstance.game.GetEntityWithName("GameInit"); // TO Do зачем нужен GameInit
 
             TestInitPlayer();
             TestInitEnemy();
@@ -70,8 +70,11 @@ namespace RedMoonRPG
             entity.AddNextAnimation(AnimationTags.idle);
             entity.AddPersona("Antonio");
             entity.AddDexterity(6);
+            entity.AddEndurance(4);
+            entity.AddHealth(0, 0);
             entity.AddActiveAvatar(true);
             entity.isPlayer = true;
+            entity.isHealthUpdate = true;
 
             // создаем клетку для игрока
             BattleEntity avatar = Contexts.sharedInstance.battle.CreateEntity();
@@ -85,6 +88,7 @@ namespace RedMoonRPG
             avatar.AddRotateSpeed(5);
             avatar.AddActiveAvatar(true);
             avatar.isPlayer = true;
+            avatar.isAI = true;
             avatar.AddTypeFaction(Factions.Player);
     
             //GameEntity camera = Contexts.sharedInstance.game.GetEntityWithName(Tags.camera);
@@ -108,6 +112,9 @@ namespace RedMoonRPG
                 entity.AddName(_testEnemy[i].name + i.ToString());
                 entity.AddActiveAvatar(true);
                 entity.AddDexterity(4);
+                entity.AddEndurance(4 + i);
+                entity.AddHealth(0, 0);
+                entity.isHealthUpdate = true;
     
                 // создаем клетки для врагов
                 BattleEntity avatar = Contexts.sharedInstance.battle.CreateEntity();
@@ -138,6 +145,7 @@ namespace RedMoonRPG
                 .Add(new Systems.LocalMap.Player.MovementSystem(contexts))
                 .Add(new Systems.LocalMap.Player.Battle.BattleMovementSystem(contexts))
                 .Add(new Systems.LocalMap.Player.InputMovementSystem(contexts))
+                .Add(new Systems.UpdateHealthSystem(contexts, gameBalanceSettings))
                 .Add(new Systems.LocalMap.Player.Battle.InputMovementSystem(contexts));
         }
     }
