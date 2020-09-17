@@ -177,6 +177,7 @@
      <Compile Include="Assets\Scripts\Game\ECS\Components\Battle\Grid\PathComponent.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\Battle\Grid\PathDisplayComponent.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\Battle\Grid\TerrainGridComponent.cs" />
+     <Compile Include="Assets\Scripts\Game\ECS\Components\Battle\RadiusAttackComponent.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\Battle\RoundComponent.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\Battle\SkipTurnComponent.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\Battle\UpdateActiveAvatarComponent.cs" />
@@ -305,6 +306,7 @@
      <Compile Include="Assets\Sources\Generated\Battle\Components\BattlePlayerComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Battle\Components\BattlePriorityFilterTargetComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Battle\Components\BattlePriorityStatesComponent.cs" />
+     <Compile Include="Assets\Sources\Generated\Battle\Components\BattleRadiusAttackComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Battle\Components\BattleRotateSpeedComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Battle\Components\BattleRoundComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Battle\Components\BattleSkipTurnComponent.cs" />

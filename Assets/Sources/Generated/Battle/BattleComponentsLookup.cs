@@ -22,20 +22,21 @@ public static class BattleComponentsLookup {
     public const int Player = 11;
     public const int PriorityFilterTarget = 12;
     public const int PriorityStates = 13;
-    public const int Name = 14;
-    public const int RotateSpeed = 15;
-    public const int Round = 16;
-    public const int SkipTurn = 17;
-    public const int Speed = 18;
-    public const int States = 19;
-    public const int TargetPosition = 20;
-    public const int TerrainGrid = 21;
-    public const int Transform = 22;
-    public const int TypeFaction = 23;
-    public const int UpdateActiveAvatar = 24;
-    public const int UpdateBattleRound = 25;
+    public const int RadiusAttack = 14;
+    public const int Name = 15;
+    public const int RotateSpeed = 16;
+    public const int Round = 17;
+    public const int SkipTurn = 18;
+    public const int Speed = 19;
+    public const int States = 20;
+    public const int TargetPosition = 21;
+    public const int TerrainGrid = 22;
+    public const int Transform = 23;
+    public const int TypeFaction = 24;
+    public const int UpdateActiveAvatar = 25;
+    public const int UpdateBattleRound = 26;
 
-    public const int TotalComponents = 26;
+    public const int TotalComponents = 27;
 
     public static readonly string[] componentNames = {
         "ActionPoint",
@@ -52,6 +53,7 @@ public static class BattleComponentsLookup {
         "Player",
         "PriorityFilterTarget",
         "PriorityStates",
+        "RadiusAttack",
         "Name",
         "RotateSpeed",
         "Round",
@@ -81,6 +83,7 @@ public static class BattleComponentsLookup {
         typeof(PlayerComponent),
         typeof(PriorityFilterTargetComponent),
         typeof(PriorityStatesComponent),
+        typeof(RadiusAttackComponent),
         typeof(RedMoonRPG.NameComponent),
         typeof(RotateSpeedComponent),
         typeof(RoundComponent),

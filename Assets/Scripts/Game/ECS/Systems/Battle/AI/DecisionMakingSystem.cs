@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Entitas;
+using RedMoonRPG.Systems.Battle.Grid;
+using TGS;
 
 namespace RedMoonRPG.Systems.Battle.AI
 {
@@ -30,15 +32,56 @@ namespace RedMoonRPG.Systems.Battle.AI
             }
 
             BattleEntity avatar = entities[0];
-            List<BattleEntity> listEnemy = FindEnemies(avatar);
-            Debug.Log("My target near unit is " + listEnemy[FindNearEnemy(listEnemy, avatar)].name.name);
-            Debug.Log("My target far unit is " + listEnemy[FindFarEnemy(listEnemy, avatar)].name.name);
-            Debug.Log("My target with min hp is " + listEnemy[FindEnemyWithMinHP(listEnemy)].name.name);
-            Debug.Log("My target with max hp is " + listEnemy[FindEnemyWithMaxHP(listEnemy)].name.name);
-            // 1. Шаг первый оценить текущих противников
-            // МассивВрагов массивВрагов = ОценкаВсехВрагов(avatar)
-            // 2. Шаг второй выбрать приоритетное состояние
-            // состояние AI = ОценкаСостояние(Аватар, массивВрагов)
+            BattleEntity targetEnemy = GetTargetEnemy(FindEnemies(avatar), avatar);
+            if (CheckRadiusForAttack(avatar.mapPosition.value.vector, targetEnemy.mapPosition.value.vector, avatar.radiusAttack.value))
+            {
+                // атакуем
+            }
+            else
+            {
+                Vector3 targetMovePosition = GetNearPositionForAttack(avatar, targetEnemy);
+                // двигаемся к позиции
+            }
+        }
+        
+        // метод взависимости от фильтра врага возвращает приоритетную цель из списка врагов
+        private BattleEntity GetTargetEnemy(List<BattleEntity> listEnemy, BattleEntity avatar)
+        {
+            // Debug.Log("My target near unit is " + listEnemy[FindNearEnemy(listEnemy, avatar)].name.name);
+            // Debug.Log("My target far unit is " + listEnemy[FindFarEnemy(listEnemy, avatar)].name.name);
+            // Debug.Log("My target with min hp is " + listEnemy[FindEnemyWithMinHP(listEnemy)].name.name);
+            // Debug.Log("My target with max hp is " + listEnemy[FindEnemyWithMaxHP(listEnemy)].name.name);
+            return listEnemy[FindNearEnemy(listEnemy, avatar)];
+        }
+
+        private bool CheckRadiusForAttack(Vector3 a, Vector3 b, float radius)
+        {
+            if (Vector3.Distance(a, b) < radius)
+            {
+                return true;
+            }
+            return false;
+        }
+        
+        private Vector3 GetNearPositionForAttack(BattleEntity avatar, BattleEntity enemy)
+        {
+            TerrainGridSystem tgs = avatar.terrainGrid.value;
+            tgs.CellGetAtPosition(avatar.mapPosition.value.vector, true).canCross = true;
+            tgs.CellGetAtPosition(enemy.mapPosition.value.vector, true).canCross = true;
+            
+            int endCell = tgs.CellGetIndex(tgs.CellGetAtPosition(enemy.mapPosition.value.vector, true));
+            int startCell = tgs.CellGetIndex(tgs.CellGetAtPosition(avatar.mapPosition.value.vector, true));
+            List<int> moveList = tgs.FindPath(startCell, endCell, avatar.actionPoint.value, 0, -1);
+            int len = moveList.Count;
+            for (int i = 0; i < len; i++)
+            {
+                if (CheckRadiusForAttack(avatar.mapPosition.value.vector, tgs.CellGetPosition(i, true), avatar.radiusAttack.value))
+                {
+                    return tgs.CellGetPosition(i, true);
+                }
+            }
+            Debug.LogError(avatar.name.name + ": I can't find near position for attack. It's a system error.");
+            return Vector3.zero;
         }
 
         private List<BattleEntity> FindEnemies(BattleEntity avatar)
@@ -93,7 +136,8 @@ namespace RedMoonRPG.Systems.Battle.AI
         private int FindEnemyWithMaxHP(List<BattleEntity> enemies)
         {
             int len = enemies.Count;
-            int maxHp = 0;
+            int maxHp = 0
+            ;
             int maxIterator = 0;
             int hp;
             for (int i = 0; i < len; i++)

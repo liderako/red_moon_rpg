@@ -244,6 +244,7 @@
                     <e p="PathDisplayComponent.cs" t="Include" />
                     <e p="TerrainGridComponent.cs" t="Include" />
                   </e>
+                  <e p="RadiusAttackComponent.cs" t="Include" />
                   <e p="RoundComponent.cs" t="Include" />
                   <e p="SkipTurnComponent.cs" t="Include" />
                   <e p="UpdateActiveAvatarComponent.cs" t="Include" />
@@ -453,6 +454,7 @@
                 <e p="BattlePlayerComponent.cs" t="Include" />
                 <e p="BattlePriorityFilterTargetComponent.cs" t="Include" />
                 <e p="BattlePriorityStatesComponent.cs" t="Include" />
+                <e p="BattleRadiusAttackComponent.cs" t="Include" />
                 <e p="BattleRotateSpeedComponent.cs" t="Include" />
                 <e p="BattleRoundComponent.cs" t="Include" />
                 <e p="BattleSkipTurnComponent.cs" t="Include" />

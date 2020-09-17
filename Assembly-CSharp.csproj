@@ -71,6 +71,7 @@
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattlePathComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattlePathDisplayComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattleTerrainGridComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Battle\Components\BattleRadiusAttackComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattleRoundComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattleSkipTurnComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattleUpdateActiveAvatarComponent.cs" />
