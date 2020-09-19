@@ -39,7 +39,13 @@ namespace RedMoonRPG.Systems.Battle.AI
             }
             else
             {
+                Debug.Log("Move");
                 Vector3 targetMovePosition = GetNearPositionForAttack(avatar, targetEnemy);
+                Debug.Log("Target position " + targetMovePosition);
+                GameEntity unit = Contexts.sharedInstance.game.GetEntityWithName(avatar.name.name);
+                unit.transform.value.position = targetMovePosition;
+                unit.ReplaceMapPosition(new Position(targetMovePosition));
+                avatar.ReplaceMapPosition(new Position(targetMovePosition));
                 // двигаемся к позиции
             }
         }
@@ -56,7 +62,7 @@ namespace RedMoonRPG.Systems.Battle.AI
 
         private bool CheckRadiusForAttack(Vector3 a, Vector3 b, float radius)
         {
-            if (Vector3.Distance(a, b) < radius)
+            if (Vector3.Distance(a, b) <= radius)
             {
                 return true;
             }
@@ -68,18 +74,22 @@ namespace RedMoonRPG.Systems.Battle.AI
             TerrainGridSystem tgs = avatar.terrainGrid.value;
             tgs.CellGetAtPosition(avatar.mapPosition.value.vector, true).canCross = true;
             tgs.CellGetAtPosition(enemy.mapPosition.value.vector, true).canCross = true;
-            
             int endCell = tgs.CellGetIndex(tgs.CellGetAtPosition(enemy.mapPosition.value.vector, true));
             int startCell = tgs.CellGetIndex(tgs.CellGetAtPosition(avatar.mapPosition.value.vector, true));
-            List<int> moveList = tgs.FindPath(startCell, endCell, avatar.actionPoint.value, 0, -1);
+            List<int> moveList = tgs.FindPath(startCell, endCell, 0, 0, -1);
             int len = moveList.Count;
             for (int i = 0; i < len; i++)
             {
-                if (CheckRadiusForAttack(avatar.mapPosition.value.vector, tgs.CellGetPosition(i, true), avatar.radiusAttack.value))
+                if (CheckRadiusForAttack(enemy.mapPosition.value.vector, tgs.CellGetPosition(moveList[i], true), avatar.radiusAttack.value * 2))
                 {
-                    return tgs.CellGetPosition(i, true);
+                    if (tgs.CellGetPosition(moveList[i], true) != enemy.mapPosition.value.vector)
+                    {
+                        return tgs.CellGetPosition(moveList[i], true);
+                    }
                 }
             }
+            tgs.CellGetAtPosition(avatar.mapPosition.value.vector, true).canCross = false;
+            tgs.CellGetAtPosition(enemy.mapPosition.value.vector, true).canCross = false;
             Debug.LogError(avatar.name.name + ": I can't find near position for attack. It's a system error.");
             return Vector3.zero;
         }

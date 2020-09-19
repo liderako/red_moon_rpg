@@ -16,7 +16,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Controllers/LocalGameController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Battle/DecisionMakingSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Battle/AI/FilterTargetComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Battle/AI/PriorityStateComponent.cs" />
@@ -63,9 +62,10 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Data/FileReader.cs" />
         <option value="$PROJECT_DIR$/Assets/Plugins/TerrainGridSystem/Scripts/Core/TGSPrivate.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Tags/Enums/BattleState.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Controllers/LocalGameController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Battle/RadiusAttackComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/Grid/DisplayAvailableGridSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Data/GameData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Controllers/LocalGameController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/AI/DecisionMakingSystem.cs" />
       </list>
     </option>
@@ -129,6 +129,8 @@
       <workItem from="1600150039921" duration="4488000" />
       <workItem from="1600265507644" duration="615000" />
       <workItem from="1600322430078" duration="3763000" />
+      <workItem from="1600348656911" duration="2717000" />
+      <workItem from="1600534595105" duration="2032000" />
     </task>
     <servers />
   </component>

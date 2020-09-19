@@ -22,7 +22,7 @@ namespace RedMoonRPG
     
     
         private Entitas.Systems _systems;
-    
+
         private void Start()
         {
             Contexts contexts = Contexts.sharedInstance;
@@ -88,8 +88,9 @@ namespace RedMoonRPG
             avatar.AddRotateSpeed(5);
             avatar.AddActiveAvatar(true);
             avatar.isPlayer = true;
-            avatar.isAI = true;
+            // avatar.isAI = true;
             avatar.AddTypeFaction(Factions.Player);
+            avatar.AddRadiusAttack(1);
     
             //GameEntity camera = Contexts.sharedInstance.game.GetEntityWithName(Tags.camera);
             //camera.isWorldMap = false;
@@ -129,6 +130,7 @@ namespace RedMoonRPG
                 avatar.AddActiveAvatar(true);
                 avatar.AddTypeFaction(Factions.TribesOfHorde);
                 avatar.isAI = true;
+                avatar.AddRadiusAttack(1);
             }
         }
     

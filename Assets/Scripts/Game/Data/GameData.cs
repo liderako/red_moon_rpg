@@ -15,8 +15,9 @@ namespace RedMoonRPG.Settings
 
         public GameBalanceSettings GameBalanceSettings;
 
-        public void Start()
+        protected override void Awake()
         {
+            base.Awake();
             SceneManager.sceneLoaded += OnSceneLoaded;
             //LoadingData();
             //SavedData();
