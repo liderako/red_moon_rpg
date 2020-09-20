@@ -25,28 +25,28 @@ namespace RedMoonRPG.Systems.WorldMap.Camera
             GameEntity level = _contexts.game.GetEntityWithName(Tags.level);
             Vector3 pos = camera.transform.value.localPosition;
             float speed = (Input.GetKey("left shift") ? camera.forceSpeed.value : camera.speed.value);
-            if (Input.GetKey("w") || Input.mousePosition.y >= Screen.height - camera.borderThickness.value)
+            if (Input.GetKey("w") || (Input.mousePosition.y >= Screen.height - camera.borderThickness.value && Input.mousePosition.y <= Screen.height && Input.mousePosition.y > 0))
             {
                 float y = pos.y;
                 pos += camera.transform.value.forward.normalized * speed * Time.deltaTime;
                 pos.y = y;
                 camera.isFreeCamera = true;
             }
-            if (Input.GetKey("s") || Input.mousePosition.y <= camera.borderThickness.value)
+            if (Input.GetKey("s") || (Input.mousePosition.y <= camera.borderThickness.value && Input.mousePosition.y <= Screen.height && Input.mousePosition.y > 0))
             {
                 float y = pos.y;
                 pos -= camera.transform.value.forward * speed * Time.deltaTime;
                 pos.y = y;
                 camera.isFreeCamera = true;
             }
-            if (Input.GetKey("d") || Input.mousePosition.x >= Screen.width - camera.borderThickness.value)
+            if (Input.GetKey("d") || (Input.mousePosition.x >= Screen.width - camera.borderThickness.value && Input.mousePosition.x <= Screen.width && Input.mousePosition.x > 0))
             {
                 float y = pos.y;
                 pos += camera.transform.value.right * speed * Time.deltaTime;
                 pos.y = y;
                 camera.isFreeCamera = true;
             }
-            if (Input.GetKey("a") || Input.mousePosition.x <= camera.borderThickness.value)
+            if (Input.GetKey("a") || (Input.mousePosition.x <= camera.borderThickness.value && Input.mousePosition.x <= Screen.width && Input.mousePosition.x > 0))
             {
                 float y = pos.y;
                 pos -= camera.transform.value.right * speed * Time.deltaTime;

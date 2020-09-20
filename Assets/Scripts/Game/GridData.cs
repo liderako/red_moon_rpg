@@ -18,6 +18,7 @@ namespace RedMoonRPG.Settings
             _cells = new FileReader().LoadGridJson(_levelName);
             _tgs = TerrainGridSystem.instance;
             DefaultGridSettings();
+            // Time.timeScale = 3;
         }
 
         private void DefaultGridSettings()

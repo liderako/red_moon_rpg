@@ -16,14 +16,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Battle/DecisionMakingSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Battle/AI/FilterTargetComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Battle/AI/PriorityStateComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Battle/AI/PriorityFilterTargetComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sources/Generated/Battle/Components/BattlePriorityStatesComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sources/Generated/Battle/Components/BattlePriorityFilterTargetComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enums/FilterTarget.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enums/BattleState.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Battle/AI/DecisionMakingSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Enums/Factions.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Components/Factions/TypeFactionComponent.cs" />
@@ -51,9 +43,7 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Map/LocalMap/Player/MovementSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Tags/Enums/Fractions.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Tags/Enums/Factions.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/AwakeBattleSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Fractions/TypeFactionComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Controllers/BattleController.cs" />
         <option value="$PROJECT_DIR$/Assets/Editor/TGSInspector.cs" />
         <option value="$PROJECT_DIR$/Assets/Editor/WaterEditor.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/EndTurnSystem.cs" />
@@ -65,7 +55,17 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Battle/RadiusAttackComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/Grid/DisplayAvailableGridSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Data/GameData.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Controllers/BattleController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/QueueBattleSystems.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/NewBattleRoundSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/BattleMovement/BattleMovementSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/AwakeBattleSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/GridData.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Controllers/LocalGameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/SkipTurnSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Map/WorldMap/Camera/MovementSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Tags/Animations.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/BattleMovement/InputMovementSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/AI/DecisionMakingSystem.cs" />
       </list>
     </option>
@@ -131,6 +131,7 @@
       <workItem from="1600322430078" duration="3763000" />
       <workItem from="1600348656911" duration="2717000" />
       <workItem from="1600534595105" duration="2032000" />
+      <workItem from="1600597036028" duration="13059000" />
     </task>
     <servers />
   </component>
@@ -147,22 +148,22 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599919028099" />
-    <state x="388" y="139" width="1438" height="843" key="dock-window-1" timestamp="1600323996674">
-      <screen x="0" y="0" width="1920" height="1040" />
+    <state x="-1920" y="0" width="1391" height="1028" maximized="true" key="dock-window-1" timestamp="1600600981785">
+      <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="0" y="0" width="1369" height="1028" maximized="true" key="dock-window-1/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1599831930642" />
-    <state x="388" y="139" width="1438" height="843" key="dock-window-1/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1600323996674" />
+    <state x="-1920" y="0" width="1391" height="1028" maximized="true" key="dock-window-1/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1600600981785" />
     <state x="-1771" y="0" width="1438" height="1044" key="dock-window-2" timestamp="1600323996674">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="-1771" y="0" width="1438" height="1044" key="dock-window-2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1600323996674" />
-    <state x="624" y="244" key="run.anything.popup" timestamp="1600324683951">
+    <state x="624" y="244" key="run.anything.popup" timestamp="1600610969136">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="624" y="244" key="run.anything.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1600324683951" />
-    <state x="1070" y="537" width="672" height="678" key="search.everywhere.popup" timestamp="1600152394264">
+    <state x="624" y="244" key="run.anything.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1600610969136" />
+    <state x="1070" y="537" width="672" height="678" key="search.everywhere.popup" timestamp="1600608850748">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1070" y="537" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1600152394264" />
+    <state x="1070" y="537" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1600608850748" />
   </component>
 </project>

@@ -32,10 +32,10 @@ namespace RedMoonRPG.Systems.Battle
             battleManager.battleList.iterator += 1;
             battleManager.isUpdateActiveAvatar = false;
             int i = battleManager.battleList.iterator;
-            if (battleManager.battleList.iterator > battleManager.battleList.battleAvatars.Count)
+            if (battleManager.battleList.iterator >= battleManager.battleList.battleAvatars.Count)
             {
                 battleManager.isUpdateBattleRound = true;
-                //Debug.Log("Новый раунд");
+                Debug.Log("Новый раунд");
                 return;
             }
             battleManager.battleList.battleAvatars[i].ReplaceActiveAvatar(true);

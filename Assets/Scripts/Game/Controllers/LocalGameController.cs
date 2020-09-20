@@ -69,7 +69,7 @@ namespace RedMoonRPG
             entity.AddActiveAnimation(AnimationTags.idle);
             entity.AddNextAnimation(AnimationTags.idle);
             entity.AddPersona("Antonio");
-            entity.AddDexterity(6);
+            entity.AddDexterity(7);
             entity.AddEndurance(4);
             entity.AddHealth(0, 0);
             entity.AddActiveAvatar(true);
@@ -145,10 +145,8 @@ namespace RedMoonRPG
                 .Add(new Systems.WorldMap.Camera.TeleportSystem(contexts))
                 .Add(new Systems.Animations.BoolAnimationSystem(contexts))
                 .Add(new Systems.LocalMap.Player.MovementSystem(contexts))
-                .Add(new Systems.LocalMap.Player.Battle.BattleMovementSystem(contexts))
                 .Add(new Systems.LocalMap.Player.InputMovementSystem(contexts))
-                .Add(new Systems.UpdateHealthSystem(contexts, gameBalanceSettings))
-                .Add(new Systems.LocalMap.Player.Battle.InputMovementSystem(contexts));
+                .Add(new Systems.UpdateHealthSystem(contexts, gameBalanceSettings));
         }
     }
 }

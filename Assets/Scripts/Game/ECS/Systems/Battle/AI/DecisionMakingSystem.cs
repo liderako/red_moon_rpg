@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Entitas;
@@ -30,24 +31,35 @@ namespace RedMoonRPG.Systems.Battle.AI
                 Debug.LogError("DecisionMakingSystem error");
                 return;
             }
-
+            Debug.Log("Decision System");
             BattleEntity avatar = entities[0];
             BattleEntity targetEnemy = GetTargetEnemy(FindEnemies(avatar), avatar);
-            if (CheckRadiusForAttack(avatar.mapPosition.value.vector, targetEnemy.mapPosition.value.vector, avatar.radiusAttack.value))
+            Cell cell = avatar.terrainGrid.value.CellGetAtPosition(avatar.mapPosition.value.vector, true);
+            Cell cellEnemy = targetEnemy.terrainGrid.value.CellGetAtPosition(targetEnemy.mapPosition.value.vector, true);
+            targetEnemy.terrainGrid.value.CellSetCanCross(targetEnemy.terrainGrid.value.CellGetIndex(cellEnemy), true);
+            avatar.terrainGrid.value.CellSetCanCross(avatar.terrainGrid.value.CellGetIndex(cell), true);
+            if (CheckRadiusForAttack(avatar.terrainGrid.value, avatar.mapPosition.value.vector, targetEnemy.mapPosition.value.vector, avatar.radiusAttack.value))
             {
                 // атакуем
+                avatar.ReplaceActionPoint(0); // после атак будет мало очков действия... ход закончится
             }
             else
             {
                 Debug.Log("Move");
-                Vector3 targetMovePosition = GetNearPositionForAttack(avatar, targetEnemy);
-                Debug.Log("Target position " + targetMovePosition);
+                List<int> path = GetPathForNearPositionForAttack(avatar, targetEnemy);
                 GameEntity unit = Contexts.sharedInstance.game.GetEntityWithName(avatar.name.name);
-                unit.transform.value.position = targetMovePosition;
-                unit.ReplaceMapPosition(new Position(targetMovePosition));
-                avatar.ReplaceMapPosition(new Position(targetMovePosition));
-                // двигаемся к позиции
+                avatar.ReplacePath(path, 0);
+                avatar.ReplaceMapPosition(avatar.mapPosition.value);
+                if (!unit.hasNextAnimation)
+                {
+                    unit.AddNextAnimation(AnimationTags.run);
+                }
+                else
+                {
+                    unit.ReplaceNextAnimation(AnimationTags.run);
+                }
             }
+            targetEnemy.terrainGrid.value.CellSetCanCross(targetEnemy.terrainGrid.value.CellGetIndex(cellEnemy), false);
         }
         
         // метод взависимости от фильтра врага возвращает приоритетную цель из списка врагов
@@ -60,38 +72,44 @@ namespace RedMoonRPG.Systems.Battle.AI
             return listEnemy[FindNearEnemy(listEnemy, avatar)];
         }
 
-        private bool CheckRadiusForAttack(Vector3 a, Vector3 b, float radius)
+        private bool CheckRadiusForAttack(TerrainGridSystem tgs, Vector3 a, Vector3 b, float radius)
         {
-            if (Vector3.Distance(a, b) <= radius)
+            if (Vector3.Distance(a, b) <= radius * 2)
             {
                 return true;
+                // Cell cellA = tgs.CellGetAtPosition(a, true);
+                // Cell cellB = tgs.CellGetAtPosition(b, true);
+                // List<int> tmp = tgs.FindPath(tgs.CellGetIndex(cellA), tgs.CellGetIndex(cellB), (int)radius, 0, -1);
+                // if (tmp != null)
+                // {
+                //     return true;
+                // }
             }
             return false;
         }
         
-        private Vector3 GetNearPositionForAttack(BattleEntity avatar, BattleEntity enemy)
+        private List<int> GetPathForNearPositionForAttack(BattleEntity avatar, BattleEntity enemy)
         {
             TerrainGridSystem tgs = avatar.terrainGrid.value;
-            tgs.CellGetAtPosition(avatar.mapPosition.value.vector, true).canCross = true;
-            tgs.CellGetAtPosition(enemy.mapPosition.value.vector, true).canCross = true;
             int endCell = tgs.CellGetIndex(tgs.CellGetAtPosition(enemy.mapPosition.value.vector, true));
             int startCell = tgs.CellGetIndex(tgs.CellGetAtPosition(avatar.mapPosition.value.vector, true));
             List<int> moveList = tgs.FindPath(startCell, endCell, 0, 0, -1);
             int len = moveList.Count;
-            for (int i = 0; i < len; i++)
+            int point = avatar.actionPoint.value;
+            List<int> path = new List<int>();
+            for (int i = 0; i < len - 1; i++)
             {
-                if (CheckRadiusForAttack(enemy.mapPosition.value.vector, tgs.CellGetPosition(moveList[i], true), avatar.radiusAttack.value * 2))
-                {
-                    if (tgs.CellGetPosition(moveList[i], true) != enemy.mapPosition.value.vector)
-                    {
-                        return tgs.CellGetPosition(moveList[i], true);
-                    }
-                }
+                if (point == 0) break;
+                path.Add((moveList[i]));
+                point--;
             }
-            tgs.CellGetAtPosition(avatar.mapPosition.value.vector, true).canCross = false;
-            tgs.CellGetAtPosition(enemy.mapPosition.value.vector, true).canCross = false;
+            if (path.Count != 0)
+            {
+                avatar.ReplaceActionPoint(point);
+                return path;
+            }
             Debug.LogError(avatar.name.name + ": I can't find near position for attack. It's a system error.");
-            return Vector3.zero;
+            return null;
         }
 
         private List<BattleEntity> FindEnemies(BattleEntity avatar)

@@ -236,6 +236,8 @@
      <Compile Include="Assets\Scripts\Game\ECS\Systems\Animations\BoolAnimationSystem.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Systems\Battle\AI\DecisionMakingSystem.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Systems\Battle\AwakeBattleSystem.cs" />
+     <Compile Include="Assets\Scripts\Game\ECS\Systems\Battle\BattleMovement\BattleMovementSystem.cs" />
+     <Compile Include="Assets\Scripts\Game\ECS\Systems\Battle\BattleMovement\InputMovementSystem.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Systems\Battle\EndTurnSystem.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Systems\Battle\Grid\AwakeDisplayGridSystem.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Systems\Battle\Grid\DisplayAvailableGridSystem.cs" />
@@ -250,8 +252,6 @@
      <Compile Include="Assets\Scripts\Game\ECS\Systems\LifeSystems\EatSystem.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Systems\LifeSystems\HealSystem.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Systems\LoadLevelSystem.cs" />
-     <Compile Include="Assets\Scripts\Game\ECS\Systems\Map\LocalMap\Player\BattleMovement\BattleMovementSystem.cs" />
-     <Compile Include="Assets\Scripts\Game\ECS\Systems\Map\LocalMap\Player\BattleMovement\InputMovementSystem.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Systems\Map\LocalMap\Player\InputMovementSystem.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Systems\Map\LocalMap\Player\MovementSystem.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Systems\Map\WorldMap\Camera\FollowerMovementSystem.cs" />

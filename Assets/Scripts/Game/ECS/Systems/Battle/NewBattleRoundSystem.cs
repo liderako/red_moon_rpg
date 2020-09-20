@@ -29,7 +29,7 @@ namespace RedMoonRPG.Systems.Battle
                 return;
             }
             BattleEntity battleManager = entities[0];
-            battleManager.battleList.iterator = 0;
+            battleManager.battleList.iterator = -1;
             battleManager.isUpdateActiveAvatar = true;
             battleManager.isUpdateBattleRound = false;
             battleManager.round.value += 1;

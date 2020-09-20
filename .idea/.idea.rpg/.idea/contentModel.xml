@@ -339,6 +339,10 @@
                     <e p="DecisionMakingSystem.cs" t="Include" />
                   </e>
                   <e p="AwakeBattleSystem.cs" t="Include" />
+                  <e p="BattleMovement" t="Include">
+                    <e p="BattleMovementSystem.cs" t="Include" />
+                    <e p="InputMovementSystem.cs" t="Include" />
+                  </e>
                   <e p="EndTurnSystem.cs" t="Include" />
                   <e p="Grid" t="Include">
                     <e p="AwakeDisplayGridSystem.cs" t="Include" />
@@ -363,10 +367,6 @@
                 <e p="Map" t="Include">
                   <e p="LocalMap" t="Include">
                     <e p="Player" t="Include">
-                      <e p="BattleMovement" t="Include">
-                        <e p="BattleMovementSystem.cs" t="Include" />
-                        <e p="InputMovementSystem.cs" t="Include" />
-                      </e>
                       <e p="InputMovementSystem.cs" t="Include" />
                       <e p="MovementSystem.cs" t="Include" />
                     </e>

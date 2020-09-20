@@ -2,8 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Entitas;
+using TGS;
 
-namespace RedMoonRPG.Systems.LocalMap.Player.Battle
+namespace RedMoonRPG.Systems.Battle.Movement
 {
     public class BattleMovementSystem : ReactiveSystem<BattleEntity>
     {
@@ -30,21 +31,25 @@ namespace RedMoonRPG.Systems.LocalMap.Player.Battle
             {
                 Debug.LogError("Во время битвы сущности ходят по очереди!\nСейчас есть ошибка с количеством сущностей действующим за раз.\n Антонио исправь это.");
             }
-            BattleEntity entityBattle = entities[0];
-            GameEntity entityPlayer = _contexts.game.GetEntityWithName(entityBattle.name.name);
-            Move(entityPlayer, entityBattle, entityBattle.terrainGrid.value.CellGetPosition(entityBattle.path.gridPath[entityBattle.path.iterator]));
-            if (entityBattle.path.iterator >= entityBattle.path.gridPath.Count)
+            BattleEntity avatar = entities[0];
+            GameEntity unit = _contexts.game.GetEntityWithName(avatar.name.name);
+            Move(unit, avatar, avatar.terrainGrid.value.CellGetPosition(avatar.path.gridPath[avatar.path.iterator]));
+            if (avatar.path.iterator >= avatar.path.gridPath.Count)
             {
-                entityBattle.terrainGrid.value.CellGetAtPosition(entityPlayer.transform.value.position, true).canCross = false;
-                entityBattle.path.gridPath.Clear();
-                entityBattle.path.iterator = 0;
-                entityPlayer.ReplaceActiveAvatar(true);
-                entityBattle.ReplaceActiveAvatar(true);
-                entityBattle.ReplaceActionPoint(entityBattle.actionPoint.value);
-                entityPlayer.AddNextAnimation(AnimationTags.idle);
-                BattleEntity e = Contexts.sharedInstance.battle.GetEntityWithCellPointer(true);
-                Object.Destroy(e.transform.value.gameObject);
-                e.Destroy();
+                Cell cell = avatar.terrainGrid.value.CellGetAtPosition(avatar.mapPosition.value.vector, true);
+                avatar.terrainGrid.value.CellSetCanCross(avatar.terrainGrid.value.CellGetIndex(cell), false);
+                avatar.path.gridPath.Clear();
+                avatar.path.iterator = 0;
+                unit.ReplaceActiveAvatar(true);
+                avatar.ReplaceActiveAvatar(true);
+                avatar.ReplaceActionPoint(avatar.actionPoint.value);
+                unit.AddNextAnimation(AnimationTags.idle);
+                if (unit.isPlayer)
+                {
+                    BattleEntity e = Contexts.sharedInstance.battle.GetEntityWithCellPointer(true);
+                    Object.Destroy(e.transform.value.gameObject);
+                    e.Destroy();   
+                }
             }
         }
     
