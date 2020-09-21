@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.AI;
 using TGS;
 using Entitas;
+using RedMoonRPG.Systems;
 using RedMoonRPG.Utils;
 using UnityEngine.SceneManagement;
 
@@ -69,14 +70,15 @@ namespace RedMoonRPG
             entity.AddActiveAnimation(AnimationTags.idle);
             entity.AddNextAnimation(AnimationTags.idle);
             entity.AddPersona("Antonio");
-            entity.AddDexterity(7);
-            entity.AddEndurance(4);
-            entity.AddHealth(0, 0);
             entity.AddActiveAvatar(true);
+            BuilderMainAttributes(entity, attention: 5, dexterity: 5, endurance: 5, intellect: 5, luck: 5, personality: 5, strength: 5);
+            BuilderLifeAttributes(entity);
+            BuilderBattleAttributes(entity);
+            UpdateAttributes(entity);
             entity.isPlayer = true;
-            entity.isHealthUpdate = true;
 
-            // создаем клетку для игрока
+
+            // создаем аватара для персонажа
             BattleEntity avatar = Contexts.sharedInstance.battle.CreateEntity();
             avatar.AddActionPoint(0);
             avatar.AddMapPosition(new Position(entity.transform.value.position));
@@ -88,10 +90,9 @@ namespace RedMoonRPG
             avatar.AddRotateSpeed(5);
             avatar.AddActiveAvatar(true);
             avatar.isPlayer = true;
-            // avatar.isAI = true;
             avatar.AddTypeFaction(Factions.Player);
             avatar.AddRadiusAttack(1);
-    
+            
             //GameEntity camera = Contexts.sharedInstance.game.GetEntityWithName(Tags.camera);
             //camera.isWorldMap = false;
             // to do нужно чтобы не было никаких конфликтов между управлением камер в локал и глоб картах
@@ -112,12 +113,15 @@ namespace RedMoonRPG
                 entity.AddPersona(_testEnemy[i].name);
                 entity.AddName(_testEnemy[i].name + i.ToString());
                 entity.AddActiveAvatar(true);
-                entity.AddDexterity(4);
-                entity.AddEndurance(4 + i);
-                entity.AddHealth(0, 0);
-                entity.isHealthUpdate = true;
-    
-                // создаем клетки для врагов
+                BuilderMainAttributes(entity, attention: 5, dexterity: 5, endurance: 5, intellect: 5, luck: 5, personality: 5, strength: 5);
+                BuilderLifeAttributes(entity);
+                BuilderBattleAttributes(entity);
+                UpdateAttributes(entity);
+                /*
+                * Теги
+                */
+                entity.isAI = true; // нужно?
+                // создаем аватара для врагов
                 BattleEntity avatar = Contexts.sharedInstance.battle.CreateEntity();
                 avatar.AddActionPoint(0);
                 avatar.AddMapPosition(new Position(entity.transform.value.position));
@@ -133,7 +137,40 @@ namespace RedMoonRPG
                 avatar.AddRadiusAttack(1);
             }
         }
-    
+
+        private void BuilderMainAttributes(GameEntity entity, int attention, int dexterity, int endurance, int intellect, int luck, int personality, int strength)
+        {
+            entity.AddAttention(attention);
+            entity.AddDexterity(dexterity);
+            entity.AddEndurance(endurance);
+            entity.AddIntellect(intellect);
+            entity.AddLuck(luck);
+            entity.AddPersonality(personality);
+            entity.AddStrength(strength);
+        }
+
+        private void BuilderLifeAttributes(GameEntity entity)
+        {
+            entity.AddHealth(0, 0);
+            entity.AddMana(0, 0);
+        }
+
+        private void BuilderBattleAttributes(GameEntity entity)
+        {
+            entity.AddIndexMagicDamage(0,0);
+            entity.AddIndexMeleeDamage(0, 0);
+            entity.AddIndexRangedDamage(0, 0);
+        }
+
+        private void UpdateAttributes(GameEntity entity)
+        {
+            entity.isManaUpdate = true;
+            entity.isHealthUpdate = true;
+            entity.isUpdateMagicDamage = true;
+            entity.isUpdateMeleeDamage = true;
+            entity.isUpdateRangedDamage = true;
+        }
+
         private Entitas.Systems CreateSystems(Contexts contexts)
         {
             return new Feature("Game")
@@ -146,7 +183,11 @@ namespace RedMoonRPG
                 .Add(new Systems.Animations.BoolAnimationSystem(contexts))
                 .Add(new Systems.LocalMap.Player.MovementSystem(contexts))
                 .Add(new Systems.LocalMap.Player.InputMovementSystem(contexts))
-                .Add(new Systems.UpdateHealthSystem(contexts, gameBalanceSettings));
+                .Add(new Systems.UpdateHealthSystem(contexts, gameBalanceSettings))
+                .Add(new Systems.UpdateManaSystem(contexts, gameBalanceSettings))
+                .Add(new Systems.UpdateMagicDamageSystem(contexts, gameBalanceSettings))
+                .Add(new Systems.UpdateMeleeDamageSystem(contexts, gameBalanceSettings))
+                .Add(new Systems.UpdateRangedDamageSystem(contexts, gameBalanceSettings));
         }
     }
 }

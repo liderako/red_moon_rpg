@@ -61,12 +61,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/BattleMovement/BattleMovementSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/AwakeBattleSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/GridData.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Controllers/LocalGameController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/SkipTurnSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Map/WorldMap/Camera/MovementSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Tags/Animations.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/BattleMovement/InputMovementSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/AI/DecisionMakingSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Controllers/LocalGameController.cs" />
       </list>
     </option>
   </component>
@@ -132,6 +132,7 @@
       <workItem from="1600348656911" duration="2717000" />
       <workItem from="1600534595105" duration="2032000" />
       <workItem from="1600597036028" duration="13059000" />
+      <workItem from="1600665494839" duration="2549000" />
     </task>
     <servers />
   </component>

@@ -203,7 +203,7 @@
      <Compile Include="Assets\Scripts\Game\ECS\Components\Stats\Battle attributes\BooleanComponents\UpdateMagicDamageComponent.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\Stats\Battle attributes\BooleanComponents\UpdateMeleeDamageComponent.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\Stats\Battle attributes\BooleanComponents\UpdateRangedDamageComponent.cs" />
-     <Compile Include="Assets\Scripts\Game\ECS\Components\Stats\Battle attributes\IndexMagicDamageComponent1.cs" />
+     <Compile Include="Assets\Scripts\Game\ECS\Components\Stats\Battle attributes\IndexMagicDamageComponent.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\Stats\Battle attributes\IndexMeleeDamageComponent.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\Stats\Battle attributes\IndexRangedDamageComponent.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\Stats\Life Attributes\BooleanComponent\HealthUpdateComponent.cs" />
