@@ -16,16 +16,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Systems/Battle/AI/DecisionMakingSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Enums/Factions.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Components/Factions/TypeFactionComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Factions/EnemyComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sources/Generated/Battle/BattleComponentsLookup.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sources/Generated/Game/Components/GameEnemyComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sources/Generated/Components/Interfaces/IEnemy.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sources/Generated/Components/Interfaces/IAI.cs" />
-        <option value="$PROJECT_DIR$/Assets/Sources/Generated/Battle/Components/BattleEnemyComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Factions/TypeFactionComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Factions/AIComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/NameComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Tags/Tags.cs" />
@@ -67,6 +57,16 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/BattleMovement/InputMovementSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/AI/DecisionMakingSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Controllers/LocalGameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Tags/Enums/WeaponType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Tags/Enums/ItemType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Data/ScriptableObjects/ItemScriptableObjects.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Items/StackableComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Items/QuestableComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Items/IconComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Items/DestroyOnUseComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Items/DefaultPriceComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Items/TypeWeaponComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Items/WeigthComponent.cs" />
       </list>
     </option>
   </component>
@@ -133,6 +133,7 @@
       <workItem from="1600534595105" duration="2032000" />
       <workItem from="1600597036028" duration="13059000" />
       <workItem from="1600665494839" duration="2549000" />
+      <workItem from="1600751791651" duration="5183000" />
     </task>
     <servers />
   </component>
@@ -162,9 +163,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="624" y="244" key="run.anything.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1600610969136" />
-    <state x="1070" y="537" width="672" height="678" key="search.everywhere.popup" timestamp="1600608850748">
+    <state x="1070" y="537" width="672" height="678" key="search.everywhere.popup" timestamp="1600758515205">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1070" y="537" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1600608850748" />
+    <state x="1070" y="537" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1600758515205" />
   </component>
 </project>

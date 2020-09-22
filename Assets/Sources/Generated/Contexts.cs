@@ -25,16 +25,18 @@ public partial class Contexts : Entitas.IContexts {
     public FactionContext faction { get; set; }
     public GameContext game { get; set; }
     public InputContext input { get; set; }
+    public InventoryContext inventory { get; set; }
     public LifeContext life { get; set; }
     public TimeContext time { get; set; }
 
-    public Entitas.IContext[] allContexts { get { return new Entitas.IContext [] { battle, faction, game, input, life, time }; } }
+    public Entitas.IContext[] allContexts { get { return new Entitas.IContext [] { battle, faction, game, input, inventory, life, time }; } }
 
     public Contexts() {
         battle = new BattleContext();
         faction = new FactionContext();
         game = new GameContext();
         input = new InputContext();
+        inventory = new InventoryContext();
         life = new LifeContext();
         time = new TimeContext();
 
@@ -182,6 +184,7 @@ public partial class Contexts {
             CreateContextObserver(faction);
             CreateContextObserver(game);
             CreateContextObserver(input);
+            CreateContextObserver(inventory);
             CreateContextObserver(life);
             CreateContextObserver(time);
         } catch(System.Exception) {
