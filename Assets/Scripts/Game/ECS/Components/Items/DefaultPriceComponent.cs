@@ -1,7 +1,7 @@
 ﻿using Entitas;
 
 [Inventory]
-public class DefaultPriceComponent : IconComponent
+public class DefaultPriceComponent : IComponent
 {
     public int value;
 }

@@ -1,6 +1,6 @@
 ﻿using Entitas;
 
 [Inventory]
-public class DestroyOnUseComponent : IconComponent
+public class DestroyOnUseComponent : IComponent
 {
 }

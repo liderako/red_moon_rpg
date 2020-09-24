@@ -16,8 +16,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Factions/AIComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/NameComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Tags/Tags.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Factions/FactionRelationsComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Sources/Generated/Faction/FactionComponentsLookup.cs" />
@@ -63,10 +61,12 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Items/StackableComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Items/QuestableComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Items/IconComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Items/DestroyOnUseComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Items/DefaultPriceComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Items/TypeWeaponComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Items/WeigthComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Items/DestroyOnUseComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Items/DefaultPriceComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Sources/Generated/Inventory/InventoryComponentsLookup.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Data/ScriptableObjects/NPCScritableObject.cs" />
       </list>
     </option>
   </component>
@@ -134,6 +134,8 @@
       <workItem from="1600597036028" duration="13059000" />
       <workItem from="1600665494839" duration="2549000" />
       <workItem from="1600751791651" duration="5183000" />
+      <workItem from="1600840324833" duration="987000" />
+      <workItem from="1600925990832" duration="1440000" />
     </task>
     <servers />
   </component>
@@ -150,11 +152,11 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599919028099" />
-    <state x="-1920" y="0" width="1391" height="1028" maximized="true" key="dock-window-1" timestamp="1600600981785">
+    <state x="-1920" y="0" width="1355" height="1044" maximized="true" key="dock-window-1" timestamp="1600926301800">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
     <state x="0" y="0" width="1369" height="1028" maximized="true" key="dock-window-1/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1599831930642" />
-    <state x="-1920" y="0" width="1391" height="1028" maximized="true" key="dock-window-1/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1600600981785" />
+    <state x="-1920" y="0" width="1355" height="1044" maximized="true" key="dock-window-1/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1600926301800" />
     <state x="-1771" y="0" width="1438" height="1044" key="dock-window-2" timestamp="1600323996674">
       <screen x="-1920" y="0" width="1920" height="1040" />
     </state>
@@ -163,9 +165,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="624" y="244" key="run.anything.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1600610969136" />
-    <state x="1070" y="537" width="672" height="678" key="search.everywhere.popup" timestamp="1600758515205">
+    <state x="1070" y="537" width="672" height="678" key="search.everywhere.popup" timestamp="1600840562670">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1070" y="537" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1600758515205" />
+    <state x="1070" y="537" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1600840562670" />
   </component>
 </project>

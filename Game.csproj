@@ -164,6 +164,7 @@
      <Compile Include="Assets\Scripts\Game\Data\ScriptableObjects\GameBalanceSettings.cs" />
      <Compile Include="Assets\Scripts\Game\Data\ScriptableObjects\ItemScriptableObjects.cs" />
      <Compile Include="Assets\Scripts\Game\Data\ScriptableObjects\LevelSettings.cs" />
+     <Compile Include="Assets\Scripts\Game\Data\ScriptableObjects\NPCScritableObject.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\ActiveAnimationComponent.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\Battle\AI\FilterTargetComponent.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\Battle\AI\PriorityFilterTargetComponent.cs" />
@@ -328,8 +329,6 @@
      <Compile Include="Assets\Sources\Generated\Battle\Components\BattleTypeFactionComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Battle\Components\BattleUpdateActiveAvatarComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Battle\Components\BattleUpdateBattleRoundComponent.cs" />
-     <Compile Include="Assets\Sources\Generated\Components\DefaultPriceComponent.cs" />
-     <Compile Include="Assets\Sources\Generated\Components\DestroyOnUseComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Components\Interfaces\IAI.cs" />
      <Compile Include="Assets\Sources\Generated\Components\Interfaces\IActiveAvatar.cs" />
      <Compile Include="Assets\Sources\Generated\Components\Interfaces\IBattle.cs" />

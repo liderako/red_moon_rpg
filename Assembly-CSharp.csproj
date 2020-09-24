@@ -83,6 +83,8 @@
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattlePlayerComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattleTypeFactionComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Input\Components\InputInputMouseComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Inventory\Components\InventoryDefaultPriceComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Inventory\Components\InventoryDestroyOnUseComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Inventory\Components\InventoryQuestableComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Inventory\Components\InventoryStackableComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Inventory\Components\InventoryTypeWeaponComponent.cs" />
@@ -139,8 +141,6 @@
     <Compile Include="Assets\Sources\Generated\Faction\Components\FactionNameComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameNextLevelNameComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GamePersonaComponent.cs" />
-    <Compile Include="Assets\Sources\Generated\Inventory\Components\InventoryDefaultPriceComponent.cs" />
-    <Compile Include="Assets\Sources\Generated\Inventory\Components\InventoryDestroyOnUseComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameTargetPositionComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattleTargetPositionComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameMapPositionComponent.cs" />
@@ -155,8 +155,6 @@
     <Compile Include="Assets\Sources\Generated\Components\Interfaces\IName.cs" />
     <Compile Include="Assets\Sources\Generated\Components\Interfaces\ITargetPosition.cs" />
     <Compile Include="Assets\Sources\Generated\Components\Interfaces\IMapPosition.cs" />
-    <Compile Include="Assets\Sources\Generated\Components\DefaultPriceComponent.cs" />
-    <Compile Include="Assets\Sources\Generated\Components\DestroyOnUseComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Components\TargetPositionComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Components\MapPositionComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\GameComponentsLookup.cs" />

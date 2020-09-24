@@ -8,25 +8,25 @@
 //------------------------------------------------------------------------------
 public partial class InventoryEntity {
 
-    public DestroyOnUseComponent destroyOnUse { get { return (DestroyOnUseComponent)GetComponent(InventoryComponentsLookup.DestroyOnUse); } }
-    public bool hasDestroyOnUse { get { return HasComponent(InventoryComponentsLookup.DestroyOnUse); } }
+    static readonly DestroyOnUseComponent destroyOnUseComponent = new DestroyOnUseComponent();
 
-    public void AddDestroyOnUse(DestroyOnUseComponent newValue) {
-        var index = InventoryComponentsLookup.DestroyOnUse;
-        var component = CreateComponent<DestroyOnUseComponent>(index);
-        component.value = newValue;
-        AddComponent(index, component);
-    }
+    public bool isDestroyOnUse {
+        get { return HasComponent(InventoryComponentsLookup.DestroyOnUse); }
+        set {
+            if (value != isDestroyOnUse) {
+                var index = InventoryComponentsLookup.DestroyOnUse;
+                if (value) {
+                    var componentPool = GetComponentPool(index);
+                    var component = componentPool.Count > 0
+                            ? componentPool.Pop()
+                            : destroyOnUseComponent;
 
-    public void ReplaceDestroyOnUse(DestroyOnUseComponent newValue) {
-        var index = InventoryComponentsLookup.DestroyOnUse;
-        var component = CreateComponent<DestroyOnUseComponent>(index);
-        component.value = newValue;
-        ReplaceComponent(index, component);
-    }
-
-    public void RemoveDestroyOnUse() {
-        RemoveComponent(InventoryComponentsLookup.DestroyOnUse);
+                    AddComponent(index, component);
+                } else {
+                    RemoveComponent(index);
+                }
+            }
+        }
     }
 }
 

@@ -222,6 +222,7 @@
                 <e p="GameBalanceSettings.cs" t="Include" />
                 <e p="ItemScriptableObjects.cs" t="Include" />
                 <e p="LevelSettings.cs" t="Include" />
+                <e p="NPCScritableObject.cs" t="Include" />
               </e>
             </e>
             <e p="ECS" t="Include">
@@ -476,7 +477,6 @@
                 <e p="BattleTerrainGridComponent.cs" t="Include" />
                 <e p="BattleTransformComponent.cs" t="Include" />
                 <e p="BattleTypeFactionComponent.cs" t="Include" />
-                <e p="BattleTypeWeaponComponent.cs" t="Include" />
                 <e p="BattleUpdateActiveAvatarComponent.cs" t="Include" />
                 <e p="BattleUpdateBattleRoundComponent.cs" t="Include" />
               </e>
@@ -552,7 +552,6 @@
                 <e p="GameUpdateMagicDamageComponent.cs" t="Include" />
                 <e p="GameUpdateMeleeDamageComponent.cs" t="Include" />
                 <e p="GameUpdateRangedDamageComponent.cs" t="Include" />
-                <e p="GameWeigthComponent.cs" t="Include" />
                 <e p="GameWorldMapComponent.cs" t="Include" />
                 <e p="GameWorldMapMovementComponent.cs" t="Include" />
               </e>
@@ -576,7 +575,12 @@
             </e>
             <e p="Inventory" t="Include">
               <e p="Components" t="Include">
+                <e p="InventoryDefaultPriceComponent.cs" t="Include" />
+                <e p="InventoryDestroyOnUseComponent.cs" t="Include" />
+                <e p="InventoryQuestableComponent.cs" t="Include" />
                 <e p="InventoryStackableComponent.cs" t="Include" />
+                <e p="InventoryTypeWeaponComponent.cs" t="Include" />
+                <e p="InventoryWeigthComponent.cs" t="Include" />
               </e>
               <e p="InventoryAttribute.cs" t="Include" />
               <e p="InventoryComponentsLookup.cs" t="Include" />

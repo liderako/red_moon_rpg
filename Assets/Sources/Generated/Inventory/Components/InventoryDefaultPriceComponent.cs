@@ -11,14 +11,14 @@ public partial class InventoryEntity {
     public DefaultPriceComponent defaultPrice { get { return (DefaultPriceComponent)GetComponent(InventoryComponentsLookup.DefaultPrice); } }
     public bool hasDefaultPrice { get { return HasComponent(InventoryComponentsLookup.DefaultPrice); } }
 
-    public void AddDefaultPrice(DefaultPriceComponent newValue) {
+    public void AddDefaultPrice(int newValue) {
         var index = InventoryComponentsLookup.DefaultPrice;
         var component = CreateComponent<DefaultPriceComponent>(index);
         component.value = newValue;
         AddComponent(index, component);
     }
 
-    public void ReplaceDefaultPrice(DefaultPriceComponent newValue) {
+    public void ReplaceDefaultPrice(int newValue) {
         var index = InventoryComponentsLookup.DefaultPrice;
         var component = CreateComponent<DefaultPriceComponent>(index);
         component.value = newValue;
