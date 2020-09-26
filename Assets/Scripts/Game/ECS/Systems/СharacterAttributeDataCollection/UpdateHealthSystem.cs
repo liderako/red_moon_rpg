@@ -8,35 +8,35 @@ using Entitas;
 */
 namespace RedMoonRPG.Systems
 {
-    public class UpdateHealthSystem : ReactiveSystem<GameEntity>
+    public class UpdateHealthSystem : ReactiveSystem<CharacterEntity>
     {
         private Contexts _contexts;
         private int _lvlBonus;
-
-        public UpdateHealthSystem(Contexts contexts, GameBalanceSettings gmt) : base(contexts.game)
+    
+        public UpdateHealthSystem(Contexts contexts, GameBalanceSettings gmt) : base(contexts.character)
         {
             _contexts = contexts;
             _lvlBonus = gmt.HpForLevelEndurance;
         }
-
-        protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
+    
+        protected override ICollector<CharacterEntity> GetTrigger(IContext<CharacterEntity> context)
         {
-            return context.CreateCollector(GameMatcher.HealthUpdate);
+            return context.CreateCollector(CharacterMatcher.HealthUpdate);
         }
-
-        protected override bool Filter(GameEntity entity)
+    
+        protected override bool Filter(CharacterEntity entity)
         {
-            return entity.hasName && entity.isHealthUpdate && entity.hasPersona;
+            return entity.isHealthUpdate && entity.hasPersona;
         }
-
-        protected override void Execute(List<GameEntity> entities)
+    
+        protected override void Execute(List<CharacterEntity> entities)
         {
             int len = entities.Count;
             for (int i = 0; i < len; i++)
             {
-                HashSet<GameEntity> array = _contexts.game.GetEntitiesWithPersona(entities[i].persona.value);
+                HashSet<CharacterEntity> array = _contexts.character.GetEntitiesWithPersona(entities[i].persona.value);
                 int hp = 0;
-                foreach (GameEntity gn in array)
+                foreach (CharacterEntity gn in array)
                 {
                     if (gn.hasEndurance)
                     {

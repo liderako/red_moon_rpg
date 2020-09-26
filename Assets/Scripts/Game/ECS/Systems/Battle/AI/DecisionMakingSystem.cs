@@ -13,17 +13,17 @@ namespace RedMoonRPG.Systems.Battle.AI
         public DecisionMakingSystem(Contexts contexts) : base(contexts.battle)
         {
         }
-
+    
         protected override ICollector<BattleEntity> GetTrigger(IContext<BattleEntity> context)
         {
             return context.CreateCollector(BattleMatcher.ActiveAvatar);
         }
-
+    
         protected override bool Filter(BattleEntity entity)
         {
             return entity.isBattle && entity.isAI && entity.activeAvatar.value;
         }
-
+    
         protected override void Execute(List<BattleEntity> entities)
         {
             if (entities.Count > 1)
@@ -71,7 +71,7 @@ namespace RedMoonRPG.Systems.Battle.AI
             // Debug.Log("My target with max hp is " + listEnemy[FindEnemyWithMaxHP(listEnemy)].name.name);
             return listEnemy[FindNearEnemy(listEnemy, avatar)];
         }
-
+    
         private bool CheckRadiusForAttack(TerrainGridSystem tgs, Vector3 a, Vector3 b, float radius)
         {
             if (Vector3.Distance(a, b) <= radius * 2)
@@ -111,7 +111,7 @@ namespace RedMoonRPG.Systems.Battle.AI
             Debug.LogError(avatar.name.name + ": I can't find near position for attack. It's a system error.");
             return null;
         }
-
+    
         private List<BattleEntity> FindEnemies(BattleEntity avatar)
         {
             FactionEntity factionsManager = Contexts.sharedInstance.faction.GetEntityWithName(Tags.factionData);
@@ -125,7 +125,7 @@ namespace RedMoonRPG.Systems.Battle.AI
                     break;
                 }
             }
-
+    
             List<BattleEntity> listEnemies = new List<BattleEntity>();
             for (int i = 0; i < len; i++)
             {
@@ -142,7 +142,7 @@ namespace RedMoonRPG.Systems.Battle.AI
             }
             return listEnemies;
         }
-
+    
         private int FindEnemyWithMinHP(List<BattleEntity> enemies)
         {
             int len = enemies.Count;
@@ -151,7 +151,7 @@ namespace RedMoonRPG.Systems.Battle.AI
             int hp;
             for (int i = 0; i < len; i++)
             {
-                hp = Contexts.sharedInstance.game.GetEntityWithName(enemies[i].name.name).health.value;
+                hp = Contexts.sharedInstance.character.GetEntityWithName(enemies[i].name.name).health.value;
                 if (hp < minHp)
                 {
                     minHp = hp;
@@ -170,7 +170,7 @@ namespace RedMoonRPG.Systems.Battle.AI
             int hp;
             for (int i = 0; i < len; i++)
             {
-                hp = Contexts.sharedInstance.game.GetEntityWithName(enemies[i].name.name).health.value;
+                hp = Contexts.sharedInstance.character.GetEntityWithName(enemies[i].name.name).health.value;
                 if (hp > maxHp)
                 {
                     maxHp = hp;
@@ -179,7 +179,7 @@ namespace RedMoonRPG.Systems.Battle.AI
             }
             return maxIterator;
         }
-
+    
         private int FindNearEnemy(List<BattleEntity> enemies, BattleEntity avatar)
         {
             int len = enemies.Count;
@@ -216,40 +216,4 @@ namespace RedMoonRPG.Systems.Battle.AI
             return maxIterator;
         }
     }
-
-    /*
-        Dictionary<int, Враг> ОценкаВсехВрагов(BattleEntity avatar)
-        {
-            Фильтр Поиска цели = взять фильтр из avatar
-            Массив врагов для текущего персонажа = вызвать метод для получение всех врагов данного аватара
-            Пройтись по массиву и взависимости от фильтра поставить оценку приоритетности в словаре
-            Dictionary<int, Враг> словарь = новый Словарь();
-            for (int i = 0; i < массивВрагов.Длина; i++
-            {
-                словавь[i] = враг
-            }
-            вернуть словарь
-        }
-    */
-        
-        /*
-         
-         СостояниеAI ОценкаСостояние(Аватар аватар, Dictionary<int, Враг> dictionary)
-         {
-            СостояниеAI стейт;
-            
-            Фильтр приоритетности состояний = аватар дай мне фильтр.
-            
-            цикл (пока фильтр состояний не закончен)
-            {
-                if ()
-                {
-                
-                }
-            }
-            
-            return стейт;
-         }
-         
-         */
 }

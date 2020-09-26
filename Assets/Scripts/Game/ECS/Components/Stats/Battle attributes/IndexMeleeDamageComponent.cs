@@ -1,6 +1,6 @@
 ﻿using Entitas;
 
-[Game]
+[Character]
 public class IndexMeleeDamageComponent : IComponent
 {
     public int minValue;

@@ -22,6 +22,7 @@ public partial class Contexts : Entitas.IContexts {
     static Contexts _sharedInstance;
 
     public BattleContext battle { get; set; }
+    public CharacterContext character { get; set; }
     public FactionContext faction { get; set; }
     public GameContext game { get; set; }
     public InputContext input { get; set; }
@@ -29,10 +30,11 @@ public partial class Contexts : Entitas.IContexts {
     public LifeContext life { get; set; }
     public TimeContext time { get; set; }
 
-    public Entitas.IContext[] allContexts { get { return new Entitas.IContext [] { battle, faction, game, input, inventory, life, time }; } }
+    public Entitas.IContext[] allContexts { get { return new Entitas.IContext [] { battle, character, faction, game, input, inventory, life, time }; } }
 
     public Contexts() {
         battle = new BattleContext();
+        character = new CharacterContext();
         faction = new FactionContext();
         game = new GameContext();
         input = new InputContext();
@@ -110,10 +112,18 @@ public partial class Contexts {
             Name,
             faction.GetGroup(FactionMatcher.Name),
             (e, c) => ((RedMoonRPG.NameComponent)c).name));
+        character.AddEntityIndex(new Entitas.PrimaryEntityIndex<CharacterEntity, string>(
+            Name,
+            character.GetGroup(CharacterMatcher.Name),
+            (e, c) => ((RedMoonRPG.NameComponent)c).name));
 
         game.AddEntityIndex(new Entitas.EntityIndex<GameEntity, string>(
             Persona,
             game.GetGroup(GameMatcher.Persona),
+            (e, c) => ((RedMoonRPG.PersonaComponent)c).value));
+        character.AddEntityIndex(new Entitas.EntityIndex<CharacterEntity, string>(
+            Persona,
+            character.GetGroup(CharacterMatcher.Persona),
             (e, c) => ((RedMoonRPG.PersonaComponent)c).value));
 
         battle.AddEntityIndex(new Entitas.EntityIndex<BattleEntity, Factions>(
@@ -157,8 +167,16 @@ public static class ContextsExtensions {
         return ((Entitas.PrimaryEntityIndex<FactionEntity, string>)context.GetEntityIndex(Contexts.Name)).GetEntity(name);
     }
 
+    public static CharacterEntity GetEntityWithName(this CharacterContext context, string name) {
+        return ((Entitas.PrimaryEntityIndex<CharacterEntity, string>)context.GetEntityIndex(Contexts.Name)).GetEntity(name);
+    }
+
     public static System.Collections.Generic.HashSet<GameEntity> GetEntitiesWithPersona(this GameContext context, string value) {
         return ((Entitas.EntityIndex<GameEntity, string>)context.GetEntityIndex(Contexts.Persona)).GetEntities(value);
+    }
+
+    public static System.Collections.Generic.HashSet<CharacterEntity> GetEntitiesWithPersona(this CharacterContext context, string value) {
+        return ((Entitas.EntityIndex<CharacterEntity, string>)context.GetEntityIndex(Contexts.Persona)).GetEntities(value);
     }
 
     public static System.Collections.Generic.HashSet<BattleEntity> GetEntitiesWithTypeFaction(this BattleContext context, Factions value) {
@@ -181,6 +199,7 @@ public partial class Contexts {
     public void InitializeContexObservers() {
         try {
             CreateContextObserver(battle);
+            CreateContextObserver(character);
             CreateContextObserver(faction);
             CreateContextObserver(game);
             CreateContextObserver(input);

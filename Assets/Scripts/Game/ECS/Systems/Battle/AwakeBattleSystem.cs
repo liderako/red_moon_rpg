@@ -73,7 +73,7 @@ namespace RedMoonRPG.Systems.Battle
                 gridsEntities.Add(avatar);
             }
         }
-
+    
         private void MoveUnitToCenterCell(GameEntity unit, BattleEntity avatar)
         {
             Vector3 targetPosition = avatar.terrainGrid.value.CellGetPosition(avatar.terrainGrid.value.CellGetAtPosition(unit.transform.value.position, true), true);
@@ -82,7 +82,7 @@ namespace RedMoonRPG.Systems.Battle
             avatar.ReplaceMapPosition(new Position(targetPosition));
             avatar.RemovePath();
         }
-
+    
         private void StartBattle(BattleEntity manager, List<GameEntity> gameEntities, List<BattleEntity> battleEntities)
         {
             manager.isUpdateActiveAvatar = true;
@@ -101,8 +101,10 @@ namespace RedMoonRPG.Systems.Battle
                 for (int j = i + 1; j < len; j++)
                 {
                     // compare array element with  
-                    // all next element 
-                    if (group[i].dexterity.value < group[j].dexterity.value)
+                    // all next element
+                    CharacterEntity iEntity = Contexts.sharedInstance.character.GetEntityWithName(group[i].name.name);
+                    CharacterEntity jEntity = Contexts.sharedInstance.character.GetEntityWithName(group[i].name.name);
+                    if (iEntity.dexterity.value < jEntity.dexterity.value)
                     {
                         GameEntity tmp = group[i];
                         group[i] = group[j];

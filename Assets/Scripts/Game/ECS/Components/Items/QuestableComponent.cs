@@ -2,7 +2,7 @@
 
 using Entitas;
 
-[Inventory]
+[Character]
 public class QuestableComponent : IComponent
 {
 }

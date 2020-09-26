@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Entitas;
 
-[Inventory]
+[Character]
 public class TypeWeaponComponent : IComponent
 {
     public WeaponType value;

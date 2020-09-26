@@ -39,7 +39,7 @@ namespace RedMoonRPG.Systems.Battle
                 return;
             }
             battleManager.battleList.battleAvatars[i].ReplaceActiveAvatar(true);
-            battleManager.battleList.battleAvatars[i].ReplaceActionPoint(battleManager.battleList.units[i].dexterity.value);
+            battleManager.battleList.battleAvatars[i].ReplaceActionPoint(Contexts.sharedInstance.character.GetEntityWithName(battleManager.battleList.units[i].name.name).dexterity.value);
             battleManager.battleList.units[i].ReplaceActiveAvatar(true);
             Debug.Log("Now Active Avatar is " + battleManager.battleList.units[i].name.name);
         }

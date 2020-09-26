@@ -197,11 +197,49 @@
             </e>
           </e>
         </e>
+        <e p="RPG Character Animation Pack" t="Include">
+          <e p="Code" t="Include">
+            <e p="CameraController.cs" t="Include" />
+            <e p="GUIControls.cs" t="Include" />
+            <e p="IKHands.cs" t="Include" />
+            <e p="PerfectLookAt" t="Include">
+              <e p="FABRIKSolver.cs" t="Include" />
+              <e p="PerfectLookAt.cs" t="Include" />
+              <e p="PerfectLookAtData.cs" t="Include" />
+              <e p="PerfectLookAtLegStabilizer.cs" t="Include" />
+            </e>
+            <e p="RPGCharacterController.cs" t="Include" />
+            <e p="RPGCharacterInputController.cs" t="Include" />
+            <e p="RPGCharacterMovementController.cs" t="Include" />
+            <e p="RPGCharacterWeaponController.cs" t="Include" />
+          </e>
+          <e p="SuperCharacterController" t="Include">
+            <e p="Code" t="Include">
+              <e p="Gravity.cs" t="Include" />
+              <e p="SimpleStateMachine.cs" t="Include" />
+              <e p="SuperCharacterController" t="Include">
+                <e p="Core" t="Include">
+                  <e p="BruteForceMesh.cs" t="Include" />
+                  <e p="BSPTree.cs" t="Include" />
+                  <e p="SuperCharacterController.cs" t="Include" />
+                  <e p="SuperCollider.cs" t="Include" />
+                  <e p="SuperCollisionType.cs" t="Include" />
+                  <e p="SuperMath.cs" t="Include" />
+                  <e p="SuperStateMachine.cs" t="Include" />
+                </e>
+                <e p="DebugDraw.cs" t="Include" />
+                <e p="Math3d.cs" t="Include" />
+                <e p="README.txt" t="Include" />
+              </e>
+            </e>
+          </e>
+        </e>
         <e p="Scripts" t="Include">
           <e p="Editor" t="Include">
             <e p="CellEditor.cs" t="Include" />
           </e>
           <e p="Game" t="Include">
+            <e p="AnimatorListener.cs" t="Include" />
             <e p="Controllers" t="Include">
               <e p="BattleController.cs" t="Include" />
               <e p="GameController.cs" t="Include" />
@@ -265,6 +303,7 @@
                   <e p="DefaultPriceComponent.cs" t="Include" />
                   <e p="DestroyOnUseComponent.cs" t="Include" />
                   <e p="IconComponent.cs" t="Include" />
+                  <e p="NameItemComponent.cs" t="Include" />
                   <e p="QuestableComponent.cs" t="Include" />
                   <e p="StackableComponent.cs" t="Include" />
                   <e p="TypeWeaponComponent.cs" t="Include" />
@@ -300,31 +339,33 @@
                     <e p="IndexMeleeDamageComponent.cs" t="Include" />
                     <e p="IndexRangedDamageComponent.cs" t="Include" />
                   </e>
-                  <e p="Life Attributes" t="Include">
+                  <e p="Character attributes" t="Include">
                     <e p="BooleanComponent" t="Include">
                       <e p="HealthUpdateComponent.cs" t="Include" />
                       <e p="ManaUpdateComponent.cs" t="Include" />
                     </e>
-                    <e p="CaloryComponent.cs" t="Include" />
                     <e p="DamagedComponent.cs" t="Include" />
                     <e p="HealedComponent.cs" t="Include" />
                     <e p="HealthComponent.cs" t="Include" />
-                    <e p="HungerComponent.cs" t="Include" />
+                    <e p="Main attributes" t="Include">
+                      <e p="AttentionComponent.cs" t="Include" />
+                      <e p="DexterityComponent.cs" t="Include" />
+                      <e p="EnduranceComponent.cs" t="Include" />
+                      <e p="IntellectComponent.cs" t="Include" />
+                      <e p="LuckComponent.cs" t="Include" />
+                      <e p="PersonalityComponent.cs" t="Include" />
+                      <e p="StrengthComponent.cs" t="Include" />
+                    </e>
                     <e p="ManaComponent.cs" t="Include" />
-                    <e p="ThirstComponent.cs" t="Include" />
-                    <e p="WaterComponent.cs" t="Include" />
-                  </e>
-                  <e p="Main attributes" t="Include">
-                    <e p="AttentionComponent.cs" t="Include" />
-                    <e p="DexterityComponent.cs" t="Include" />
-                    <e p="EnduranceComponent.cs" t="Include" />
-                    <e p="IntellectComponent.cs" t="Include" />
-                    <e p="LuckComponent.cs" t="Include" />
-                    <e p="PersonalityComponent.cs" t="Include" />
-                    <e p="StrengthComponent.cs" t="Include" />
                     <e p="Update main Attributes" t="Include">
                       <e p="ModifiedStatComponent.cs" t="Include" />
                     </e>
+                  </e>
+                  <e p="Life Attributes" t="Include">
+                    <e p="CaloryComponent.cs" t="Include" />
+                    <e p="HungerComponent.cs" t="Include" />
+                    <e p="ThirstComponent.cs" t="Include" />
+                    <e p="WaterComponent.cs" t="Include" />
                   </e>
                 </e>
                 <e p="TeleportCameraComponent.cs" t="Include" />
@@ -481,6 +522,44 @@
                 <e p="BattleUpdateBattleRoundComponent.cs" t="Include" />
               </e>
             </e>
+            <e p="Character" t="Include">
+              <e p="CharacterAttribute.cs" t="Include" />
+              <e p="CharacterComponentsLookup.cs" t="Include" />
+              <e p="CharacterContext.cs" t="Include" />
+              <e p="CharacterEntity.cs" t="Include" />
+              <e p="CharacterMatcher.cs" t="Include" />
+              <e p="Components" t="Include">
+                <e p="CharacterAttentionComponent.cs" t="Include" />
+                <e p="CharacterDamagedComponent.cs" t="Include" />
+                <e p="CharacterDefaultPriceComponent.cs" t="Include" />
+                <e p="CharacterDestroyOnUseComponent.cs" t="Include" />
+                <e p="CharacterDexterityComponent.cs" t="Include" />
+                <e p="CharacterEnduranceComponent.cs" t="Include" />
+                <e p="CharacterHealedComponent.cs" t="Include" />
+                <e p="CharacterHealthComponent.cs" t="Include" />
+                <e p="CharacterHealthUpdateComponent.cs" t="Include" />
+                <e p="CharacterIndexMagicDamageComponent.cs" t="Include" />
+                <e p="CharacterIndexMeleeDamageComponent.cs" t="Include" />
+                <e p="CharacterIndexRangedDamageComponent.cs" t="Include" />
+                <e p="CharacterIntellectComponent.cs" t="Include" />
+                <e p="CharacterLuckComponent.cs" t="Include" />
+                <e p="CharacterManaComponent.cs" t="Include" />
+                <e p="CharacterManaUpdateComponent.cs" t="Include" />
+                <e p="CharacterModifiedStatComponent.cs" t="Include" />
+                <e p="CharacterNameComponent.cs" t="Include" />
+                <e p="CharacterNameItemComponent.cs" t="Include" />
+                <e p="CharacterPersonaComponent.cs" t="Include" />
+                <e p="CharacterPersonalityComponent.cs" t="Include" />
+                <e p="CharacterQuestableComponent.cs" t="Include" />
+                <e p="CharacterStackableComponent.cs" t="Include" />
+                <e p="CharacterStrengthComponent.cs" t="Include" />
+                <e p="CharacterTypeWeaponComponent.cs" t="Include" />
+                <e p="CharacterUpdateMagicDamageComponent.cs" t="Include" />
+                <e p="CharacterUpdateMeleeDamageComponent.cs" t="Include" />
+                <e p="CharacterUpdateRangedDamageComponent.cs" t="Include" />
+                <e p="CharacterWeigthComponent.cs" t="Include" />
+              </e>
+            </e>
             <e p="Components" t="Include">
               <e p="Interfaces" t="Include">
                 <e p="IActiveAvatar.cs" t="Include" />
@@ -488,6 +567,7 @@
                 <e p="IBattle.cs" t="Include" />
                 <e p="IMapPosition.cs" t="Include" />
                 <e p="IName.cs" t="Include" />
+                <e p="IPersona.cs" t="Include" />
                 <e p="IPlayer.cs" t="Include" />
                 <e p="IRotateSpeed.cs" t="Include" />
                 <e p="ISpeed.cs" t="Include" />
@@ -516,42 +596,22 @@
                 <e p="GameActiveAvatarComponent.cs" t="Include" />
                 <e p="GameAIComponent.cs" t="Include" />
                 <e p="GameAnimatorComponent.cs" t="Include" />
-                <e p="GameAttentionComponent.cs" t="Include" />
                 <e p="GameBorderThicknessComponent.cs" t="Include" />
-                <e p="GameDamagedComponent.cs" t="Include" />
-                <e p="GameDexterityComponent.cs" t="Include" />
-                <e p="GameEnduranceComponent.cs" t="Include" />
                 <e p="GameForceSpeedComponent.cs" t="Include" />
                 <e p="GameFreeCameraComponent.cs" t="Include" />
-                <e p="GameHealedComponent.cs" t="Include" />
-                <e p="GameHealthComponent.cs" t="Include" />
-                <e p="GameHealthUpdateComponent.cs" t="Include" />
-                <e p="GameIndexMagicDamageComponent.cs" t="Include" />
-                <e p="GameIndexMeleeDamageComponent.cs" t="Include" />
-                <e p="GameIndexRangedDamageComponent.cs" t="Include" />
-                <e p="GameIntellectComponent.cs" t="Include" />
                 <e p="GameLimitMapComponent.cs" t="Include" />
-                <e p="GameLuckComponent.cs" t="Include" />
-                <e p="GameManaComponent.cs" t="Include" />
-                <e p="GameManaUpdateComponent.cs" t="Include" />
                 <e p="GameMapPositionComponent.cs" t="Include" />
-                <e p="GameModifiedStatComponent.cs" t="Include" />
                 <e p="GameNameComponent.cs" t="Include" />
                 <e p="GameNavMeshAgentComponent.cs" t="Include" />
                 <e p="GameNextAnimationComponent.cs" t="Include" />
                 <e p="GameNextLevelNameComponent.cs" t="Include" />
                 <e p="GamePersonaComponent.cs" t="Include" />
-                <e p="GamePersonalityComponent.cs" t="Include" />
                 <e p="GamePlayerComponent.cs" t="Include" />
                 <e p="GameRotateSpeedComponent.cs" t="Include" />
                 <e p="GameSpeedComponent.cs" t="Include" />
-                <e p="GameStrengthComponent.cs" t="Include" />
                 <e p="GameTargetPositionComponent.cs" t="Include" />
                 <e p="GameTeleportCameraComponent.cs" t="Include" />
                 <e p="GameTransformComponent.cs" t="Include" />
-                <e p="GameUpdateMagicDamageComponent.cs" t="Include" />
-                <e p="GameUpdateMeleeDamageComponent.cs" t="Include" />
-                <e p="GameUpdateRangedDamageComponent.cs" t="Include" />
                 <e p="GameWorldMapComponent.cs" t="Include" />
                 <e p="GameWorldMapMovementComponent.cs" t="Include" />
               </e>
@@ -574,14 +634,6 @@
               <e p="InputMatcher.cs" t="Include" />
             </e>
             <e p="Inventory" t="Include">
-              <e p="Components" t="Include">
-                <e p="InventoryDefaultPriceComponent.cs" t="Include" />
-                <e p="InventoryDestroyOnUseComponent.cs" t="Include" />
-                <e p="InventoryQuestableComponent.cs" t="Include" />
-                <e p="InventoryStackableComponent.cs" t="Include" />
-                <e p="InventoryTypeWeaponComponent.cs" t="Include" />
-                <e p="InventoryWeigthComponent.cs" t="Include" />
-              </e>
               <e p="InventoryAttribute.cs" t="Include" />
               <e p="InventoryComponentsLookup.cs" t="Include" />
               <e p="InventoryContext.cs" t="Include" />

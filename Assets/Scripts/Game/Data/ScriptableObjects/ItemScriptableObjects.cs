@@ -30,9 +30,9 @@ public class ItemScriptableObjects : ScriptableObject
     public int strength;
     
     // дополнительные характеристики для оружия
-    public int meeleDamage;
-    public int rangedDamage;
-    public int magicDamage;
+    public Vector2Int meeleDamage;
+    public Vector2Int rangedDamage;
+    public Vector2Int magicDamage;
     
     // дополнительные характеристики для интерактивных обьектов
     public int calory;

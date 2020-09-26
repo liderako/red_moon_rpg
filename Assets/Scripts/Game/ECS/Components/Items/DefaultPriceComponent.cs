@@ -1,6 +1,6 @@
 ﻿using Entitas;
 
-[Inventory]
+[Character]
 public class DefaultPriceComponent : IComponent
 {
     public int value;

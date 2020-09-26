@@ -10,39 +10,39 @@ using RedMoonRPG.Settings;
 */
 namespace RedMoonRPG.Systems
 {
-    public class UpdateManaSystem : ReactiveSystem<GameEntity>
+    public class UpdateManaSystem : ReactiveSystem<CharacterEntity>
     {
         private Contexts _contexts;
         private int _lvlBonus;
-
-        public UpdateManaSystem(Contexts contexts, GameBalanceSettings gmt) : base(contexts.game)
+    
+        public UpdateManaSystem(Contexts contexts, GameBalanceSettings gmt) : base(contexts.character)
         {
             _contexts = contexts;
             _lvlBonus = gmt.ManaForLevelIntellect;
         }
-
-        protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
+    
+        protected override ICollector<CharacterEntity> GetTrigger(IContext<CharacterEntity> context)
         {
-            return context.CreateCollector(GameMatcher.ManaUpdate);
+            return context.CreateCollector(CharacterMatcher.ManaUpdate);
         }
-
+    
         /*
         ** Система будет вызиваться только один раз на персонажа благодаря тому
         ** что Имя может быть только у одного Entity на персонажа
         */
-        protected override bool Filter(GameEntity entity)
+        protected override bool Filter(CharacterEntity entity)
         {
-            return entity.hasName && entity.isManaUpdate && entity.hasPersona;
+            return entity.isManaUpdate && entity.hasPersona;
         }
-
-        protected override void Execute(List<GameEntity> entities)
+    
+        protected override void Execute(List<CharacterEntity> entities)
         {
             int len = entities.Count;
             for (int i = 0; i < len; i++)
             {
-                HashSet<GameEntity> array = _contexts.game.GetEntitiesWithPersona(entities[i].persona.value);
+                HashSet<CharacterEntity> array = _contexts.character.GetEntitiesWithPersona(entities[i].persona.value);
                 int mana = 0;
-                foreach (GameEntity gn in array)
+                foreach (CharacterEntity gn in array)
                 {
                     if (gn.hasIntellect)
                     {

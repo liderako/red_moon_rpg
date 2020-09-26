@@ -9,23 +9,23 @@ namespace RedMoonRPG.Systems
     ** Система для модификации основных параметров персонажа
     ** Система будет использоваться при создании персонажа либо редактировании основных параметров.
     */
-    public class ModifyStatSystem : ReactiveSystem<GameEntity>
+    public class ModifyStatSystem : ReactiveSystem<CharacterEntity>
     {
-        public ModifyStatSystem(Contexts contexts) : base(contexts.game)
+        public ModifyStatSystem(Contexts contexts) : base(contexts.character)
         {
         }
-
-        protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
+    
+        protected override ICollector<CharacterEntity> GetTrigger(IContext<CharacterEntity> context)
         {
-            return context.CreateCollector(GameMatcher.ModifiedStat);
+            return context.CreateCollector(CharacterMatcher.ModifiedStat);
         }
-
-        protected override bool Filter(GameEntity entity)
+    
+        protected override bool Filter(CharacterEntity entity)
         {
             return entity.hasModifiedStat;
         }
-
-        protected override void Execute(List<GameEntity> entities)
+    
+        protected override void Execute(List<CharacterEntity> entities)
         {
             int len = entities.Count;
             for (int i = 0; i < len; i++)
@@ -34,8 +34,8 @@ namespace RedMoonRPG.Systems
                 entities[i].RemoveModifiedStat();
             }
         }
-
-        private void ChangeStat(GameEntity entity)
+    
+        private void ChangeStat(CharacterEntity entity)
         {
             switch (entity.modifiedStat.stat)
             {

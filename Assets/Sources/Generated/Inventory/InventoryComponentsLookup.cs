@@ -8,30 +8,15 @@
 //------------------------------------------------------------------------------
 public static class InventoryComponentsLookup {
 
-    public const int DefaultPrice = 0;
-    public const int DestroyOnUse = 1;
-    public const int Questable = 2;
-    public const int Stackable = 3;
-    public const int TypeWeapon = 4;
-    public const int Weigth = 5;
 
-    public const int TotalComponents = 6;
+
+    public const int TotalComponents = 0;
 
     public static readonly string[] componentNames = {
-        "DefaultPrice",
-        "DestroyOnUse",
-        "Questable",
-        "Stackable",
-        "TypeWeapon",
-        "Weigth"
+
     };
 
     public static readonly System.Type[] componentTypes = {
-        typeof(DefaultPriceComponent),
-        typeof(DestroyOnUseComponent),
-        typeof(QuestableComponent),
-        typeof(StackableComponent),
-        typeof(TypeWeaponComponent),
-        typeof(WeigthComponent)
+
     };
 }

@@ -3,7 +3,7 @@ using Entitas.CodeGeneration.Attributes;
 
 namespace RedMoonRPG
 {
-    [Game]
+    [Game][Character]
     public class PersonaComponent : IComponent
     {
         [EntityIndex]

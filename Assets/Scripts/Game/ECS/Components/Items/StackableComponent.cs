@@ -1,6 +1,6 @@
 ﻿using Entitas;
 
-[Inventory]
+[Character]
 public class StackableComponent : IComponent
 {
 }

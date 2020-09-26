@@ -1,6 +1,6 @@
 ﻿using Entitas;
 
-[Inventory]
+[Character]
 public class WeigthComponent : IComponent
 {
     public int value;

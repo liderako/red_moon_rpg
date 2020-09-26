@@ -9,48 +9,48 @@ using Entitas;
 */
 namespace RedMoonRPG.Systems
 {
-    public class UpdateRangedDamageSystem : ReactiveSystem<GameEntity>
+    public class UpdateRangedDamageSystem : ReactiveSystem<CharacterEntity>
     {
         private Contexts _contexts;
         private int _lvlBonus;
         private float _range;
-
-        public UpdateRangedDamageSystem(Contexts contexts, GameBalanceSettings gmt) : base(contexts.game)
+    
+        public UpdateRangedDamageSystem(Contexts contexts, GameBalanceSettings gmt) : base(contexts.character)
         {
             _contexts = contexts;
             _lvlBonus = gmt.RangedDamageForDexterity;
             _range = gmt.RangeRangedDamage;
         }
-
-        protected override ICollector<GameEntity> GetTrigger(IContext<GameEntity> context)
+    
+        protected override ICollector<CharacterEntity> GetTrigger(IContext<CharacterEntity> context)
         {
-            return context.CreateCollector(GameMatcher.UpdateRangedDamage);
+            return context.CreateCollector(CharacterMatcher.UpdateRangedDamage);
         }
-
+    
         /*
         ** Система будет вызиваться только один раз на персонажа благодаря тому
         ** что Имя может быть только у одного Entity на персонажа
         */
-        protected override bool Filter(GameEntity entity)
+        protected override bool Filter(CharacterEntity entity)
         {
-            return entity.hasName && entity.isUpdateRangedDamage && entity.hasPersona;
+            return entity.isUpdateRangedDamage && entity.hasPersona;
         }
-
-        protected override void Execute(List<GameEntity> entities)
+    
+        protected override void Execute(List<CharacterEntity> entities)
         {
             int len = entities.Count;
             for (int i = 0; i < len; i++)
             {
-                HashSet<GameEntity> array = _contexts.game.GetEntitiesWithPersona(entities[i].persona.value);
+                HashSet<CharacterEntity> array = _contexts.character.GetEntitiesWithPersona(entities[i].persona.value);
                 int amount = 0;
                 int minAmount = 0;
-                foreach (GameEntity gn in array)
+                foreach (CharacterEntity gn in array)
                 {
                     if (gn.hasDexterity) // если это стата персонажа или баф от шмоток или тд зайдет сюда
                     {
                         amount += (gn.dexterity.value * _lvlBonus); // подсчитываем бонусный урон от всей ловкости персонажа
                     }
-                    if (gn.hasIndexRangedDamage && !gn.hasName) // если это оружие то зайдет сюда
+                    if (gn.hasIndexRangedDamage && !gn.hasNameItem) // если это оружие то зайдет сюда
                     {
                         amount += (gn.indexRangedDamage.maxValue); // бонус от оружия к максимальному урону
                         minAmount += (gn.indexRangedDamage.minValue); // бонус от оружия к минимальному урону

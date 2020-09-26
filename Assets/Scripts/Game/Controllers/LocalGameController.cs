@@ -71,10 +71,14 @@ namespace RedMoonRPG
             entity.AddNextAnimation(AnimationTags.idle);
             entity.AddPersona("Antonio");
             entity.AddActiveAvatar(true);
-            BuilderMainAttributes(entity, attention: 5, dexterity: 5, endurance: 5, intellect: 5, luck: 5, personality: 5, strength: 5);
-            BuilderLifeAttributes(entity);
-            BuilderBattleAttributes(entity);
-            UpdateAttributes(entity);
+            
+            CharacterEntity characterEntity = Contexts.sharedInstance.character.CreateEntity();
+            characterEntity.AddName(entity.name.name);
+            characterEntity.AddPersona(entity.persona.value);
+            BuilderMainAttributes(characterEntity, attention: 5, dexterity: 5, endurance: 5, intellect: 5, luck: 5, personality: 5, strength: 5);
+            BuilderLifeAttributes(characterEntity);
+            BuilderBattleAttributes(characterEntity);
+            UpdateAttributes(characterEntity);
             entity.isPlayer = true;
 
 
@@ -101,6 +105,13 @@ namespace RedMoonRPG
         private void TestInitEnemy()
         {
             TerrainGridSystem tgs = TerrainGridSystem.instance;
+            List<ItemScriptableObjects> array = new List<ItemScriptableObjects>();
+            array.Add(Resources.Load<ItemScriptableObjects>("SO/Items/BigAxe"));
+            array.Add(Resources.Load<ItemScriptableObjects>("SO/Items/WoodenClub"));
+            for (int i = 0; i < array.Count; i++)
+            {
+                Debug.Log(array[i].name);
+            }
             // создаем гейм сущности для врагов
             for (int i = 0; i < _testEnemy.Count; i++)
             {
@@ -113,10 +124,15 @@ namespace RedMoonRPG
                 entity.AddPersona(_testEnemy[i].name);
                 entity.AddName(_testEnemy[i].name + i.ToString());
                 entity.AddActiveAvatar(true);
-                BuilderMainAttributes(entity, attention: 5, dexterity: 5, endurance: 5, intellect: 5, luck: 5, personality: 5, strength: 5);
-                BuilderLifeAttributes(entity);
-                BuilderBattleAttributes(entity);
-                UpdateAttributes(entity);
+                CharacterEntity characterEntity = Contexts.sharedInstance.character.CreateEntity();
+                characterEntity.AddName(_testEnemy[i].name + i.ToString());
+                characterEntity.AddPersona(_testEnemy[i].name);
+                
+                BuilderMainAttributes(characterEntity, attention: 5, dexterity: 5, endurance: 5, intellect: 5, luck: 5, personality: 5, strength: 5);
+                BuilderLifeAttributes(characterEntity);
+                BuilderBattleAttributes(characterEntity);
+                BuilderWeapon(characterEntity, array[i]);
+                UpdateAttributes(characterEntity);
                 /*
                 * Теги
                 */
@@ -138,7 +154,7 @@ namespace RedMoonRPG
             }
         }
 
-        private void BuilderMainAttributes(GameEntity entity, int attention, int dexterity, int endurance, int intellect, int luck, int personality, int strength)
+        private void BuilderMainAttributes(CharacterEntity entity, int attention, int dexterity, int endurance, int intellect, int luck, int personality, int strength)
         {
             entity.AddAttention(attention);
             entity.AddDexterity(dexterity);
@@ -149,20 +165,71 @@ namespace RedMoonRPG
             entity.AddStrength(strength);
         }
 
-        private void BuilderLifeAttributes(GameEntity entity)
+        private void BuilderWeapon(CharacterEntity unit, ItemScriptableObjects data)
+        {
+            CharacterEntity entityWeapon = Contexts.sharedInstance.character.CreateEntity();
+            entityWeapon.AddPersona(unit.persona.value);
+            if (data.magicDamage[1] != 0)
+            {
+                entityWeapon.AddIndexMagicDamage(data.magicDamage[0], data.magicDamage[1]); 
+            }
+            
+            if (data.meeleDamage[1] != 0)
+            {
+                entityWeapon.AddIndexMeleeDamage(data.meeleDamage[0], data.meeleDamage[1]);
+            }
+            
+            if (data.rangedDamage[1] != 0)
+            {
+                entityWeapon.AddIndexRangedDamage(data.rangedDamage[0], data.rangedDamage[1]);
+            }
+            if (data.attention != 0)
+            {
+                entityWeapon.AddAttention(data.attention);
+            }
+            if (data.dexterity != 0)
+            {
+                entityWeapon.AddAttention(data.dexterity);
+            }
+            if (data.endurance != 0)
+            {
+                entityWeapon.AddAttention(data.endurance);
+            }
+            if (data.intellect != 0)
+            {
+                entityWeapon.AddAttention(data.intellect);
+            }
+            if (data.luck != 0)
+            {
+                entityWeapon.AddAttention(data.luck);
+            }
+            if (data.personality != 0)
+            {
+                entityWeapon.AddAttention(data.personality);
+            }
+            if (data.strength != 0)
+            {
+                entityWeapon.AddAttention(data.strength);
+            }
+            entityWeapon.AddName(data.name);
+            entityWeapon.AddWeigth(data.weigth);
+            entityWeapon.AddDefaultPrice(data.defaultPrice);
+        }
+
+        private void BuilderLifeAttributes(CharacterEntity entity)
         {
             entity.AddHealth(0, 0);
             entity.AddMana(0, 0);
         }
 
-        private void BuilderBattleAttributes(GameEntity entity)
+        private void BuilderBattleAttributes(CharacterEntity entity)
         {
             entity.AddIndexMagicDamage(0,0);
             entity.AddIndexMeleeDamage(0, 0);
             entity.AddIndexRangedDamage(0, 0);
         }
 
-        private void UpdateAttributes(GameEntity entity)
+        private void UpdateAttributes(CharacterEntity entity)
         {
             entity.isManaUpdate = true;
             entity.isHealthUpdate = true;
