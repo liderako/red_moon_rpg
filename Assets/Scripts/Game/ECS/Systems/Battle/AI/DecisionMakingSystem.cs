@@ -31,7 +31,6 @@ namespace RedMoonRPG.Systems.Battle.AI
                 Debug.LogError("DecisionMakingSystem error");
                 return;
             }
-            Debug.Log("Decision System");
             BattleEntity avatar = entities[0];
             BattleEntity targetEnemy = GetTargetEnemy(FindEnemies(avatar), avatar);
             Cell cell = avatar.terrainGrid.value.CellGetAtPosition(avatar.mapPosition.value.vector, true);
@@ -40,8 +39,9 @@ namespace RedMoonRPG.Systems.Battle.AI
             avatar.terrainGrid.value.CellSetCanCross(avatar.terrainGrid.value.CellGetIndex(cell), true);
             if (CheckRadiusForAttack(avatar.terrainGrid.value, avatar.mapPosition.value.vector, targetEnemy.mapPosition.value.vector, avatar.radiusAttack.value))
             {
-                // атакуем
-                avatar.ReplaceActionPoint(0); // после атак будет мало очков действия... ход закончится
+                Debug.Log("Attack");
+                avatar.isAttack = true;
+                avatar.terrainGrid.value.CellSetCanCross(avatar.terrainGrid.value.CellGetIndex(cell), false);
             }
             else
             {

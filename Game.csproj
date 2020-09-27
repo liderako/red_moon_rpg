@@ -195,6 +195,7 @@
      <Compile Include="Assets\Scripts\Game\ECS\Components\Battle\AI\StateComponent.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\Battle\ActionPointComponent.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\Battle\ActiveAvatarComponent.cs" />
+     <Compile Include="Assets\Scripts\Game\ECS\Components\Battle\AttackComponent.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\Battle\AwakeBattleComponent.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\Battle\BattleComponent.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\Battle\BattleListComponent.cs" />
@@ -269,6 +270,7 @@
      <Compile Include="Assets\Scripts\Game\ECS\Systems\Animations\BoolAnimationSystem.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Systems\Battle\AI\DecisionMakingSystem.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Systems\Battle\AwakeBattleSystem.cs" />
+     <Compile Include="Assets\Scripts\Game\ECS\Systems\Battle\BaseAttackSystem.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Systems\Battle\BattleMovement\BattleMovementSystem.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Systems\Battle\BattleMovement\InputMovementSystem.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Systems\Battle\EndTurnSystem.cs" />
@@ -329,6 +331,7 @@
      <Compile Include="Assets\Sources\Generated\Battle\Components\BattleAIComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Battle\Components\BattleActionPointComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Battle\Components\BattleActiveAvatarComponent.cs" />
+     <Compile Include="Assets\Sources\Generated\Battle\Components\BattleAttackComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Battle\Components\BattleAwakeBattleComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Battle\Components\BattleBattleComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Battle\Components\BattleBattleListComponent.cs" />

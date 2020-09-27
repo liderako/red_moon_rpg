@@ -11,37 +11,39 @@ public static class BattleComponentsLookup {
     public const int ActionPoint = 0;
     public const int ActiveAvatar = 1;
     public const int AI = 2;
-    public const int AwakeBattle = 3;
-    public const int Battle = 4;
-    public const int BattleList = 5;
-    public const int CellPointer = 6;
-    public const int FilterTarget = 7;
-    public const int MapPosition = 8;
-    public const int Path = 9;
-    public const int PathDisplay = 10;
-    public const int Player = 11;
-    public const int PriorityFilterTarget = 12;
-    public const int PriorityStates = 13;
-    public const int RadiusAttack = 14;
-    public const int Name = 15;
-    public const int RotateSpeed = 16;
-    public const int Round = 17;
-    public const int SkipTurn = 18;
-    public const int Speed = 19;
-    public const int States = 20;
-    public const int TargetPosition = 21;
-    public const int TerrainGrid = 22;
-    public const int Transform = 23;
-    public const int TypeFaction = 24;
-    public const int UpdateActiveAvatar = 25;
-    public const int UpdateBattleRound = 26;
+    public const int Attack = 3;
+    public const int AwakeBattle = 4;
+    public const int Battle = 5;
+    public const int BattleList = 6;
+    public const int CellPointer = 7;
+    public const int FilterTarget = 8;
+    public const int MapPosition = 9;
+    public const int Path = 10;
+    public const int PathDisplay = 11;
+    public const int Player = 12;
+    public const int PriorityFilterTarget = 13;
+    public const int PriorityStates = 14;
+    public const int RadiusAttack = 15;
+    public const int Name = 16;
+    public const int RotateSpeed = 17;
+    public const int Round = 18;
+    public const int SkipTurn = 19;
+    public const int Speed = 20;
+    public const int States = 21;
+    public const int TargetPosition = 22;
+    public const int TerrainGrid = 23;
+    public const int Transform = 24;
+    public const int TypeFaction = 25;
+    public const int UpdateActiveAvatar = 26;
+    public const int UpdateBattleRound = 27;
 
-    public const int TotalComponents = 27;
+    public const int TotalComponents = 28;
 
     public static readonly string[] componentNames = {
         "ActionPoint",
         "ActiveAvatar",
         "AI",
+        "Attack",
         "AwakeBattle",
         "Battle",
         "BattleList",
@@ -72,6 +74,7 @@ public static class BattleComponentsLookup {
         typeof(ActionPointComponent),
         typeof(ActiveAvatarComponent),
         typeof(AIComponent),
+        typeof(AttackComponent),
         typeof(AwakeBattleComponent),
         typeof(BattleComponent),
         typeof(BattleListComponent),

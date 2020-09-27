@@ -63,6 +63,7 @@
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattleActionPointComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattleActiveAvatarComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameActiveAvatarComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Battle\Components\BattleAttackComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattleAwakeBattleComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattleBattleComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Input\Components\InputBattleComponent.cs" />

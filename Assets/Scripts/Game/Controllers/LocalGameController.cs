@@ -61,6 +61,7 @@ namespace RedMoonRPG
             TerrainGridSystem tgs = TerrainGridSystem.instance;
             GameEntity entity = Contexts.sharedInstance.game.CreateEntity();
             GameObject go = Instantiate(_playerPrefab);
+            go.GetComponent<AnimatorListener>().SetUnit(entity);
             go.transform.position = tgs.CellGetPosition(tgs.CellGetAtPosition(_spawnPoint.position, true), true);
             //entity.AddNavMeshAgent(go.GetComponent<NavMeshAgent>()); // удаляем nav mesh потому чтоо не используем его на локальной карте
             entity.AddName(Tags.playerAvatar);
@@ -118,6 +119,7 @@ namespace RedMoonRPG
                 GameEntity entity = Contexts.sharedInstance.game.CreateEntity();
                 _testEnemy[i].transform.position = tgs.CellGetPosition(tgs.CellGetAtPosition(_testEnemy[i].transform.position, true), true);
                 entity.AddAnimator(_testEnemy[i].GetComponent<Animator>());
+                _testEnemy[i].GetComponent<AnimatorListener>().SetUnit(entity);
                 entity.AddTransform(_testEnemy[i].transform);
                 entity.AddActiveAnimation(AnimationTags.idle);
                 entity.AddNextAnimation(AnimationTags.idle);

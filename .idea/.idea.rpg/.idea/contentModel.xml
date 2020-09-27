@@ -275,6 +275,7 @@
                     <e p="PriorityStateComponent.cs" t="Include" />
                     <e p="StateComponent.cs" t="Include" />
                   </e>
+                  <e p="AttackComponent.cs" t="Include" />
                   <e p="AwakeBattleComponent.cs" t="Include" />
                   <e p="BattleComponent.cs" t="Include" />
                   <e p="BattleListComponent.cs" t="Include" />
@@ -391,6 +392,7 @@
                     <e p="DecisionMakingSystem.cs" t="Include" />
                   </e>
                   <e p="AwakeBattleSystem.cs" t="Include" />
+                  <e p="BaseAttackSystem.cs" t="Include" />
                   <e p="BattleMovement" t="Include">
                     <e p="BattleMovementSystem.cs" t="Include" />
                     <e p="InputMovementSystem.cs" t="Include" />
@@ -496,6 +498,7 @@
                 <e p="BattleActionPointComponent.cs" t="Include" />
                 <e p="BattleActiveAvatarComponent.cs" t="Include" />
                 <e p="BattleAIComponent.cs" t="Include" />
+                <e p="BattleAttackComponent.cs" t="Include" />
                 <e p="BattleAwakeBattleComponent.cs" t="Include" />
                 <e p="BattleBattleComponent.cs" t="Include" />
                 <e p="BattleBattleListComponent.cs" t="Include" />

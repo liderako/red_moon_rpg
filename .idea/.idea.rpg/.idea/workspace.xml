@@ -17,13 +17,8 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Tags/Animations.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/BattleMovement/InputMovementSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Tags/Enums/WeaponType.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Tags/Enums/ItemType.cs" />
         <option value="$PROJECT_DIR$/Assets/Sources/Generated/Inventory/InventoryComponentsLookup.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Data/ScriptableObjects/NPCScritableObject.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/AnimatorListener.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Data/ScriptableObjects/ItemScriptableObjects.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Stats/Main attributes/Update main Attributes/ModifiedStatComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Stats/Main attributes/AttentionComponent.cs" />
@@ -65,9 +60,14 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/NameComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/AwakeBattleSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/QueueBattleSystems.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Tags/Animations.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Battle/AttackComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/AnimationEndScripting.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Controllers/LocalGameController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Controllers/BattleController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/AI/DecisionMakingSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/AnimatorListener.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Controllers/BattleController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/BaseAttackSystem.cs" />
       </list>
     </option>
   </component>
@@ -139,6 +139,7 @@
       <workItem from="1600925990832" duration="1440000" />
       <workItem from="1601011605136" duration="2991000" />
       <workItem from="1601102471976" duration="3437000" />
+      <workItem from="1601189661944" duration="4232000" />
     </task>
     <servers />
   </component>
