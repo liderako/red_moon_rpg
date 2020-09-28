@@ -5,6 +5,7 @@
     <e p="C:\Users\Cell_02\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_rpg.1208847235.00" t="ExcludeRecursive" />
     <e p="D:\asvirido-unity\rpg" t="IncludeRecursive">
       <e p="Assets" t="Include">
+        <e p="AnimationAttackScript.cs" t="Include" />
         <e p="Editor" t="Include">
           <e p="TGSInspector.cs" t="Include" />
           <e p="WaterEditor.cs" t="Include" />
@@ -279,15 +280,19 @@
                   <e p="AwakeBattleComponent.cs" t="Include" />
                   <e p="BattleComponent.cs" t="Include" />
                   <e p="BattleListComponent.cs" t="Include" />
+                  <e p="EndAttack.cs" t="Include" />
+                  <e p="EndTurnComponent.cs" t="Include" />
                   <e p="Grid" t="Include">
                     <e p="CellPointer.cs" t="Include" />
                     <e p="PathComponent.cs" t="Include" />
                     <e p="PathDisplayComponent.cs" t="Include" />
                     <e p="TerrainGridComponent.cs" t="Include" />
                   </e>
+                  <e p="InflictedDamageComponent.cs" t="Include" />
                   <e p="RadiusAttackComponent.cs" t="Include" />
                   <e p="RoundComponent.cs" t="Include" />
                   <e p="SkipTurnComponent.cs" t="Include" />
+                  <e p="TargetEnemyComponent.cs" t="Include" />
                   <e p="UpdateActiveAvatarComponent.cs" t="Include" />
                   <e p="UpdateBattleRound.cs" t="Include" />
                 </e>
@@ -397,6 +402,7 @@
                     <e p="BattleMovementSystem.cs" t="Include" />
                     <e p="InputMovementSystem.cs" t="Include" />
                   </e>
+                  <e p="DamageTakingSystem.cs" t="Include" />
                   <e p="EndTurnSystem.cs" t="Include" />
                   <e p="Grid" t="Include">
                     <e p="AwakeDisplayGridSystem.cs" t="Include" />
@@ -503,7 +509,10 @@
                 <e p="BattleBattleComponent.cs" t="Include" />
                 <e p="BattleBattleListComponent.cs" t="Include" />
                 <e p="BattleCellPointerComponent.cs" t="Include" />
+                <e p="BattleEndAttackComponent.cs" t="Include" />
+                <e p="BattleEndTurnComponent.cs" t="Include" />
                 <e p="BattleFilterTargetComponent.cs" t="Include" />
+                <e p="BattleInflictedDamageComponent.cs" t="Include" />
                 <e p="BattleMapPositionComponent.cs" t="Include" />
                 <e p="BattleNameComponent.cs" t="Include" />
                 <e p="BattlePathComponent.cs" t="Include" />
@@ -517,6 +526,7 @@
                 <e p="BattleSkipTurnComponent.cs" t="Include" />
                 <e p="BattleSpeedComponent.cs" t="Include" />
                 <e p="BattleStatesComponent.cs" t="Include" />
+                <e p="BattleTargetEnemyComponent.cs" t="Include" />
                 <e p="BattleTargetPositionComponent.cs" t="Include" />
                 <e p="BattleTerrainGridComponent.cs" t="Include" />
                 <e p="BattleTransformComponent.cs" t="Include" />

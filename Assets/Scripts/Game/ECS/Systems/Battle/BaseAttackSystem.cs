@@ -31,6 +31,13 @@ namespace RedMoonRPG.Systems.Battle
             unit.AddNextAnimation(AnimationTags.SwordAttack);
             avatar[0].isAttack = false;
             avatar[0].ReplaceActionPoint(0);
+            avatar[0].AddInflictedDamage(10);
+
+            Quaternion OriginalRot = unit.transform.value.rotation;
+            unit.transform.value.LookAt(avatar[0].targetEnemy.value.mapPosition.value.vector);
+            Quaternion NewRot = unit.transform.value.rotation;
+            unit.transform.value.rotation = OriginalRot;
+            unit.transform.value.rotation = Quaternion.Lerp(unit.transform.value.rotation, NewRot, avatar[0].rotateSpeed.value);
         }
     }
 }

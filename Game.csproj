@@ -58,6 +58,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\AnimationAttackScript.cs" />
      <Compile Include="Assets\Editor\TGSInspector.cs" />
      <Compile Include="Assets\Editor\WaterEditor.cs" />
      <Compile Include="Assets\Graphics\NastyWizard_Depth\VertFog\PostProcessVertFog.cs" />
@@ -199,13 +200,17 @@
      <Compile Include="Assets\Scripts\Game\ECS\Components\Battle\AwakeBattleComponent.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\Battle\BattleComponent.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\Battle\BattleListComponent.cs" />
+     <Compile Include="Assets\Scripts\Game\ECS\Components\Battle\EndAttack.cs" />
+     <Compile Include="Assets\Scripts\Game\ECS\Components\Battle\EndTurnComponent.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\Battle\Grid\CellPointer.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\Battle\Grid\PathComponent.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\Battle\Grid\PathDisplayComponent.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\Battle\Grid\TerrainGridComponent.cs" />
+     <Compile Include="Assets\Scripts\Game\ECS\Components\Battle\InflictedDamageComponent.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\Battle\RadiusAttackComponent.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\Battle\RoundComponent.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\Battle\SkipTurnComponent.cs" />
+     <Compile Include="Assets\Scripts\Game\ECS\Components\Battle\TargetEnemyComponent.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\Battle\UpdateActiveAvatarComponent.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\Battle\UpdateBattleRound.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\Fractions\AIComponent.cs" />
@@ -273,6 +278,7 @@
      <Compile Include="Assets\Scripts\Game\ECS\Systems\Battle\BaseAttackSystem.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Systems\Battle\BattleMovement\BattleMovementSystem.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Systems\Battle\BattleMovement\InputMovementSystem.cs" />
+     <Compile Include="Assets\Scripts\Game\ECS\Systems\Battle\DamageTakingSystem.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Systems\Battle\EndTurnSystem.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Systems\Battle\Grid\AwakeDisplayGridSystem.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Systems\Battle\Grid\DisplayAvailableGridSystem.cs" />
@@ -336,7 +342,10 @@
      <Compile Include="Assets\Sources\Generated\Battle\Components\BattleBattleComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Battle\Components\BattleBattleListComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Battle\Components\BattleCellPointerComponent.cs" />
+     <Compile Include="Assets\Sources\Generated\Battle\Components\BattleEndAttackComponent.cs" />
+     <Compile Include="Assets\Sources\Generated\Battle\Components\BattleEndTurnComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Battle\Components\BattleFilterTargetComponent.cs" />
+     <Compile Include="Assets\Sources\Generated\Battle\Components\BattleInflictedDamageComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Battle\Components\BattleMapPositionComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Battle\Components\BattleNameComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Battle\Components\BattlePathComponent.cs" />
@@ -350,6 +359,7 @@
      <Compile Include="Assets\Sources\Generated\Battle\Components\BattleSkipTurnComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Battle\Components\BattleSpeedComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Battle\Components\BattleStatesComponent.cs" />
+     <Compile Include="Assets\Sources\Generated\Battle\Components\BattleTargetEnemyComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Battle\Components\BattleTargetPositionComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Battle\Components\BattleTerrainGridComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Battle\Components\BattleTransformComponent.cs" />

@@ -13,12 +13,12 @@ namespace RedMoonRPG.Systems.Battle
     
         protected override ICollector<BattleEntity> GetTrigger(IContext<BattleEntity> context)
         {
-            return context.CreateCollector(BattleMatcher.ActionPoint);
+            return context.CreateCollector(BattleMatcher.EndTurn);
         }
     
         protected override bool Filter(BattleEntity entity)
         {
-            return entity.isBattle && entity.activeAvatar.value == true && entity.actionPoint.value == 0 && entity.path.gridPath.Count == 0;
+            return entity.isEndTurn && entity.isBattle;
         }
     
         protected override void Execute(List<BattleEntity> entities)
@@ -33,6 +33,11 @@ namespace RedMoonRPG.Systems.Battle
             battleManager.battleList.battleAvatars[battleManager.battleList.iterator].ReplaceActiveAvatar(false);
             battleManager.battleList.units[battleManager.battleList.iterator].ReplaceActiveAvatar(false);
             battleManager.isUpdateActiveAvatar = true;
+            entities[0].isEndTurn = false;
+            if (entities[0].hasTargetEnemy)
+            {
+                entities[0].RemoveTargetEnemy();
+            }
         }
     }
 }

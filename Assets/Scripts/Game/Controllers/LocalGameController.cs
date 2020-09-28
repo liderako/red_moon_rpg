@@ -252,6 +252,7 @@ namespace RedMoonRPG
                 .Add(new Systems.Animations.BoolAnimationSystem(contexts))
                 .Add(new Systems.LocalMap.Player.MovementSystem(contexts))
                 .Add(new Systems.LocalMap.Player.InputMovementSystem(contexts))
+                .Add(new Systems.Life.DamageSystem(contexts))
                 .Add(new Systems.UpdateHealthSystem(contexts, gameBalanceSettings))
                 .Add(new Systems.UpdateManaSystem(contexts, gameBalanceSettings))
                 .Add(new Systems.UpdateMagicDamageSystem(contexts, gameBalanceSettings))

@@ -16,28 +16,32 @@ public static class BattleComponentsLookup {
     public const int Battle = 5;
     public const int BattleList = 6;
     public const int CellPointer = 7;
-    public const int FilterTarget = 8;
-    public const int MapPosition = 9;
-    public const int Path = 10;
-    public const int PathDisplay = 11;
-    public const int Player = 12;
-    public const int PriorityFilterTarget = 13;
-    public const int PriorityStates = 14;
-    public const int RadiusAttack = 15;
-    public const int Name = 16;
-    public const int RotateSpeed = 17;
-    public const int Round = 18;
-    public const int SkipTurn = 19;
-    public const int Speed = 20;
-    public const int States = 21;
-    public const int TargetPosition = 22;
-    public const int TerrainGrid = 23;
-    public const int Transform = 24;
-    public const int TypeFaction = 25;
-    public const int UpdateActiveAvatar = 26;
-    public const int UpdateBattleRound = 27;
+    public const int EndAttack = 8;
+    public const int EndTurn = 9;
+    public const int FilterTarget = 10;
+    public const int InflictedDamage = 11;
+    public const int MapPosition = 12;
+    public const int Path = 13;
+    public const int PathDisplay = 14;
+    public const int Player = 15;
+    public const int PriorityFilterTarget = 16;
+    public const int PriorityStates = 17;
+    public const int RadiusAttack = 18;
+    public const int Name = 19;
+    public const int RotateSpeed = 20;
+    public const int Round = 21;
+    public const int SkipTurn = 22;
+    public const int Speed = 23;
+    public const int States = 24;
+    public const int TargetEnemy = 25;
+    public const int TargetPosition = 26;
+    public const int TerrainGrid = 27;
+    public const int Transform = 28;
+    public const int TypeFaction = 29;
+    public const int UpdateActiveAvatar = 30;
+    public const int UpdateBattleRound = 31;
 
-    public const int TotalComponents = 28;
+    public const int TotalComponents = 32;
 
     public static readonly string[] componentNames = {
         "ActionPoint",
@@ -48,7 +52,10 @@ public static class BattleComponentsLookup {
         "Battle",
         "BattleList",
         "CellPointer",
+        "EndAttack",
+        "EndTurn",
         "FilterTarget",
+        "InflictedDamage",
         "MapPosition",
         "Path",
         "PathDisplay",
@@ -62,6 +69,7 @@ public static class BattleComponentsLookup {
         "SkipTurn",
         "Speed",
         "States",
+        "TargetEnemy",
         "TargetPosition",
         "TerrainGrid",
         "Transform",
@@ -79,7 +87,10 @@ public static class BattleComponentsLookup {
         typeof(BattleComponent),
         typeof(BattleListComponent),
         typeof(CellPointerComponent),
+        typeof(EndAttack),
+        typeof(EndTurnComponent),
         typeof(FilterTargetComponent),
+        typeof(InflictedDamageComponent),
         typeof(MapPositionComponent),
         typeof(PathComponent),
         typeof(PathDisplayComponent),
@@ -93,6 +104,7 @@ public static class BattleComponentsLookup {
         typeof(SkipTurnComponent),
         typeof(SpeedComponent),
         typeof(StatesComponent),
+        typeof(TargetEnemyComponent),
         typeof(TargetPositionComponent),
         typeof(TerrainGridComponent),
         typeof(TransformComponent),

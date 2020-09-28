@@ -43,6 +43,10 @@ namespace RedMoonRPG.Systems.Battle.Movement
                 unit.ReplaceActiveAvatar(true);
                 avatar.ReplaceActiveAvatar(true);
                 avatar.ReplaceActionPoint(avatar.actionPoint.value);
+                if (avatar.actionPoint.value == 0)
+                {
+                    avatar.isEndTurn = true;
+                }
                 unit.AddNextAnimation(AnimationTags.idle);
                 if (unit.isPlayer)
                 {

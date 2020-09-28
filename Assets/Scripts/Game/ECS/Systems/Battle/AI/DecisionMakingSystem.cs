@@ -39,7 +39,7 @@ namespace RedMoonRPG.Systems.Battle.AI
             avatar.terrainGrid.value.CellSetCanCross(avatar.terrainGrid.value.CellGetIndex(cell), true);
             if (CheckRadiusForAttack(avatar.terrainGrid.value, avatar.mapPosition.value.vector, targetEnemy.mapPosition.value.vector, avatar.radiusAttack.value))
             {
-                Debug.Log("Attack");
+                avatar.AddTargetEnemy(targetEnemy);
                 avatar.isAttack = true;
                 avatar.terrainGrid.value.CellSetCanCross(avatar.terrainGrid.value.CellGetIndex(cell), false);
             }

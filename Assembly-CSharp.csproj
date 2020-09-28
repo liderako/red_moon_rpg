@@ -68,13 +68,17 @@
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattleBattleComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Input\Components\InputBattleComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattleBattleListComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Battle\Components\BattleEndAttackComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Battle\Components\BattleEndTurnComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattleCellPointerComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattlePathComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattlePathDisplayComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattleTerrainGridComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Battle\Components\BattleInflictedDamageComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattleRadiusAttackComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattleRoundComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattleSkipTurnComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Battle\Components\BattleTargetEnemyComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattleUpdateActiveAvatarComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattleUpdateBattleRoundComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameAIComponent.cs" />

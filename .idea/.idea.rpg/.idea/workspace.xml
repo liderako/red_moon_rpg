@@ -17,15 +17,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Sources/Generated/Inventory/InventoryComponentsLookup.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Data/ScriptableObjects/NPCScritableObject.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Data/ScriptableObjects/ItemScriptableObjects.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Stats/Main attributes/Update main Attributes/ModifiedStatComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Stats/Main attributes/AttentionComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Stats/Main attributes/DexterityComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Stats/Main attributes/EnduranceComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Stats/Main attributes/IntellectComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Stats/Main attributes/LuckComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Stats/Main attributes/PersonalityComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Stats/Main attributes/StrengthComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Stats/Life Attributes/HealthComponent.cs" />
@@ -34,7 +25,6 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Stats/Life Attributes/BooleanComponent/HealthUpdateComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Stats/Life Attributes/BooleanComponent/ManaUpdateComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/PersonaComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/LifeSystems/DamageSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/LifeSystems/HealSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/СharacterAttributeDataCollection/UpdateHealthSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Stats/Battle attributes/BooleanComponents/UpdateRangedDamageComponent.cs" />
@@ -59,15 +49,25 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/ModifyStatSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/NameComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/AwakeBattleSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/QueueBattleSystems.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Tags/Animations.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Battle/AttackComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/AnimationEndScripting.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Controllers/LocalGameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/QueueBattleSystems.cs" />
+        <option value="$PROJECT_DIR$/Assets/AnimationScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/AnimationAttackScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Battle/EndTurnComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/BattleMovement/BattleMovementSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Battle/TargetEnemyComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/AI/DecisionMakingSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/AnimatorListener.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Controllers/BattleController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/EndTurnSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Battle/EndAttack.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/LifeSystems/DamageSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Controllers/LocalGameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Battle/InflictedDamageComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/BaseAttackSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/DamageTakingSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Controllers/BattleController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/AnimatorListener.cs" />
       </list>
     </option>
   </component>
@@ -140,6 +140,8 @@
       <workItem from="1601011605136" duration="2991000" />
       <workItem from="1601102471976" duration="3437000" />
       <workItem from="1601189661944" duration="4232000" />
+      <workItem from="1601194908267" duration="4000" />
+      <workItem from="1601269602516" duration="4079000" />
     </task>
     <servers />
   </component>
