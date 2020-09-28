@@ -26,10 +26,11 @@ namespace RedMoonRPG.Systems.Battle
         {
             if (avatar.Count > 1)
             {
-                Debug.LogError("BaseAttack error");
+                Debug.LogError("DamageTakingSystem error");
             }
             CharacterEntity enemy = Contexts.sharedInstance.character.GetEntityWithName(avatar[0].targetEnemy.value.name.name);
             enemy.AddDamaged(avatar[0].inflictedDamage.value);
+            
             avatar[0].RemoveInflictedDamage();
         }
     }

@@ -68,8 +68,10 @@
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattleBattleComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Input\Components\InputBattleComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattleBattleListComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Character\Components\CharacterDamageTypeComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattleEndAttackComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattleEndTurnComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Battle\Components\BattleEstimateInflictedDamageComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattleCellPointerComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattlePathComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattlePathDisplayComponent.cs" />
@@ -170,8 +172,8 @@
     <Compile Include="Assets\Sources\Generated\Game\GameComponentsLookup.cs" />
     <Compile Include="Assets\Sources\Generated\Battle\BattleComponentsLookup.cs" />
     <Compile Include="Assets\Sources\Generated\Input\InputComponentsLookup.cs" />
-    <Compile Include="Assets\Sources\Generated\Faction\FactionComponentsLookup.cs" />
     <Compile Include="Assets\Sources\Generated\Character\CharacterComponentsLookup.cs" />
+    <Compile Include="Assets\Sources\Generated\Faction\FactionComponentsLookup.cs" />
     <Compile Include="Assets\Sources\Generated\Life\LifeComponentsLookup.cs" />
     <Compile Include="Assets\Sources\Generated\Time\TimeComponentsLookup.cs" />
     <Compile Include="Assets\Sources\Generated\Game\GameAttribute.cs" />

@@ -280,8 +280,10 @@
                   <e p="AwakeBattleComponent.cs" t="Include" />
                   <e p="BattleComponent.cs" t="Include" />
                   <e p="BattleListComponent.cs" t="Include" />
+                  <e p="DamageTypeComponent.cs" t="Include" />
                   <e p="EndAttack.cs" t="Include" />
                   <e p="EndTurnComponent.cs" t="Include" />
+                  <e p="EstimateInflictedDamageComponent.cs" t="Include" />
                   <e p="Grid" t="Include">
                     <e p="CellPointer.cs" t="Include" />
                     <e p="PathComponent.cs" t="Include" />
@@ -404,6 +406,7 @@
                   </e>
                   <e p="DamageTakingSystem.cs" t="Include" />
                   <e p="EndTurnSystem.cs" t="Include" />
+                  <e p="EstimateInflictedDamageSystem.cs" t="Include" />
                   <e p="Grid" t="Include">
                     <e p="AwakeDisplayGridSystem.cs" t="Include" />
                     <e p="DisplayAvailableGridSystem.cs" t="Include" />
@@ -511,6 +514,7 @@
                 <e p="BattleCellPointerComponent.cs" t="Include" />
                 <e p="BattleEndAttackComponent.cs" t="Include" />
                 <e p="BattleEndTurnComponent.cs" t="Include" />
+                <e p="BattleEstimateInflictedDamageComponent.cs" t="Include" />
                 <e p="BattleFilterTargetComponent.cs" t="Include" />
                 <e p="BattleInflictedDamageComponent.cs" t="Include" />
                 <e p="BattleMapPositionComponent.cs" t="Include" />
@@ -544,6 +548,7 @@
               <e p="Components" t="Include">
                 <e p="CharacterAttentionComponent.cs" t="Include" />
                 <e p="CharacterDamagedComponent.cs" t="Include" />
+                <e p="CharacterDamageTypeComponent.cs" t="Include" />
                 <e p="CharacterDefaultPriceComponent.cs" t="Include" />
                 <e p="CharacterDestroyOnUseComponent.cs" t="Include" />
                 <e p="CharacterDexterityComponent.cs" t="Include" />

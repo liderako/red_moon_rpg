@@ -18,30 +18,31 @@ public static class BattleComponentsLookup {
     public const int CellPointer = 7;
     public const int EndAttack = 8;
     public const int EndTurn = 9;
-    public const int FilterTarget = 10;
-    public const int InflictedDamage = 11;
-    public const int MapPosition = 12;
-    public const int Path = 13;
-    public const int PathDisplay = 14;
-    public const int Player = 15;
-    public const int PriorityFilterTarget = 16;
-    public const int PriorityStates = 17;
-    public const int RadiusAttack = 18;
-    public const int Name = 19;
-    public const int RotateSpeed = 20;
-    public const int Round = 21;
-    public const int SkipTurn = 22;
-    public const int Speed = 23;
-    public const int States = 24;
-    public const int TargetEnemy = 25;
-    public const int TargetPosition = 26;
-    public const int TerrainGrid = 27;
-    public const int Transform = 28;
-    public const int TypeFaction = 29;
-    public const int UpdateActiveAvatar = 30;
-    public const int UpdateBattleRound = 31;
+    public const int EstimateInflictedDamage = 10;
+    public const int FilterTarget = 11;
+    public const int InflictedDamage = 12;
+    public const int MapPosition = 13;
+    public const int Path = 14;
+    public const int PathDisplay = 15;
+    public const int Player = 16;
+    public const int PriorityFilterTarget = 17;
+    public const int PriorityStates = 18;
+    public const int RadiusAttack = 19;
+    public const int Name = 20;
+    public const int RotateSpeed = 21;
+    public const int Round = 22;
+    public const int SkipTurn = 23;
+    public const int Speed = 24;
+    public const int States = 25;
+    public const int TargetEnemy = 26;
+    public const int TargetPosition = 27;
+    public const int TerrainGrid = 28;
+    public const int Transform = 29;
+    public const int TypeFaction = 30;
+    public const int UpdateActiveAvatar = 31;
+    public const int UpdateBattleRound = 32;
 
-    public const int TotalComponents = 32;
+    public const int TotalComponents = 33;
 
     public static readonly string[] componentNames = {
         "ActionPoint",
@@ -54,6 +55,7 @@ public static class BattleComponentsLookup {
         "CellPointer",
         "EndAttack",
         "EndTurn",
+        "EstimateInflictedDamage",
         "FilterTarget",
         "InflictedDamage",
         "MapPosition",
@@ -89,6 +91,7 @@ public static class BattleComponentsLookup {
         typeof(CellPointerComponent),
         typeof(EndAttack),
         typeof(EndTurnComponent),
+        typeof(EstimateInflictedDamageComponent),
         typeof(FilterTargetComponent),
         typeof(InflictedDamageComponent),
         typeof(MapPositionComponent),

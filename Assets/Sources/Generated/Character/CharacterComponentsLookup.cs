@@ -10,39 +10,41 @@ public static class CharacterComponentsLookup {
 
     public const int Attention = 0;
     public const int Damaged = 1;
-    public const int DefaultPrice = 2;
-    public const int DestroyOnUse = 3;
-    public const int Dexterity = 4;
-    public const int Endurance = 5;
-    public const int Healed = 6;
-    public const int Health = 7;
-    public const int HealthUpdate = 8;
-    public const int IndexMagicDamage = 9;
-    public const int IndexMeleeDamage = 10;
-    public const int IndexRangedDamage = 11;
-    public const int Intellect = 12;
-    public const int Luck = 13;
-    public const int Mana = 14;
-    public const int ManaUpdate = 15;
-    public const int ModifiedStat = 16;
-    public const int Personality = 17;
-    public const int Questable = 18;
-    public const int Name = 19;
-    public const int NameItem = 20;
-    public const int Persona = 21;
-    public const int Stackable = 22;
-    public const int Strength = 23;
-    public const int TypeWeapon = 24;
-    public const int UpdateMagicDamage = 25;
-    public const int UpdateMeleeDamage = 26;
-    public const int UpdateRangedDamage = 27;
-    public const int Weigth = 28;
+    public const int DamageType = 2;
+    public const int DefaultPrice = 3;
+    public const int DestroyOnUse = 4;
+    public const int Dexterity = 5;
+    public const int Endurance = 6;
+    public const int Healed = 7;
+    public const int Health = 8;
+    public const int HealthUpdate = 9;
+    public const int IndexMagicDamage = 10;
+    public const int IndexMeleeDamage = 11;
+    public const int IndexRangedDamage = 12;
+    public const int Intellect = 13;
+    public const int Luck = 14;
+    public const int Mana = 15;
+    public const int ManaUpdate = 16;
+    public const int ModifiedStat = 17;
+    public const int Personality = 18;
+    public const int Questable = 19;
+    public const int Name = 20;
+    public const int NameItem = 21;
+    public const int Persona = 22;
+    public const int Stackable = 23;
+    public const int Strength = 24;
+    public const int TypeWeapon = 25;
+    public const int UpdateMagicDamage = 26;
+    public const int UpdateMeleeDamage = 27;
+    public const int UpdateRangedDamage = 28;
+    public const int Weigth = 29;
 
-    public const int TotalComponents = 29;
+    public const int TotalComponents = 30;
 
     public static readonly string[] componentNames = {
         "Attention",
         "Damaged",
+        "DamageType",
         "DefaultPrice",
         "DestroyOnUse",
         "Dexterity",
@@ -75,6 +77,7 @@ public static class CharacterComponentsLookup {
     public static readonly System.Type[] componentTypes = {
         typeof(AttentionComponent),
         typeof(DamagedComponent),
+        typeof(DamageTypeComponent),
         typeof(DefaultPriceComponent),
         typeof(DestroyOnUseComponent),
         typeof(DexterityComponent),

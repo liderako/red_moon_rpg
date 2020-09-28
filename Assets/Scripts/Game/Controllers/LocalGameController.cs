@@ -216,6 +216,8 @@ namespace RedMoonRPG
             entityWeapon.AddName(data.name);
             entityWeapon.AddWeigth(data.weigth);
             entityWeapon.AddDefaultPrice(data.defaultPrice);
+            entityWeapon.AddTypeWeapon(data.type);
+            entityWeapon.AddDamageType(data.damageTypes);
         }
 
         private void BuilderLifeAttributes(CharacterEntity entity)

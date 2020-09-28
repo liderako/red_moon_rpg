@@ -7,3 +7,10 @@
     twoHandedSlashing,
     twoHandedBlunt,
 }
+
+public enum DamageType
+{
+    piercing,
+    slashing,
+    blunt,
+}

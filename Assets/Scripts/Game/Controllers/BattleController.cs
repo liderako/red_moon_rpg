@@ -33,6 +33,7 @@ namespace RedMoonRPG
                 .Add(new Systems.Battle.NewBattleRound(contexts))
                 .Add(new Systems.Battle.AwakeBattleSystem(contexts))
                 .Add(new Systems.Battle.BaseAttackSystem(contexts))
+                .Add(new Systems.Battle.EstimateInflictedDamageSystem(contexts))
                 .Add(new Systems.Battle.DamageTakingSystem(contexts))
                 .Add(new Systems.Battle.AI.DecisionMakingSystem(contexts))
                 .Add(new Systems.Battle.Movement.BattleMovementSystem(contexts))

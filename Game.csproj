@@ -200,8 +200,10 @@
      <Compile Include="Assets\Scripts\Game\ECS\Components\Battle\AwakeBattleComponent.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\Battle\BattleComponent.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\Battle\BattleListComponent.cs" />
+     <Compile Include="Assets\Scripts\Game\ECS\Components\Battle\DamageTypeComponent.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\Battle\EndAttack.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\Battle\EndTurnComponent.cs" />
+     <Compile Include="Assets\Scripts\Game\ECS\Components\Battle\EstimateInflictedDamageComponent.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\Battle\Grid\CellPointer.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\Battle\Grid\PathComponent.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\Battle\Grid\PathDisplayComponent.cs" />
@@ -280,6 +282,7 @@
      <Compile Include="Assets\Scripts\Game\ECS\Systems\Battle\BattleMovement\InputMovementSystem.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Systems\Battle\DamageTakingSystem.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Systems\Battle\EndTurnSystem.cs" />
+     <Compile Include="Assets\Scripts\Game\ECS\Systems\Battle\EstimateInflictedDamageSystem.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Systems\Battle\Grid\AwakeDisplayGridSystem.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Systems\Battle\Grid\DisplayAvailableGridSystem.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Systems\Battle\NewBattleRoundSystem.cs" />
@@ -344,6 +347,7 @@
      <Compile Include="Assets\Sources\Generated\Battle\Components\BattleCellPointerComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Battle\Components\BattleEndAttackComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Battle\Components\BattleEndTurnComponent.cs" />
+     <Compile Include="Assets\Sources\Generated\Battle\Components\BattleEstimateInflictedDamageComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Battle\Components\BattleFilterTargetComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Battle\Components\BattleInflictedDamageComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Battle\Components\BattleMapPositionComponent.cs" />
@@ -372,6 +376,7 @@
      <Compile Include="Assets\Sources\Generated\Character\CharacterEntity.cs" />
      <Compile Include="Assets\Sources\Generated\Character\CharacterMatcher.cs" />
      <Compile Include="Assets\Sources\Generated\Character\Components\CharacterAttentionComponent.cs" />
+     <Compile Include="Assets\Sources\Generated\Character\Components\CharacterDamageTypeComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Character\Components\CharacterDamagedComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Character\Components\CharacterDefaultPriceComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Character\Components\CharacterDestroyOnUseComponent.cs" />

@@ -34,7 +34,9 @@ public class ItemScriptableObjects : ScriptableObject
     public Vector2Int rangedDamage;
     public Vector2Int magicDamage;
     
-    // дополнительные характеристики для интерактивных обьектов
+    public List<DamageType> damageTypes;
+
+        // дополнительные характеристики для интерактивных обьектов
     public int calory;
     public int water;
     public float duration;
