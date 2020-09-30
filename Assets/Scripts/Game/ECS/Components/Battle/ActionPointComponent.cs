@@ -1,6 +1,6 @@
 ﻿using Entitas;
 
-[Battle]
+[Battle][Character]
 public class ActionPointComponent : IComponent
 {
     public int value;

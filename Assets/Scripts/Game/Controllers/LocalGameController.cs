@@ -130,7 +130,7 @@ namespace RedMoonRPG
                 characterEntity.AddName(_testEnemy[i].name + i.ToString());
                 characterEntity.AddPersona(_testEnemy[i].name + i.ToString());
                 
-                BuilderMainAttributes(characterEntity, attention: 5, dexterity: 5, endurance: 5, intellect: 5, luck: 5, personality: 5, strength: 5);
+                BuilderMainAttributes(characterEntity, attention: 5, dexterity: 7, endurance: 5, intellect: 5, luck: 5, personality: 5, strength: 5);
                 BuilderLifeAttributes(characterEntity);
                 BuilderBattleAttributes(characterEntity);
                 BuilderWeapon(characterEntity, array[i]);
@@ -218,6 +218,7 @@ namespace RedMoonRPG
             entityWeapon.AddDefaultPrice(data.defaultPrice);
             entityWeapon.AddTypeWeapon(data.type);
             entityWeapon.AddDamageType(data.damageTypes);
+            entityWeapon.AddActionPoint(data.actionPoint);
         }
 
         private void BuilderLifeAttributes(CharacterEntity entity)

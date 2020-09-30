@@ -34,10 +34,6 @@ namespace RedMoonRPG.Systems.Battle
             battleManager.battleList.units[battleManager.battleList.iterator].ReplaceActiveAvatar(false);
             battleManager.isUpdateActiveAvatar = true;
             entities[0].isEndTurn = false;
-            if (entities[0].hasTargetEnemy)
-            {
-                entities[0].RemoveTargetEnemy();
-            }
         }
     }
 }

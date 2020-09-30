@@ -38,12 +38,10 @@ namespace RedMoonRPG.Systems.Battle
                 Debug.Log("Новый раунд");
                 return;
             }
-            // float time = Time.deltaTime;
-            // float coolDown = 0.1f;
-            // while (Time.time - time < coolDown)
-            // {
-            //     ;
-            // }
+            if (battleManager.battleList.battleAvatars[i].hasTargetEnemy)
+            {
+                battleManager.battleList.battleAvatars[i].RemoveTargetEnemy();
+            }
             battleManager.battleList.battleAvatars[i].ReplaceActiveAvatar(true);
             battleManager.battleList.battleAvatars[i].ReplaceActionPoint(Contexts.sharedInstance.character.GetEntityWithName(battleManager.battleList.units[i].name.name).dexterity.value);
             battleManager.battleList.units[i].ReplaceActiveAvatar(true);

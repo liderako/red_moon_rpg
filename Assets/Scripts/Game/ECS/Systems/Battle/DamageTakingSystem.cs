@@ -31,6 +31,11 @@ namespace RedMoonRPG.Systems.Battle
             CharacterEntity enemy = Contexts.sharedInstance.character.GetEntityWithName(avatar[0].targetEnemy.value.name.name);
             enemy.AddDamaged(avatar[0].inflictedDamage.value);
             avatar[0].RemoveInflictedDamage();
+            Contexts.sharedInstance.game.GetEntityWithName(avatar[0].name.name).ReplaceActiveAvatar(true);
+            avatar[0].ReplaceActiveAvatar(true);
+            avatar[0].ReplaceActionPoint(avatar[0].actionPoint.value);
+            avatar[0].isEndAttack = false;
+            Debug.Log("Damage Take");
         }
     }
 }

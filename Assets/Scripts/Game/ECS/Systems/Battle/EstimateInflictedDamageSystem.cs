@@ -38,6 +38,8 @@ namespace RedMoonRPG.Systems.Battle
                     avatar[0].AddInflictedDamage(Random.Range(character.indexMeleeDamage.minValue, character.indexMeleeDamage.maxValue));
                 }
             }
+            avatar[0].isEstimateInflictedDamage = false;
+            Debug.Log("Estimate Take");
         }
     }
 }

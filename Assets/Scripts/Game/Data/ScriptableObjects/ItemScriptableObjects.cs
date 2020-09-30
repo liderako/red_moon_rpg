@@ -33,6 +33,8 @@ public class ItemScriptableObjects : ScriptableObject
     public Vector2Int meeleDamage;
     public Vector2Int rangedDamage;
     public Vector2Int magicDamage;
+
+    public int actionPoint;
     
     public List<DamageType> damageTypes;
 

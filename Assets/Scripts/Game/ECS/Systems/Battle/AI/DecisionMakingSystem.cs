@@ -26,12 +26,29 @@ namespace RedMoonRPG.Systems.Battle.AI
     
         protected override void Execute(List<BattleEntity> entities)
         {
+            Debug.Log("Desicion");
             if (entities.Count > 1)
             {
                 Debug.LogError("DecisionMakingSystem error");
                 return;
             }
             BattleEntity avatar = entities[0];
+            if (!IsAvailabeBaseAttack(avatar))
+            {
+                Debug.Log("doesn't have action point for attack");
+                Contexts.sharedInstance.battle.GetEntityWithName(Tags.battleManagerEntity).isSkipTurn = true;
+                return;
+            }
+            if (avatar.hasTargetEnemy)
+            {
+                if (CheckRadiusForAttack(avatar.terrainGrid.value, avatar.mapPosition.value.vector, avatar.targetEnemy.value.mapPosition.value.vector, avatar.radiusAttack.value))
+                {
+                    avatar.isEstimateInflictedDamage = true;
+                    avatar.ReplaceTargetEnemy(avatar.targetEnemy.value);
+                    avatar.isAttack = true;
+                    return;
+                }
+            }
             BattleEntity targetEnemy = GetTargetEnemy(FindEnemies(avatar), avatar);
             Cell cell = avatar.terrainGrid.value.CellGetAtPosition(avatar.mapPosition.value.vector, true);
             Cell cellEnemy = targetEnemy.terrainGrid.value.CellGetAtPosition(targetEnemy.mapPosition.value.vector, true);
@@ -46,7 +63,6 @@ namespace RedMoonRPG.Systems.Battle.AI
             }
             else
             {
-                Debug.Log("Move");
                 List<int> path = GetPathForNearPositionForAttack(avatar, targetEnemy);
                 GameEntity unit = Contexts.sharedInstance.game.GetEntityWithName(avatar.name.name);
                 avatar.ReplacePath(path, 0);
@@ -62,7 +78,25 @@ namespace RedMoonRPG.Systems.Battle.AI
             }
             targetEnemy.terrainGrid.value.CellSetCanCross(targetEnemy.terrainGrid.value.CellGetIndex(cellEnemy), false);
         }
-        
+
+        private bool IsAvailabeBaseAttack(BattleEntity avatar)
+        {
+            HashSet<CharacterEntity> array = Contexts.sharedInstance.character.GetEntitiesWithPersona(avatar.name.name);
+            foreach (CharacterEntity item in array)
+            {
+                if (item.hasActionPoint && item.hasNameItem)
+                {
+                    if (item.actionPoint.value <= avatar.actionPoint.value)
+                    {
+                        Debug.Log("Return TRUE");
+                        return true;
+                    }
+                    return false;
+                }
+            }
+            return false;
+        }
+
         // метод взависимости от фильтра врага возвращает приоритетную цель из списка врагов
         private BattleEntity GetTargetEnemy(List<BattleEntity> listEnemy, BattleEntity avatar)
         {

@@ -546,6 +546,7 @@
               <e p="CharacterEntity.cs" t="Include" />
               <e p="CharacterMatcher.cs" t="Include" />
               <e p="Components" t="Include">
+                <e p="CharacterActionPointComponent.cs" t="Include" />
                 <e p="CharacterAttentionComponent.cs" t="Include" />
                 <e p="CharacterDamagedComponent.cs" t="Include" />
                 <e p="CharacterDamageTypeComponent.cs" t="Include" />
@@ -580,6 +581,7 @@
             </e>
             <e p="Components" t="Include">
               <e p="Interfaces" t="Include">
+                <e p="IActionPoint.cs" t="Include" />
                 <e p="IActiveAvatar.cs" t="Include" />
                 <e p="IAI.cs" t="Include" />
                 <e p="IBattle.cs" t="Include" />

@@ -17,8 +17,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Stats/Life Attributes/BooleanComponent/HealthUpdateComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Stats/Life Attributes/BooleanComponent/ManaUpdateComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/PersonaComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/LifeSystems/HealSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/СharacterAttributeDataCollection/UpdateHealthSystem.cs" />
@@ -47,14 +45,11 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Tags/Animations.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Battle/AttackComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/AnimationEndScripting.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/QueueBattleSystems.cs" />
         <option value="$PROJECT_DIR$/Assets/AnimationScript.cs" />
         <option value="$PROJECT_DIR$/Assets/AnimationAttackScript.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Battle/EndTurnComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/BattleMovement/BattleMovementSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Battle/TargetEnemyComponent.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/AI/DecisionMakingSystem.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/EndTurnSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Battle/EndAttack.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/LifeSystems/DamageSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Battle/InflictedDamageComponent.cs" />
@@ -63,11 +58,16 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Controllers/BattleController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Tags/Enums/WeaponType.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Battle/DamageTypeComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Battle/ActionPointComponent.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Data/ScriptableObjects/ItemScriptableObjects.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/Controllers/LocalGameController.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/EstimateInflictedDamageSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/BaseAttackSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/EndTurnSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/SkipTurnSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/QueueBattleSystems.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/AI/DecisionMakingSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/DamageTakingSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/EstimateInflictedDamageSystem.cs" />
       </list>
     </option>
   </component>
@@ -142,6 +142,7 @@
       <workItem from="1601189661944" duration="4232000" />
       <workItem from="1601194908267" duration="4000" />
       <workItem from="1601269602516" duration="6367000" />
+      <workItem from="1601445117974" duration="4363000" />
     </task>
     <servers />
   </component>
@@ -171,9 +172,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="624" y="244" key="run.anything.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1600610969136" />
-    <state x="1070" y="537" width="672" height="678" key="search.everywhere.popup" timestamp="1600840562670">
+    <state x="1070" y="537" width="672" height="678" key="search.everywhere.popup" timestamp="1601445654864">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="1070" y="537" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1600840562670" />
+    <state x="1070" y="537" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601445654864" />
   </component>
 </project>

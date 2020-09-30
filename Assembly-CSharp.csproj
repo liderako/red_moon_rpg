@@ -61,6 +61,7 @@
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattlePriorityStatesComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattleStatesComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattleActionPointComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Character\Components\CharacterActionPointComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattleActiveAvatarComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameActiveAvatarComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattleAttackComponent.cs" />
@@ -155,6 +156,7 @@
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattleTargetPositionComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameMapPositionComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattleMapPositionComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Components\Interfaces\IActionPoint.cs" />
     <Compile Include="Assets\Sources\Generated\Components\Interfaces\IActiveAvatar.cs" />
     <Compile Include="Assets\Sources\Generated\Components\Interfaces\IBattle.cs" />
     <Compile Include="Assets\Sources\Generated\Components\Interfaces\IAI.cs" />
@@ -171,8 +173,8 @@
     <Compile Include="Assets\Sources\Generated\Inventory\InventoryComponentsLookup.cs" />
     <Compile Include="Assets\Sources\Generated\Game\GameComponentsLookup.cs" />
     <Compile Include="Assets\Sources\Generated\Battle\BattleComponentsLookup.cs" />
-    <Compile Include="Assets\Sources\Generated\Input\InputComponentsLookup.cs" />
     <Compile Include="Assets\Sources\Generated\Character\CharacterComponentsLookup.cs" />
+    <Compile Include="Assets\Sources\Generated\Input\InputComponentsLookup.cs" />
     <Compile Include="Assets\Sources\Generated\Faction\FactionComponentsLookup.cs" />
     <Compile Include="Assets\Sources\Generated\Life\LifeComponentsLookup.cs" />
     <Compile Include="Assets\Sources\Generated\Time\TimeComponentsLookup.cs" />
