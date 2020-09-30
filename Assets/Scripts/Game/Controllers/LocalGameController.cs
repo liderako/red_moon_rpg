@@ -107,8 +107,8 @@ namespace RedMoonRPG
         {
             TerrainGridSystem tgs = TerrainGridSystem.instance;
             List<ItemScriptableObjects> array = new List<ItemScriptableObjects>();
-            array.Add(Resources.Load<ItemScriptableObjects>("SO/Items/BigAxe"));
             array.Add(Resources.Load<ItemScriptableObjects>("SO/Items/WoodenClub"));
+            array.Add(Resources.Load<ItemScriptableObjects>("SO/Items/BigAxe"));
             for (int i = 0; i < array.Count; i++)
             {
                 Debug.Log(array[i].name);
@@ -128,7 +128,7 @@ namespace RedMoonRPG
                 entity.AddActiveAvatar(true);
                 CharacterEntity characterEntity = Contexts.sharedInstance.character.CreateEntity();
                 characterEntity.AddName(_testEnemy[i].name + i.ToString());
-                characterEntity.AddPersona(_testEnemy[i].name);
+                characterEntity.AddPersona(_testEnemy[i].name + i.ToString());
                 
                 BuilderMainAttributes(characterEntity, attention: 5, dexterity: 5, endurance: 5, intellect: 5, luck: 5, personality: 5, strength: 5);
                 BuilderLifeAttributes(characterEntity);
@@ -213,7 +213,7 @@ namespace RedMoonRPG
             {
                 entityWeapon.AddAttention(data.strength);
             }
-            entityWeapon.AddName(data.name);
+            entityWeapon.AddNameItem(data.name);
             entityWeapon.AddWeigth(data.weigth);
             entityWeapon.AddDefaultPrice(data.defaultPrice);
             entityWeapon.AddTypeWeapon(data.type);

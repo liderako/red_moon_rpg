@@ -28,6 +28,10 @@ namespace RedMoonRPG.Systems.Battle
                 Debug.LogError("BaseAttack error");
             }
             GameEntity unit = Contexts.sharedInstance.game.GetEntityWithName(avatar[0].name.name);
+            if (unit.hasNextAnimation)
+            {
+                unit.RemoveNextAnimation();
+            }
             unit.AddNextAnimation(AnimationTags.SwordAttack);
             avatar[0].isAttack = false;
             avatar[0].ReplaceActionPoint(0);

@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95f8dd1c704593840a94ad2451f2bf55, type: 3}
   m_Name: GameBalance
   m_EditorClassIdentifier: Assembly-CSharp::GameBalanceSettings
-  MagicDamageForIntellect: 3
+  MagicDamageForIntellect: 2
   RangeMagicDamage: 0.2
-  MeleeDamageForStrength: 5
+  MeleeDamageForStrength: 2
   RangeMeleeDamage: 0.3
-  RangedDamageForDexterity: 4
+  RangedDamageForDexterity: 2
   RangeRangedDamage: 0.4
   ManaForLevelIntellect: 10
   HpForLevelEndurance: 5
