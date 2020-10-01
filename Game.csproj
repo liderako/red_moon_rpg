@@ -188,7 +188,7 @@
      <Compile Include="Assets\Scripts\Game\Data\ScriptableObjects\GameBalanceSettings.cs" />
      <Compile Include="Assets\Scripts\Game\Data\ScriptableObjects\ItemScriptableObjects.cs" />
      <Compile Include="Assets\Scripts\Game\Data\ScriptableObjects\LevelSettings.cs" />
-     <Compile Include="Assets\Scripts\Game\Data\ScriptableObjects\NPCScritableObject.cs" />
+     <Compile Include="Assets\Scripts\Game\Data\ScriptableObjects\NPCScritableObjects.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\ActiveAnimationComponent.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\Battle\AI\FilterTargetComponent.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\Battle\AI\PriorityFilterTargetComponent.cs" />

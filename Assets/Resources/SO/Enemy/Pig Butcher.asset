@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 0}
   m_Name: Pig Butcher
   m_EditorClassIdentifier: Game::NPCScriptableObjects
-  name: Pig Butcher
+  name: Pig butcher
   model: {fileID: 8685493681117967046, guid: f5f920a68dc91cb43b21c9533bf73a4d, type: 3}
-  faction: 1
-  attention: 2
-  dexterity: 3
+  faction: 0
+  attention: 3
+  dexterity: 7
   endurance: 7
-  intellect: 2
+  intellect: 1
   luck: 2
-  personality: 3
+  personality: 1
   strength: 7
   speed: 2
   rotateSpeed: 5

@@ -261,7 +261,7 @@
                 <e p="GameBalanceSettings.cs" t="Include" />
                 <e p="ItemScriptableObjects.cs" t="Include" />
                 <e p="LevelSettings.cs" t="Include" />
-                <e p="NPCScritableObject.cs" t="Include" />
+                <e p="NPCScritableObjects.cs" t="Include" />
               </e>
             </e>
             <e p="ECS" t="Include">

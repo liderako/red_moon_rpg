@@ -60,14 +60,14 @@
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/EndTurnSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/SkipTurnSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/QueueBattleSystems.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Controllers/LocalGameController.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Animations/BoolAnimationSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/AI/DecisionMakingSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/AnimatorListener.cs" />
-        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/AwakeBattleSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/DamageTakingSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/EstimateInflictedDamageSystem.cs" />
         <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/BaseAttackSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/AwakeBattleSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Controllers/LocalGameController.cs" />
       </list>
     </option>
   </component>
@@ -143,7 +143,8 @@
       <workItem from="1601194908267" duration="4000" />
       <workItem from="1601269602516" duration="6367000" />
       <workItem from="1601445117974" duration="4363000" />
-      <workItem from="1601528623274" duration="4353000" />
+      <workItem from="1601528623274" duration="5449000" />
+      <workItem from="1601540090203" duration="2857000" />
     </task>
     <servers />
   </component>

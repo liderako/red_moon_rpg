@@ -30,7 +30,7 @@ MonoBehaviour:
   meeleDamage: {x: 1, y: 8}
   rangedDamage: {x: 0, y: 0}
   magicDamage: {x: 0, y: 0}
-  actionPoint: 6
+  actionPoint: 4
   damageTypes: 02000000
   calory: 0
   water: 0

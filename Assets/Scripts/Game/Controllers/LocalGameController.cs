@@ -16,11 +16,10 @@ namespace RedMoonRPG
         public GameObject _playerPrefab;
     
         public GameBalanceSettings gameBalanceSettings;
-        public List<GameObject> _testEnemy;
-    
-    
+
         [SerializeField] private Transform _spawnPoint;
-    
+        [SerializeField] private List<Transform> _listPositionForSpawn;
+        [SerializeField] private List<NPCScriptableObjects> _enemies;
     
         private Entitas.Systems _systems;
 
@@ -51,11 +50,10 @@ namespace RedMoonRPG
         private void InitTest()
         {
 //            GameEntity gameInitializer = Contexts.sharedInstance.game.GetEntityWithName("GameInit"); // TO Do зачем нужен GameInit
-
             TestInitPlayer();
             TestInitEnemy();
         }
-    
+
         private void TestInitPlayer()
         {
             TerrainGridSystem tgs = TerrainGridSystem.instance;
@@ -106,34 +104,37 @@ namespace RedMoonRPG
         private void TestInitEnemy()
         {
             TerrainGridSystem tgs = TerrainGridSystem.instance;
-            List<ItemScriptableObjects> array = new List<ItemScriptableObjects>();
-            array.Add(Resources.Load<ItemScriptableObjects>("SO/Items/WoodenClub"));
-            array.Add(Resources.Load<ItemScriptableObjects>("SO/Items/BigAxe"));
-            for (int i = 0; i < array.Count; i++)
-            {
-                Debug.Log(array[i].name);
-            }
+            // List<ItemScriptableObjects> array = new List<ItemScriptableObjects>();
+            // array.Add(Resources.Load<ItemScriptableObjects>("SO/Items/WoodenClub"));
+            // array.Add(Resources.Load<ItemScriptableObjects>("SO/Items/BigAxe"));
+            // for (int i = 0; i < array.Count; i++)
+            // {
+            //     Debug.Log(array[i].name);
+            // }
             // создаем гейм сущности для врагов
-            for (int i = 0; i < _testEnemy.Count; i++)
+            for (int i = 0; i < _enemies.Count; i++)
             {
                 GameEntity entity = Contexts.sharedInstance.game.CreateEntity();
-                _testEnemy[i].transform.position = tgs.CellGetPosition(tgs.CellGetAtPosition(_testEnemy[i].transform.position, true), true);
-                entity.AddAnimator(_testEnemy[i].GetComponent<Animator>());
-                _testEnemy[i].GetComponent<AnimatorListener>().SetUnit(entity);
-                entity.AddTransform(_testEnemy[i].transform);
+                GameObject go = Instantiate(_enemies[i].model);
+                NPCScriptableObjects npc = _enemies[i];
+                //go.transform.position = tgs.CellGetPosition(tgs.CellGetAtPosition(_spawnPoint.position, true), true);
+                go.transform.position = tgs.CellGetPosition(tgs.CellGetAtPosition(_listPositionForSpawn[i].transform.position, true), true);
+                entity.AddAnimator(go.GetComponent<Animator>());
+                go.GetComponent<AnimatorListener>().SetUnit(entity);
+                entity.AddTransform(go.transform);
                 entity.AddActiveAnimation(AnimationTags.idle);
                 entity.AddNextAnimation(AnimationTags.idle);
-                entity.AddPersona(_testEnemy[i].name);
-                entity.AddName(_testEnemy[i].name + i.ToString());
+                entity.AddPersona(npc.name);
+                entity.AddName(npc.name + i.ToString());
                 entity.AddActiveAvatar(true);
                 CharacterEntity characterEntity = Contexts.sharedInstance.character.CreateEntity();
-                characterEntity.AddName(_testEnemy[i].name + i.ToString());
-                characterEntity.AddPersona(_testEnemy[i].name + i.ToString());
+                characterEntity.AddName(npc.name + i.ToString());
+                characterEntity.AddPersona(npc.name + i.ToString());
                 
-                BuilderMainAttributes(characterEntity, attention: 5, dexterity: 7, endurance: 5, intellect: 5, luck: 5, personality: 5, strength: 5);
+                BuilderMainAttributes(characterEntity, attention: npc.attention, dexterity: npc.dexterity, endurance: npc.endurance, intellect: npc.intellect, luck: npc.luck, personality: npc.personality, strength: npc.personality);
                 BuilderLifeAttributes(characterEntity);
                 BuilderBattleAttributes(characterEntity);
-                BuilderWeapon(characterEntity, array[i]);
+                BuilderWeapon(characterEntity, npc.weapon);
                 UpdateAttributes(characterEntity);
                 /*
                 * Теги
@@ -147,8 +148,8 @@ namespace RedMoonRPG
                 avatar.AddTerrainGrid(TerrainGridSystem.instance);
                 avatar.AddName(entity.name.name);
                 avatar.AddPath(new List<int>(), 0);
-                avatar.AddSpeed(2);
-                avatar.AddRotateSpeed(5);
+                avatar.AddSpeed(npc.speed);
+                avatar.AddRotateSpeed(npc.rotateSpeed);
                 avatar.AddActiveAvatar(true);
                 avatar.AddTypeFaction(Factions.TribesOfHorde);
                 avatar.isAI = true;

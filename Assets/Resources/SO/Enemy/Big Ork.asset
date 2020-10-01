@@ -10,18 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 0}
-  m_Name: BigOrk
+  m_Name: Big Ork
   m_EditorClassIdentifier: Game::NPCScriptableObjects
   name: Big Ork
   model: {fileID: 1535834590559161135, guid: 524f7b3acd924d54dad88d623055df53, type: 3}
   faction: 1
-  attention: 3
-  dexterity: 4
-  endurance: 7
-  intellect: 3
-  luck: 3
-  personality: 3
-  strength: 7
+  attention: 5
+  dexterity: 7
+  endurance: 6
+  intellect: 2
+  luck: 4
+  personality: 5
+  strength: 5
   speed: 2
   rotateSpeed: 5
   weapon: {fileID: 11400000, guid: 14acaec3f3ddf724294f07ae39960b94, type: 2}
