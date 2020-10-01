@@ -42,6 +42,12 @@ namespace RedMoonRPG.Systems.Battle
             {
                 battleManager.battleList.battleAvatars[i].RemoveTargetEnemy();
             }
+            if (Contexts.sharedInstance.battle.GetEntityWithCellPointer(true) != null)
+            {
+                BattleEntity e = Contexts.sharedInstance.battle.GetEntityWithCellPointer(true);
+                Object.Destroy(e.transform.value.gameObject);
+                e.Destroy();
+            }
             battleManager.battleList.battleAvatars[i].ReplaceActiveAvatar(true);
             battleManager.battleList.battleAvatars[i].ReplaceActionPoint(Contexts.sharedInstance.character.GetEntityWithName(battleManager.battleList.units[i].name.name).dexterity.value);
             battleManager.battleList.units[i].ReplaceActiveAvatar(true);
