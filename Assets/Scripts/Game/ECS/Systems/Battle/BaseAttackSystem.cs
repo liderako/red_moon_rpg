@@ -28,14 +28,9 @@ namespace RedMoonRPG.Systems.Battle
                 Debug.LogError("BaseAttack error");
             }
             GameEntity unit = Contexts.sharedInstance.game.GetEntityWithName(avatar[0].name.name);
-            if (unit.hasNextAnimation)
-            {
-                unit.RemoveNextAnimation();
-            }
             unit.AddNextAnimation(AnimationTags.SwordAttack);
             avatar[0].isAttack = false;
             avatar[0].ReplaceActionPoint(avatar[0].actionPoint.value - GetPriceForBaseAttack(avatar[0]));
-
             Quaternion OriginalRot = unit.transform.value.rotation;
             unit.transform.value.LookAt(avatar[0].targetEnemy.value.mapPosition.value.vector);
             Quaternion NewRot = unit.transform.value.rotation;

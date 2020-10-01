@@ -100,8 +100,6 @@ namespace RedMoonRPG.Systems.Battle
             {
                 for (int j = i + 1; j < len; j++)
                 {
-                    // compare array element with  
-                    // all next element
                     CharacterEntity iEntity = Contexts.sharedInstance.character.GetEntityWithName(group[i].name.name);
                     CharacterEntity jEntity = Contexts.sharedInstance.character.GetEntityWithName(group[i].name.name);
                     if (iEntity.dexterity.value < jEntity.dexterity.value)

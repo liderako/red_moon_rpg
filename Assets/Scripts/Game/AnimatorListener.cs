@@ -20,6 +20,16 @@ namespace RedMoonRPG
             {
                 Contexts.sharedInstance.battle.GetEntityWithName(this.unit.name.name).isEndTurn = true;
             }
+            else
+            {
+                StartCoroutine(wait());
+            }
+        }
+
+        private IEnumerator wait()
+        {
+            yield return  new WaitForSeconds(0.01f);
+            Contexts.sharedInstance.battle.GetEntityWithName(unit.name.name).ReplaceActiveAvatar(true);
         }
 
         public void SetUnit(GameEntity unit)

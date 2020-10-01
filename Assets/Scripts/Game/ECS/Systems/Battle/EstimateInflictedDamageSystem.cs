@@ -39,7 +39,6 @@ namespace RedMoonRPG.Systems.Battle
                 }
             }
             avatar[0].isEstimateInflictedDamage = false;
-            Debug.Log("Estimate Take");
         }
     }
 }
