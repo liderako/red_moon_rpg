@@ -38,11 +38,12 @@ public static class BattleComponentsLookup {
     public const int TargetPosition = 27;
     public const int TerrainGrid = 28;
     public const int Transform = 29;
-    public const int TypeFaction = 30;
-    public const int UpdateActiveAvatar = 31;
-    public const int UpdateBattleRound = 32;
+    public const int TypeAttack = 30;
+    public const int TypeFaction = 31;
+    public const int UpdateActiveAvatar = 32;
+    public const int UpdateBattleRound = 33;
 
-    public const int TotalComponents = 33;
+    public const int TotalComponents = 34;
 
     public static readonly string[] componentNames = {
         "ActionPoint",
@@ -75,6 +76,7 @@ public static class BattleComponentsLookup {
         "TargetPosition",
         "TerrainGrid",
         "Transform",
+        "TypeAttack",
         "TypeFaction",
         "UpdateActiveAvatar",
         "UpdateBattleRound"
@@ -111,6 +113,7 @@ public static class BattleComponentsLookup {
         typeof(TargetPositionComponent),
         typeof(TerrainGridComponent),
         typeof(TransformComponent),
+        typeof(TypeAttackComponent),
         typeof(TypeFactionComponent),
         typeof(UpdateActiveAvatarComponent),
         typeof(UpdateBattleRound)

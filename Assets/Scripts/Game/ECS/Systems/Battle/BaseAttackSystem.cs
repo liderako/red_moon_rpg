@@ -40,16 +40,7 @@ namespace RedMoonRPG.Systems.Battle
         
         private int GetPriceForBaseAttack(BattleEntity avatar)
         {
-            HashSet<CharacterEntity> array = Contexts.sharedInstance.character.GetEntitiesWithPersona(avatar.name.name);
-            foreach (CharacterEntity item in array)
-            {
-                if (item.hasActionPoint && item.hasNameItem)
-                {
-                    return item.actionPoint.value;
-                }
-            }
-            Debug.LogError("Weapon doesn't find");
-            return (-1);
+            return avatar.typeAttack.value[AnimationTags.SwordAttack];
         }
     }
 }

@@ -58,7 +58,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\AnimationAttackScript.cs" />
      <Compile Include="Assets\Editor\TGSInspector.cs" />
      <Compile Include="Assets\Editor\WaterEditor.cs" />
      <Compile Include="Assets\Graphics\NastyWizard_Depth\VertFog\PostProcessVertFog.cs" />
@@ -172,6 +171,7 @@
      <Compile Include="Assets\RPG Character Animation Pack\SuperCharacterController\Code\SuperCharacterController\Core\SuperStateMachine.cs" />
      <Compile Include="Assets\RPG Character Animation Pack\SuperCharacterController\Code\SuperCharacterController\DebugDraw.cs" />
      <Compile Include="Assets\RPG Character Animation Pack\SuperCharacterController\Code\SuperCharacterController\Math3d.cs" />
+     <Compile Include="Assets\Scripts\AnimationAttackScript.cs" />
      <Compile Include="Assets\Scripts\Editor\CellEditor.cs" />
      <Compile Include="Assets\Scripts\Game\AnimatorListener.cs" />
      <Compile Include="Assets\Scripts\Game\Controllers\BattleController.cs" />
@@ -213,6 +213,7 @@
      <Compile Include="Assets\Scripts\Game\ECS\Components\Battle\RoundComponent.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\Battle\SkipTurnComponent.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\Battle\TargetEnemyComponent.cs" />
+     <Compile Include="Assets\Scripts\Game\ECS\Components\Battle\TypeAttackComponent.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\Battle\UpdateActiveAvatarComponent.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\Battle\UpdateBattleRound.cs" />
      <Compile Include="Assets\Scripts\Game\ECS\Components\Fractions\AIComponent.cs" />
@@ -367,6 +368,7 @@
      <Compile Include="Assets\Sources\Generated\Battle\Components\BattleTargetPositionComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Battle\Components\BattleTerrainGridComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Battle\Components\BattleTransformComponent.cs" />
+     <Compile Include="Assets\Sources\Generated\Battle\Components\BattleTypeAttackComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Battle\Components\BattleTypeFactionComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Battle\Components\BattleUpdateActiveAvatarComponent.cs" />
      <Compile Include="Assets\Sources\Generated\Battle\Components\BattleUpdateBattleRoundComponent.cs" />

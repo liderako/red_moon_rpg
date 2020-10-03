@@ -5,7 +5,6 @@
     <e p="C:\Users\Cell_02\AppData\Local\JetBrains\Rider2020.2\resharper-host\Local\Transient\Rider\v202\SolutionCaches\_rpg.1208847235.00" t="ExcludeRecursive" />
     <e p="D:\asvirido-unity\rpg" t="IncludeRecursive">
       <e p="Assets" t="Include">
-        <e p="AnimationAttackScript.cs" t="Include" />
         <e p="Editor" t="Include">
           <e p="TGSInspector.cs" t="Include" />
           <e p="WaterEditor.cs" t="Include" />
@@ -236,6 +235,7 @@
           </e>
         </e>
         <e p="Scripts" t="Include">
+          <e p="AnimationAttackScript.cs" t="Include" />
           <e p="Editor" t="Include">
             <e p="CellEditor.cs" t="Include" />
           </e>
@@ -295,6 +295,7 @@
                   <e p="RoundComponent.cs" t="Include" />
                   <e p="SkipTurnComponent.cs" t="Include" />
                   <e p="TargetEnemyComponent.cs" t="Include" />
+                  <e p="TypeAttackComponent.cs" t="Include" />
                   <e p="UpdateActiveAvatarComponent.cs" t="Include" />
                   <e p="UpdateBattleRound.cs" t="Include" />
                 </e>
@@ -534,6 +535,7 @@
                 <e p="BattleTargetPositionComponent.cs" t="Include" />
                 <e p="BattleTerrainGridComponent.cs" t="Include" />
                 <e p="BattleTransformComponent.cs" t="Include" />
+                <e p="BattleTypeAttackComponent.cs" t="Include" />
                 <e p="BattleTypeFactionComponent.cs" t="Include" />
                 <e p="BattleUpdateActiveAvatarComponent.cs" t="Include" />
                 <e p="BattleUpdateBattleRoundComponent.cs" t="Include" />

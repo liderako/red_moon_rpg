@@ -95,6 +95,8 @@ namespace RedMoonRPG
             avatar.isPlayer = true;
             avatar.AddTypeFaction(Factions.Player);
             avatar.AddRadiusAttack(1);
+            Dictionary<string, int> dictionary = new Dictionary<string, int>();
+            dictionary.Add(AnimationTags.SwordAttack, 3);
             
             //GameEntity camera = Contexts.sharedInstance.game.GetEntityWithName(Tags.camera);
             //camera.isWorldMap = false;
@@ -154,6 +156,9 @@ namespace RedMoonRPG
                 avatar.AddTypeFaction(Factions.TribesOfHorde);
                 avatar.isAI = true;
                 avatar.AddRadiusAttack(1);
+                Dictionary<string, int> dictionary = new Dictionary<string, int>();
+                dictionary.Add(AnimationTags.SwordAttack, npc.weapon.actionPoint);
+                avatar.AddTypeAttack(dictionary);
             }
         }
 
@@ -219,7 +224,7 @@ namespace RedMoonRPG
             entityWeapon.AddDefaultPrice(data.defaultPrice);
             entityWeapon.AddTypeWeapon(data.type);
             entityWeapon.AddDamageType(data.damageTypes);
-            entityWeapon.AddActionPoint(data.actionPoint);
+            // entityWeapon.AddActionPoint(data.actionPoint); возможно нужно удалить компонент из этого контекста
         }
 
         private void BuilderLifeAttributes(CharacterEntity entity)

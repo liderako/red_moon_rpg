@@ -82,6 +82,7 @@
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattleRoundComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattleSkipTurnComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattleTargetEnemyComponent.cs" />
+    <Compile Include="Assets\Sources\Generated\Battle\Components\BattleTypeAttackComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattleUpdateActiveAvatarComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Battle\Components\BattleUpdateBattleRoundComponent.cs" />
     <Compile Include="Assets\Sources\Generated\Game\Components\GameAIComponent.cs" />

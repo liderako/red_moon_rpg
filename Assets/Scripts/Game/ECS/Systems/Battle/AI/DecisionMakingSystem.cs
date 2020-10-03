@@ -33,13 +33,6 @@ namespace RedMoonRPG.Systems.Battle.AI
                 return;
             }
             BattleEntity avatar = entities[0];
-            // if (Contexts.sharedInstance.game.GetEntityWithName(avatar.name.name).activeAnimation.name != AnimationTags.idle)
-            // {
-            //     Debug.Log("?14314123413414");
-            //     Contexts.sharedInstance.game.GetEntityWithName(avatar.name.name).ReplaceActiveAnimation(AnimationTags.idle);
-            //     avatar.ReplaceActiveAvatar(true);
-            //     return;
-            // }
             if (!IsAvailabeBaseAttack(avatar))
             {
                 Debug.Log("doesn't have action point for attack");
@@ -50,7 +43,6 @@ namespace RedMoonRPG.Systems.Battle.AI
             {
                 if (CheckRadiusForAttack(avatar.terrainGrid.value, avatar.mapPosition.value.vector, avatar.targetEnemy.value.mapPosition.value.vector, avatar.radiusAttack.value))
                 {
-                    Debug.Log("???????");
                     avatar.isEstimateInflictedDamage = true;
                     avatar.ReplaceTargetEnemy(avatar.targetEnemy.value);
                     avatar.isAttack = true;
@@ -89,19 +81,24 @@ namespace RedMoonRPG.Systems.Battle.AI
 
         private bool IsAvailabeBaseAttack(BattleEntity avatar)
         {
-            HashSet<CharacterEntity> array = Contexts.sharedInstance.character.GetEntitiesWithPersona(avatar.name.name);
-            foreach (CharacterEntity item in array)
+            int point = avatar.typeAttack.value[AnimationTags.SwordAttack];
+            if (point <= avatar.actionPoint.value)
             {
-                if (item.hasActionPoint && item.hasNameItem)
-                {
-                    if (item.actionPoint.value <= avatar.actionPoint.value)
-                    {
-                        Debug.Log("Return TRUE");
-                        return true;
-                    }
-                    return false;
-                }
+                return true;
             }
+            // HashSet<CharacterEntity> array = Contexts.sharedInstance.character.GetEntitiesWithPersona(avatar.name.name);
+            // foreach (CharacterEntity item in array)
+            // {
+            //     if (item.hasActionPoint && item.hasNameItem)
+            //     {
+            //         if (item.actionPoint.value <= avatar.actionPoint.value)
+            //         {
+            //             Debug.Log("Return TRUE");
+            //             return true;
+            //         }
+            //         return false;
+            //     }
+            // }
             return false;
         }
 
