@@ -133,6 +133,16 @@ PrefabInstance:
       propertyPath: _gameController
       value: 
       objectReference: {fileID: 1742070417}
+    - target: {fileID: 7203189450735319080, guid: 273af4d89a21d564e99350c43b3931eb,
+        type: 3}
+      propertyPath: _gameControllerWorldMap
+      value: 
+      objectReference: {fileID: 1742070417}
+    - target: {fileID: 7203189450735319080, guid: 273af4d89a21d564e99350c43b3931eb,
+        type: 3}
+      propertyPath: WorldMap
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7203189450735319081, guid: 273af4d89a21d564e99350c43b3931eb,
         type: 3}
       propertyPath: m_LocalPosition.x

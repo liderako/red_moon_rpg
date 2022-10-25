@@ -3,14 +3,16 @@
     "",
     "\\Assets",
     "\\Assets\\Scripts",
-    "\\Assets\\Scripts\\Components",
-    "\\Assets\\Scripts\\Components\\Stats",
-    "\\Assets\\Scripts\\Components\\Stats\\Life Attributes",
     "\\Assets\\Scripts\\Systems",
-    "\\Assets\\Scripts\\Systems\\СharacterAttributeDataCollection",
-    "\\Assets\\Tests",
-    "\\Assets\\Tests\\LifeSystemsTest"
+    "\\Assets\\Scripts\\Systems\\Battle",
+    "\\Assets\\Scripts\\Systems\\Battle\\Grid",
+    "\\Assets\\Scripts\\Systems\\Map",
+    "\\Assets\\Scripts\\Systems\\Map\\LocalMap",
+    "\\Assets\\Scripts\\Systems\\Map\\LocalMap\\Player",
+    "\\Assets\\Scripts\\Systems\\Map\\LocalMap\\Player\\BattleMovement",
+    "\\Assets\\Scripts\\TMP",
+    "\\Assets\\Scripts\\Utils"
   ],
-  "SelectedNode": "\\Assets\\Tests\\TestTimeThirstSystem.cs",
+  "SelectedNode": "\\Assets\\Scripts\\Systems\\Battle\\NewBattleRoundSystem.cs",
   "PreviewInSolutionExplorer": false
 }

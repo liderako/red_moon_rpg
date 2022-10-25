@@ -6,7 +6,7 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
-[Game]
+[Game, Battle]
 public sealed partial class TargetPositionComponent : Entitas.IComponent {
     public Position value;
 }

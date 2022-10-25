@@ -1,2 +1,0 @@
-D:\asvirido-unity\rpg\obj\Debug\Game.csprojAssemblyReference.cache
-D:\asvirido-unity\rpg\obj\Debug\Game.csproj.CoreCompileInputs.cache

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 0}
+  m_Name: Pig Butcher
+  m_EditorClassIdentifier: Game::NPCScriptableObjects
+  name: Pig butcher
+  model: {fileID: 8685493681117967046, guid: f5f920a68dc91cb43b21c9533bf73a4d, type: 3}
+  faction: 0
+  attention: 3
+  dexterity: 7
+  endurance: 7
+  intellect: 1
+  luck: 2
+  personality: 1
+  strength: 7
+  speed: 2
+  rotateSpeed: 5
+  weapon: {fileID: 11400000, guid: 1c3ce73d03c04ee448e5b8e144695b1c, type: 2}
+  radiusAttack: 1

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="21a65572-38e6-4830-81aa-81ac3db23c56" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Editor/TGSInspector.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Stats/Character attributes/Main Attributes/DexterityComponent.cs" root0="FORCE_HIGHLIGHTING" />
+  </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Stats/Battle attributes/BooleanComponents/UpdateRangedDamageComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Stats/Battle attributes/BooleanComponents/UpdateMeleeDamageComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Stats/Battle attributes/BooleanComponents/UpdateMagicDamageComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Stats/Battle attributes/IndexRangedDamageComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Stats/Battle attributes/IndexMeleeDamageComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Stats/Battle attributes/IndexMagicDamageComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Items/NameItemComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Items/IconComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Items/DestroyOnUseComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Items/DefaultPriceComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Items/QuestableComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Items/StackableComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Items/TypeWeaponComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Items/WeigthComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/СharacterAttributeDataCollection/UpdateMagicDamageSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Stats/Character attributes/ManaComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/СharacterAttributeDataCollection/UpdateManaSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/СharacterAttributeDataCollection/UpdateMeleeDamageSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/СharacterAttributeDataCollection/UpdateRangedDamageSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/ModifyStatSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/NameComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Tags/Animations.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Battle/AttackComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/AnimationEndScripting.cs" />
+        <option value="$PROJECT_DIR$/Assets/AnimationScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/AnimationAttackScript.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Battle/EndTurnComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/BattleMovement/BattleMovementSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Battle/TargetEnemyComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Battle/EndAttack.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/LifeSystems/DamageSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Battle/InflictedDamageComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Battle/EstimateInflictedDamageComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Controllers/BattleController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Tags/Enums/WeaponType.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Battle/DamageTypeComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Battle/ActionPointComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Data/ScriptableObjects/ItemScriptableObjects.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/EndTurnSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/SkipTurnSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Animations/BoolAnimationSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/AnimatorListener.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/DamageTakingSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/EstimateInflictedDamageSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/AwakeBattleSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/QueueBattleSystems.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Map/LocalMap/Player/MovementSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Components/Battle/TypeAttackComponent.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/AI/DecisionMakingSystem.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/Controllers/LocalGameController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Scripts/Game/ECS/Systems/Battle/BaseAttackSystem.cs" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1hDVtqAdCgPxJDe7HnJOm3AUjkC" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Discover.Launch.Via.Unity" value="true" />
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Standalone Player" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="$USER_HOME$/Desktop/testBuild\Red Moon RPG.exe" />
+      <option name="PROGRAM_PARAMETERS" value="" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\Cell_02\Desktop\testBuild" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="selectedOptions">
+        <set />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="21a65572-38e6-4830-81aa-81ac3db23c56" name="Default Changelist" comment="" />
+      <created>1599545870577</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1599545870577</updated>
+      <workItem from="1599545895637" duration="2691000" />
+      <workItem from="1599673033643" duration="500000" />
+      <workItem from="1599714711187" duration="2386000" />
+      <workItem from="1599718407503" duration="550000" />
+      <workItem from="1599719031490" duration="6850000" />
+      <workItem from="1599831552466" duration="389000" />
+      <workItem from="1599915712401" duration="8515000" />
+      <workItem from="1599928677323" duration="5227000" />
+      <workItem from="1600064300247" duration="4592000" />
+      <workItem from="1600101404677" duration="4249000" />
+      <workItem from="1600150039921" duration="4488000" />
+      <workItem from="1600265507644" duration="615000" />
+      <workItem from="1600322430078" duration="3763000" />
+      <workItem from="1600348656911" duration="2717000" />
+      <workItem from="1600534595105" duration="2032000" />
+      <workItem from="1600597036028" duration="13059000" />
+      <workItem from="1600665494839" duration="2549000" />
+      <workItem from="1600751791651" duration="5183000" />
+      <workItem from="1600840324833" duration="987000" />
+      <workItem from="1600925990832" duration="1440000" />
+      <workItem from="1601011605136" duration="2991000" />
+      <workItem from="1601102471976" duration="3437000" />
+      <workItem from="1601189661944" duration="4232000" />
+      <workItem from="1601194908267" duration="4000" />
+      <workItem from="1601269602516" duration="6367000" />
+      <workItem from="1601445117974" duration="4363000" />
+      <workItem from="1601528623274" duration="5449000" />
+      <workItem from="1601540090203" duration="4004000" />
+      <workItem from="1601659290092" duration="692000" />
+      <workItem from="1601724168869" duration="2802000" />
+      <workItem from="1601730535940" duration="728000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="498" height="446" key="SwitcherDM" timestamp="1599919028099">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1599919028099" />
+    <state x="-1920" y="0" width="1355" height="1044" maximized="true" key="dock-window-1" timestamp="1601012668487">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="0" y="0" width="1369" height="1028" maximized="true" key="dock-window-1/0.0.1920.1040/-1920.0.1920.1040@-1920.0.1920.1040" timestamp="1599831930642" />
+    <state x="-1920" y="0" width="1355" height="1044" maximized="true" key="dock-window-1/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601012668487" />
+    <state x="-1771" y="0" width="1438" height="1044" key="dock-window-2" timestamp="1600323996674">
+      <screen x="-1920" y="0" width="1920" height="1040" />
+    </state>
+    <state x="-1771" y="0" width="1438" height="1044" key="dock-window-2/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1600323996674" />
+    <state x="624" y="244" key="run.anything.popup" timestamp="1600610969136">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="624" y="244" key="run.anything.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1600610969136" />
+    <state x="2990" y="356" width="672" height="678" key="search.everywhere.popup" timestamp="1601532155439">
+      <screen x="1920" y="-181" width="1920" height="1040" />
+    </state>
+    <state x="1070" y="537" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/-1920.0.1920.1040@0.0.1920.1040" timestamp="1601445654864" />
+    <state x="2990" y="356" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.-181.1920.1040@1920.-181.1920.1040" timestamp="1601532155439" />
+  </component>
+</project>
